@@ -1,0 +1,911 @@
+{
+    "info": {
+        "_postman_id": "08641db1-3948-4fc8-b21e-540e7013bde8",
+        "name": "PayPal APIs Copy 7",
+        "description": "# Getting Started\n\n## Step 1: Fork the collection using Run in Postman\n\n[](https://god.gw.postman.com/run-collection/19024122-92a85d0e-51e7-47da-9f83-c45dcb1cdf24?action=collection/fork&collection-url=entityId=19024122-92a85d0e-51e7-47da-9f83-c45dcb1cdf24&entityType=collection&workspaceId=345300e6-346e-42e0-aed1-53717919aef0#?env[PayPal%20Override%20Env]=W3sia2V5IjoiUGxlYXNlIE5vdGUgLS0+IiwidmFsdWUiOiI8IFBheVBhbCBQdWJsaWMgQ29sbGVjdGlvbiBjb21lcyB3aXRoIGRlZmF1bHQgcHVibGljIHNldCBvZiBjcmVkZW50aWFscyBzdG9yZWQgYXQgdGhlIENvbGxlY3Rpb24gbGV2ZWwuIFxuVGhpcyBlbnZpcm9ubWVudCBvdmVycmlkZXMgdGhvc2UgZGVmYXVsdCB2YXJpYWJsZXMuIFlvdSBtYXkgYnJpbmcgeW91ciBvd24gY3JlZGVudGlhbHMgZnJvbSBQYXlQYWwgRGV2ZWxvcGVyIERhc2hib2FyZCBhbmQgcGFzdGUgdGhlbSBoZXJlLiBEbyBub3QgZm9yZ290IHRvIGVuYWJsZSB0aGUgdmFpYWJsZSBieSBjaGVja2luZyB0aGUgYm94IGFuZCBoaXQgXCJTYXZlXCIgYmVmb3JlIGludm9raW5nIHRoZSBQYXlQYWwgQVBJcy4gPiIsImVuYWJsZWQiOnRydWV9LHsia2V5IjoiY2xpZW50X2lkIiwidmFsdWUiOiI8IGNvcHkgY3JlZGVudGlhbHMgZnJvbSB5b3VyIGRldmVsb3Blci5wYXlwYWwuY29tIGFuZCBwYXN0ZSB0aGVtIGhlcmUgPiIsImVuYWJsZWQiOmZhbHNlfSx7ImtleSI6ImNsaWVudF9zZWNyZXQiLCJ2YWx1ZSI6IjwgY29weSBjcmVkZW50aWFscyBmcm9tIHlvdXIgZGV2ZWxvcGVyLnBheXBhbC5jb20gYW5kIHBhc3RlIHRoZW0gaGVyZSA+IiwiZW5hYmxlZCI6ZmFsc2V9XQ==)\n\n[![](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/19024122-92a85d0e-51e7-47da-9f83-c45dcb1cdf24?action=collection/fork&collection-url=entityId=19024122-92a85d0e-51e7-47da-9f83-c45dcb1cdf24&entityType=collection&workspaceId=345300e6-346e-42e0-aed1-53717919aef0#?env[PayPal%20Override%20Env]=W3sia2V5IjoiUGxlYXNlIE5vdGUgLS0+IiwidmFsdWUiOiI8IFBheVBhbCBQdWJsaWMgQ29sbGVjdGlvbiBjb21lcyB3aXRoIGRlZmF1bHQgcHVibGljIHNldCBvZiBjcmVkZW50aWFscyBzdG9yZWQgYXQgdGhlIENvbGxlY3Rpb24gbGV2ZWwuIFxuVGhpcyBlbnZpcm9ubWVudCBvdmVycmlkZXMgdGhvc2UgZGVmYXVsdCB2YXJpYWJsZXMuIFlvdSBtYXkgYnJpbmcgeW91ciBvd24gY3JlZGVudGlhbHMgZnJvbSBQYXlQYWwgRGV2ZWxvcGVyIERhc2hib2FyZCBhbmQgcGFzdGUgdGhlbSBoZXJlLiBEbyBub3QgZm9yZ290IHRvIGVuYWJsZSB0aGUgdmFpYWJsZSBieSBjaGVja2luZyB0aGUgYm94IGFuZCBoaXQgXCJTYXZlXCIgYmVmb3JlIGludm9raW5nIHRoZSBQYXlQYWwgQVBJcy4gPiIsImVuYWJsZWQiOnRydWV9LHsia2V5IjoiY2xpZW50X2lkIiwidmFsdWUiOiI8IGNvcHkgY3JlZGVudGlhbHMgZnJvbSB5b3VyIGRldmVsb3Blci5wYXlwYWwuY29tIGFuZCBwYXN0ZSB0aGVtIGhlcmUgPiIsImVuYWJsZWQiOmZhbHNlfSx7ImtleSI6ImNsaWVudF9zZWNyZXQiLCJ2YWx1ZSI6IjwgY29weSBjcmVkZW50aWFscyBmcm9tIHlvdXIgZGV2ZWxvcGVyLnBheXBhbC5jb20gYW5kIHBhc3RlIHRoZW0gaGVyZSA+IiwiZW5hYmxlZCI6ZmFsc2V9XQ==)\n\n## Step 2: Get your access token\n\nAn access token is automatically generated using a default `client_id` and `secret`. PayPal recommends using your own `client_id` and `secret` from the [Developer Dashboard](https://www.paypal.com/signin?intent=developer&returnUri=https%3A%2F%2Fdeveloper.paypal.com%2Fdeveloper%2Fapplication) by entering the values under the **Variables** tab. A pre-request script will generate and manage the `access_token` automatically.\n\n> **Note:** Your developer account `client_id` and `secret` may have a different scope than the default `client_id` and `secret`.\n\n## Step 3: Make your first API call\n\nPayPal recommends starting with the Orders API. These steps will use the Orders API to create an order and capture payment using [sandbox accounts](https://developer.paypal.com/developer/accounts) linked to your Developer Dashboard account.\n\nTo create an order:\n\n1. In your workspace, navigate to your fork of the PayPal collection.\n1. Select **Orders > Create Order**.\n1. Select the **Send** button to create the order. On a successful call, the API returns a 201 order created response code.\n1. In the response, find the **approve** link.\n1. Open the **approve** link in a browser.\n1. Log in with your Developer Dashboard Sandbox Personal Account credentials. You can find those credentials by logging into the Developer Dashboard and selecting **Sandbox > Account**\n1. Select the **Continue** button. Payment has now been made.\n\nTo capture payment:\n\n1. In the response of the order you created, find the `order_id`.\n1. In the **Variables** tab, enter the `order_id` number.\n1. Select **Orders > Capture payment for order**.\n1. Select **Send**. On a successful call, the API returns a 201 order created response code.\n\nYour order has been created and payment has been captured. You can verify the transaction in both the sandbox personal account and the sandbox business account.\n\n![Buyer Payment Verification](https://www.paypalobjects.com/devdoc/transaction-details-buyer.png)\n![Seller Payment Verification](https://www.paypalobjects.com/devdoc/transaction-details-seller.png)",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "_exporter_id": "18897170"
+    },
+    "item": [
+        {
+            "name": "Authorization",
+            "item": []
+        },
+        {
+            "name": "Orders",
+            "item": [
+                {
+                    "name": "Create order",
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "exec": [
+                                    "pm.test(\"Extract resource_id\", function() {",
+                                    "    var jsonData = pm.response.json();",
+                                    "    pm.expect(jsonData).to.have.property('id');",
+                                    "    pm.collectionVariables.set(\"order_id\", jsonData.id);",
+                                    "",
+                                    "    if (jsonData.purchase_units && jsonData.purchase_units[0] && jsonData.purchase_units[0].payments) {",
+                                    "        var payments = jsonData.purchase_units && jsonData.purchase_units[0] && jsonData.purchase_units[0].payments;",
+                                    "        if (payments.authorizations && payments.authorizations[0]) {",
+                                    "            pm.collectionVariables.set(\"authorization_id\", payments.authorizations[0].id);",
+                                    "        }",
+                                    "        if (payments.captures && payments.captures[0]) {",
+                                    "            pm.collectionVariables.set(\"capture_id\", payments.captures[0].id);",
+                                    "        }",
+                                    "    }",
+                                    "});"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        },
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "exec": [
+                                    "// first API in the folder enable delay subsequent APIs only during folder/collection run.",
+                                    "pm.variables.set('delayed_run', 'true');"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ],
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "description": "The Content-Type header field is used to specify the nature of the data in the body of an entity. PayPal REST APIs support application/json."
+                            },
+                            {
+                                "description": "The preferred server response upon successful completion of the request. Value is:<ul><li><code>return=minimal</code>. The server returns a minimal response to optimize communication between the API caller and the server. A minimal response includes the <code>id</code>, <code>status</code> and HATEOAS links.</li><li><code>return=representation</code>. The server returns a complete resource representation, including the current state of the resource.</li></ul>",
+                                "key": "Prefer",
+                                "value": "{{prefer_representation_detailed}}"
+                            },
+                            {
+                                "description": "The server stores keys for 6 hours. The API callers can request the times to up to 72 hours by speaking to their Account Manager.",
+                                "key": "PayPal-Request-Id",
+                                "value": "{{$guid}}"
+                            },
+                            {
+                                "key": "PayPal-Client-Metadata-Id",
+                                "value": "{{paypal_client_metadata_Id}}",
+                                "description": "Optional. Verifies that the payment originates from a valid, user-consented device and application. Reduces fraud and decreases declines. Transactions that do not include a client metadata ID are not eligible for PayPal Seller Protection.",
+                                "disabled": true
+                            },
+                            {
+                                "key": "PayPal-Partner-Attribution-Id",
+                                "value": "{{paypal_partner_attribution_id}}",
+                                "description": "Optional. Identifies the caller as a PayPal partner. To receive revenue attribution, specify a unique build notation (BN) code. BN codes provide tracking on all transactions that originate or are associated with a particular partner. To find your BN code, see Code and Credential Reference.",
+                                "disabled": true
+                            },
+                            {
+                                "key": "PayPal-Auth-Assertion",
+                                "value": "{{paypal_auth_assertion}}",
+                                "description": "An API client-provided JSON Web Token (JWT) assertion that identifies the merchant. To use this header, you must get consent to act on behalf of a merchant.\n\n",
+                                "type": "text",
+                                "disabled": true
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"intent\": \"CAPTURE\",\n    \"purchase_units\": [\n        {\n            \"items\": [\n                {\n                    \"name\": \"T-Shirt\",\n                    \"description\": \"Green XL\",\n                    \"quantity\": \"1\",\n                    \"unit_amount\": {\n                        \"currency_code\": \"USD\",\n                        \"value\": \"100.00\"\n                    }\n                }\n            ],\n            \"amount\": {\n                \"currency_code\": \"USD\",\n                \"value\": \"100.00\",\n                \"breakdown\": {\n                    \"item_total\": {\n                        \"currency_code\": \"USD\",\n                        \"value\": \"100.00\"\n                    }\n                }\n            }\n        }\n    ],\n    \"application_context\": {\n        \"return_url\": \"https://example.com/return\",\n        \"cancel_url\": \"https://example.com/cancel\"\n    }\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/v2/checkout/orders",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "v2",
+                                "checkout",
+                                "orders"
+                            ]
+                        },
+                        "description": "Creates an order.<blockquote><strong>Note:</strong> For error handling and troubleshooting, see <a href=\"https://developer.paypal.com/api/rest/reference/orders/v2/errors/#create-order\">Orders v2 errors</a>.</blockquote>"
+                    },
+                    "response": [
+                        {
+                            "name": "Create order",
+                            "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json",
+                                        "description": "The Content-Type header field is used to specify the nature of the data in the body of an entity. PayPal REST APIs support application/json."
+                                    },
+                                    {
+                                        "key": "Prefer",
+                                        "value": "{{prefer_representation_detailed}}",
+                                        "description": "The preferred server response upon successful completion of the request. Value is:<ul><li><code>return=minimal</code>. The server returns a minimal response to optimize communication between the API caller and the server. A minimal response includes the <code>id</code>, <code>status</code> and HATEOAS links.</li><li><code>return=representation</code>. The server returns a complete resource representation, including the current state of the resource.</li></ul>"
+                                    },
+                                    {
+                                        "key": "PayPal-Request-Id",
+                                        "value": "{{$guid}}",
+                                        "description": "The server stores keys for 6 hours. The API callers can request the times to up to 72 hours by speaking to their Account Manager."
+                                    },
+                                    {
+                                        "key": "PayPal-Client-Metadata-Id",
+                                        "value": "{{paypal_client_metadata_Id}}",
+                                        "description": "Optional. Verifies that the payment originates from a valid, user-consented device and application. Reduces fraud and decreases declines. Transactions that do not include a client metadata ID are not eligible for PayPal Seller Protection.",
+                                        "disabled": true
+                                    },
+                                    {
+                                        "key": "PayPal-Partner-Attribution-Id",
+                                        "value": "{{paypal_partner_attribution_id}}",
+                                        "description": "Optional. Identifies the caller as a PayPal partner. To receive revenue attribution, specify a unique build notation (BN) code. BN codes provide tracking on all transactions that originate or are associated with a particular partner. To find your BN code, see Code and Credential Reference.",
+                                        "disabled": true
+                                    },
+                                    {
+                                        "key": "PayPal-Auth-Assertion",
+                                        "value": "{{paypal_auth_assertion}}",
+                                        "description": "An API client-provided JSON Web Token (JWT) assertion that identifies the merchant. To use this header, you must get consent to act on behalf of a merchant.\n\n",
+                                        "disabled": true
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"intent\": \"CAPTURE\",\n    \"purchase_units\": [\n        {\n            \"amount\": {\n                \"currency_code\": \"USD\",\n                \"value\": \"100.00\"\n            }\n        }\n    ]\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "{{base_url}}/v2/checkout/orders",
+                                    "host": [
+                                        "{{base_url}}"
+                                    ],
+                                    "path": [
+                                        "v2",
+                                        "checkout",
+                                        "orders"
+                                    ]
+                                }
+                            },
+                            "status": "Created",
+                            "code": 201,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "742"
+                                },
+                                {
+                                    "key": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "key": "Date",
+                                    "value": "Fri, 04 Feb 2022 02:22:17 GMT"
+                                },
+                                {
+                                    "key": "Application_id",
+                                    "value": "APP-80W284485P519543T"
+                                },
+                                {
+                                    "key": "Cache-Control",
+                                    "value": "max-age=0, no-cache, no-store, must-revalidate"
+                                },
+                                {
+                                    "key": "Caller_acct_num",
+                                    "value": "ER87FV8ER63HJ"
+                                },
+                                {
+                                    "key": "Paypal-Debug-Id",
+                                    "value": "6463af374c106"
+                                },
+                                {
+                                    "key": "Strict-Transport-Security",
+                                    "value": "max-age=31536000; includeSubDomains"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "{\n    \"id\": \"09H88704RC448263N\",\n    \"intent\": \"CAPTURE\",\n    \"status\": \"CREATED\",\n    \"purchase_units\": [\n        {\n            \"reference_id\": \"default\",\n            \"amount\": {\n                \"currency_code\": \"USD\",\n                \"value\": \"100.00\"\n            },\n            \"payee\": {\n                \"email_address\": \"etondoze-facilitator@gmail.com\",\n                \"merchant_id\": \"ER87FV8ER63HJ\"\n            }\n        }\n    ],\n    \"create_time\": \"2022-02-04T02:22:17Z\",\n    \"links\": [\n        {\n            \"href\": \"https://api.sandbox.paypal.com/v2/checkout/orders/09H88704RC448263N\",\n            \"rel\": \"self\",\n            \"method\": \"GET\"\n        },\n        {\n            \"href\": \"https://www.sandbox.paypal.com/checkoutnow?token=09H88704RC448263N\",\n            \"rel\": \"approve\",\n            \"method\": \"GET\"\n        },\n        {\n            \"href\": \"https://api.sandbox.paypal.com/v2/checkout/orders/09H88704RC448263N\",\n            \"rel\": \"update\",\n            \"method\": \"PATCH\"\n        },\n        {\n            \"href\": \"https://api.sandbox.paypal.com/v2/checkout/orders/09H88704RC448263N/capture\",\n            \"rel\": \"capture\",\n            \"method\": \"POST\"\n        }\n    ]\n}"
+                        }
+                    ]
+                }
+            ],
+            "description": "An order represents a payment between two or more parties. Use the Orders API to create, update, retrieve, authorize, and capture orders.\n\nUse the `/orders` resource to create, update, retrieve, authorize, and capture orders."
+        },
+        {
+            "name": "Payments",
+            "item": [],
+            "description": "Call the Payments API to authorize payments, capture authorized payments, refund payments that have already been captured, and show payment information. Use the Payments API in conjunction with the <a href=\"https://developer.paypal.com/api/orders/v2/\">Orders API</a>. For more information, see the <a href=\"https://developer.paypal.com/docs/checkout/\">PayPal Checkout Overview</a>."
+        },
+        {
+            "name": "Invoices",
+            "item": [
+                {
+                    "name": "Invoices",
+                    "item": [],
+                    "description": "Use the `/invoices` resource to create, update, and send invoices and invoice reminders. To manage invoices, you can also list invoices, show details for invoices, delete draft invoices, and cancel sent invoices. You can also record payments for invoices to mark them as fully or partially paid, or record refunds for invoices to mark them as fully or partially refunded. You can create QR codes for invoices that can be scanned, viewed, and paid by a mobile phone."
+                },
+                {
+                    "name": "Templates",
+                    "item": [],
+                    "description": "Use the `/templates` resource to create, list, show details for, update, and delete invoice templates. Use the `/templates` resource when you create a third-party invoicing application. For instance, a business can create a template with predefined invoice data. Later, the business can select the template to populate the invoice data.<blockquote><strong>Note:</strong> To upload a logo to display on an invoice, you can use the <strong>Template Settings</strong> dashboard to <a href=\"https://www.paypal.com/invoice/settings/templates\">create a template</a>. When you create an invoice, you can use the URI for that logo.</blockquote>"
+                }
+            ],
+            "description": "Use the Invoicing API to create, send, and manage invoices. You can also use the API or webhooks to track invoice payments. When you send an invoice to a customer, the invoice moves from draft to payable state. PayPal then emails the customer a link to the invoice on the PayPal website. Customers with a PayPal account can log in and pay the invoice with PayPal. Alternatively, customers can pay as a guest with a debit card or credit card. For more information, see the <a href=\"https://developer.paypal.com/docs/invoicing/\">Invoicing Overview</a> and the <a href=\"https://developer.paypal.com/docs/invoicing/basic-integration/\">Invoicing Integration Guide</a>."
+        },
+        {
+            "name": "Subscriptions",
+            "item": [
+                {
+                    "name": "Catalog Products",
+                    "item": [
+                        {
+                            "name": "List products",
+                            "request": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "PayPal-Partner-Attribution-Id",
+                                        "value": "{{paypal_partner_attribution_id}}",
+                                        "type": "text",
+                                        "description": "Optional. Identifies the caller as a PayPal partner. To receive revenue attribution, specify a unique build notation (BN) code. BN codes provide tracking on all transactions that originate or are associated with a particular partner. To find your BN code, see Code and Credential Reference.",
+                                        "disabled": true
+                                    },
+                                    {
+                                        "key": "PayPal-Auth-Assertion",
+                                        "value": "{{paypal_auth_assertion}}",
+                                        "type": "text",
+                                        "description": "An API client-provided JSON Web Token (JWT) assertion that identifies the merchant. To use this header, you must get consent to act on behalf of a merchant.\n",
+                                        "disabled": true
+                                    },
+                                    {
+                                        "key": "Prefer",
+                                        "value": "{{prefer_representation_detailed}}",
+                                        "type": "text",
+                                        "description": "The preferred server response upon successful completion of the request. Value is:<ul><li><code>return=minimal</code>. The server returns a minimal response to optimize communication between the API caller and the server. A minimal response includes the <code>id</code>, <code>status</code> and HATEOAS links.</li><li><code>return=representation</code>. The server returns a complete resource representation, including the current state of the resource.</li></ul>",
+                                        "disabled": true
+                                    },
+                                    {
+                                        "key": "Prefer",
+                                        "value": "{{prefer_representation_minimal}}",
+                                        "description": "The preferred server response upon successful completion of the request. Value is:<ul><li><code>return=minimal</code>. The server returns a minimal response to optimize communication between the API caller and the server. A minimal response includes the <code>id</code>, <code>status</code> and HATEOAS links.</li><li><code>return=representation</code>. The server returns a complete resource representation, including the current state of the resource.</li></ul>",
+                                        "type": "text",
+                                        "disabled": true
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json",
+                                        "type": "text",
+                                        "description": "The Content-Type header field is used to specify the nature of the data in the body of an entity. PayPal REST APIs support application/json.",
+                                        "disabled": true
+                                    },
+                                    {
+                                        "key": "PayPal-Request-Id",
+                                        "value": "{{$guid}}",
+                                        "type": "text",
+                                        "description": "The server stores keys for 6 hours. The API callers can request the times to up to 72 hours by speaking to their Account Manager.",
+                                        "disabled": true
+                                    },
+                                    {
+                                        "key": "PayPal-Client-Metadata-Id",
+                                        "value": "{{paypal_client_metadata_Id}}",
+                                        "type": "text",
+                                        "description": "Optional. Verifies that the payment originates from a valid, user-consented device and application. Reduces fraud and decreases declines. Transactions that do not include a client metadata ID are not eligible for PayPal Seller Protection.",
+                                        "disabled": true
+                                    },
+                                    {
+                                        "key": "PayPal-Partner-Attribution-Id",
+                                        "value": "{{paypal_partner_attribution_id}}",
+                                        "type": "text",
+                                        "description": "Optional. Identifies the caller as a PayPal partner. To receive revenue attribution, specify a unique build notation (BN) code. BN codes provide tracking on all transactions that originate or are associated with a particular partner. To find your BN code, see Code and Credential Reference.",
+                                        "disabled": true
+                                    },
+                                    {
+                                        "key": "PayPal-Auth-Assertion",
+                                        "value": "{{paypal_auth_assertion}}",
+                                        "type": "text",
+                                        "description": "An API client-provided JSON Web Token (JWT) assertion that identifies the merchant. To use this header, you must get consent to act on behalf of a merchant.\n",
+                                        "disabled": true
+                                    },
+                                    {
+                                        "key": "Prefer",
+                                        "value": "{{prefer_representation_detailed}}",
+                                        "type": "text",
+                                        "description": "The preferred server response upon successful completion of the request. Value is:<ul><li><code>return=minimal</code>. The server returns a minimal response to optimize communication between the API caller and the server. A minimal response includes the <code>id</code>, <code>status</code> and HATEOAS links.</li><li><code>return=representation</code>. The server returns a complete resource representation, including the current state of the resource.</li></ul>",
+                                        "disabled": true
+                                    },
+                                    {
+                                        "key": "Prefer",
+                                        "value": "{{prefer_representation_minimal}}",
+                                        "description": "The preferred server response upon successful completion of the request. Value is:<ul><li><code>return=minimal</code>. The server returns a minimal response to optimize communication between the API caller and the server. A minimal response includes the <code>id</code>, <code>status</code> and HATEOAS links.</li><li><code>return=representation</code>. The server returns a complete resource representation, including the current state of the resource.</li></ul>",
+                                        "type": "text",
+                                        "disabled": true
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{base_url}}/v1/catalogs/products?page_size=10&page=1&total_required=true",
+                                    "host": [
+                                        "{{base_url}}"
+                                    ],
+                                    "path": [
+                                        "v1",
+                                        "catalogs",
+                                        "products"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "page_size",
+                                            "value": "10",
+                                            "description": "The number of items to return in the response."
+                                        },
+                                        {
+                                            "key": "page",
+                                            "value": "1",
+                                            "description": "A non-zero integer which is the start index of the entire list of items that are returned in the response. So, the combination of `page=1` and `page_size=20` returns the first 20 items. The combination of `page=2` and `page_size=20` returns the next 20 items."
+                                        },
+                                        {
+                                            "key": "total_required",
+                                            "value": "true",
+                                            "description": "Indicates whether to show the total items and total pages in the response."
+                                        }
+                                    ]
+                                },
+                                "description": "Lists products."
+                            },
+                            "response": [
+                                {
+                                    "name": "List products",
+                                    "originalRequest": {
+                                        "method": "GET",
+                                        "header": [
+                                            {
+                                                "key": "PayPal-Partner-Attribution-Id",
+                                                "value": "{{paypal_partner_attribution_id}}",
+                                                "description": "Optional. Identifies the caller as a PayPal partner. To receive revenue attribution, specify a unique build notation (BN) code. BN codes provide tracking on all transactions that originate or are associated with a particular partner. To find your BN code, see Code and Credential Reference.",
+                                                "disabled": true
+                                            },
+                                            {
+                                                "key": "PayPal-Auth-Assertion",
+                                                "value": "{{paypal_auth_assertion}}",
+                                                "description": "An API client-provided JSON Web Token (JWT) assertion that identifies the merchant. To use this header, you must get consent to act on behalf of a merchant.\n",
+                                                "disabled": true
+                                            },
+                                            {
+                                                "key": "Prefer",
+                                                "value": "{{prefer_representation_detailed}}",
+                                                "description": "The preferred server response upon successful completion of the request. Value is:<ul><li><code>return=minimal</code>. The server returns a minimal response to optimize communication between the API caller and the server. A minimal response includes the <code>id</code>, <code>status</code> and HATEOAS links.</li><li><code>return=representation</code>. The server returns a complete resource representation, including the current state of the resource.</li></ul>",
+                                                "disabled": true
+                                            },
+                                            {
+                                                "key": "Prefer",
+                                                "value": "{{prefer_representation_minimal}}",
+                                                "description": "The preferred server response upon successful completion of the request. Value is:<ul><li><code>return=minimal</code>. The server returns a minimal response to optimize communication between the API caller and the server. A minimal response includes the <code>id</code>, <code>status</code> and HATEOAS links.</li><li><code>return=representation</code>. The server returns a complete resource representation, including the current state of the resource.</li></ul>",
+                                                "disabled": true
+                                            },
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/json",
+                                                "description": "The Content-Type header field is used to specify the nature of the data in the body of an entity. PayPal REST APIs support application/json.",
+                                                "disabled": true
+                                            },
+                                            {
+                                                "key": "PayPal-Request-Id",
+                                                "value": "{{$guid}}",
+                                                "description": "The server stores keys for 6 hours. The API callers can request the times to up to 72 hours by speaking to their Account Manager.",
+                                                "disabled": true
+                                            },
+                                            {
+                                                "key": "PayPal-Client-Metadata-Id",
+                                                "value": "{{paypal_client_metadata_Id}}",
+                                                "description": "Optional. Verifies that the payment originates from a valid, user-consented device and application. Reduces fraud and decreases declines. Transactions that do not include a client metadata ID are not eligible for PayPal Seller Protection.",
+                                                "disabled": true
+                                            },
+                                            {
+                                                "key": "PayPal-Partner-Attribution-Id",
+                                                "value": "{{paypal_partner_attribution_id}}",
+                                                "description": "Optional. Identifies the caller as a PayPal partner. To receive revenue attribution, specify a unique build notation (BN) code. BN codes provide tracking on all transactions that originate or are associated with a particular partner. To find your BN code, see Code and Credential Reference.",
+                                                "disabled": true
+                                            },
+                                            {
+                                                "key": "PayPal-Auth-Assertion",
+                                                "value": "{{paypal_auth_assertion}}",
+                                                "description": "An API client-provided JSON Web Token (JWT) assertion that identifies the merchant. To use this header, you must get consent to act on behalf of a merchant.\n",
+                                                "disabled": true
+                                            },
+                                            {
+                                                "key": "Prefer",
+                                                "value": "{{prefer_representation_detailed}}",
+                                                "description": "The preferred server response upon successful completion of the request. Value is:<ul><li><code>return=minimal</code>. The server returns a minimal response to optimize communication between the API caller and the server. A minimal response includes the <code>id</code>, <code>status</code> and HATEOAS links.</li><li><code>return=representation</code>. The server returns a complete resource representation, including the current state of the resource.</li></ul>",
+                                                "disabled": true
+                                            },
+                                            {
+                                                "key": "Prefer",
+                                                "value": "{{prefer_representation_minimal}}",
+                                                "description": "The preferred server response upon successful completion of the request. Value is:<ul><li><code>return=minimal</code>. The server returns a minimal response to optimize communication between the API caller and the server. A minimal response includes the <code>id</code>, <code>status</code> and HATEOAS links.</li><li><code>return=representation</code>. The server returns a complete resource representation, including the current state of the resource.</li></ul>",
+                                                "disabled": true
+                                            }
+                                        ],
+                                        "url": {
+                                            "raw": "{{base_url}}/v1/catalogs/products?page_size=10&page=1&total_required=true",
+                                            "host": [
+                                                "{{base_url}}"
+                                            ],
+                                            "path": [
+                                                "v1",
+                                                "catalogs",
+                                                "products"
+                                            ],
+                                            "query": [
+                                                {
+                                                    "key": "page_size",
+                                                    "value": "10",
+                                                    "description": "The number of items to return in the response."
+                                                },
+                                                {
+                                                    "key": "page",
+                                                    "value": "1",
+                                                    "description": "A non-zero integer which is the start index of the entire list of items that are returned in the response. So, the combination of `page=1` and `page_size=20` returns the first 20 items. The combination of `page=2` and `page_size=20` returns the next 20 items."
+                                                },
+                                                {
+                                                    "key": "total_required",
+                                                    "value": "true",
+                                                    "description": "Indicates whether to show the total items and total pages in the response."
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "_postman_previewlanguage": "json",
+                                    "header": [
+                                        {
+                                            "key": "Connection",
+                                            "value": "keep-alive"
+                                        },
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        },
+                                        {
+                                            "key": "Server",
+                                            "value": "nginx/1.14.0 (Ubuntu)"
+                                        },
+                                        {
+                                            "key": "Cache-Control",
+                                            "value": "max-age=0, no-cache, no-store, must-revalidate"
+                                        },
+                                        {
+                                            "key": "Paypal-Debug-Id",
+                                            "value": "ac5f8136b076c"
+                                        },
+                                        {
+                                            "key": "Strict-Transport-Security",
+                                            "value": "max-age=31536000; includeSubDomains"
+                                        },
+                                        {
+                                            "key": "Edge-Control",
+                                            "value": "max-age=0"
+                                        },
+                                        {
+                                            "key": "Accept-Ranges",
+                                            "value": "none"
+                                        },
+                                        {
+                                            "key": "Date",
+                                            "value": "Fri, 07 Apr 2023 19:00:05 GMT"
+                                        },
+                                        {
+                                            "key": "Via",
+                                            "value": "1.1 varnish"
+                                        },
+                                        {
+                                            "key": "X-Served-By",
+                                            "value": "cache-chi-klot8100164-CHI"
+                                        },
+                                        {
+                                            "key": "X-Cache",
+                                            "value": "MISS"
+                                        },
+                                        {
+                                            "key": "X-Cache-Hits",
+                                            "value": "0"
+                                        },
+                                        {
+                                            "key": "X-Timer",
+                                            "value": "S1680894005.333432,VS0,VE266"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Accept-Encoding"
+                                        },
+                                        {
+                                            "key": "content-encoding",
+                                            "value": "br"
+                                        },
+                                        {
+                                            "key": "transfer-encoding",
+                                            "value": "chunked"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "body": "{\n    \"products\": [\n        {\n            \"id\": \"1647236710\",\n            \"name\": \"Blue M\",\n            \"create_time\": \"2022-03-14T05:45:06Z\",\n            \"links\": [\n                {\n                    \"href\": \"https://api.sandbox.paypal.com/v1/catalogs/products/1647236710\",\n                    \"rel\": \"self\",\n                    \"method\": \"GET\"\n                }\n            ]\n        },\n        {\n            \"id\": \"1647236727\",\n            \"name\": \"Licenza Oro\",\n            \"create_time\": \"2022-03-14T05:45:23Z\",\n            \"links\": [\n                {\n                    \"href\": \"https://api.sandbox.paypal.com/v1/catalogs/products/1647236727\",\n                    \"rel\": \"self\",\n                    \"method\": \"GET\"\n                }\n            ]\n        },\n        {\n            \"id\": \"1647285840\",\n            \"name\": \"Licenza Premium\",\n            \"description\": \"Blue M\",\n            \"create_time\": \"2022-03-14T19:24:00Z\",\n            \"links\": [\n                {\n                    \"href\": \"https://api.sandbox.paypal.com/v1/catalogs/products/1647285840\",\n                    \"rel\": \"self\",\n                    \"method\": \"GET\"\n                }\n            ]\n        },\n        {\n            \"id\": \"1647285859\",\n            \"name\": \"T-Shirt\",\n            \"create_time\": \"2022-03-14T19:24:18Z\",\n            \"links\": [\n                {\n                    \"href\": \"https://api.sandbox.paypal.com/v1/catalogs/products/1647285859\",\n                    \"rel\": \"self\",\n                    \"method\": \"GET\"\n                }\n            ]\n        },\n        {\n            \"id\": \"1647288288\",\n            \"name\": \"T-Shirt\",\n            \"description\": \"Blue M\",\n            \"create_time\": \"2022-03-14T20:04:47Z\",\n            \"links\": [\n                {\n                    \"href\": \"https://api.sandbox.paypal.com/v1/catalogs/products/1647288288\",\n                    \"rel\": \"self\",\n                    \"method\": \"GET\"\n                }\n            ]\n        },\n        {\n            \"id\": \"1647288308\",\n            \"name\": \"T-Shirt\",\n            \"create_time\": \"2022-03-14T20:05:08Z\",\n            \"links\": [\n                {\n                    \"href\": \"https://api.sandbox.paypal.com/v1/catalogs/products/1647288308\",\n                    \"rel\": \"self\",\n                    \"method\": \"GET\"\n                }\n            ]\n        },\n        {\n            \"id\": \"1647289108\",\n            \"name\": \"T-Shirt\",\n            \"description\": \"Blue M\",\n            \"create_time\": \"2022-03-14T20:18:28Z\",\n            \"links\": [\n                {\n                    \"href\": \"https://api.sandbox.paypal.com/v1/catalogs/products/1647289108\",\n                    \"rel\": \"self\",\n                    \"method\": \"GET\"\n                }\n            ]\n        },\n        {\n            \"id\": \"1647289127\",\n            \"name\": \"T-Shirt\",\n            \"create_time\": \"2022-03-14T20:18:47Z\",\n            \"links\": [\n                {\n                    \"href\": \"https://api.sandbox.paypal.com/v1/catalogs/products/1647289127\",\n                    \"rel\": \"self\",\n                    \"method\": \"GET\"\n                }\n            ]\n        },\n        {\n            \"id\": \"1647289319\",\n            \"name\": \"T-Shirt\",\n            \"description\": \"Blue M\",\n            \"create_time\": \"2022-03-14T20:21:59Z\",\n            \"links\": [\n                {\n                    \"href\": \"https://api.sandbox.paypal.com/v1/catalogs/products/1647289319\",\n                    \"rel\": \"self\",\n                    \"method\": \"GET\"\n                }\n            ]\n        },\n        {\n            \"id\": \"1647289338\",\n            \"name\": \"T-Shirt\",\n            \"create_time\": \"2022-03-14T20:22:18Z\",\n            \"links\": [\n                {\n                    \"href\": \"https://api.sandbox.paypal.com/v1/catalogs/products/1647289338\",\n                    \"rel\": \"self\",\n                    \"method\": \"GET\"\n                }\n            ]\n        }\n    ],\n    \"total_items\": 18719,\n    \"total_pages\": 1872,\n    \"links\": [\n        {\n            \"href\": \"https://api.sandbox.paypal.com/v1/catalogs/products?page_size=10&page=1\",\n            \"rel\": \"self\",\n            \"method\": \"GET\"\n        },\n        {\n            \"href\": \"https://api.sandbox.paypal.com/v1/catalogs/products?page_size=10&page=2\",\n            \"rel\": \"next\",\n            \"method\": \"GET\"\n        },\n        {\n            \"href\": \"https://api.sandbox.paypal.com/v1/catalogs/products?page_size=10&page=1872\",\n            \"rel\": \"last\",\n            \"method\": \"GET\"\n        }\n    ]\n}"
+                                }
+                            ]
+                        }
+                    ],
+                    "description": "Merchants can use the Catalog Products API to create products, which are goods and services.\n\nUse `/products` resource to create and manage products."
+                },
+                {
+                    "name": "Plans",
+                    "item": [],
+                    "description": "Use the `/billing/plans` resource to create and manage plans."
+                },
+                {
+                    "name": "Subscriptions",
+                    "item": [],
+                    "description": "Use the `/billing/subscriptions` resource to create and manage subscriptions."
+                }
+            ],
+            "description": "You can use billing plans and subscriptions to create subscriptions that process recurring PayPal payments for physical or digital goods, or services. A plan includes pricing and billing cycle information that defines the amount and frequency of charge for a subscription. You can also define a fixed plan, such as a $5 basic plan or a volume- or graduated-based plan with pricing tiers based on the quantity purchased. For more information, see <a href=\"https://developer.paypal.com/docs/subscriptions/\">Subscriptions Overview</a>."
+        },
+        {
+            "name": "Payouts",
+            "item": [],
+            "description": "Use the Payouts API to make payments to multiple PayPal or Venmo recipients. The Payouts API is a fast, convenient way to send commissions, rebates, rewards, and general disbursements. You can send up to 15,000 payments per call. If you integrated the Payouts API before September 1, 2017, you receive transaction reports through <a href=\"https://developer.paypal.com/docs/archive/mass-pay/integration-guide/MassPayReporting/\">Mass Payments Reporting</a>. Otherwise, <a href=\"https://developer.paypal.com/docs/payouts/features/view-reports/\">view reports from your PayPal Business account</a>. The Payouts API uses the <a href=\"https://tools.ietf.org/html/rfc3339#section-5.6\">ISO 8601 Internet date and time format</a>."
+        },
+        {
+            "name": "Webhooks",
+            "item": [],
+            "description": "The PayPal REST APIs use <a href=\"https://developer.paypal.com/api/rest/webhooks/\"/>webhooks</a> for event notification. Webhooks are HTTP callbacks that receive notification messages for events. After you configure a webhook listener for your app, you can <a href=\"#webhooks_create\">create a webhook</a>, which subscribes the webhook listener for your app to events. The <code>notifications</code> namespace contains resource collections for webhooks."
+        },
+        {
+            "name": "Shipment Tracking",
+            "item": [],
+            "description": "Merchants can use the PayPal Add Tracking API to manage tracking information. Merchants can add tracking numbers and associated information to PayPal. After adding these details to PayPal, merchants can:<ul><li>Update tracking details.</li><li>Show tracking details.</li><li>Cancel tracking numbers.</li></ul>For more information, see the <a href=\"https://developer.paypal.com/docs/tracking/\">Add Tracking API Overview</a> and <a href=\"https://developer.paypal.com/docs/tracking/integrate/\">Add Tracking API Integration Guide</a>."
+        },
+        {
+            "name": "Transaction Search",
+            "item": [],
+            "description": "Use the Transaction Search API to get the history of transactions for a PayPal account. To use the API on behalf of third parties, you must be part of the PayPal partner network. Reach out to your partner manager for the next steps. To enroll in the partner program, see <a href=\"https://www.paypal.com/webapps/mpp/partner-program\">Partner with PayPal</a>. For more information about the API, see the <a href=\"https://developer.paypal.com/docs/transaction-search/\">Transaction Search API Integration Guide</a>."
+        },
+        {
+            "name": "Disputes",
+            "item": [],
+            "description": "Occasionally, something goes wrong with a customer's order. To dispute a charge, a customer can create a dispute with PayPal. PayPal merchants, partners, and external developers can use the PayPal Disputes API to manage customer disputes.<blockquote><strong>Note:</strong> In the live environment, merchants cannot create disputes but can only respond to customer-created disputes. However, merchants can create disputes in the sandbox environment. When you create an app, enable Disputes in the App feature options section.</blockquote>A customer can also ask his or her bank or credit card company to dispute and reverse a charge, which is known as a <i>chargeback</i>. For more information, see <a href=\"https://www.paypal.com/us/brc/article/customer-disputes-claims-chargebacks-bank-reversals\">Disputes, claims, chargebacks, and bank reversals</a>.<br/><br/>When a customer disputes a charge, you can use this API to provide evidence that the charge is legitimate. To provide evidence or appeal a dispute, you submit a proof of delivery or proof of refund document or notes, which can include logs.<br/><br/>Normally, an agent at PayPal creates a dispute, updates the dispute status, and settles disputes, but now you can run test cases in the sandbox that complete these operations.<br/><br/><blockquote><strong>Important:</strong> The create, cancel, compute metrics, change reason, and validate eligibility methods are available as a limited-release solution at this time. For more information, reach out to your PayPal account manager.</blockquote><br/>For details, see <a href=\"https://developer.paypal.com/docs/disputes/#link-customerdisputes\">Disputes Overview</a> documentation."
+        }
+    ],
+    "auth": {
+        "type": "bearer",
+        "bearer": [
+            {
+                "key": "token",
+                "value": "{{access_token}}",
+                "type": "string"
+            }
+        ]
+    },
+    "event": [
+        {
+            "listen": "prerequest",
+            "script": {
+                "type": "text/javascript",
+                "exec": [
+                    "// Following script is executed before every request in this collection. ",
+                    "",
+                    "// Introduce delay in running the APIs only during collection/folder run.",
+                    "// Delay wont be introduced if the APIs are running individually in postman app",
+                    "if (pm.variables.get('delayed_run')) {",
+                    "  setTimeout(() => {}, 1000); // in milliseconds",
+                    "}",
+                    "",
+                    "// This script obtains access_token by invoking PayPal OAuth 2 API and stores it in the collection variable with same name `access_token`. This token is then reused as an Bearer Token for each API invocation until. The script obtains a new access_token automatically when the original one is expired. When the client_id is changed, original access_token is discarded and replaced with new one obtained against that new client_id and client_secret pair.",
+                    "",
+                    "const auth_request = {",
+                    "    url: pm.variables.get(\"base_url\")+'/v1/oauth2/token',",
+                    "    method: 'POST',",
+                    "    header: {",
+                    "        'content-type': 'application/x-www-form-urlencoded',",
+                    "        'authorization': 'Basic ' + btoa(pm.variables.get(\"client_id\") + ':' +",
+                    "            pm.variables.get(\"client_secret\"))",
+                    "    },",
+                    "    body: {",
+                    "        mode: 'urlencoded',",
+                    "        urlencoded: [{",
+                    "            key: 'grant_type',",
+                    "            value: 'client_credentials'",
+                    "        }]",
+                    "    }",
+                    "};",
+                    "",
+                    "//console.info('Invoking: ', pm.info.requestName, pm.info.requestId);",
+                    "if(pm.request.url.path.join('/').includes('/oauth2/token')) {",
+                    "    // excude token generation API from reusing the token.",
+                    "    return;",
+                    "}",
+                    "var needNewToken = true;",
+                    "if (!pm.collectionVariables.get('access_token_expiry') ||",
+                    "    !pm.collectionVariables.get('access_token') ||",
+                    "    !pm.collectionVariables.get('access_token_for')) {",
+                    "    console.log('access_token or its expiry date are missing.');",
+                    "} else if (pm.collectionVariables.get('access_token_expiry') <= (new Date()).getTime()) {",
+                    "    console.log('access_token is expired')",
+                    "} else if (pm.collectionVariables.get('access_token_for') != pm.variables.get(\"client_id\")) {",
+                    "    console.log('client_id is changed', ",
+                    "        pm.collectionVariables.get('access_token_for'), ",
+                    "        pm.variables.get(\"client_id\"))",
+                    "} else {",
+                    "    //console.log('Reusing previous access_token, valid until ', new Date(pm.collectionVariables.get('access_token_expiry')));",
+                    "    needNewToken = false;",
+                    "}",
+                    "",
+                    "if (needNewToken === true) {",
+                    "",
+                    "    // clear cached token before obtaining a new one",
+                    "    pm.collectionVariables.unset('access_token');",
+                    "    pm.collectionVariables.unset('access_token_expiry');",
+                    "    pm.collectionVariables.unset('access_token_for');",
+                    "",
+                    "    pm.sendRequest(auth_request, function(err, response) {",
+                    "        if (response.code === 200) {",
+                    "            console.log('Saving the access_token')",
+                    "            var responseJson = response.json();",
+                    "            pm.collectionVariables.set('access_token', responseJson.access_token)",
+                    "",
+                    "            var expiryDate = new Date();",
+                    "            expiryDate.setSeconds(expiryDate.getSeconds() + responseJson.expires_in);",
+                    "            //console.log('Saving the access_token_expiry', expiryDate.getTime());",
+                    "            pm.collectionVariables.set('access_token_expiry', expiryDate.getTime());",
+                    "            //console.log('Saving the access_token_for');",
+                    "            pm.collectionVariables.set('access_token_for', pm.variables.get(\"client_id\"));",
+                    "",
+                    "        } else {",
+                    "            console.error(\"Failed to obtain access_token\", err, response.code, response.headers.get('Paypal-Debug-Id'), response.json());",
+                    "        }",
+                    "    });",
+                    "}",
+                    "",
+                    "// global function to detect if APIs are being invoked against sandbox",
+                    "Object.prototype.isSandbox = function() {",
+                    "    return pm.variables.get(\"base_url\").includes(\"sandbox.paypal.com\");",
+                    "}",
+                    "",
+                    "// global function to get tomorrow's date in ISO8601 format e.g. 2023-01-26T19:58:16.351Z",
+                    "Object.prototype.getTomorrow = function() {",
+                    "    const tomorrow = new Date();",
+                    "    tomorrow.setDate(tomorrow.getDate() + 1)",
+                    "    return tomorrow.toISOString();",
+                    "}",
+                    "",
+                    "// get value for PayPal-Auth-Assertion header while acting on behalf of a consented seller",
+                    "// Typical Usage: pm.collectionVariables.set('PayPal-Auth-Assertion', getAuthAssertionFor(pm.variables.get('seller1_payer_id')));",
+                    "Object.prototype.getAuthAssertionFor = function(sellerEmailORPayerId) {",
+                    "    var data = {",
+                    "        \"payer_id\": sellerEmailORPayerId",
+                    "    };",
+                    "    return getJWT(pm.variables.get('client_id'), data, \"none\");",
+                    "    //return getJWT(pm.variables.get('client_id'), data, \"HS256\", pm.variables.get('client_secret'));",
+                    "}",
+                    "",
+                    "// generate JSON Web Tokens (JWT) by encoding the header and payload with base64url, ",
+                    "// and optionally signing the token with a secret",
+                    "Object.prototype.getJWT = function(iss, data, alg, secret) {",
+                    "    const header = { alg };",
+                    "    const encodedHeader = base64url(JSON.stringify(header));",
+                    "    const payload = { ...{ iss }, ...data };",
+                    "    const encodedPayload = base64url(JSON.stringify(payload));",
+                    "    const token = `${encodedHeader}.${encodedPayload}`;",
+                    "    const signature = alg && alg !== 'none'",
+                    "        ? base64url(CryptoJS.HmacSHA256(token, secret || '').toString())",
+                    "        : '';",
+                    "    return `${token}.${signature}`;",
+                    "}",
+                    "",
+                    "Object.prototype.base64url = function(source) {",
+                    "    return btoa(source)",
+                    "        .replace(/=+$/, '')",
+                    "        .replace(/\\+/g, '-')",
+                    "        .replace(/\\//g, '_');",
+                    "}",
+                    ""
+                ]
+            }
+        },
+        {
+            "listen": "test",
+            "script": {
+                "type": "text/javascript",
+                "exec": [
+                    "var successHttpStatuses = [200, 201, 202, 204];",
+                    "var message = pm.response.code +\", Paypal-Debug-Id=\"+getPayPalDebugId();",
+                    "",
+                    "if(!isSuccessful()) {",
+                    "    console.error(\"Unexpected HTTP Status Code: \", message, pm.response.text());",
+                    "    console.error(\"https://developer.paypal.com/developer/dashboard/sandbox?Paypal-Debug-Id=\"+getPayPalDebugId());",
+                    "    message = message + \", \"+pm.response.text();",
+                    "}",
+                    "",
+                    "pm.test(\"HTTP Status Code must be one of \"+successHttpStatuses+\", actual is \"+message, function () {",
+                    "    pm.expect(pm.response.code).to.be.oneOf(successHttpStatuses);",
+                    "});",
+                    "",
+                    "function getPayPalDebugId() {",
+                    "    if(pm && pm.response && pm.response.headers) {",
+                    "        return pm.response.headers.get('Paypal-Debug-Id');",
+                    "    } ",
+                    "}",
+                    "",
+                    "function isSuccessful() {",
+                    "    return successHttpStatuses.includes(pm.response.code);",
+                    "}"
+                ]
+            }
+        }
+    ],
+    "variable": [
+        {
+            "key": "PLEASE NOTE -->",
+            "value": "< PayPal Public Collection comes with following default public set of credentials stored at the Collection level. \nYou may choose to override these values via environment level variables. You may bring your own credentials from PayPal Developer Dashboard there."
+        },
+        {
+            "key": "base_url",
+            "value": "https://api-m.sandbox.paypal.com"
+        },
+        {
+            "key": "client_id",
+            "value": "AUv8rrc_P-EbP2E0mpb49BV7rFt3Usr-vdUZO8VGOnjRehGHBXkSzchr37SYF2GNdQFYSp72jh5QUhzG"
+        },
+        {
+            "key": "client_secret",
+            "value": "EMnAWe06ioGtouJs7gLYT9chK9-2jJ--7MKRXpI8FesmY_2Kp-d_7aCqff7M9moEJBvuXoBO4clKtY0v"
+        },
+        {
+            "key": "access_token",
+            "value": ""
+        },
+        {
+            "key": "access_token_expiry",
+            "value": ""
+        },
+        {
+            "key": "access_token_for",
+            "value": ""
+        },
+        {
+            "key": "authorization_id",
+            "value": ""
+        },
+        {
+            "key": "billing_plan_id",
+            "value": ""
+        },
+        {
+            "key": "capture_id",
+            "value": ""
+        },
+        {
+            "key": "dispute_id",
+            "value": ""
+        },
+        {
+            "key": "event_auth_algo",
+            "value": ""
+        },
+        {
+            "key": "event_cert_url",
+            "value": ""
+        },
+        {
+            "key": "event_id",
+            "value": ""
+        },
+        {
+            "key": "event_transmission_id",
+            "value": ""
+        },
+        {
+            "key": "event_transmission_sig",
+            "value": ""
+        },
+        {
+            "key": "event_transmission_time",
+            "value": ""
+        },
+        {
+            "key": "event_webhook_payload",
+            "value": ""
+        },
+        {
+            "key": "invoice_id",
+            "value": ""
+        },
+        {
+            "key": "invoice_payment_id",
+            "value": ""
+        },
+        {
+            "key": "invoice_template_id",
+            "value": ""
+        },
+        {
+            "key": "order_id",
+            "value": ""
+        },
+        {
+            "key": "payout_batch_id",
+            "value": ""
+        },
+        {
+            "key": "payout_item_id",
+            "value": ""
+        },
+        {
+            "key": "paypal_auth_assertion",
+            "value": ""
+        },
+        {
+            "key": "paypal_client_metadata_Id",
+            "value": ""
+        },
+        {
+            "key": "paypal_partner_attribution_id",
+            "value": "TEST_ATTRIBUTION_ID"
+        },
+        {
+            "key": "pipedream_key",
+            "value": ""
+        },
+        {
+            "key": "prefer_representation_detailed",
+            "value": "return=representation"
+        },
+        {
+            "key": "prefer_representation_min",
+            "value": "return=minimal"
+        },
+        {
+            "key": "product_id",
+            "value": "1645840190"
+        },
+        {
+            "key": "refund_id",
+            "value": ""
+        },
+        {
+            "key": "subscription_id",
+            "value": ""
+        },
+        {
+            "key": "todays_date",
+            "value": ""
+        },
+        {
+            "key": "tracking_id",
+            "value": ""
+        },
+        {
+            "key": "tracking_number",
+            "value": ""
+        },
+        {
+            "key": "web_profile_id",
+            "value": ""
+        },
+        {
+            "key": "webhook_id",
+            "value": ""
+        },
+        {
+            "key": "webhook_url",
+            "value": ""
+        }
+    ]
+}

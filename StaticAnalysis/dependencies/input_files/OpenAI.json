@@ -1,0 +1,3333 @@
+{
+	"info": {
+		"_postman_id": "2b2c3783-bf9b-4875-b052-8f5939da8610",
+		"name": "OpenAI Copy",
+		"description": "[The OpenAI API](https://beta.openai.com/docs/introduction/overview) can be applied to virtually any task that involves understanding or generating natural language or code. We offer a spectrum of [models](https://beta.openai.com/docs/models) with different levels of power suitable for different tasks, as well as the ability to [fine-tune](https://beta.openai.com/docs/guides/fine-tuning) your own custom models. These models can be used for everything from content generation to semantic search and classification.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18897170"
+	},
+	"item": [
+		{
+			"name": "Models",
+			"item": [
+				{
+					"name": "List models",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/models",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"models"
+							]
+						},
+						"description": "Lists the currently available engines, and provides basic information about each one such as the owner and availability.\n\n[See More](https://beta.openai.com/docs/api-reference/engines/list)\n"
+					},
+					"response": [
+						{
+							"name": "List models",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/models",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"models"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 22 Mar 2023 22:24:57 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "45701"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "OpenAI-Version",
+									"value": "2020-10-01"
+								},
+								{
+									"key": "OpenAI-Organization",
+									"value": "user-aaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "f281653ca33e44e1f6a3cfb65690a862"
+								},
+								{
+									"key": "OpenAI-Processing-Ms",
+									"value": "74"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15724800; includeSubDomains"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"object\": \"list\",\n    \"data\": [\n        {\n            \"id\": \"davinci\",\n            \"object\": \"model\",\n            \"created\": 1649359874,\n            \"owned_by\": \"openai\",\n            \"permission\": [\n                {\n                    \"id\": \"modelperm-U6ZwlyAd0LyMk4rcMdz33Yc3\",\n                    \"object\": \"model_permission\",\n                    \"created\": 1669066355,\n                    \"allow_create_engine\": false,\n                    \"allow_sampling\": true,\n                    \"allow_logprobs\": true,\n                    \"allow_search_indices\": false,\n                    \"allow_view\": true,\n                    \"allow_fine_tuning\": false,\n                    \"organization\": \"*\",\n                    \"group\": null,\n                    \"is_blocking\": false\n                }\n            ],\n            \"root\": \"davinci\",\n            \"parent\": null\n        },\n        {\n            \"id\": \"text-similarity-babbage-001\",\n            \"object\": \"model\",\n            \"created\": 1651172505,\n            \"owned_by\": \"openai-dev\",\n            \"permission\": [\n                {\n                    \"id\": \"modelperm-48kcCHhfzvnfY84OtJf5m8Cz\",\n                    \"object\": \"model_permission\",\n                    \"created\": 1669081947,\n                    \"allow_create_engine\": false,\n                    \"allow_sampling\": true,\n                    \"allow_logprobs\": true,\n                    \"allow_search_indices\": true,\n                    \"allow_view\": true,\n                    \"allow_fine_tuning\": false,\n                    \"organization\": \"*\",\n                    \"group\": null,\n                    \"is_blocking\": false\n                }\n            ],\n            \"root\": \"text-similarity-babbage-001\",\n            \"parent\": null\n        },\n        {\n            \"id\": \"gpt-3.5-turbo\",\n            \"object\": \"model\",\n            \"created\": 1677610602,\n            \"owned_by\": \"openai\",\n            \"permission\": [\n                {\n                    \"id\": \"modelperm-gsCj9RWTrhBBXxLD3balnjDC\",\n                    \"object\": \"model_permission\",\n                    \"created\": 1679514173,\n                    \"allow_create_engine\": false,\n                    \"allow_sampling\": true,\n                    \"allow_logprobs\": true,\n                    \"allow_search_indices\": false,\n                    \"allow_view\": true,\n                    \"allow_fine_tuning\": false,\n                    \"organization\": \"*\",\n                    \"group\": null,\n                    \"is_blocking\": false\n                }\n            ],\n            \"root\": \"gpt-3.5-turbo\",\n            \"parent\": null\n        },\n        {\n            \"id\": \"text-davinci-edit-001\",\n            \"object\": \"model\",\n            \"created\": 1649809179,\n            \"owned_by\": \"openai\",\n            \"permission\": [\n                {\n                    \"id\": \"modelperm-3NeB0MQxtyng6zr1OyafQWsR\",\n                    \"object\": \"model_permission\",\n                    \"created\": 1679353911,\n                    \"allow_create_engine\": false,\n                    \"allow_sampling\": true,\n                    \"allow_logprobs\": true,\n                    \"allow_search_indices\": false,\n                    \"allow_view\": true,\n                    \"allow_fine_tuning\": false,\n                    \"organization\": \"*\",\n                    \"group\": null,\n                    \"is_blocking\": false\n                }\n            ],\n            \"root\": \"text-davinci-edit-001\",\n            \"parent\": null\n        },\n        {\n            \"id\": \"text-babbage:001\",\n            \"object\": \"model\",\n            \"created\": 1642018370,\n            \"owned_by\": \"openai\",\n            \"permission\": [\n                {\n                    \"id\": \"snapperm-7oP3WFr9x7qf5xb3eZrVABAH\",\n                    \"object\": \"model_permission\",\n                    \"created\": 1642018480,\n                    \"allow_create_engine\": false,\n                    \"allow_sampling\": true,\n                    \"allow_logprobs\": true,\n                    \"allow_search_indices\": false,\n                    \"allow_view\": true,\n                    \"allow_fine_tuning\": false,\n                    \"organization\": \"*\",\n                    \"group\": null,\n                    \"is_blocking\": false\n                }\n            ],\n            \"root\": \"text-babbage:001\",\n            \"parent\": null\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Retrieve model",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/models/:model_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"models",
+								":model_id"
+							],
+							"variable": [
+								{
+									"key": "model_id",
+									"value": "babbage"
+								}
+							]
+						},
+						"description": "Retrieves an engine instance, providing basic information about the engine such as the owner and availability.\n\n[See More](https://beta.openai.com/docs/api-reference/engines/retrieve)\n"
+					},
+					"response": [
+						{
+							"name": "Retrieve model",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/models/:model_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"models",
+										":model_id"
+									],
+									"variable": [
+										{
+											"key": "model_id",
+											"value": "babbage"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 10 Dec 2022 19:52:06 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "549"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "OpenAI-Version",
+									"value": "2020-10-01"
+								},
+								{
+									"key": "OpenAI-Organization",
+									"value": "user-aaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "ca0c3e2fc88b859eebd7eb1a80f399a5"
+								},
+								{
+									"key": "OpenAI-Processing-Ms",
+									"value": "32"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15724800; includeSubDomains"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"babbage\",\n    \"object\": \"model\",\n    \"created\": 1649358449,\n    \"owned_by\": \"openai\",\n    \"permission\": [\n        {\n            \"id\": \"modelperm-49FUp5v084tBB49tC4z8LPH5\",\n            \"object\": \"model_permission\",\n            \"created\": 1669085501,\n            \"allow_create_engine\": false,\n            \"allow_sampling\": true,\n            \"allow_logprobs\": true,\n            \"allow_search_indices\": false,\n            \"allow_view\": true,\n            \"allow_fine_tuning\": false,\n            \"organization\": \"*\",\n            \"group\": null,\n            \"is_blocking\": false\n        }\n    ],\n    \"root\": \"babbage\",\n    \"parent\": null\n}"
+						}
+					]
+				}
+			],
+			"description": "List and describe the various models available in the API. You can refer to the [Models](https://beta.openai.com/docs/models) documentation to understand what models are available and the differences between them."
+		},
+		{
+			"name": "Completions",
+			"item": [
+				{
+					"name": "Create completion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"model\": \"gpt-3.5-turbo-instruct\",\n  \"prompt\": \"Write a limmerick about APIs\",\n  \"max_tokens\": 250,\n  \"temperature\": 0.7\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/completions",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"completions"
+							]
+						},
+						"description": "Creates a completion for the provided prompt and parameters."
+					},
+					"response": [
+						{
+							"name": "Create completion",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"model\": \"gpt-3.5-turbo-instruct\",\n  \"prompt\": \"Write a limmerick about APIs\",\n  \"max_tokens\": 250,\n  \"temperature\": 0.7\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/completions",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"completions"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, must-revalidate"
+								},
+								{
+									"key": "openai-model",
+									"value": "gpt-3.5-turbo-instruct"
+								},
+								{
+									"key": "openai-version",
+									"value": "2020-10-01"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"cmpl-83ii3RJqSuChBUomqhg4FhPcWbmiv\",\n    \"object\": \"text_completion\",\n    \"created\": 1695897539,\n    \"model\": \"gpt-3.5-turbo-instruct\",\n    \"choices\": [\n        {\n            \"text\": \"\\n\\nThere once was a programmer so wise\\nWho worked on APIs day and night\\nWith endpoints and requests\\nThey were never stressed\\nFor their code was always a delight.\",\n            \"index\": 0,\n            \"logprobs\": null,\n            \"finish_reason\": \"stop\"\n        }\n    ],\n    \"usage\": {\n        \"prompt_tokens\": 7,\n        \"completion_tokens\": 35,\n        \"total_tokens\": 42\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Chat",
+			"item": [
+				{
+					"name": "Create chat message completion",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = null;",
+									"",
+									"try {",
+									"    jsonData = pm.response.json();",
+									"    pm.test(\"Check if response is valid JSON\", function() {    ",
+									"    pm.expect(jsonData).to.be.an('object');",
+									"    pm.visualizer.set(`<textarea style=\"width: 100vw; height: 100vh; font-family: monospace;\">${pm.response.json().choices[0].message.content}</textarea>`);",
+									"});",
+									"} catch (a) {",
+									"    console.log(\"Dealing with an SSE stream ... \")",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"model\": \"gpt-3.5-turbo\",\n    \"messages\": [\n        {\n            \"role\": \"user\",\n            \"content\": \"Who won the world series in 2020?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"content\": \"The Los Angeles Dodgers won the World Series in 2020.\"\n        },\n        {\n            \"role\": \"user\",\n            \"content\": \"Where was it played?\"\n        }\n    ],\n    \"temperature\": 1,\n    \"top_p\": 1,\n    \"n\": 1,\n    \"stream\": false,\n    \"max_tokens\": 250,\n    \"presence_penalty\": 0,\n    \"frequency_penalty\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/chat/completions",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"chat",
+								"completions"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create chat message completion",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"model\": \"gpt-3.5-turbo\",\n    \"messages\": [\n        {\n            \"role\": \"user\",\n            \"content\": \"Who won the world series in 2020?\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"content\": \"The Los Angeles Dodgers won the World Series in 2020.\"\n        },\n        {\n            \"role\": \"user\",\n            \"content\": \"Where was it played?\"\n        }\n    ],\n    \"temperature\": 1,\n    \"top_p\": 1,\n    \"n\": 1,\n    \"stream\": false,\n    \"max_tokens\": 250,\n    \"presence_penalty\": 0,\n    \"frequency_penalty\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/chat/completions",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"chat",
+										"completions"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 20 Mar 2023 23:50:57 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "360"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, must-revalidate"
+								},
+								{
+									"key": "Openai-Model",
+									"value": "gpt-3.5-turbo-0301"
+								},
+								{
+									"key": "Openai-Organization",
+									"value": "user-ydfxhof885ycvb52zjw5ly51"
+								},
+								{
+									"key": "Openai-Processing-Ms",
+									"value": "1800"
+								},
+								{
+									"key": "Openai-Version",
+									"value": "2020-10-01"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15724800; includeSubDomains"
+								},
+								{
+									"key": "X-Ratelimit-Limit-Requests",
+									"value": "3500"
+								},
+								{
+									"key": "X-Ratelimit-Remaining-Requests",
+									"value": "3499"
+								},
+								{
+									"key": "X-Ratelimit-Reset-Requests",
+									"value": "17ms"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "8506a913c39e706fede784458b254ca7"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"chatcmpl-6wJZ9Ebt8puAO4zW3zUpgFwS8BfJB\",\n    \"object\": \"chat.completion\",\n    \"created\": 1679356255,\n    \"model\": \"gpt-3.5-turbo-0301\",\n    \"usage\": {\n        \"prompt_tokens\": 45,\n        \"completion_tokens\": 19,\n        \"total_tokens\": 64\n    },\n    \"choices\": [\n        {\n            \"message\": {\n                \"role\": \"assistant\",\n                \"content\": \"The 2020 World Series was played in Arlington, Texas, at Globe Life Field.\"\n            },\n            \"finish_reason\": \"stop\",\n            \"index\": 0\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Edits",
+			"item": [
+				{
+					"name": "Create edit",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = null;",
+									"",
+									"try {",
+									"    jsonData = pm.response.json();",
+									"    pm.test(\"Check if response is valid JSON\", function() {    ",
+									"    pm.expect(jsonData).to.be.an('object');",
+									"    pm.visualizer.set(`<textarea style=\"width: 100vw; height: 100vh; font-family: monospace;\">${pm.response.json().choices[0].text}</textarea>`);",
+									"});",
+									"} catch (a) {",
+									"    console.log(\"Dealing with an SSE stream ... \")",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"model\": \"text-davinci-edit-001\",\n  \"input\": \"What day of the wek is it?\",\n  \"instruction\": \"Fix the spelling mistakes\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/edits",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"edits"
+							]
+						},
+						"description": "Creates a new edit for the provided input, instruction, and parameters."
+					},
+					"response": [
+						{
+							"name": "Create edit",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"model\": \"text-davinci-edit-001\",\n  \"input\": \"What day of the wek is it?\",\n  \"instruction\": \"Fix the spelling mistakes\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/edits",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"edits"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 10 Dec 2022 20:01:00 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "172"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, must-revalidate"
+								},
+								{
+									"key": "Openai-Model",
+									"value": "text-davinci-edit:001"
+								},
+								{
+									"key": "Openai-Organization",
+									"value": "user-aaaaaa"
+								},
+								{
+									"key": "Openai-Processing-Ms",
+									"value": "790"
+								},
+								{
+									"key": "Openai-Version",
+									"value": "2020-10-01"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15724800; includeSubDomains"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "a81c8d7d4b8bbf887fcae9b42f8e615c"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"object\": \"edit\",\n    \"created\": 1670702460,\n    \"choices\": [\n        {\n            \"text\": \"What day of the week is it?\\n\",\n            \"index\": 0\n        }\n    ],\n    \"usage\": {\n        \"prompt_tokens\": 25,\n        \"completion_tokens\": 28,\n        \"total_tokens\": 53\n    }\n}"
+						}
+					]
+				}
+			],
+			"description": "Creates a new edit for the provided input, instruction, and parameters."
+		},
+		{
+			"name": "Images",
+			"item": [
+				{
+					"name": "Create image",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();",
+									"",
+									"var html = '';",
+									"",
+									"for (let i = 0; i < jsonData.data.length; i++) {",
+									"    html += '<img src=\"' + jsonData.data[i].url + '\" width=\"512\">';",
+									"}",
+									"",
+									"pm.visualizer.set(html);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"prompt\": \"A cute baby sea otter\",\n  \"n\": 2,\n  \"size\": \"1024x1024\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/images/generations",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"images",
+								"generations"
+							]
+						},
+						"description": "Creates an image given a prompt."
+					},
+					"response": [
+						{
+							"name": "Create image",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"prompt\": \"A cute baby sea otter\",\n  \"n\": 2,\n  \"size\": \"1024x1024\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/images/generations",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"images",
+										"generations"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 01:57:49 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1048"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "OpenAI-Version",
+									"value": "2020-10-01"
+								},
+								{
+									"key": "OpenAI-Organization",
+									"value": "user-aaaaaaa"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "f8769836d4ac7cb3da1b21aa17863afe"
+								},
+								{
+									"key": "OpenAI-Processing-Ms",
+									"value": "5874"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15724800; includeSubDomains"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"created\": 1679536669,\n    \"data\": [\n        {\n            \"url\": \"https://oaidalleapiprodscus.blob.core.windows.net/private/org-6dmqkbEsO2sA55h8sMAzZdMz/user-YDfxhOf885yCVb52Zjw5ly51/img-Ngyb0XF5lV7Ewe3b65phFLil.png?st=2023-03-23T00%3A57%3A49Z&se=2023-03-23T02%3A57%3A49Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-03-22T23%3A24%3A55Z&ske=2023-03-23T23%3A24%3A55Z&sks=b&skv=2021-08-06&sig=3FimhPDFSYy3S1eThhHGKzV73xrubNHhlm2R3mAaK/8%3D\"\n        },\n        {\n            \"url\": \"https://oaidalleapiprodscus.blob.core.windows.net/private/org-6dmqkbEsO2sA55h8sMAzZdMz/user-YDfxhOf885yCVb52Zjw5ly51/img-VLYgKiFSVsGcUBEwkzF11adi.png?st=2023-03-23T00%3A57%3A49Z&se=2023-03-23T02%3A57%3A49Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-03-22T23%3A24%3A55Z&ske=2023-03-23T23%3A24%3A55Z&sks=b&skv=2021-08-06&sig=OkF68bmC8DLsEuqGxMi0IpoLVaGXRHKXoV%2Bn3fBy6EE%3D\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create image edit",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();",
+									"",
+									"var html = '';",
+									"",
+									"for (let i = 0; i < jsonData.data.length; i++) {",
+									"    html += '<img src=\"' + jsonData.data[i].url + '\" width=\"512\">';",
+									"}",
+									"",
+									"pm.visualizer.set(html);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"description": "The image to edit. Must be a valid PNG file, less than 4MB, and square. If mask is not provided, image must have transparency, which will be used as the mask.",
+									"type": "file",
+									"src": "sfLWMJw3y/output-onlinepngtools (1).png"
+								},
+								{
+									"key": "mask",
+									"description": "An additional image whose fully transparent areas (e.g. where alpha is zero) indicate where image should be edited. Must be a valid PNG file, less than 4MB, and have the same dimensions as image.",
+									"type": "file",
+									"src": "poKIrTn-l/gerenuk-removebg-preview.png"
+								},
+								{
+									"key": "prompt",
+									"value": "make the background on the moon",
+									"description": "A text description of the desired image(s). The maximum length is 1000 characters.",
+									"type": "text"
+								},
+								{
+									"key": "n",
+									"value": "2",
+									"description": "The number of images to generate. Must be between 1 and 10.",
+									"type": "text"
+								},
+								{
+									"key": "size",
+									"value": "1024x1024",
+									"description": "The size of the generated images. Must be one of 256x256, 512x512, or 1024x1024.",
+									"type": "text"
+								},
+								{
+									"key": "response_format",
+									"value": "url",
+									"description": "The format in which the generated images are returned. Must be one of url or b64_json.",
+									"type": "text"
+								},
+								{
+									"key": "user",
+									"value": "",
+									"description": "A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse.",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/images/edits",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"images",
+								"edits"
+							]
+						},
+						"description": "Creates a variation of a given image."
+					},
+					"response": [
+						{
+							"name": "Create image edit",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"description": "The image to edit. Must be a valid PNG file, less than 4MB, and square. If mask is not provided, image must have transparency, which will be used as the mask.",
+											"type": "file",
+											"src": "sfLWMJw3y/output-onlinepngtools (1).png"
+										},
+										{
+											"key": "mask",
+											"description": "An additional image whose fully transparent areas (e.g. where alpha is zero) indicate where image should be edited. Must be a valid PNG file, less than 4MB, and have the same dimensions as image.",
+											"type": "file",
+											"src": "poKIrTn-l/gerenuk-removebg-preview.png"
+										},
+										{
+											"key": "prompt",
+											"value": "make the background on the moon",
+											"description": "A text description of the desired image(s). The maximum length is 1000 characters.",
+											"type": "text"
+										},
+										{
+											"key": "n",
+											"value": "2",
+											"description": "The number of images to generate. Must be between 1 and 10.",
+											"type": "text"
+										},
+										{
+											"key": "size",
+											"value": "1024x1024",
+											"description": "The size of the generated images. Must be one of 256x256, 512x512, or 1024x1024.",
+											"type": "text"
+										},
+										{
+											"key": "response_format",
+											"value": "url",
+											"description": "The format in which the generated images are returned. Must be one of url or b64_json.",
+											"type": "text"
+										},
+										{
+											"key": "user",
+											"value": "",
+											"description": "A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse.",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/images/edits",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"images",
+										"edits"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 01:53:40 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1050"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "OpenAI-Version",
+									"value": "2020-10-01"
+								},
+								{
+									"key": "OpenAI-Organization",
+									"value": "user-aaaa"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "2ccc6f49530c32e8c06fa4a1adfb8c9a"
+								},
+								{
+									"key": "OpenAI-Processing-Ms",
+									"value": "12169"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15724800; includeSubDomains"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"created\": 1679536420,\n    \"data\": [\n        {\n            \"url\": \"https://oaidalleapiprodscus.blob.core.windows.net/private/org-6dmqkbEsO2sA55h8sMAzZdMz/user-YDfxhOf885yCVb52Zjw5ly51/img-NF2ROxO8oIWUU5hTAtL4zboF.png?st=2023-03-23T00%3A53%3A40Z&se=2023-03-23T02%3A53%3A40Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-03-23T00%3A21%3A07Z&ske=2023-03-24T00%3A21%3A07Z&sks=b&skv=2021-08-06&sig=bp0dpNFHBWwdQS%2BlXxeEJTfFxXPT2%2BE0Dv8A5EE5U5w%3D\"\n        },\n        {\n            \"url\": \"https://oaidalleapiprodscus.blob.core.windows.net/private/org-6dmqkbEsO2sA55h8sMAzZdMz/user-YDfxhOf885yCVb52Zjw5ly51/img-qJM5cHnLnzd8f7u8eLdc7410.png?st=2023-03-23T00%3A53%3A40Z&se=2023-03-23T02%3A53%3A40Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-03-23T00%3A21%3A07Z&ske=2023-03-24T00%3A21%3A07Z&sks=b&skv=2021-08-06&sig=n1i17VSimhyRPwDKXZ9Fe1iNQsqRXvzO48TqgUTivys%3D\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create image variation",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();",
+									"",
+									"var html = '';",
+									"",
+									"for (let i = 0; i < jsonData.data.length; i++) {",
+									"    html += '<img src=\"' + jsonData.data[i].url + '\" width=\"512\">';",
+									"}",
+									"",
+									"pm.visualizer.set(html);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"description": "The image to edit. Must be a valid PNG file, less than 4MB, and square. If mask is not provided, image must have transparency, which will be used as the mask.",
+									"type": "file",
+									"src": "v3VHX8Xi0/gerenuk.png"
+								},
+								{
+									"key": "n",
+									"value": "2",
+									"description": "The number of images to generate. Must be between 1 and 10.",
+									"type": "text"
+								},
+								{
+									"key": "size",
+									"value": "1024x1024",
+									"description": "The size of the generated images. Must be one of 256x256, 512x512, or 1024x1024.",
+									"type": "text"
+								},
+								{
+									"key": "response_format",
+									"value": "url",
+									"description": "The format in which the generated images are returned. Must be one of url or b64_json.",
+									"type": "text"
+								},
+								{
+									"key": "user",
+									"value": "",
+									"description": "A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse.",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/images/variations",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"images",
+								"variations"
+							]
+						},
+						"description": "Creates a variation of a given image."
+					},
+					"response": [
+						{
+							"name": "Create image variation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"description": "The image to edit. Must be a valid PNG file, less than 4MB, and square. If mask is not provided, image must have transparency, which will be used as the mask.",
+											"type": "file",
+											"src": "v3VHX8Xi0/gerenuk.png"
+										},
+										{
+											"key": "n",
+											"value": "2",
+											"description": "The number of images to generate. Must be between 1 and 10.",
+											"type": "text"
+										},
+										{
+											"key": "size",
+											"value": "1024x1024",
+											"description": "The size of the generated images. Must be one of 256x256, 512x512, or 1024x1024.",
+											"type": "text"
+										},
+										{
+											"key": "response_format",
+											"value": "url",
+											"description": "The format in which the generated images are returned. Must be one of url or b64_json.",
+											"type": "text"
+										},
+										{
+											"key": "user",
+											"value": "",
+											"description": "A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse.",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/images/variations",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"images",
+										"variations"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 01:33:25 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1046"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "OpenAI-Version",
+									"value": "2020-10-01"
+								},
+								{
+									"key": "OpenAI-Organization",
+									"value": "user-aaaaaa"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "04a34b0eb57280dac25a01892d496f77"
+								},
+								{
+									"key": "OpenAI-Processing-Ms",
+									"value": "10306"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15724800; includeSubDomains"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"created\": 1679535205,\n    \"data\": [\n        {\n            \"url\": \"https://oaidalleapiprodscus.blob.core.windows.net/private/org-6dmqkbEsO2sA55h8sMAzZdMz/user-YDfxhOf885yCVb52Zjw5ly51/img-OYsJcqj0rVYfVhYluejJrfEn.png?st=2023-03-23T00%3A33%3A25Z&se=2023-03-23T02%3A33%3A25Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-03-23T00%3A22%3A49Z&ske=2023-03-24T00%3A22%3A49Z&sks=b&skv=2021-08-06&sig=JgNgllteb13k0cB2WFiEatRSjm2qc8eVb/pb2qCRGN8%3D\"\n        },\n        {\n            \"url\": \"https://oaidalleapiprodscus.blob.core.windows.net/private/org-6dmqkbEsO2sA55h8sMAzZdMz/user-YDfxhOf885yCVb52Zjw5ly51/img-FtOQhQDItN31ebG2KDTqffLt.png?st=2023-03-23T00%3A33%3A25Z&se=2023-03-23T02%3A33%3A25Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-03-23T00%3A22%3A49Z&ske=2023-03-24T00%3A22%3A49Z&sks=b&skv=2021-08-06&sig=jQpXE60He7szcda3fBtUYndgcEYB84eH1f5nvq9Rqk8%3D\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			],
+			"description": "Given a prompt and/or an input image, the model will generate a new image."
+		},
+		{
+			"name": "Audio (Speech to Text)",
+			"item": [
+				{
+					"name": "Create Transcription",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = null;",
+									"",
+									"try {",
+									"    jsonData = pm.response.json();",
+									"    pm.test(\"Check if response is valid JSON\", function() {    ",
+									"    pm.expect(jsonData).to.be.an('object');",
+									"    pm.visualizer.set(`<textarea style=\"width: 100vw; height: 100vh; font-family: monospace;\">${pm.response.json().text}</textarea>`);",
+									"});",
+									"} catch (a) {",
+									"    console.log(\"Dealing with an SSE stream ... \")",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"description": "(Required) The audio file to transcribe, in one of these formats: mp3, mp4, mpeg, mpga, m4a, wav, or webm.\n",
+									"type": "file",
+									"src": "sg656JXMR/sample.mp3"
+								},
+								{
+									"key": "model",
+									"value": "whisper-1",
+									"description": "(Required) ID of the model to use. Only `whisper-1` is currently available.\n",
+									"type": "text"
+								},
+								{
+									"key": "prompt",
+									"value": "Some style context for the transcription.",
+									"description": "An optional text to guide the model's style or continue a previous audio segment. The [prompt](/docs/guides/speech-to-text/prompting) should match the audio language.\n",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "response_format",
+									"value": "json",
+									"description": "The format of the transcript output, in one of these options: json, text, srt, verbose_json, or vtt.\n",
+									"type": "text"
+								},
+								{
+									"key": "temperature",
+									"value": "0",
+									"description": "The sampling temperature, between 0 and 1. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. If set to 0, the model will use [log probability](https://en.wikipedia.org/wiki/Log_probability) to automatically increase the temperature until certain thresholds are hit.\n",
+									"type": "text"
+								},
+								{
+									"key": "language",
+									"value": "en",
+									"description": "The language of the input audio. Supplying the input language in [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) format will improve accuracy and latency.\n",
+									"type": "text"
+								},
+								{
+									"key": "transcription",
+									"value": "srt",
+									"description": "Choose the format for the transcription\nAllowed values:plain text, srt, vtt\nDefault value: plain text",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/audio/transcriptions",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"audio",
+								"transcriptions"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Transcription",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"description": "(Required) The audio file to transcribe, in one of these formats: mp3, mp4, mpeg, mpga, m4a, wav, or webm.\n",
+											"type": "file",
+											"src": "sg656JXMR/sample.mp3"
+										},
+										{
+											"key": "model",
+											"value": "whisper-1",
+											"description": "(Required) ID of the model to use. Only `whisper-1` is currently available.\n",
+											"type": "text"
+										},
+										{
+											"key": "prompt",
+											"value": "let me tell you some context about this audio",
+											"description": "An optional text to guide the model's style or continue a previous audio segment. The [prompt](/docs/guides/speech-to-text/prompting) should match the audio language.\n",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "response_format",
+											"value": "json",
+											"description": "The format of the transcript output, in one of these options: json, text, srt, verbose_json, or vtt.\n",
+											"type": "text"
+										},
+										{
+											"key": "temperature",
+											"value": "0",
+											"description": "The sampling temperature, between 0 and 1. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. If set to 0, the model will use [log probability](https://en.wikipedia.org/wiki/Log_probability) to automatically increase the temperature until certain thresholds are hit.\n",
+											"type": "text"
+										},
+										{
+											"key": "language",
+											"value": "en",
+											"description": "The language of the input audio. Supplying the input language in [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) format will improve accuracy and latency.\n",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/audio/transcriptions",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"audio",
+										"transcriptions"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 00:47:26 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Openai-Organization",
+									"value": "user-aaaaaa"
+								},
+								{
+									"key": "Openai-Processing-Ms",
+									"value": "667"
+								},
+								{
+									"key": "Openai-Version",
+									"value": "2020-10-01"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15724800; includeSubDomains"
+								},
+								{
+									"key": "X-Ratelimit-Limit-Requests",
+									"value": "3000"
+								},
+								{
+									"key": "X-Ratelimit-Remaining-Requests",
+									"value": "2999"
+								},
+								{
+									"key": "X-Ratelimit-Reset-Requests",
+									"value": "20ms"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "cc7d262d00ae96637f357eb1a474b6a8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"text\": \"Four score and seven years ago.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Translation",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = null;",
+									"",
+									"try {",
+									"    jsonData = pm.response.json();",
+									"    pm.test(\"Check if response is valid JSON\", function() {    ",
+									"    pm.expect(jsonData).to.be.an('object');",
+									"    pm.visualizer.set(`<textarea style=\"width: 100vw; height: 100vh; font-family: monospace;\">${pm.response.json().text}</textarea>`);",
+									"});",
+									"} catch (a) {",
+									"    console.log(\"Dealing with an SSE stream ... \")",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"description": "(Required) The audio file to translate, in one of these formats: mp3, mp4, mpeg, mpga, m4a, wav, or webm.\n",
+									"type": "file",
+									"src": "zUaWKk6op/example-ja.m4a"
+								},
+								{
+									"key": "model",
+									"value": "whisper-1",
+									"description": "(Required) ID of the model to use. Only `whisper-1` is currently available.\n",
+									"type": "text"
+								},
+								{
+									"key": "prompt",
+									"value": "Some style context for the translation.",
+									"description": "An optional text to guide the model's style or continue a previous audio segment. The [prompt](/docs/guides/speech-to-text/prompting) should be in English.\n",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "response_format",
+									"value": "json",
+									"description": "The format of the transcript output, in one of these options: json, text, srt, verbose_json, or vtt.\n",
+									"type": "text"
+								},
+								{
+									"key": "temperature",
+									"value": "0",
+									"description": "The sampling temperature, between 0 and 1. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. If set to 0, the model will use [log probability](https://en.wikipedia.org/wiki/Log_probability) to automatically increase the temperature until certain thresholds are hit.\n",
+									"type": "text"
+								},
+								{
+									"key": "language",
+									"value": "ja",
+									"description": "Language of the audio",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/audio/translations",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"audio",
+								"translations"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Translation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"description": "(Required) The audio file to translate, in one of these formats: mp3, mp4, mpeg, mpga, m4a, wav, or webm.\n",
+											"type": "file",
+											"src": "zUaWKk6op/example-ja.m4a"
+										},
+										{
+											"key": "model",
+											"value": "whisper-1",
+											"description": "(Required) ID of the model to use. Only `whisper-1` is currently available.\n",
+											"type": "text"
+										},
+										{
+											"key": "prompt",
+											"value": "Some style context for the translation.",
+											"description": "An optional text to guide the model's style or continue a previous audio segment. The [prompt](/docs/guides/speech-to-text/prompting) should be in English.\n",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "response_format",
+											"value": "json",
+											"description": "The format of the transcript output, in one of these options: json, text, srt, verbose_json, or vtt.\n",
+											"type": "text"
+										},
+										{
+											"key": "temperature",
+											"value": "0",
+											"description": "The sampling temperature, between 0 and 1. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. If set to 0, the model will use [log probability](https://en.wikipedia.org/wiki/Log_probability) to automatically increase the temperature until certain thresholds are hit.\n",
+											"type": "text"
+										},
+										{
+											"key": "language",
+											"value": "ja",
+											"description": "Language of the audio",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/audio/translations",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"audio",
+										"translations"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 02:06:56 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "26"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Openai-Organization",
+									"value": "user-aaaaa"
+								},
+								{
+									"key": "Openai-Processing-Ms",
+									"value": "326"
+								},
+								{
+									"key": "Openai-Version",
+									"value": "2020-10-01"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15724800; includeSubDomains"
+								},
+								{
+									"key": "X-Ratelimit-Limit-Requests",
+									"value": "3000"
+								},
+								{
+									"key": "X-Ratelimit-Remaining-Requests",
+									"value": "2999"
+								},
+								{
+									"key": "X-Ratelimit-Reset-Requests",
+									"value": "20ms"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "1b12934376877fcaf9a6eb4c9e30b1a2"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"text\": \"This is a test.\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Embeddings",
+			"item": [
+				{
+					"name": "Create embeddings",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"model\": \"text-similarity-babbage-001\",\n  \"input\": \"I was looking for something interesting to write about when it came to technology...\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/embeddings",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"embeddings"
+							]
+						},
+						"description": "Creates an embedding vector representing the input text."
+					},
+					"response": [
+						{
+							"name": "Create embeddings",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"model\": \"text-similarity-babbage-001\",\n  \"input\": \"The food was delicious and the waiter...\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/embeddings",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"embeddings"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 10 Dec 2022 20:32:47 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "44410"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Openai-Organization",
+									"value": "user-aaaaaa"
+								},
+								{
+									"key": "Openai-Processing-Ms",
+									"value": "96"
+								},
+								{
+									"key": "Openai-Version",
+									"value": "2020-10-01"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15724800; includeSubDomains"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "ec55cb28726cc687355454e1a0adaed3"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"object\": \"list\",\n    \"data\": [\n        {\n            \"object\": \"embedding\",\n            \"index\": 0,\n            \"embedding\": [\n                0.0028667077,\n                -0.008131327\n            ]\n        }\n    ],\n    \"model\": \"text-similarity-babbage:001\",\n    \"usage\": {\n        \"prompt_tokens\": 8,\n        \"total_tokens\": 8\n    }\n}"
+						}
+					]
+				}
+			],
+			"description": "Creates a new edit for the provided input, instruction, and parameters."
+		},
+		{
+			"name": "Files",
+			"item": [
+				{
+					"name": "Upload file",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"description": "Name of the JSON Lines file to be uploaded.",
+									"type": "file",
+									"src": "hoOzENuhO/my-custom-model.jsonl"
+								},
+								{
+									"key": "purpose",
+									"value": "fine-tune",
+									"description": "The intended purpose of the uploaded documents.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/files",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"files"
+							]
+						},
+						"description": "Upload a file that contains document(s) to be used across various endpoints/features. Currently, the size of all the files uploaded by one organization can be up to 1 GB. Please contact us if you need to increase the storage limit."
+					},
+					"response": [
+						{
+							"name": "Upload file",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"description": "Name of the JSON Lines file to be uploaded.",
+											"type": "file",
+											"src": "hoOzENuhO/my-custom-model.jsonl"
+										},
+										{
+											"key": "purpose",
+											"value": "fine-tune",
+											"description": "The intended purpose of the uploaded documents.",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/files",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"files"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 22 Mar 2023 23:51:28 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "223"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "OpenAI-Version",
+									"value": "2020-10-01"
+								},
+								{
+									"key": "OpenAI-Organization",
+									"value": "user-ydfxhof885ycvb52zjw5ly51"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "f3cd86f188c8858d2a82d3c2ba8f0e5a"
+								},
+								{
+									"key": "OpenAI-Processing-Ms",
+									"value": "715"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15724800; includeSubDomains"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"object\": \"file\",\n    \"id\": \"file-vGxE9KywnSUkEL6dv9qZxKAF\",\n    \"purpose\": \"fine-tune\",\n    \"filename\": \"my-custom-model.jsonl\",\n    \"bytes\": 159,\n    \"created_at\": 1679529088,\n    \"status\": \"uploaded\",\n    \"status_details\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "List files",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/files",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"files"
+							]
+						},
+						"description": "Returns a list of files that belong to the user's organization."
+					},
+					"response": [
+						{
+							"name": "List files",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/files",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"files"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 22 Mar 2023 23:52:21 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "304"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "OpenAI-Version",
+									"value": "2020-10-01"
+								},
+								{
+									"key": "OpenAI-Organization",
+									"value": "user-ydfxhof885ycvb52zjw5ly51"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "741694f2b46b1a22746abf8b0ec99f5b"
+								},
+								{
+									"key": "OpenAI-Processing-Ms",
+									"value": "263"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15724800; includeSubDomains"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"object\": \"list\",\n    \"data\": [\n        {\n            \"object\": \"file\",\n            \"id\": \"file-vGxE9KywnSUkEL6dv9qZxKAF\",\n            \"purpose\": \"fine-tune\",\n            \"filename\": \"my-custom-model.jsonl\",\n            \"bytes\": 159,\n            \"created_at\": 1679529088,\n            \"status\": \"processed\",\n            \"status_details\": null\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Retrieve files",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/files/:file_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"files",
+								":file_id"
+							],
+							"variable": [
+								{
+									"key": "file_id",
+									"value": "file-vGxE9KywnSUkEL6dv9qZxKAF",
+									"description": "The ID of the file to use for this request."
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Retrieve files",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/files/:file_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"files",
+										":file_id"
+									],
+									"variable": [
+										{
+											"key": "file_id",
+											"value": "file-vGxE9KywnSUkEL6dv9qZxKAF",
+											"description": "The ID of the file to use for this request."
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 22 Mar 2023 23:53:04 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "224"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "OpenAI-Version",
+									"value": "2020-10-01"
+								},
+								{
+									"key": "OpenAI-Organization",
+									"value": "user-ydfxhof885ycvb52zjw5ly51"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "846c7d75ee01aa769172e9a31072c1c8"
+								},
+								{
+									"key": "OpenAI-Processing-Ms",
+									"value": "101"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15724800; includeSubDomains"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"object\": \"file\",\n    \"id\": \"file-vGxE9KywnSUkEL6dv9qZxKAF\",\n    \"purpose\": \"fine-tune\",\n    \"filename\": \"my-custom-model.jsonl\",\n    \"bytes\": 159,\n    \"created_at\": 1679529088,\n    \"status\": \"processed\",\n    \"status_details\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Retrieve file content",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/files/:file_id/content",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"files",
+								":file_id",
+								"content"
+							],
+							"variable": [
+								{
+									"key": "file_id",
+									"value": "file-vGxE9KywnSUkEL6dv9qZxKAF",
+									"description": "The ID of the file to use for this request."
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Retrieve file content",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/files/:file_id/content",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"files",
+										":file_id",
+										"content"
+									],
+									"variable": [
+										{
+											"key": "file_id",
+											"value": "file-vGxE9KywnSUkEL6dv9qZxKAF",
+											"description": "The ID of the file to use for this request."
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "raw",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 22 Mar 2023 23:54:53 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/octet-stream"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Disposition",
+									"value": "attachment; filename=\"my-custom-model.jsonl\""
+								},
+								{
+									"key": "OpenAI-Version",
+									"value": "2020-10-01"
+								},
+								{
+									"key": "OpenAI-Organization",
+									"value": "user-ydfxhof885ycvb52zjw5ly51"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "6fa55d65ce90dc1d1e2ae923c856ece7"
+								},
+								{
+									"key": "OpenAI-Processing-Ms",
+									"value": "16"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15724800; includeSubDomains"
+								}
+							],
+							"cookie": [],
+							"body": "{\"prompt\": \"Why did the chicken cross the road?\", \"completion\": \"Why not?\"}\n{\"prompt\": \"Why did the chicken use AI?\", \"completion\": \"To get to the other side\"}"
+						}
+					]
+				},
+				{
+					"name": "Delete file",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/files/:file_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"files",
+								":file_id"
+							],
+							"variable": [
+								{
+									"key": "file_id",
+									"value": "file-a1damcA5590YJpVfifz9kLOH",
+									"description": "The ID of the file to use for this request."
+								}
+							]
+						},
+						"description": "Delete a file."
+					},
+					"response": [
+						{
+							"name": "Delete file",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/files/:file_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"files",
+										":file_id"
+									],
+									"variable": [
+										{
+											"key": "file_id",
+											"value": "file-a1damcA5590YJpVfifz9kLOH",
+											"description": "The ID of the file to use for this request."
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 00:10:46 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "83"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "OpenAI-Version",
+									"value": "2020-10-01"
+								},
+								{
+									"key": "OpenAI-Organization",
+									"value": "user-aaaaa"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "8ef22e7ef5c1e6f42806f8cca69b405d"
+								},
+								{
+									"key": "OpenAI-Processing-Ms",
+									"value": "653"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15724800; includeSubDomains"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"object\": \"file\",\n    \"id\": \"file-a1damcA5590YJpVfifz9kLOH\",\n    \"deleted\": true\n}"
+						}
+					]
+				}
+			],
+			"description": "Creates a new edit for the provided input, instruction, and parameters.\n\n[https://platform.openai.com/docs/api-reference/files](https://platform.openai.com/docs/api-reference/files)"
+		},
+		{
+			"name": "Fine-tunes",
+			"item": [
+				{
+					"name": "Create fine-tune",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"training_file\": \"file-vGxE9KywnSUkEL6dv9qZxKAF\",\n  \"model\": \"davinci\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/fine-tunes",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"fine-tunes"
+							]
+						},
+						"description": "Creates a job that fine-tunes a specified model from a given dataset.\n\nModels eligble for fine tuning are: `ada`, `babbage`, `curie`, or `davinci`\n\nThe dataset (training file) should be formatted like below (JSONL)\n\n```\n{\"prompt\": \"<prompt>\", \"completion\": \"<ideal generated text>\"}\n{\"prompt\": \"<prompt>\", \"completion\": \"<ideal generated text>\"}\n{\"prompt\": \"<prompt>\", \"completion\": \"<ideal generated text>\"}\n\n```\n\n  \nFor example:  \n\n```\n{\"prompt\": \"Why did the chicken cross the road?\", \"completion\": \"Why not?\"}\n{\"prompt\": \"Why did the chicken use AI?\", \"completion\": \"To get to the other side\"}\n\n```\n\nNote that after a job completes it may take several minutes for your model to become ready to handle requests."
+					},
+					"response": [
+						{
+							"name": "Create fine-tune",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"training_file\": \"file-vGxE9KywnSUkEL6dv9qZxKAF\",\n  \"model\": \"davinci\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/fine-tunes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"fine-tunes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 22 Mar 2023 23:56:36 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "911"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "OpenAI-Version",
+									"value": "2020-10-01"
+								},
+								{
+									"key": "OpenAI-Organization",
+									"value": "user-aaaaaaaaa"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "27119253cb968c0d6181544f994ebe0e"
+								},
+								{
+									"key": "OpenAI-Processing-Ms",
+									"value": "101"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15724800; includeSubDomains"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"object\": \"fine-tune\",\n    \"id\": \"ft-MH3TkRzJrC62xWaudm1aHqC5\",\n    \"hyperparams\": {\n        \"n_epochs\": 4,\n        \"batch_size\": null,\n        \"prompt_loss_weight\": 0.01,\n        \"learning_rate_multiplier\": null\n    },\n    \"organization_id\": \"org-6dmqkbEsO2sA55h8sMAzZdMz\",\n    \"model\": \"davinci\",\n    \"training_files\": [\n        {\n            \"object\": \"file\",\n            \"id\": \"file-vGxE9KywnSUkEL6dv9qZxKAF\",\n            \"purpose\": \"fine-tune\",\n            \"filename\": \"my-custom-model.jsonl\",\n            \"bytes\": 159,\n            \"created_at\": 1679529088,\n            \"status\": \"processed\",\n            \"status_details\": null\n        }\n    ],\n    \"validation_files\": [],\n    \"result_files\": [],\n    \"created_at\": 1679529396,\n    \"updated_at\": 1679529396,\n    \"status\": \"pending\",\n    \"fine_tuned_model\": null,\n    \"events\": [\n        {\n            \"object\": \"fine-tune-event\",\n            \"level\": \"info\",\n            \"message\": \"Created fine-tune: ft-MH3TkRzJrC62xWaudm1aHqC5\",\n            \"created_at\": 1679529396\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "List fine-tunes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/fine-tunes",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"fine-tunes"
+							]
+						},
+						"description": "Creates a job that fine-tunes a specified model from a given dataset."
+					},
+					"response": [
+						{
+							"name": "List fine-tunes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/fine-tunes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"fine-tunes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 22 Mar 2023 23:59:19 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1719"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "OpenAI-Version",
+									"value": "2020-10-01"
+								},
+								{
+									"key": "OpenAI-Organization",
+									"value": "user-aaaaaaaaa"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "dbe51d85a66ae0ac7c56ab86c4338f15"
+								},
+								{
+									"key": "OpenAI-Processing-Ms",
+									"value": "75"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15724800; includeSubDomains"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"object\": \"list\",\n    \"data\": [\n        {\n            \"object\": \"fine-tune\",\n            \"id\": \"ft-Pb228NXaz51mx9b9yTksDcyT\",\n            \"hyperparams\": {\n                \"n_epochs\": 4,\n                \"batch_size\": 1,\n                \"prompt_loss_weight\": 0.01,\n                \"learning_rate_multiplier\": 0.1\n            },\n            \"organization_id\": \"org-6dmqkbEsO2sA55h8sMAzZdMz\",\n            \"model\": \"curie\",\n            \"training_files\": [\n                {\n                    \"object\": \"file\",\n                    \"id\": \"file-vGxE9KywnSUkEL6dv9qZxKAF\",\n                    \"purpose\": \"fine-tune\",\n                    \"filename\": \"my-custom-model.jsonl\",\n                    \"bytes\": 159,\n                    \"created_at\": 1679529088,\n                    \"status\": \"processed\",\n                    \"status_details\": null\n                }\n            ],\n            \"validation_files\": [],\n            \"result_files\": [],\n            \"created_at\": 1679529320,\n            \"updated_at\": 1679529510,\n            \"status\": \"pending\",\n            \"fine_tuned_model\": null\n        },\n        {\n            \"object\": \"fine-tune\",\n            \"id\": \"ft-MH3TkRzJrC62xWaudm1aHqC5\",\n            \"hyperparams\": {\n                \"n_epochs\": 4,\n                \"batch_size\": 1,\n                \"prompt_loss_weight\": 0.01,\n                \"learning_rate_multiplier\": 0.1\n            },\n            \"organization_id\": \"org-6dmqkbEsO2sA55h8sMAzZdMz\",\n            \"model\": \"davinci\",\n            \"training_files\": [\n                {\n                    \"object\": \"file\",\n                    \"id\": \"file-vGxE9KywnSUkEL6dv9qZxKAF\",\n                    \"purpose\": \"fine-tune\",\n                    \"filename\": \"my-custom-model.jsonl\",\n                    \"bytes\": 159,\n                    \"created_at\": 1679529088,\n                    \"status\": \"processed\",\n                    \"status_details\": null\n                }\n            ],\n            \"validation_files\": [],\n            \"result_files\": [],\n            \"created_at\": 1679529396,\n            \"updated_at\": 1679529510,\n            \"status\": \"running\",\n            \"fine_tuned_model\": null\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Retrieve fine-tune",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/fine-tunes/:fine_tune_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"fine-tunes",
+								":fine_tune_id"
+							],
+							"variable": [
+								{
+									"key": "fine_tune_id",
+									"value": "ft-MH3TkRzJrC62xWaudm1aHqC5",
+									"description": "The ID of the fine-tune job."
+								}
+							]
+						},
+						"description": "Creates a job that fine-tunes a specified model from a given dataset."
+					},
+					"response": [
+						{
+							"name": "Retrieve fine-tune",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/fine-tunes/:fine_tune_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"fine-tunes",
+										":fine_tune_id"
+									],
+									"variable": [
+										{
+											"key": "fine_tune_id",
+											"value": "ft-MH3TkRzJrC62xWaudm1aHqC5",
+											"description": "The ID of the fine-tune job."
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 00:01:01 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2724"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "OpenAI-Version",
+									"value": "2020-10-01"
+								},
+								{
+									"key": "OpenAI-Organization",
+									"value": "user-aaaaa"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "0cc6c544463c0731f847e78af08372a7"
+								},
+								{
+									"key": "OpenAI-Processing-Ms",
+									"value": "34"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15724800; includeSubDomains"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"object\": \"fine-tune\",\n    \"id\": \"ft-MH3TkRzJrC62xWaudm1aHqC5\",\n    \"hyperparams\": {\n        \"n_epochs\": 4,\n        \"batch_size\": 1,\n        \"prompt_loss_weight\": 0.01,\n        \"learning_rate_multiplier\": 0.1\n    },\n    \"organization_id\": \"org-6dmqkbEsO2sA55h8sMAzZdMz\",\n    \"model\": \"davinci\",\n    \"training_files\": [\n        {\n            \"object\": \"file\",\n            \"id\": \"file-vGxE9KywnSUkEL6dv9qZxKAF\",\n            \"purpose\": \"fine-tune\",\n            \"filename\": \"my-custom-model.jsonl\",\n            \"bytes\": 159,\n            \"created_at\": 1679529088,\n            \"status\": \"processed\",\n            \"status_details\": null\n        }\n    ],\n    \"validation_files\": [],\n    \"result_files\": [\n        {\n            \"object\": \"file\",\n            \"id\": \"file-BebmMZ8yVlJBouJpuUq3buhU\",\n            \"purpose\": \"fine-tune-results\",\n            \"filename\": \"compiled_results.csv\",\n            \"bytes\": 550,\n            \"created_at\": 1679529633,\n            \"status\": \"processed\",\n            \"status_details\": null\n        }\n    ],\n    \"created_at\": 1679529396,\n    \"updated_at\": 1679529633,\n    \"status\": \"succeeded\",\n    \"fine_tuned_model\": \"davinci:ft-personal-2023-03-23-00-00-32\",\n    \"events\": [\n        {\n            \"object\": \"fine-tune-event\",\n            \"level\": \"info\",\n            \"message\": \"Created fine-tune: ft-MH3TkRzJrC62xWaudm1aHqC5\",\n            \"created_at\": 1679529396\n        },\n        {\n            \"object\": \"fine-tune-event\",\n            \"level\": \"info\",\n            \"message\": \"Fine-tune costs $0.00\",\n            \"created_at\": 1679529508\n        },\n        {\n            \"object\": \"fine-tune-event\",\n            \"level\": \"info\",\n            \"message\": \"Fine-tune enqueued. Queue number: 0\",\n            \"created_at\": 1679529508\n        },\n        {\n            \"object\": \"fine-tune-event\",\n            \"level\": \"info\",\n            \"message\": \"Fine-tune started\",\n            \"created_at\": 1679529509\n        },\n        {\n            \"object\": \"fine-tune-event\",\n            \"level\": \"info\",\n            \"message\": \"Completed epoch 1/4\",\n            \"created_at\": 1679529596\n        },\n        {\n            \"object\": \"fine-tune-event\",\n            \"level\": \"info\",\n            \"message\": \"Completed epoch 2/4\",\n            \"created_at\": 1679529597\n        },\n        {\n            \"object\": \"fine-tune-event\",\n            \"level\": \"info\",\n            \"message\": \"Completed epoch 3/4\",\n            \"created_at\": 1679529597\n        },\n        {\n            \"object\": \"fine-tune-event\",\n            \"level\": \"info\",\n            \"message\": \"Completed epoch 4/4\",\n            \"created_at\": 1679529598\n        },\n        {\n            \"object\": \"fine-tune-event\",\n            \"level\": \"info\",\n            \"message\": \"Uploaded model: davinci:ft-personal-2023-03-23-00-00-32\",\n            \"created_at\": 1679529632\n        },\n        {\n            \"object\": \"fine-tune-event\",\n            \"level\": \"info\",\n            \"message\": \"Uploaded result file: file-BebmMZ8yVlJBouJpuUq3buhU\",\n            \"created_at\": 1679529633\n        },\n        {\n            \"object\": \"fine-tune-event\",\n            \"level\": \"info\",\n            \"message\": \"Fine-tune succeeded\",\n            \"created_at\": 1679529633\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Cancel fine-tune",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/fine-tunes/:fine_tune_id/cancel",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"fine-tunes",
+								":fine_tune_id",
+								"cancel"
+							],
+							"variable": [
+								{
+									"key": "fine_tune_id",
+									"value": "ft-tMP2cW32xmBNF29Ng0IOHkJ3",
+									"description": "The ID of the fine-tune job."
+								}
+							]
+						},
+						"description": "Creates a job that fine-tunes a specified model from a given dataset."
+					},
+					"response": [
+						{
+							"name": "Cancel fine-tune",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/fine-tunes/:fine_tune_id/cancel",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"fine-tunes",
+										":fine_tune_id",
+										"cancel"
+									],
+									"variable": [
+										{
+											"key": "fine_tune_id",
+											"value": "ft-tMP2cW32xmBNF29Ng0IOHkJ3",
+											"description": "The ID of the fine-tune job."
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 00:02:35 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1055"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "OpenAI-Version",
+									"value": "2020-10-01"
+								},
+								{
+									"key": "OpenAI-Organization",
+									"value": "user-aaaaaaa"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "c777c8b92eb83d3e4c68d202c0e8a041"
+								},
+								{
+									"key": "OpenAI-Processing-Ms",
+									"value": "61"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15724800; includeSubDomains"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"object\": \"fine-tune\",\n    \"id\": \"ft-tMP2cW32xmBNF29Ng0IOHkJ3\",\n    \"hyperparams\": {\n        \"n_epochs\": 4,\n        \"batch_size\": null,\n        \"prompt_loss_weight\": 0.01,\n        \"learning_rate_multiplier\": null\n    },\n    \"organization_id\": \"org-6dmqkbEsO2sA55h8sMAzZdMz\",\n    \"model\": \"davinci\",\n    \"training_files\": [\n        {\n            \"object\": \"file\",\n            \"id\": \"file-vGxE9KywnSUkEL6dv9qZxKAF\",\n            \"purpose\": \"fine-tune\",\n            \"filename\": \"my-custom-model.jsonl\",\n            \"bytes\": 159,\n            \"created_at\": 1679529088,\n            \"status\": \"processed\",\n            \"status_details\": null\n        }\n    ],\n    \"validation_files\": [],\n    \"result_files\": [],\n    \"created_at\": 1679529741,\n    \"updated_at\": 1679529755,\n    \"status\": \"cancelled\",\n    \"fine_tuned_model\": null,\n    \"events\": [\n        {\n            \"object\": \"fine-tune-event\",\n            \"level\": \"info\",\n            \"message\": \"Created fine-tune: ft-tMP2cW32xmBNF29Ng0IOHkJ3\",\n            \"created_at\": 1679529741\n        },\n        {\n            \"object\": \"fine-tune-event\",\n            \"level\": \"info\",\n            \"message\": \"Fine-tune cancelled\",\n            \"created_at\": 1679529755\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "List fine-tune events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/fine-tunes/:fine_tune_id/events",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"fine-tunes",
+								":fine_tune_id",
+								"events"
+							],
+							"variable": [
+								{
+									"key": "fine_tune_id",
+									"value": "ft-MH3TkRzJrC62xWaudm1aHqC5",
+									"description": "The ID of the fine-tune job."
+								}
+							]
+						},
+						"description": "Creates a job that fine-tunes a specified model from a given dataset."
+					},
+					"response": [
+						{
+							"name": "List fine-tune events",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/fine-tunes/:fine_tune_id/events",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"fine-tunes",
+										":fine_tune_id",
+										"events"
+									],
+									"variable": [
+										{
+											"key": "fine_tune_id",
+											"value": "ft-MH3TkRzJrC62xWaudm1aHqC5",
+											"description": "The ID of the fine-tune job."
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 00:01:42 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1712"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "OpenAI-Version",
+									"value": "2020-10-01"
+								},
+								{
+									"key": "OpenAI-Organization",
+									"value": "user-ydfxhof885ycvb52zjw5ly51"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "bcf740447b3a31787003fd3c34a76dc5"
+								},
+								{
+									"key": "OpenAI-Processing-Ms",
+									"value": "30"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15724800; includeSubDomains"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"object\": \"list\",\n    \"data\": [\n        {\n            \"object\": \"fine-tune-event\",\n            \"level\": \"info\",\n            \"message\": \"Created fine-tune: ft-MH3TkRzJrC62xWaudm1aHqC5\",\n            \"created_at\": 1679529396\n        },\n        {\n            \"object\": \"fine-tune-event\",\n            \"level\": \"info\",\n            \"message\": \"Fine-tune costs $0.00\",\n            \"created_at\": 1679529508\n        },\n        {\n            \"object\": \"fine-tune-event\",\n            \"level\": \"info\",\n            \"message\": \"Fine-tune enqueued. Queue number: 0\",\n            \"created_at\": 1679529508\n        },\n        {\n            \"object\": \"fine-tune-event\",\n            \"level\": \"info\",\n            \"message\": \"Fine-tune started\",\n            \"created_at\": 1679529509\n        },\n        {\n            \"object\": \"fine-tune-event\",\n            \"level\": \"info\",\n            \"message\": \"Completed epoch 1/4\",\n            \"created_at\": 1679529596\n        },\n        {\n            \"object\": \"fine-tune-event\",\n            \"level\": \"info\",\n            \"message\": \"Completed epoch 2/4\",\n            \"created_at\": 1679529597\n        },\n        {\n            \"object\": \"fine-tune-event\",\n            \"level\": \"info\",\n            \"message\": \"Completed epoch 3/4\",\n            \"created_at\": 1679529597\n        },\n        {\n            \"object\": \"fine-tune-event\",\n            \"level\": \"info\",\n            \"message\": \"Completed epoch 4/4\",\n            \"created_at\": 1679529598\n        },\n        {\n            \"object\": \"fine-tune-event\",\n            \"level\": \"info\",\n            \"message\": \"Uploaded model: davinci:ft-personal-2023-03-23-00-00-32\",\n            \"created_at\": 1679529632\n        },\n        {\n            \"object\": \"fine-tune-event\",\n            \"level\": \"info\",\n            \"message\": \"Uploaded result file: file-BebmMZ8yVlJBouJpuUq3buhU\",\n            \"created_at\": 1679529633\n        },\n        {\n            \"object\": \"fine-tune-event\",\n            \"level\": \"info\",\n            \"message\": \"Fine-tune succeeded\",\n            \"created_at\": 1679529633\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete a fine-tuned model. You must have the Owner role in your organization.",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/models/:model",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"models",
+								":model"
+							],
+							"variable": [
+								{
+									"key": "model",
+									"value": "curie:ft-acmeco-2021-03-03-21-44-20",
+									"description": "(Required) The model to delete"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete a fine-tuned model. You must have the Owner role in your organization.",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/models/:model",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"models",
+										":model"
+									],
+									"variable": [
+										{
+											"key": "model",
+											"value": "curie:ft-personal-2023-03-23-00-02-30",
+											"description": "(Required) The model to delete"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 00:04:46 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "92"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "OpenAI-Version",
+									"value": "2020-10-01"
+								},
+								{
+									"key": "OpenAI-Organization",
+									"value": "user-ydfxhof885ycvb52zjw5ly51"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "5da5f286ce29977636e5089f665fecdb"
+								},
+								{
+									"key": "OpenAI-Processing-Ms",
+									"value": "61"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15724800; includeSubDomains"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"curie:ft-personal-2023-03-23-00-02-30\",\n    \"object\": \"model\",\n    \"deleted\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Use fine-tuned model (completion)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"model\": \"davinci:ft-personal-2023-03-23-00-00-32\",\n  \"prompt\": \"Why did the chicken use AI?\",\n  \"max_tokens\": 10,\n  \"temperature\": 0.7\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/completions",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"completions"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Use fine-tuned model (completion)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"model\": \"davinci:ft-personal-2023-03-23-00-00-32\",\n  \"prompt\": \"Why did the chicken use AI?\",\n  \"max_tokens\": 10,\n  \"temperature\": 0.7\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/completions",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"completions"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 23 Mar 2023 00:09:01 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, must-revalidate"
+								},
+								{
+									"key": "Openai-Model",
+									"value": "davinci:ft-personal-2023-03-23-00-00-32"
+								},
+								{
+									"key": "Openai-Organization",
+									"value": "user-aaaaaaaaa"
+								},
+								{
+									"key": "Openai-Processing-Ms",
+									"value": "325"
+								},
+								{
+									"key": "Openai-Version",
+									"value": "2020-10-01"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15724800; includeSubDomains"
+								},
+								{
+									"key": "X-Ratelimit-Limit-Requests",
+									"value": "3000"
+								},
+								{
+									"key": "X-Ratelimit-Limit-Tokens",
+									"value": "250000"
+								},
+								{
+									"key": "X-Ratelimit-Remaining-Requests",
+									"value": "2999"
+								},
+								{
+									"key": "X-Ratelimit-Remaining-Tokens",
+									"value": "249990"
+								},
+								{
+									"key": "X-Ratelimit-Reset-Requests",
+									"value": "20ms"
+								},
+								{
+									"key": "X-Ratelimit-Reset-Tokens",
+									"value": "2ms"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "1b434aa757754898bddfd6127627b8a3"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"cmpl-6x2nlvwnB5tYyMOTHJ7VP60bEZYeW\",\n    \"object\": \"text_completion\",\n    \"created\": 1679530141,\n    \"model\": \"davinci:ft-personal-2023-03-23-00-00-32\",\n    \"choices\": [\n        {\n            \"text\": \" To get to the other side.”\\n\",\n            \"index\": 0,\n            \"logprobs\": null,\n            \"finish_reason\": \"length\"\n        }\n    ],\n    \"usage\": {\n        \"prompt_tokens\": 7,\n        \"completion_tokens\": 10,\n        \"total_tokens\": 17\n    }\n}"
+						}
+					]
+				}
+			],
+			"description": "Manage fine-tuning jobs to tailor a model to your specific training data.\n\nThe Files endpoints in this collection can be used to upload training data files. Alternatively you can use the `openai` CLI tool to upload datasets. Read more here:\n\n[https://platform.openai.com/docs/guides/fine-tuning](https://platform.openai.com/docs/guides/fine-tuning)"
+		},
+		{
+			"name": "Moderations",
+			"item": [
+				{
+					"name": "Create moderation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"input\": \"I want to kill them.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/moderations",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"moderations"
+							]
+						},
+						"description": "Creates a completion for the provided prompt and parameters."
+					},
+					"response": [
+						{
+							"name": "Create moderation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"input\": \"I want to kill them.\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/moderations",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"moderations"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 10 Dec 2022 21:21:05 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "719"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "OpenAI-Version",
+									"value": "2020-10-01"
+								},
+								{
+									"key": "OpenAI-Organization",
+									"value": "user-aaaaaaa"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "c1a3779b8bb1d21a7f4a06e4808fc1dc"
+								},
+								{
+									"key": "OpenAI-Processing-Ms",
+									"value": "228"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15724800; includeSubDomains"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"modr-6M1ZJ7xMF68OwMqizgblbzVAJXUYK\",\n    \"model\": \"text-moderation-004\",\n    \"results\": [\n        {\n            \"categories\": {\n                \"hate\": false,\n                \"hate/threatening\": false,\n                \"self-harm\": false,\n                \"sexual\": false,\n                \"sexual/minors\": false,\n                \"violence\": true,\n                \"violence/graphic\": false\n            },\n            \"category_scores\": {\n                \"hate\": 0.18252533674240112,\n                \"hate/threatening\": 0.0032941880635917187,\n                \"self-harm\": 1.9077321944394043e-9,\n                \"sexual\": 9.69763732427964e-7,\n                \"sexual/minors\": 1.3826513267645169e-8,\n                \"violence\": 0.8871539235115051,\n                \"violence/graphic\": 3.196241493697016e-8\n            },\n            \"flagged\": true\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Engines",
+			"item": [
+				{
+					"name": "List engines",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/engines",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"engines"
+							]
+						},
+						"description": "Lists the currently available engines, and provides basic information about each one such as the owner and availability.\n\n[See More](https://beta.openai.com/docs/api-reference/engines/list)\n"
+					},
+					"response": [
+						{
+							"name": "List engines",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/engines",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"engines"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 22 Mar 2023 22:29:57 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "9360"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "OpenAI-Version",
+									"value": "2020-10-01"
+								},
+								{
+									"key": "OpenAI-Organization",
+									"value": "user-aaaaaa"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "320fa5cef1f38a7e3aff35a0235a8d1f"
+								},
+								{
+									"key": "OpenAI-Processing-Ms",
+									"value": "48"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15724800; includeSubDomains"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"object\": \"list\",\n    \"data\": [\n        {\n            \"object\": \"engine\",\n            \"id\": \"babbage\",\n            \"ready\": true,\n            \"owner\": \"openai\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"davinci\",\n            \"ready\": true,\n            \"owner\": \"openai\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"babbage-code-search-code\",\n            \"ready\": true,\n            \"owner\": \"openai-dev\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"text-similarity-babbage-001\",\n            \"ready\": true,\n            \"owner\": \"openai-dev\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"text-davinci-001\",\n            \"ready\": true,\n            \"owner\": \"openai\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"ada\",\n            \"ready\": true,\n            \"owner\": \"openai\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"curie-instruct-beta\",\n            \"ready\": true,\n            \"owner\": \"openai\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"babbage-code-search-text\",\n            \"ready\": true,\n            \"owner\": \"openai-dev\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"babbage-similarity\",\n            \"ready\": true,\n            \"owner\": \"openai-dev\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"gpt-3.5-turbo\",\n            \"ready\": true,\n            \"owner\": \"openai\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"whisper-1\",\n            \"ready\": true,\n            \"owner\": \"openai-internal\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"code-search-babbage-text-001\",\n            \"ready\": true,\n            \"owner\": \"openai-dev\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"text-curie-001\",\n            \"ready\": true,\n            \"owner\": \"openai\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"gpt-3.5-turbo-0301\",\n            \"ready\": true,\n            \"owner\": \"openai\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"code-cushman-001\",\n            \"ready\": true,\n            \"owner\": \"openai\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"code-search-babbage-code-001\",\n            \"ready\": true,\n            \"owner\": \"openai-dev\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"text-davinci-insert-001\",\n            \"ready\": true,\n            \"owner\": \"openai\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"text-davinci-003\",\n            \"ready\": true,\n            \"owner\": \"openai-internal\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"text-ada-001\",\n            \"ready\": true,\n            \"owner\": \"openai\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"text-embedding-ada-002\",\n            \"ready\": true,\n            \"owner\": \"openai-internal\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"text-similarity-ada-001\",\n            \"ready\": true,\n            \"owner\": \"openai-dev\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"text-davinci-insert-002\",\n            \"ready\": true,\n            \"owner\": \"openai\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"code-davinci-002\",\n            \"ready\": true,\n            \"owner\": \"openai\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"ada-code-search-code\",\n            \"ready\": true,\n            \"owner\": \"openai-dev\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"ada-similarity\",\n            \"ready\": true,\n            \"owner\": \"openai-dev\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"code-search-ada-text-001\",\n            \"ready\": true,\n            \"owner\": \"openai-dev\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"text-search-ada-query-001\",\n            \"ready\": true,\n            \"owner\": \"openai-dev\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"davinci-search-document\",\n            \"ready\": true,\n            \"owner\": \"openai-dev\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"ada-code-search-text\",\n            \"ready\": true,\n            \"owner\": \"openai-dev\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"text-search-ada-doc-001\",\n            \"ready\": true,\n            \"owner\": \"openai-dev\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"davinci-instruct-beta\",\n            \"ready\": true,\n            \"owner\": \"openai\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"text-similarity-curie-001\",\n            \"ready\": true,\n            \"owner\": \"openai-dev\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"code-search-ada-code-001\",\n            \"ready\": true,\n            \"owner\": \"openai-dev\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"ada-search-query\",\n            \"ready\": true,\n            \"owner\": \"openai-dev\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"text-search-davinci-query-001\",\n            \"ready\": true,\n            \"owner\": \"openai-dev\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"curie-search-query\",\n            \"ready\": true,\n            \"owner\": \"openai-dev\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"davinci-search-query\",\n            \"ready\": true,\n            \"owner\": \"openai-dev\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"babbage-search-document\",\n            \"ready\": true,\n            \"owner\": \"openai-dev\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"ada-search-document\",\n            \"ready\": true,\n            \"owner\": \"openai-dev\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"text-search-curie-query-001\",\n            \"ready\": true,\n            \"owner\": \"openai-dev\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"text-search-babbage-doc-001\",\n            \"ready\": true,\n            \"owner\": \"openai-dev\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"curie-search-document\",\n            \"ready\": true,\n            \"owner\": \"openai-dev\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"text-search-curie-doc-001\",\n            \"ready\": true,\n            \"owner\": \"openai-dev\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"babbage-search-query\",\n            \"ready\": true,\n            \"owner\": \"openai-dev\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"text-babbage-001\",\n            \"ready\": true,\n            \"owner\": \"openai\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"code-davinci-edit-001\",\n            \"ready\": true,\n            \"owner\": \"openai\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"text-search-davinci-doc-001\",\n            \"ready\": true,\n            \"owner\": \"openai-dev\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"text-search-babbage-query-001\",\n            \"ready\": true,\n            \"owner\": \"openai-dev\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"curie-similarity\",\n            \"ready\": true,\n            \"owner\": \"openai-dev\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"curie\",\n            \"ready\": true,\n            \"owner\": \"openai\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"text-davinci-edit-001\",\n            \"ready\": true,\n            \"owner\": \"openai\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"text-similarity-davinci-001\",\n            \"ready\": true,\n            \"owner\": \"openai-dev\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"text-davinci-002\",\n            \"ready\": true,\n            \"owner\": \"openai\",\n            \"permissions\": null,\n            \"created\": null\n        },\n        {\n            \"object\": \"engine\",\n            \"id\": \"davinci-similarity\",\n            \"ready\": true,\n            \"owner\": \"openai-dev\",\n            \"permissions\": null,\n            \"created\": null\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Retrieve engine",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/engines/:engineId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"engines",
+								":engineId"
+							],
+							"variable": [
+								{
+									"key": "engineId",
+									"value": "babbage",
+									"description": "(Required) The ID of the engine to use for this request.\n"
+								}
+							]
+						},
+						"description": "Retrieves an engine instance, providing basic information about the engine such as the owner and availability.\n\n[See More](https://beta.openai.com/docs/api-reference/engines/retrieve)\n"
+					},
+					"response": [
+						{
+							"name": "Retrieve engine",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/engines/:engineId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"engines",
+										":engineId"
+									],
+									"variable": [
+										{
+											"key": "engineId",
+											"value": "babbage",
+											"description": "(Required) (Required) The ID of the engine to use for this request.\n"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 10 Dec 2022 19:46:41 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "124"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "OpenAI-Version",
+									"value": "2020-10-01"
+								},
+								{
+									"key": "OpenAI-Organization",
+									"value": "user-aaaaaa"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "838e2df0452fed82b1ae166514edecf1"
+								},
+								{
+									"key": "OpenAI-Processing-Ms",
+									"value": "27"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15724800; includeSubDomains"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"object\": \"engine\",\n    \"id\": \"babbage\",\n    \"ready\": true,\n    \"owner\": \"openai\",\n    \"permissions\": null,\n    \"created\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Search",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"query\": \"the president\",\n  \"documents\": [\n    \"mollit cillum irure\"\n  ],\n  \"file\": \"tempor deserunt of\",\n  \"max_rerank\": 200,\n  \"return_metadata\": false,\n  \"user\": \"user-1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/engines/:engine_id/search",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"engines",
+								":engine_id",
+								"search"
+							],
+							"variable": [
+								{
+									"key": "engine_id",
+									"value": "davinci",
+									"description": "(Required) The ID of the engine to use for this request.  You can select one of `ada`, `babbage`, `curie`, or `davinci`."
+								}
+							]
+						},
+						"description": "The search endpoint computes similarity scores between provided query and documents. Documents can be passed directly to the API if there are no more than 200 of them.To go beyond the 200 document limit, documents can be processed offline and then used"
+					},
+					"response": [
+						{
+							"name": "Search",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"query\": \"the president\",\n  \"documents\": [\n    \"mollit cillum irure\"\n  ],\n  \"file\": \"tempor deserunt of\",\n  \"max_rerank\": 200,\n  \"return_metadata\": false,\n  \"user\": \"user-1234\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/engines/:engine_id/search",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"engines",
+										":engine_id",
+										"search"
+									],
+									"variable": [
+										{
+											"key": "engine_id",
+											"value": "davinci",
+											"description": "(Required) The ID of the engine to use for this request.  You can select one of `ada`, `babbage`, `curie`, or `davinci`."
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"object\": \"aliqua\",\n  \"model\": \"culpa mollit\",\n  \"data\": [\n    {\n      \"object\": \"quis ullamco\",\n      \"document\": -71944099,\n      \"score\": -27372955.13266051\n    },\n    {\n      \"object\": \"nostrud\",\n      \"document\": 60251307,\n      \"score\": 27385981.955217436\n    }\n  ]\n}"
+						}
+					]
+				}
+			],
+			"description": "These endpoints describe and provide access to the various engines available in the API."
+		},
+		{
+			"name": "Answers",
+			"item": [
+				{
+					"name": "Answer Question",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"model\": \"ipsum occaecat\",\n  \"question\": \"What is the capital of Japan?\",\n  \"examples\": [\n    [\n      \"esse\",\n      \"dolo\"\n    ]\n  ],\n  \"examples_context\": \"Ottawa, Canada's capital, is located in the east of southern Ontario, near the city of Montréal and the U.S. border.\",\n  \"documents\": [\n    \"est in mollit nisi elit\",\n    \"consectetur exercitation quis cil\"\n  ],\n  \"file\": \"ipsum esse minim Lorem\",\n  \"search_model\": \"ada\",\n  \"max_rerank\": 200,\n  \"temperature\": 0,\n  \"logprobs\": null,\n  \"max_tokens\": 16,\n  \"stop\": \"\\n\",\n  \"n\": 1,\n  \"logit_bias\": null,\n  \"return_metadata\": false,\n  \"return_prompt\": false,\n  \"user\": \"user-1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/answers",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"answers"
+							]
+						},
+						"description": "Answers the specified question using the provided documents and examples.The endpoint first [searches](/docs/api-reference/searches) over provided documents or files to find relevant context. The relevant context is combined with the provided examples a"
+					},
+					"response": [
+						{
+							"name": "Answer Question",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"model\": \"quis\",\n  \"question\": \"What is the capital of Japan?\",\n  \"examples\": [\n    [\n      \"et pariatur anim\",\n      \"laboris mollit amet in\"\n    ]\n  ],\n  \"examples_context\": \"Ottawa, Canada's capital, is located in the east of southern Ontario, near the city of Montréal and the U.S. border.\",\n  \"documents\": [\n    \"reprehenderit consectetur ipsum cupidatat\",\n    \"voluptate sit veniam\"\n  ],\n  \"file\": \"nulla dolor\",\n  \"search_model\": \"ada\",\n  \"max_rerank\": 200,\n  \"temperature\": 0,\n  \"logprobs\": null,\n  \"max_tokens\": 16,\n  \"stop\": \"\\n\",\n  \"n\": 1,\n  \"logit_bias\": null,\n  \"return_metadata\": false,\n  \"return_prompt\": false,\n  \"user\": \"user-1234\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/answers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"answers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"object\": \"voluptate dolore aliquip ipsum\",\n  \"model\": \"Duis laborum\",\n  \"search_model\": \"dolor\",\n  \"completion\": \"minim aute fugiat\",\n  \"answers\": [\n    \"et qui\",\n    \"consequat nisi consectetur\"\n  ],\n  \"selected_documents\": [\n    {\n      \"document\": -31709807,\n      \"text\": \"dolor consectetur\"\n    },\n    {\n      \"document\": 65300678,\n      \"text\": \"esse labore commodo\"\n    }\n  ]\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://api.openai.com/v1"
+		},
+		{
+			"key": "token",
+			"value": ""
+		}
+	]
+}

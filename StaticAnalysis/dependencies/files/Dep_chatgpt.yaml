@@ -1,0 +1,166 @@
+openapi: 3.0.0
+info:
+  title: PayPal APIs Copy 2
+  version: 1.0.0
+paths:
+  /v2/checkout/orders/{order_id}:
+    get:
+      summary: Show order details
+      description: |
+        Shows details for an order, by ID.
+        
+        Note: For error handling and troubleshooting, see [Orders v2 errors](https://developer.paypal.com/api/rest/reference/orders/v2/errors/#get-order).
+      parameters:
+        - name: order_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Show order details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OrderDetails'
+  /v2/checkout/orders:
+    post:
+      summary: Create order
+      description: |
+        Creates an order.
+        
+        Note: For error handling and troubleshooting, see [Orders v2 errors](https://developer.paypal.com/api/rest/reference/orders/v2/errors/#create-order).
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateOrderRequest'
+      responses:
+        '200':
+          description: Create order
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateOrderResponse'
+components:
+  schemas:
+    OrderDetails:
+      type: object
+      properties:
+        id:
+          type: string
+        intent:
+           $ref: "#/components/schemas/Dependency1"
+        status:
+          type: string
+        purchase_units:
+          type: array
+          items:
+            $ref: '#/components/schemas/PurchaseUnit'
+        create_time:
+          type: string
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrderLink'
+    PurchaseUnit:
+      type: object
+      properties:
+        reference_id:
+          type: string
+        amount:
+          $ref: '#/components/schemas/Amount'
+        payee:
+          $ref: '#/components/schemas/Payee'
+        soft_descriptor:
+          type: string
+    Amount:
+      type: object
+      properties:
+        currency_code:
+           $ref: "#/components/schemas/Dependency2"
+        value:
+           $ref: "#/components/schemas/Dependency3"
+    Payee:
+      type: object
+      properties:
+        email_address:
+          type: string
+        merchant_id:
+          type: string
+    OrderLink:
+      type: object
+      properties:
+        href:
+          type: string
+        rel:
+          type: string
+        method:
+          type: string
+    CreateOrderRequest:
+      type: object
+      properties:
+        intent:
+           $ref: "#/components/schemas/Dependency1"
+        purchase_units:
+          type: array
+          items:
+            $ref: '#/components/schemas/PurchaseUnitRequest'
+        application_context:
+          $ref: '#/components/schemas/ApplicationContext'
+    PurchaseUnitRequest:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Item'
+        amount:
+          $ref: '#/components/schemas/Amount'
+    Item:
+      type: object
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        quantity:
+          type: string
+        unit_amount:
+          $ref: '#/components/schemas/Amount'
+    CreateOrderResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        status:
+          type: string
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrderLink'
+    ApplicationContext:
+      type: object
+      properties:
+        brand_name:
+          type: string
+        locale:
+          type: string
+        shipping_preference:
+          type: string
+    Dependency1:
+      type: object
+      properties:
+        CONTENT:
+          type:  string
+    Dependency2:
+      type: object
+      properties:
+        CONTENT:
+          type:  string
+    Dependency3:
+      type: object
+      properties:
+        CONTENT:
+          type:  string

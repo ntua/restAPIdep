@@ -1,0 +1,2770 @@
+{
+    "info": {
+        "nodes": "27",
+        "interdependencyNodes": "24",
+        "dependentOnlyNodes": "8",
+        "derivingOnlyDependencyNodes": "3",
+        "bothDependentDerivingNodes": "13",
+        "edges": "51",
+        "dependenciesPerAttribute": "131",
+        "bodyDependencies": "95",
+        "queryDependencies": "1",
+        "pathDependencies": "35"
+    },
+    "endpoints": [
+        {
+            "name": "GET v1/models",
+            "method": "GET",
+            "description": "not available",
+            "dependencies": [
+                {
+                    "name": "POST v1/chat/completions",
+                    "method": "POST",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->28->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "1",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 2,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->20->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 10,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "id",
+                            "toKey": "model",
+                            "fromPath": "body->data->1->id",
+                            "toPath": "body->model",
+                            "fromValue": "gpt-4o-mini",
+                            "toValue": "gpt-4o-mini",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "1",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 2,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->11->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "1",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 2,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->0->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 10,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->16->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "1",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 2,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->22->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "1",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 2,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->18->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "1",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 2,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "id",
+                            "toKey": "model",
+                            "fromPath": "body->data->1->id",
+                            "toPath": "body->model",
+                            "fromValue": "gpt-4o-mini",
+                            "toValue": "gpt-4o-mini",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "1",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 3,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->26->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 10,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->0->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "1",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 2,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->4->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 10,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->9->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "1",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 2,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->13->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 10,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->13->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "1",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 2,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->4->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "1",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 2,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->5->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 10,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->22->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 10,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->17->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 10,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->6->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 10,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->3->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "1",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 2,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->24->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "1",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 2,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->5->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "1",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 2,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->6->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "1",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 2,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->15->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "1",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 2,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->3->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 10,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->26->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "1",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 2,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->9->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 10,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->14->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 10,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->21->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "1",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 2,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->2->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 10,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->15->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 10,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->1->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "1",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 2,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->18->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 10,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->17->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "1",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 2,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->7->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 10,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->8->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "1",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 2,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->2->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "1",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 2,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->21->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 10,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->24->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 10,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->8->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 10,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->14->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "1",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 2,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->11->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 10,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->1->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 10,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->7->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "1",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 2,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->27->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "1",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 2,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->16->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 10,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->27->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 10,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->28->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 10,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->data->20->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "1",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 2,
+                            "parameter": "body"
+                        }
+                    ]
+                },
+                {
+                    "name": "GET v1/models/gpt-4o-mini",
+                    "method": "GET",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "id",
+                            "toKey": "gpt-4o-mini",
+                            "fromPath": "body->data->1->id",
+                            "toPath": "url->gpt-4o-mini",
+                            "fromValue": "gpt-4o-mini",
+                            "toValue": "gpt-4o-mini",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "path",
+                            "format": {},
+                            "use_case": "1",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 1,
+                            "parameter": "path"
+                        }
+                    ]
+                },
+                {
+                    "name": "POST v1/embeddings",
+                    "method": "POST",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "id",
+                            "toKey": "model",
+                            "fromPath": "body->data->2->id",
+                            "toPath": "body->model",
+                            "fromValue": "text-embedding-3-small",
+                            "toValue": "text-embedding-3-small",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "1",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 4,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "id",
+                            "toKey": "model",
+                            "fromPath": "body->data->2->id",
+                            "toPath": "body->model",
+                            "fromValue": "text-embedding-3-small",
+                            "toValue": "text-embedding-3-small",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "1",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 5,
+                            "parameter": "body"
+                        }
+                    ]
+                },
+                {
+                    "name": "POST v1/images/generations",
+                    "method": "POST",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "id",
+                            "toKey": "model",
+                            "fromPath": "body->data->9->id",
+                            "toPath": "body->model",
+                            "fromValue": "dall-e-3",
+                            "toValue": "dall-e-3",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "1",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 6,
+                            "parameter": "body"
+                        }
+                    ]
+                },
+                {
+                    "name": "GET v1/models/gpt-3.5-turbo-0125",
+                    "method": "GET",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "id",
+                            "toKey": "gpt-3.5-turbo-0125",
+                            "fromPath": "body->data->15->id",
+                            "toPath": "url->gpt-3.5-turbo-0125",
+                            "fromValue": "gpt-3.5-turbo-0125",
+                            "toValue": "gpt-3.5-turbo-0125",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "path",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 1,
+                            "parameter": "path"
+                        }
+                    ]
+                },
+                {
+                    "name": "POST v1/fine_tuning/jobs",
+                    "method": "POST",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "id",
+                            "toKey": "model",
+                            "fromPath": "body->data->15->id",
+                            "toPath": "body->model",
+                            "fromValue": "gpt-3.5-turbo-0125",
+                            "toValue": "gpt-3.5-turbo-0125",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 12,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "id",
+                            "toKey": "model",
+                            "fromPath": "body->data->15->id",
+                            "toPath": "body->model",
+                            "fromValue": "gpt-3.5-turbo-0125",
+                            "toValue": "gpt-3.5-turbo-0125",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 4,
+                            "parameter": "body"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "GET v1/models/gpt-4o-mini",
+            "method": "GET",
+            "description": "not available",
+            "dependencies": [
+                {
+                    "name": "POST v1/chat/completions",
+                    "method": "POST",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "id",
+                            "toKey": "model",
+                            "fromPath": "body->id",
+                            "toPath": "body->model",
+                            "fromValue": "gpt-4o-mini",
+                            "toValue": "gpt-4o-mini",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "1",
+                            "fromSeqNumber": 1,
+                            "toSeqNumber": 2,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "id",
+                            "toKey": "model",
+                            "fromPath": "body->id",
+                            "toPath": "body->model",
+                            "fromValue": "gpt-4o-mini",
+                            "toValue": "gpt-4o-mini",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "1",
+                            "fromSeqNumber": 1,
+                            "toSeqNumber": 3,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "1",
+                            "fromSeqNumber": 1,
+                            "toSeqNumber": 2,
+                            "parameter": "body"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "GET v1/models/gpt-3.5-turbo-0125",
+            "method": "GET",
+            "description": "not available",
+            "dependencies": [
+                {
+                    "name": "POST v1/chat/completions",
+                    "method": "POST",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "owned_by",
+                            "toKey": "role",
+                            "fromPath": "body->owned_by",
+                            "toPath": "body->messages->0->role",
+                            "fromValue": "system",
+                            "toValue": "system",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 1,
+                            "toSeqNumber": 10,
+                            "parameter": "body"
+                        }
+                    ]
+                },
+                {
+                    "name": "POST v1/fine_tuning/jobs",
+                    "method": "POST",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "id",
+                            "toKey": "model",
+                            "fromPath": "body->id",
+                            "toPath": "body->model",
+                            "fromValue": "gpt-3.5-turbo-0125",
+                            "toValue": "gpt-3.5-turbo-0125",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 1,
+                            "toSeqNumber": 12,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "id",
+                            "toKey": "model",
+                            "fromPath": "body->id",
+                            "toPath": "body->model",
+                            "fromValue": "gpt-3.5-turbo-0125",
+                            "toValue": "gpt-3.5-turbo-0125",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 1,
+                            "toSeqNumber": 4,
+                            "parameter": "body"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "GET v1/fine_tuning/jobs",
+            "method": "GET",
+            "description": "not available",
+            "dependencies": [
+                {
+                    "name": "POST v1/fine_tuning/jobs",
+                    "method": "POST",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "model",
+                            "toKey": "model",
+                            "fromPath": "body->data->0->model",
+                            "toPath": "body->model",
+                            "fromValue": "gpt-3.5-turbo-0125",
+                            "toValue": "gpt-3.5-turbo-0125",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 5,
+                            "toSeqNumber": 12,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "model",
+                            "toKey": "model",
+                            "fromPath": "body->data->1->model",
+                            "toPath": "body->model",
+                            "fromValue": "gpt-3.5-turbo-0125",
+                            "toValue": "gpt-3.5-turbo-0125",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 5,
+                            "toSeqNumber": 12,
+                            "parameter": "body"
+                        }
+                    ]
+                },
+                {
+                    "name": "GET v1/fine_tuning/jobs/ftjob-IrTLeij9xFogesyfFtX4POk8",
+                    "method": "GET",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "id",
+                            "toKey": "ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "fromPath": "body->data->0->id",
+                            "toPath": "url->ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "fromValue": "ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "toValue": "ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "path",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 5,
+                            "toSeqNumber": 6,
+                            "parameter": "path"
+                        }
+                    ]
+                },
+                {
+                    "name": "GET v1/fine_tuning/jobs/ftjob-IrTLeij9xFogesyfFtX4POk8/events",
+                    "method": "GET",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "id",
+                            "toKey": "ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "fromPath": "body->data->0->id",
+                            "toPath": "url->ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "fromValue": "ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "toValue": "ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "path",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 5,
+                            "toSeqNumber": 7,
+                            "parameter": "path"
+                        },
+                        {
+                            "fromKey": "id",
+                            "toKey": "ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "fromPath": "body->data->0->id",
+                            "toPath": "url->ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "fromValue": "ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "toValue": "ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "path",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 5,
+                            "toSeqNumber": 8,
+                            "parameter": "path"
+                        }
+                    ]
+                },
+                {
+                    "name": "GET v1/fine_tuning/jobs/ftjob-IrTLeij9xFogesyfFtX4POk8/checkpoints",
+                    "method": "GET",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "id",
+                            "toKey": "ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "fromPath": "body->data->0->id",
+                            "toPath": "url->ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "fromValue": "ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "toValue": "ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "path",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 5,
+                            "toSeqNumber": 9,
+                            "parameter": "path"
+                        }
+                    ]
+                },
+                {
+                    "name": "GET v1/fine_tuning/jobs/ftjob-dFUCreOfERDyj48UoRqIs9hF",
+                    "method": "GET",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "id",
+                            "toKey": "ftjob-dFUCreOfERDyj48UoRqIs9hF",
+                            "fromPath": "body->data->0->id",
+                            "toPath": "url->ftjob-dFUCreOfERDyj48UoRqIs9hF",
+                            "fromValue": "ftjob-dFUCreOfERDyj48UoRqIs9hF",
+                            "toValue": "ftjob-dFUCreOfERDyj48UoRqIs9hF",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "path",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 13,
+                            "toSeqNumber": 14,
+                            "parameter": "path"
+                        }
+                    ]
+                },
+                {
+                    "name": "POST v1/fine_tuning/jobs/ftjob-dFUCreOfERDyj48UoRqIs9hF/cancel",
+                    "method": "POST",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "id",
+                            "toKey": "ftjob-dFUCreOfERDyj48UoRqIs9hF",
+                            "fromPath": "body->data->0->id",
+                            "toPath": "url->ftjob-dFUCreOfERDyj48UoRqIs9hF",
+                            "fromValue": "ftjob-dFUCreOfERDyj48UoRqIs9hF",
+                            "toValue": "ftjob-dFUCreOfERDyj48UoRqIs9hF",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "path",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 13,
+                            "toSeqNumber": 15,
+                            "parameter": "path"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "GET v1/fine_tuning/jobs/ftjob-IrTLeij9xFogesyfFtX4POk8",
+            "method": "GET",
+            "description": "not available",
+            "dependencies": [
+                {
+                    "name": "POST v1/fine_tuning/jobs",
+                    "method": "POST",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "model",
+                            "toKey": "model",
+                            "fromPath": "body->model",
+                            "toPath": "body->model",
+                            "fromValue": "gpt-3.5-turbo-0125",
+                            "toValue": "gpt-3.5-turbo-0125",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 6,
+                            "toSeqNumber": 12,
+                            "parameter": "body"
+                        }
+                    ]
+                },
+                {
+                    "name": "GET v1/fine_tuning/jobs/ftjob-IrTLeij9xFogesyfFtX4POk8/events",
+                    "method": "GET",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "id",
+                            "toKey": "ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "fromPath": "body->id",
+                            "toPath": "url->ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "fromValue": "ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "toValue": "ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "path",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 6,
+                            "toSeqNumber": 7,
+                            "parameter": "path"
+                        },
+                        {
+                            "fromKey": "id",
+                            "toKey": "ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "fromPath": "body->id",
+                            "toPath": "url->ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "fromValue": "ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "toValue": "ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "path",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 6,
+                            "toSeqNumber": 8,
+                            "parameter": "path"
+                        }
+                    ]
+                },
+                {
+                    "name": "GET v1/fine_tuning/jobs/ftjob-IrTLeij9xFogesyfFtX4POk8/checkpoints",
+                    "method": "GET",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "id",
+                            "toKey": "ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "fromPath": "body->id",
+                            "toPath": "url->ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "fromValue": "ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "toValue": "ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "path",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 6,
+                            "toSeqNumber": 9,
+                            "parameter": "path"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "GET v1/files",
+            "method": "GET",
+            "description": "not available",
+            "dependencies": [
+                {
+                    "name": "POST v1/files",
+                    "method": "POST",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "purpose",
+                            "toKey": "purpose",
+                            "fromPath": "body->data->1->purpose",
+                            "toPath": "body->purpose",
+                            "fromValue": "batch",
+                            "toValue": "batch",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 1,
+                            "toSeqNumber": 6,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "purpose",
+                            "toKey": "purpose",
+                            "fromPath": "body->data->4->purpose",
+                            "toPath": "body->purpose",
+                            "fromValue": "batch",
+                            "toValue": "batch",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 1,
+                            "toSeqNumber": 6,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "object",
+                            "toKey": "fieldname",
+                            "fromPath": "body->data->2->object",
+                            "toPath": "body->file->fieldname",
+                            "fromValue": "file",
+                            "toValue": "file",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 1,
+                            "toSeqNumber": 6,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "object",
+                            "toKey": "fieldname",
+                            "fromPath": "body->data->3->object",
+                            "toPath": "body->file->fieldname",
+                            "fromValue": "file",
+                            "toValue": "file",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 1,
+                            "toSeqNumber": 6,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "purpose",
+                            "toKey": "purpose",
+                            "fromPath": "body->data->8->purpose",
+                            "toPath": "body->purpose",
+                            "fromValue": "batch",
+                            "toValue": "batch",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 1,
+                            "toSeqNumber": 6,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "object",
+                            "toKey": "fieldname",
+                            "fromPath": "body->data->6->object",
+                            "toPath": "body->file->fieldname",
+                            "fromValue": "file",
+                            "toValue": "file",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 1,
+                            "toSeqNumber": 6,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "purpose",
+                            "toKey": "purpose",
+                            "fromPath": "body->data->0->purpose",
+                            "toPath": "body->purpose",
+                            "fromValue": "batch",
+                            "toValue": "batch",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 1,
+                            "toSeqNumber": 6,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "object",
+                            "toKey": "fieldname",
+                            "fromPath": "body->data->8->object",
+                            "toPath": "body->file->fieldname",
+                            "fromValue": "file",
+                            "toValue": "file",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 1,
+                            "toSeqNumber": 6,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "purpose",
+                            "toKey": "purpose",
+                            "fromPath": "body->data->3->purpose",
+                            "toPath": "body->purpose",
+                            "fromValue": "batch",
+                            "toValue": "batch",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 1,
+                            "toSeqNumber": 6,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "object",
+                            "toKey": "fieldname",
+                            "fromPath": "body->data->4->object",
+                            "toPath": "body->file->fieldname",
+                            "fromValue": "file",
+                            "toValue": "file",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 1,
+                            "toSeqNumber": 6,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "object",
+                            "toKey": "fieldname",
+                            "fromPath": "body->data->1->object",
+                            "toPath": "body->file->fieldname",
+                            "fromValue": "file",
+                            "toValue": "file",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 1,
+                            "toSeqNumber": 6,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "purpose",
+                            "toKey": "purpose",
+                            "fromPath": "body->data->5->purpose",
+                            "toPath": "body->purpose",
+                            "fromValue": "batch",
+                            "toValue": "batch",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 1,
+                            "toSeqNumber": 6,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "purpose",
+                            "toKey": "purpose",
+                            "fromPath": "body->data->6->purpose",
+                            "toPath": "body->purpose",
+                            "fromValue": "batch",
+                            "toValue": "batch",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 1,
+                            "toSeqNumber": 6,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "object",
+                            "toKey": "fieldname",
+                            "fromPath": "body->data->5->object",
+                            "toPath": "body->file->fieldname",
+                            "fromValue": "file",
+                            "toValue": "file",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 1,
+                            "toSeqNumber": 6,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "purpose",
+                            "toKey": "purpose",
+                            "fromPath": "body->data->7->purpose",
+                            "toPath": "body->purpose",
+                            "fromValue": "batch",
+                            "toValue": "batch",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 1,
+                            "toSeqNumber": 6,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "object",
+                            "toKey": "fieldname",
+                            "fromPath": "body->data->0->object",
+                            "toPath": "body->file->fieldname",
+                            "fromValue": "file",
+                            "toValue": "file",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 1,
+                            "toSeqNumber": 6,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "purpose",
+                            "toKey": "purpose",
+                            "fromPath": "body->data->2->purpose",
+                            "toPath": "body->purpose",
+                            "fromValue": "batch",
+                            "toValue": "batch",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 1,
+                            "toSeqNumber": 6,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "object",
+                            "toKey": "fieldname",
+                            "fromPath": "body->data->7->object",
+                            "toPath": "body->file->fieldname",
+                            "fromValue": "file",
+                            "toValue": "file",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 1,
+                            "toSeqNumber": 6,
+                            "parameter": "body"
+                        }
+                    ]
+                },
+                {
+                    "name": "GET v1/files/file-8z409oW4wHN74HN7I8IU72xE",
+                    "method": "GET",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "id",
+                            "toKey": "file-8z409oW4wHN74HN7I8IU72xE",
+                            "fromPath": "body->data->0->id",
+                            "toPath": "url->file-8z409oW4wHN74HN7I8IU72xE",
+                            "fromValue": "file-8z409oW4wHN74HN7I8IU72xE",
+                            "toValue": "file-8z409oW4wHN74HN7I8IU72xE",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "path",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 1,
+                            "toSeqNumber": 2,
+                            "parameter": "path"
+                        }
+                    ]
+                },
+                {
+                    "name": "GET v1/files/file-8z409oW4wHN74HN7I8IU72xE/content",
+                    "method": "GET",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "id",
+                            "toKey": "file-8z409oW4wHN74HN7I8IU72xE",
+                            "fromPath": "body->data->0->id",
+                            "toPath": "url->file-8z409oW4wHN74HN7I8IU72xE",
+                            "fromValue": "file-8z409oW4wHN74HN7I8IU72xE",
+                            "toValue": "file-8z409oW4wHN74HN7I8IU72xE",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "path",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 1,
+                            "toSeqNumber": 3,
+                            "parameter": "path"
+                        }
+                    ]
+                },
+                {
+                    "name": "POST v1/batches",
+                    "method": "POST",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "id",
+                            "toKey": "input_file_id",
+                            "fromPath": "body->data->0->id",
+                            "toPath": "body->input_file_id",
+                            "fromValue": "file-8z409oW4wHN74HN7I8IU72xE",
+                            "toValue": "file-8z409oW4wHN74HN7I8IU72xE",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 1,
+                            "toSeqNumber": 4,
+                            "parameter": "body"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "GET v1/files/file-8z409oW4wHN74HN7I8IU72xE",
+            "method": "GET",
+            "description": "not available",
+            "dependencies": [
+                {
+                    "name": "POST v1/files",
+                    "method": "POST",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "object",
+                            "toKey": "fieldname",
+                            "fromPath": "body->object",
+                            "toPath": "body->file->fieldname",
+                            "fromValue": "file",
+                            "toValue": "file",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 2,
+                            "toSeqNumber": 6,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "purpose",
+                            "toKey": "purpose",
+                            "fromPath": "body->purpose",
+                            "toPath": "body->purpose",
+                            "fromValue": "batch",
+                            "toValue": "batch",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 2,
+                            "toSeqNumber": 6,
+                            "parameter": "body"
+                        }
+                    ]
+                },
+                {
+                    "name": "GET v1/files/file-8z409oW4wHN74HN7I8IU72xE/content",
+                    "method": "GET",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "id",
+                            "toKey": "file-8z409oW4wHN74HN7I8IU72xE",
+                            "fromPath": "body->id",
+                            "toPath": "url->file-8z409oW4wHN74HN7I8IU72xE",
+                            "fromValue": "file-8z409oW4wHN74HN7I8IU72xE",
+                            "toValue": "file-8z409oW4wHN74HN7I8IU72xE",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "path",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 2,
+                            "toSeqNumber": 3,
+                            "parameter": "path"
+                        }
+                    ]
+                },
+                {
+                    "name": "POST v1/batches",
+                    "method": "POST",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "id",
+                            "toKey": "input_file_id",
+                            "fromPath": "body->id",
+                            "toPath": "body->input_file_id",
+                            "fromValue": "file-8z409oW4wHN74HN7I8IU72xE",
+                            "toValue": "file-8z409oW4wHN74HN7I8IU72xE",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 2,
+                            "toSeqNumber": 4,
+                            "parameter": "body"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "POST v1/files",
+            "method": "POST",
+            "description": "not available",
+            "dependencies": [
+                {
+                    "name": "GET v1/files/file-8z409oW4wHN74HN7I8IU72xE",
+                    "method": "GET",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "id",
+                            "toKey": "file-8z409oW4wHN74HN7I8IU72xE",
+                            "fromPath": "body->id",
+                            "toPath": "url->file-8z409oW4wHN74HN7I8IU72xE",
+                            "fromValue": "file-8z409oW4wHN74HN7I8IU72xE",
+                            "toValue": "file-8z409oW4wHN74HN7I8IU72xE",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "path",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 2,
+                            "parameter": "path"
+                        }
+                    ]
+                },
+                {
+                    "name": "GET v1/files/file-8z409oW4wHN74HN7I8IU72xE/content",
+                    "method": "GET",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "id",
+                            "toKey": "file-8z409oW4wHN74HN7I8IU72xE",
+                            "fromPath": "body->id",
+                            "toPath": "url->file-8z409oW4wHN74HN7I8IU72xE",
+                            "fromValue": "file-8z409oW4wHN74HN7I8IU72xE",
+                            "toValue": "file-8z409oW4wHN74HN7I8IU72xE",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "path",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 3,
+                            "parameter": "path"
+                        }
+                    ]
+                },
+                {
+                    "name": "POST v1/batches",
+                    "method": "POST",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "id",
+                            "toKey": "input_file_id",
+                            "fromPath": "body->id",
+                            "toPath": "body->input_file_id",
+                            "fromValue": "file-8z409oW4wHN74HN7I8IU72xE",
+                            "toValue": "file-8z409oW4wHN74HN7I8IU72xE",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 4,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "id",
+                            "toKey": "input_file_id",
+                            "fromPath": "body->id",
+                            "toPath": "body->input_file_id",
+                            "fromValue": "file-QlgGlwQtD7PtM6HXKWaTqwLd",
+                            "toValue": "file-QlgGlwQtD7PtM6HXKWaTqwLd",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 6,
+                            "toSeqNumber": 7,
+                            "parameter": "body"
+                        }
+                    ]
+                },
+                {
+                    "name": "GET v1/files",
+                    "method": "GET",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "purpose",
+                            "toKey": "purpose",
+                            "fromPath": "body->purpose",
+                            "toPath": "url->purpose",
+                            "fromValue": "batch",
+                            "toValue": "batch",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "query",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 0,
+                            "toSeqNumber": 1,
+                            "parameter": "query"
+                        }
+                    ]
+                },
+                {
+                    "name": "DELETE v1/files/file-QlgGlwQtD7PtM6HXKWaTqwLd",
+                    "method": "DELETE",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "id",
+                            "toKey": "file-QlgGlwQtD7PtM6HXKWaTqwLd",
+                            "fromPath": "body->id",
+                            "toPath": "url->file-QlgGlwQtD7PtM6HXKWaTqwLd",
+                            "fromValue": "file-QlgGlwQtD7PtM6HXKWaTqwLd",
+                            "toValue": "file-QlgGlwQtD7PtM6HXKWaTqwLd",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "path",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 6,
+                            "toSeqNumber": 11,
+                            "parameter": "path"
+                        }
+                    ]
+                },
+                {
+                    "name": "GET v1/files/file-ITvEX91WBaayKElPiYLF99Ek/content",
+                    "method": "GET",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "id",
+                            "toKey": "file-ITvEX91WBaayKElPiYLF99Ek",
+                            "fromPath": "body->id",
+                            "toPath": "url->file-ITvEX91WBaayKElPiYLF99Ek",
+                            "fromValue": "file-ITvEX91WBaayKElPiYLF99Ek",
+                            "toValue": "file-ITvEX91WBaayKElPiYLF99Ek",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "path",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 2,
+                            "toSeqNumber": 3,
+                            "parameter": "path"
+                        }
+                    ]
+                },
+                {
+                    "name": "POST v1/fine_tuning/jobs",
+                    "method": "POST",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "id",
+                            "toKey": "training_file",
+                            "fromPath": "body->id",
+                            "toPath": "body->training_file",
+                            "fromValue": "file-71rqtkSyfLhL5SSpIOz6Hzc2",
+                            "toValue": "file-71rqtkSyfLhL5SSpIOz6Hzc2",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 11,
+                            "toSeqNumber": 12,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "id",
+                            "toKey": "training_file",
+                            "fromPath": "body->id",
+                            "toPath": "body->training_file",
+                            "fromValue": "file-ITvEX91WBaayKElPiYLF99Ek",
+                            "toValue": "file-ITvEX91WBaayKElPiYLF99Ek",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 2,
+                            "toSeqNumber": 4,
+                            "parameter": "body"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "POST v1/batches",
+            "method": "POST",
+            "description": "not available",
+            "dependencies": [
+                {
+                    "name": "POST v1/files",
+                    "method": "POST",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "object",
+                            "toKey": "purpose",
+                            "fromPath": "body->object",
+                            "toPath": "body->purpose",
+                            "fromValue": "batch",
+                            "toValue": "batch",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 4,
+                            "toSeqNumber": 6,
+                            "parameter": "body"
+                        }
+                    ]
+                },
+                {
+                    "name": "GET v1/batches/batch_OcNaj81mesXOFlf9yPWfTquu",
+                    "method": "GET",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "id",
+                            "toKey": "batch_OcNaj81mesXOFlf9yPWfTquu",
+                            "fromPath": "body->id",
+                            "toPath": "url->batch_OcNaj81mesXOFlf9yPWfTquu",
+                            "fromValue": "batch_OcNaj81mesXOFlf9yPWfTquu",
+                            "toValue": "batch_OcNaj81mesXOFlf9yPWfTquu",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "path",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 4,
+                            "toSeqNumber": 5,
+                            "parameter": "path"
+                        }
+                    ]
+                },
+                {
+                    "name": "DELETE v1/files/file-QlgGlwQtD7PtM6HXKWaTqwLd",
+                    "method": "DELETE",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "input_file_id",
+                            "toKey": "file-QlgGlwQtD7PtM6HXKWaTqwLd",
+                            "fromPath": "body->input_file_id",
+                            "toPath": "url->file-QlgGlwQtD7PtM6HXKWaTqwLd",
+                            "fromValue": "file-QlgGlwQtD7PtM6HXKWaTqwLd",
+                            "toValue": "file-QlgGlwQtD7PtM6HXKWaTqwLd",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "path",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 7,
+                            "toSeqNumber": 11,
+                            "parameter": "path"
+                        }
+                    ]
+                },
+                {
+                    "name": "GET v1/batches/batch_g7PNBOOamxM1ahMVuGUv59wC",
+                    "method": "GET",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "id",
+                            "toKey": "batch_g7PNBOOamxM1ahMVuGUv59wC",
+                            "fromPath": "body->id",
+                            "toPath": "url->batch_g7PNBOOamxM1ahMVuGUv59wC",
+                            "fromValue": "batch_g7PNBOOamxM1ahMVuGUv59wC",
+                            "toValue": "batch_g7PNBOOamxM1ahMVuGUv59wC",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "path",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 7,
+                            "toSeqNumber": 8,
+                            "parameter": "path"
+                        }
+                    ]
+                },
+                {
+                    "name": "POST v1/batches/batch_g7PNBOOamxM1ahMVuGUv59wC/cancel",
+                    "method": "POST",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "id",
+                            "toKey": "batch_g7PNBOOamxM1ahMVuGUv59wC",
+                            "fromPath": "body->id",
+                            "toPath": "url->batch_g7PNBOOamxM1ahMVuGUv59wC",
+                            "fromValue": "batch_g7PNBOOamxM1ahMVuGUv59wC",
+                            "toValue": "batch_g7PNBOOamxM1ahMVuGUv59wC",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "path",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 7,
+                            "toSeqNumber": 10,
+                            "parameter": "path"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "GET v1/batches/batch_OcNaj81mesXOFlf9yPWfTquu",
+            "method": "GET",
+            "description": "not available",
+            "dependencies": [
+                {
+                    "name": "POST v1/files",
+                    "method": "POST",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "object",
+                            "toKey": "purpose",
+                            "fromPath": "body->object",
+                            "toPath": "body->purpose",
+                            "fromValue": "batch",
+                            "toValue": "batch",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 5,
+                            "toSeqNumber": 6,
+                            "parameter": "body"
+                        }
+                    ]
+                },
+                {
+                    "name": "POST v1/batches",
+                    "method": "POST",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "completion_window",
+                            "toKey": "completion_window",
+                            "fromPath": "body->completion_window",
+                            "toPath": "body->completion_window",
+                            "fromValue": "24h",
+                            "toValue": "24h",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 5,
+                            "toSeqNumber": 7,
+                            "parameter": "body"
+                        },
+                        {
+                            "fromKey": "endpoint",
+                            "toKey": "endpoint",
+                            "fromPath": "body->endpoint",
+                            "toPath": "body->endpoint",
+                            "fromValue": "/v1/chat/completions",
+                            "toValue": "/v1/chat/completions",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {
+                                "name": "jsonPointer",
+                                "variant": "rfc6901"
+                            },
+                            "use_case": "2",
+                            "fromSeqNumber": 5,
+                            "toSeqNumber": 7,
+                            "parameter": "body"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "GET v1/batches/batch_g7PNBOOamxM1ahMVuGUv59wC",
+            "method": "GET",
+            "description": "not available",
+            "dependencies": [
+                {
+                    "name": "DELETE v1/files/file-QlgGlwQtD7PtM6HXKWaTqwLd",
+                    "method": "DELETE",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "input_file_id",
+                            "toKey": "file-QlgGlwQtD7PtM6HXKWaTqwLd",
+                            "fromPath": "body->input_file_id",
+                            "toPath": "url->file-QlgGlwQtD7PtM6HXKWaTqwLd",
+                            "fromValue": "file-QlgGlwQtD7PtM6HXKWaTqwLd",
+                            "toValue": "file-QlgGlwQtD7PtM6HXKWaTqwLd",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "path",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 8,
+                            "toSeqNumber": 11,
+                            "parameter": "path"
+                        }
+                    ]
+                },
+                {
+                    "name": "POST v1/batches/batch_g7PNBOOamxM1ahMVuGUv59wC/cancel",
+                    "method": "POST",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "id",
+                            "toKey": "batch_g7PNBOOamxM1ahMVuGUv59wC",
+                            "fromPath": "body->id",
+                            "toPath": "url->batch_g7PNBOOamxM1ahMVuGUv59wC",
+                            "fromValue": "batch_g7PNBOOamxM1ahMVuGUv59wC",
+                            "toValue": "batch_g7PNBOOamxM1ahMVuGUv59wC",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "path",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 8,
+                            "toSeqNumber": 10,
+                            "parameter": "path"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "GET v1/batches",
+            "method": "GET",
+            "description": "not available",
+            "dependencies": [
+                {
+                    "name": "DELETE v1/files/file-QlgGlwQtD7PtM6HXKWaTqwLd",
+                    "method": "DELETE",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "input_file_id",
+                            "toKey": "file-QlgGlwQtD7PtM6HXKWaTqwLd",
+                            "fromPath": "body->data->0->input_file_id",
+                            "toPath": "url->file-QlgGlwQtD7PtM6HXKWaTqwLd",
+                            "fromValue": "file-QlgGlwQtD7PtM6HXKWaTqwLd",
+                            "toValue": "file-QlgGlwQtD7PtM6HXKWaTqwLd",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "path",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 9,
+                            "toSeqNumber": 11,
+                            "parameter": "path"
+                        }
+                    ]
+                },
+                {
+                    "name": "POST v1/batches/batch_g7PNBOOamxM1ahMVuGUv59wC/cancel",
+                    "method": "POST",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "first_id",
+                            "toKey": "batch_g7PNBOOamxM1ahMVuGUv59wC",
+                            "fromPath": "body->first_id",
+                            "toPath": "url->batch_g7PNBOOamxM1ahMVuGUv59wC",
+                            "fromValue": "batch_g7PNBOOamxM1ahMVuGUv59wC",
+                            "toValue": "batch_g7PNBOOamxM1ahMVuGUv59wC",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "path",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 9,
+                            "toSeqNumber": 10,
+                            "parameter": "path"
+                        },
+                        {
+                            "fromKey": "id",
+                            "toKey": "batch_g7PNBOOamxM1ahMVuGUv59wC",
+                            "fromPath": "body->data->0->id",
+                            "toPath": "url->batch_g7PNBOOamxM1ahMVuGUv59wC",
+                            "fromValue": "batch_g7PNBOOamxM1ahMVuGUv59wC",
+                            "toValue": "batch_g7PNBOOamxM1ahMVuGUv59wC",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "path",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 9,
+                            "toSeqNumber": 10,
+                            "parameter": "path"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "POST v1/batches/batch_g7PNBOOamxM1ahMVuGUv59wC/cancel",
+            "method": "POST",
+            "description": "not available",
+            "dependencies": [
+                {
+                    "name": "DELETE v1/files/file-QlgGlwQtD7PtM6HXKWaTqwLd",
+                    "method": "DELETE",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "input_file_id",
+                            "toKey": "file-QlgGlwQtD7PtM6HXKWaTqwLd",
+                            "fromPath": "body->input_file_id",
+                            "toPath": "url->file-QlgGlwQtD7PtM6HXKWaTqwLd",
+                            "fromValue": "file-QlgGlwQtD7PtM6HXKWaTqwLd",
+                            "toValue": "file-QlgGlwQtD7PtM6HXKWaTqwLd",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "path",
+                            "format": {},
+                            "use_case": "2",
+                            "fromSeqNumber": 10,
+                            "toSeqNumber": 11,
+                            "parameter": "path"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "POST v1/fine_tuning/jobs",
+            "method": "POST",
+            "description": "not available",
+            "dependencies": [
+                {
+                    "name": "GET v1/fine_tuning/jobs/ftjob-IrTLeij9xFogesyfFtX4POk8",
+                    "method": "GET",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "id",
+                            "toKey": "ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "fromPath": "body->id",
+                            "toPath": "url->ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "fromValue": "ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "toValue": "ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "path",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 4,
+                            "toSeqNumber": 6,
+                            "parameter": "path"
+                        }
+                    ]
+                },
+                {
+                    "name": "GET v1/fine_tuning/jobs/ftjob-IrTLeij9xFogesyfFtX4POk8/events",
+                    "method": "GET",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "id",
+                            "toKey": "ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "fromPath": "body->id",
+                            "toPath": "url->ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "fromValue": "ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "toValue": "ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "path",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 4,
+                            "toSeqNumber": 8,
+                            "parameter": "path"
+                        },
+                        {
+                            "fromKey": "id",
+                            "toKey": "ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "fromPath": "body->id",
+                            "toPath": "url->ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "fromValue": "ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "toValue": "ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "path",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 4,
+                            "toSeqNumber": 7,
+                            "parameter": "path"
+                        }
+                    ]
+                },
+                {
+                    "name": "GET v1/fine_tuning/jobs/ftjob-IrTLeij9xFogesyfFtX4POk8/checkpoints",
+                    "method": "GET",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "id",
+                            "toKey": "ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "fromPath": "body->id",
+                            "toPath": "url->ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "fromValue": "ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "toValue": "ftjob-IrTLeij9xFogesyfFtX4POk8",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "path",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 4,
+                            "toSeqNumber": 9,
+                            "parameter": "path"
+                        }
+                    ]
+                },
+                {
+                    "name": "GET v1/fine_tuning/jobs/ftjob-dFUCreOfERDyj48UoRqIs9hF",
+                    "method": "GET",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "id",
+                            "toKey": "ftjob-dFUCreOfERDyj48UoRqIs9hF",
+                            "fromPath": "body->id",
+                            "toPath": "url->ftjob-dFUCreOfERDyj48UoRqIs9hF",
+                            "fromValue": "ftjob-dFUCreOfERDyj48UoRqIs9hF",
+                            "toValue": "ftjob-dFUCreOfERDyj48UoRqIs9hF",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "path",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 12,
+                            "toSeqNumber": 14,
+                            "parameter": "path"
+                        }
+                    ]
+                },
+                {
+                    "name": "POST v1/fine_tuning/jobs/ftjob-dFUCreOfERDyj48UoRqIs9hF/cancel",
+                    "method": "POST",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "id",
+                            "toKey": "ftjob-dFUCreOfERDyj48UoRqIs9hF",
+                            "fromPath": "body->id",
+                            "toPath": "url->ftjob-dFUCreOfERDyj48UoRqIs9hF",
+                            "fromValue": "ftjob-dFUCreOfERDyj48UoRqIs9hF",
+                            "toValue": "ftjob-dFUCreOfERDyj48UoRqIs9hF",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "path",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 12,
+                            "toSeqNumber": 15,
+                            "parameter": "path"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "GET v1/fine_tuning/jobs/ftjob-IrTLeij9xFogesyfFtX4POk8/checkpoints",
+            "method": "GET",
+            "description": "not available",
+            "dependencies": [
+                {
+                    "name": "POST v1/chat/completions",
+                    "method": "POST",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "fine_tuned_model_checkpoint",
+                            "toKey": "model",
+                            "fromPath": "body->data->0->fine_tuned_model_checkpoint",
+                            "toPath": "body->model",
+                            "fromValue": "ft:gpt-3.5-turbo-0125:personal::A2G3sYHp",
+                            "toValue": "ft:gpt-3.5-turbo-0125:personal::A2G3sYHp",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "body",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 9,
+                            "toSeqNumber": 10,
+                            "parameter": "body"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "GET v1/fine_tuning/jobs/ftjob-dFUCreOfERDyj48UoRqIs9hF",
+            "method": "GET",
+            "description": "not available",
+            "dependencies": [
+                {
+                    "name": "POST v1/fine_tuning/jobs/ftjob-dFUCreOfERDyj48UoRqIs9hF/cancel",
+                    "method": "POST",
+                    "description": "not available",
+                    "attributes": [
+                        {
+                            "fromKey": "id",
+                            "toKey": "ftjob-dFUCreOfERDyj48UoRqIs9hF",
+                            "fromPath": "body->id",
+                            "toPath": "url->ftjob-dFUCreOfERDyj48UoRqIs9hF",
+                            "fromValue": "ftjob-dFUCreOfERDyj48UoRqIs9hF",
+                            "toValue": "ftjob-dFUCreOfERDyj48UoRqIs9hF",
+                            "strict_matching": true,
+                            "type": "string",
+                            "fromParamType": "body",
+                            "toParamType": "path",
+                            "format": {},
+                            "use_case": "3",
+                            "fromSeqNumber": 14,
+                            "toSeqNumber": 15,
+                            "parameter": "path"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "POST v1/images/generations",
+            "method": "POST",
+            "dependencies": []
+        },
+        {
+            "name": "POST v1/chat/completions",
+            "method": "POST",
+            "dependencies": []
+        },
+        {
+            "name": "POST v1/images/edits",
+            "method": "POST",
+            "dependencies": []
+        },
+        {
+            "name": "POST v1/fine_tuning/jobs/ftjob-dFUCreOfERDyj48UoRqIs9hF/cancel",
+            "method": "POST",
+            "dependencies": []
+        },
+        {
+            "name": "GET v1/files/file-ITvEX91WBaayKElPiYLF99Ek/content",
+            "method": "GET",
+            "dependencies": []
+        },
+        {
+            "name": "GET v1/files/file-8z409oW4wHN74HN7I8IU72xE/content",
+            "method": "GET",
+            "dependencies": []
+        },
+        {
+            "name": "POST v1/moderations",
+            "method": "POST",
+            "dependencies": []
+        },
+        {
+            "name": "POST v1/images/variations",
+            "method": "POST",
+            "dependencies": []
+        },
+        {
+            "name": "POST v1/embeddings",
+            "method": "POST",
+            "dependencies": []
+        },
+        {
+            "name": "GET v1/fine_tuning/jobs/ftjob-IrTLeij9xFogesyfFtX4POk8/events",
+            "method": "GET",
+            "dependencies": []
+        },
+        {
+            "name": "DELETE v1/files/file-QlgGlwQtD7PtM6HXKWaTqwLd",
+            "method": "DELETE",
+            "dependencies": []
+        }
+    ]
+}

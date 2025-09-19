@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "88c9e96d-4700-4430-aad1-1109f7dd6b57",
+		"name": "My api dependency",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18897170"
+	},
+	"item": [
+		{
+			"name": "get_cities",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:4445/cities/:hi/:id?color=black&you=me",
+					"host": [
+						"localhost"
+					],
+					"port": "4445",
+					"path": [
+						"cities",
+						":hi",
+						":id"
+					],
+					"query": [
+						{
+							"key": "color",
+							"value": "1"
+						},
+						{
+							"key": "you",
+							"value": "me"
+						}
+					],
+					"variable": [
+						{
+							"key": "hi",
+							"value": "Greece"
+						},
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_country",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id_city\":\"1\",\r\n\"city\":\"Athens\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4445/countries",
+					"host": [
+						"localhost"
+					],
+					"port": "4445",
+					"path": [
+						"countries"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get_country",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"id_city\":\"1\",\r\n\"city\":\"Athens\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4445/countries",
+							"host": [
+								"localhost"
+							],
+							"port": "4445",
+							"path": [
+								"countries"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:4445"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "114"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"72-So0RlUdeuAhIpvrjSlO4Uj+qg40\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 25 Oct 2023 18:26:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id_country\": \"1\",\n        \"country\": \"Greece\"\n    },\n    {\n        \"id_country\": \"2\",\n        \"country\": \"France\"\n    },\n    {\n        \"id_country\": \"3\",\n        \"country\": \"Japan\"\n    }\n]"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,56 @@
+----------------------------------------------
+       Endpoint dependencies               
+       Number of api endpoints (nodes): 28
+       Number of dependencies (edges): 35
+----------------------------------------------
+
+List_engines  ->  Answer_Question , Create_chat_message_completion , Create_edit , Create_embeddings , Create_fine-tune , Delete_a_fine-tuned_model._You_must_have_the_Owner_role_in_your_organization. , Retrieve_engine , Retrieve_model , Search
+List_files  ->  Create_fine-tune , Retrieve_file_content , Retrieve_files
+List_fine-tunes  ->  Create_fine-tune , Delete_a_fine-tuned_model._You_must_have_the_Owner_role_in_your_organization. , List_fine-tune_events , Retrieve_file_content , Retrieve_files , Retrieve_fine-tune , Search
+List_models  ->  Create_chat_message_completion , Create_edit , Create_embeddings , Create_fine-tune , Search
+Retrieve_engine  ->  Retrieve_model
+Retrieve_file_content  ->  Use_fine-tuned_model_(completion)
+Retrieve_files  ->  Create_fine-tune , Retrieve_file_content
+Retrieve_fine-tune  ->  Create_fine-tune , List_fine-tune_events , Retrieve_file_content , Retrieve_files , Search , Use_fine-tuned_model_(completion)
+Retrieve_model  ->  Retrieve_engine
+Delete file
+Create Translation
+Create image variation
+Create Transcription
+Create image edit
+Cancel fine-tune
+Upload file
+Create completion
+Create image
+Create moderation
+
+-----------List of endpoints and methods--------------
+
+List models, method: GET
+Retrieve model, method: GET
+Create completion, method: POST
+Create chat message completion, method: POST
+Create edit, method: POST
+Create image, method: POST
+Create image edit, method: POST
+Create image variation, method: POST
+Create Transcription, method: POST
+Create Translation, method: POST
+Create embeddings, method: POST
+Upload file, method: POST
+List files, method: GET
+Retrieve files, method: GET
+Retrieve file content, method: GET
+Delete file, method: DELETE
+Create fine-tune, method: POST
+List fine-tunes, method: GET
+Retrieve fine-tune, method: GET
+Cancel fine-tune, method: POST
+List fine-tune events, method: GET
+Delete a fine-tuned model. You must have the Owner role in your organization., method: DELETE
+Use fine-tuned model (completion), method: POST
+Create moderation, method: POST
+List engines, method: GET
+Retrieve engine, method: GET
+Search, method: POST
+Answer Question, method: POST

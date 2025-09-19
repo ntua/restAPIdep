@@ -1,0 +1,12 @@
+----------------------------------------------
+       Endpoint dependencies               
+       Number of api endpoints (nodes): 2
+       Number of dependencies (edges): 1
+----------------------------------------------
+
+get_country  ->  get_cities
+
+-----------List of endpoints and methods--------------
+
+get_country, method: POST
+get_cities, method: POST

@@ -1,0 +1,164 @@
+----------------------------------------------
+       Endpoint dependencies               
+       Number of api endpoints (nodes): 91
+       Number of dependencies (edges): 402
+----------------------------------------------
+
+List_all_balances  ->  Capture_authorized_payment , Capture_authorized_payment_on_subscription , Create_batch_payout , Create_draft_invoice , Create_order , Create_plan , Create_subscription , Create_template , Fully_update_invoice , Fully_update_template , Make_offer_to_resolve_dispute , Reauthorize_authorized_payment , Record_payment_for_invoice , Refund_captured_payment , Revise_plan_or_quantity_of_subscription , Search_for_invoices , Update_pricing , Update_subscription
+List_available_events  ->  Simulate_webhook_event , Update_webhook
+List_disputes  ->  Capture_authorized_payment , Capture_authorized_payment_on_subscription , Create_batch_payout , Create_draft_invoice , Create_order , Create_plan , Create_subscription , Create_template , Fully_update_invoice , Fully_update_template , Make_offer_to_resolve_dispute , Reauthorize_authorized_payment , Record_payment_for_invoice , Refund_captured_payment , Revise_plan_or_quantity_of_subscription , Search_for_invoices , Update_pricing , Update_subscription
+List_event_notifications  ->  Capture_authorized_payment , Capture_authorized_payment_on_subscription , Create_batch_payout , Create_draft_invoice , Create_order , Create_plan , Create_subscription , Create_template , Fully_update_invoice , Fully_update_template , List_invoices , List_plans , List_products , List_templates , Make_offer_to_resolve_dispute , Reauthorize_authorized_payment , Record_payment_for_invoice , Refund_captured_payment , Revise_plan_or_quantity_of_subscription , Search_for_invoices , Show_payout_batch_details , Simulate_webhook_event , Update_pricing , Update_subscription , Update_webhook
+List_event_subscriptions_for_webhook  ->  Create_webhook , List_all_balances
+List_invoices  ->  Capture_authorized_payment , Capture_authorized_payment_on_subscription , Create_batch_payout , Create_draft_invoice , Create_order , Create_plan , Create_subscription , Create_template , Fully_update_invoice , Fully_update_template , Make_offer_to_resolve_dispute , Reauthorize_authorized_payment , Record_payment_for_invoice , Refund_captured_payment , Revise_plan_or_quantity_of_subscription , Search_for_invoices , Update_plan , Update_pricing , Update_product , Update_subscription , Update_webhook
+List_plans  ->  Capture_authorized_payment , Capture_authorized_payment_on_subscription , Create_batch_payout , Create_draft_invoice , Create_order , Create_plan , Create_subscription , Create_template , Fully_update_invoice , Fully_update_template , Make_offer_to_resolve_dispute , Reauthorize_authorized_payment , Record_payment_for_invoice , Refund_captured_payment , Revise_plan_or_quantity_of_subscription , Search_for_invoices , Simulate_webhook_event , Update_pricing , Update_subscription
+List_products  ->  Create_order , Create_product , Update_product
+List_templates  ->  Capture_authorized_payment , Capture_authorized_payment_on_subscription , Create_batch_payout , Create_draft_invoice , Create_order , Create_plan , Create_subscription , Create_template , Fully_update_invoice , Fully_update_template , Make_offer_to_resolve_dispute , Reauthorize_authorized_payment , Record_payment_for_invoice , Refund_captured_payment , Revise_plan_or_quantity_of_subscription , Search_for_invoices , Update_pricing , Update_subscription
+List_transactions  ->  Capture_authorized_payment , Capture_authorized_payment_on_subscription , Create_batch_payout , Create_draft_invoice , Create_order , Create_plan , Create_subscription , Create_template , Fully_update_invoice , Fully_update_template , Make_offer_to_resolve_dispute , Reauthorize_authorized_payment , Record_payment_for_invoice , Refund_captured_payment , Revise_plan_or_quantity_of_subscription , Search_for_invoices , Update_pricing , Update_subscription
+List_transactions_for_subscription  ->  Capture_authorized_payment , Capture_authorized_payment_on_subscription , Create_batch_payout , Create_draft_invoice , Create_order , Create_plan , Create_subscription , Create_template , Fully_update_invoice , Fully_update_template , Make_offer_to_resolve_dispute , Reauthorize_authorized_payment , Record_payment_for_invoice , Refund_captured_payment , Revise_plan_or_quantity_of_subscription , Search_for_invoices , Update_pricing , Update_subscription
+List_webhooks  ->  Create_webhook , List_all_balances , Update_webhook
+Show_captured_payment_details  ->  Capture_authorized_payment , Capture_authorized_payment_on_subscription , Create_batch_payout , Create_draft_invoice , Create_order , Create_plan , Create_subscription , Create_template , Fully_update_invoice , Fully_update_template , Make_offer_to_resolve_dispute , Reauthorize_authorized_payment , Record_payment_for_invoice , Refund_captured_payment , Revise_plan_or_quantity_of_subscription , Search_for_invoices , Update_pricing , Update_subscription
+Show_details_for_authorized_payment  ->  Capture_authorized_payment , Capture_authorized_payment_on_subscription , Create_batch_payout , Create_draft_invoice , Create_order , Create_plan , Create_subscription , Create_template , Fully_update_invoice , Fully_update_template , Make_offer_to_resolve_dispute , Reauthorize_authorized_payment , Record_payment_for_invoice , Refund_captured_payment , Revise_plan_or_quantity_of_subscription , Search_for_invoices , Update_pricing , Update_subscription
+Show_dispute_details  ->  Accept_claim , Create_batch_payout , Create_draft_invoice , Create_order , Create_plan , Create_product , Create_subscription , Create_template , Fully_update_invoice , Fully_update_template , List_invoices , List_plans , List_products , List_templates , Make_offer_to_resolve_dispute , Record_payment_for_invoice , Refund_captured_payment , Revise_plan_or_quantity_of_subscription , Search_for_invoices , Show_payout_batch_details , Update_or_cancel_tracking_information_for_PayPal_transaction , Update_subscription
+Show_event_notification_details  ->  Capture_authorized_payment , Capture_authorized_payment_on_subscription , Create_batch_payout , Create_draft_invoice , Create_order , Create_plan , Create_subscription , Create_template , Fully_update_invoice , Fully_update_template , Make_offer_to_resolve_dispute , Reauthorize_authorized_payment , Record_payment_for_invoice , Refund_captured_payment , Revise_plan_or_quantity_of_subscription , Search_for_invoices , Simulate_webhook_event , Update_pricing , Update_subscription
+Show_invoice_details  ->  Capture_authorized_payment , Capture_authorized_payment_on_subscription , Create_batch_payout , Create_draft_invoice , Create_order , Create_plan , Create_subscription , Create_template , Fully_update_invoice , Fully_update_template , List_invoices , List_plans , List_products , List_templates , Make_offer_to_resolve_dispute , Reauthorize_authorized_payment , Record_payment_for_invoice , Refund_captured_payment , Revise_plan_or_quantity_of_subscription , Search_for_invoices , Show_payout_batch_details , Update_plan , Update_pricing , Update_product , Update_subscription , Update_webhook
+Show_order_details  ->  Capture_authorized_payment , Capture_authorized_payment_on_subscription , Create_batch_payout , Create_draft_invoice , Create_order , Create_plan , Create_subscription , Create_template , Fully_update_invoice , Fully_update_template , Make_offer_to_resolve_dispute , Reauthorize_authorized_payment , Record_payment_for_invoice , Refund_captured_payment , Revise_plan_or_quantity_of_subscription , Search_for_invoices , Update_pricing , Update_subscription
+Show_payout_batch_details  ->  Capture_authorized_payment , Capture_authorized_payment_on_subscription , Create_batch_payout , Create_draft_invoice , Create_order , Create_plan , Create_subscription , Create_template , Fully_update_invoice , Fully_update_template , Make_offer_to_resolve_dispute , Reauthorize_authorized_payment , Record_payment_for_invoice , Refund_captured_payment , Revise_plan_or_quantity_of_subscription , Search_for_invoices , Update_pricing , Update_subscription
+Show_payout_item_details  ->  Capture_authorized_payment , Capture_authorized_payment_on_subscription , Create_batch_payout , Create_draft_invoice , Create_order , Create_plan , Create_subscription , Create_template , Fully_update_invoice , Fully_update_template , Make_offer_to_resolve_dispute , Reauthorize_authorized_payment , Record_payment_for_invoice , Refund_captured_payment , Revise_plan_or_quantity_of_subscription , Search_for_invoices , Update_pricing , Update_subscription
+Show_plan_details  ->  Capture_authorized_payment , Capture_authorized_payment_on_subscription , Create_batch_payout , Create_draft_invoice , Create_order , Create_plan , Create_subscription , Create_template , Fully_update_invoice , Fully_update_template , Make_offer_to_resolve_dispute , Reauthorize_authorized_payment , Record_payment_for_invoice , Refund_captured_payment , Revise_plan_or_quantity_of_subscription , Search_for_invoices , Simulate_webhook_event , Update_pricing , Update_subscription
+Show_product_details  ->  Create_order , Create_product
+Show_refund_details  ->  Capture_authorized_payment , Capture_authorized_payment_on_subscription , Create_batch_payout , Create_draft_invoice , Create_order , Create_plan , Create_subscription , Create_template , Fully_update_invoice , Fully_update_template , Make_offer_to_resolve_dispute , Reauthorize_authorized_payment , Record_payment_for_invoice , Refund_captured_payment , Revise_plan_or_quantity_of_subscription , Search_for_invoices , Update_pricing , Update_subscription
+Show_subscription_details  ->  Create_draft_invoice , Create_order , Create_plan , Create_template , Fully_update_invoice , Fully_update_template , List_invoices , List_plans , List_products , List_templates , Search_for_invoices , Show_payout_batch_details
+Show_template_details  ->  Capture_authorized_payment , Capture_authorized_payment_on_subscription , Create_batch_payout , Create_draft_invoice , Create_order , Create_plan , Create_subscription , Create_template , Fully_update_invoice , Fully_update_template , List_invoices , List_plans , List_products , List_templates , Make_offer_to_resolve_dispute , Partially_update_dispute , Reauthorize_authorized_payment , Record_payment_for_invoice , Refund_captured_payment , Revise_plan_or_quantity_of_subscription , Search_for_invoices , Show_payout_batch_details , Update_plan , Update_pricing , Update_product , Update_subscription , Update_webhook
+Show_webhook_details  ->  Create_webhook , List_all_balances
+Add tracking information for multiple PayPal transactions
+Activate plan
+Accept offer to resolve dispute
+Delete external payment
+Delete external refund
+Escalate dispute to claim
+Cancel subscription
+Acknowledge returned item
+Void authorized payment
+Settle dispute
+Send invoice
+Cancel sent invoice
+Terminate access_token
+Deny offer to resolve dispute
+Delete template
+Send invoice reminder
+Authorize payment for order
+Generate QR code
+Resend event notification
+Delete invoice
+Activate subscription
+Provide supporting information for dispute
+User Info
+Update order
+Generate invoice number
+Verify webhook signature
+Capture payment for order
+Appeal dispute
+Suspend subscription
+Trigger a sample event
+Send message about dispute to other party
+Update dispute status
+Deactivate plan
+Delete webhook
+Provide evidence
+Generate client_token
+Cancel unclaimed payout item
+Generate access_token
+
+-----------List of endpoints and methods--------------
+
+Generate access_token, method: POST
+Terminate access_token, method: POST
+User Info, method: GET
+Generate client_token, method: POST
+Create order, method: POST
+Show order details, method: GET
+Update order, method: PATCH
+Authorize payment for order, method: POST
+Capture payment for order, method: POST
+Show details for authorized payment, method: GET
+Reauthorize authorized payment, method: POST
+Void authorized payment, method: POST
+Capture authorized payment, method: POST
+Show captured payment details, method: GET
+Refund captured payment, method: POST
+Show refund details, method: GET
+Generate invoice number, method: POST
+Create draft invoice, method: POST
+Show invoice details, method: GET
+List invoices, method: GET
+Generate QR code, method: POST
+Fully update invoice, method: PUT
+Send invoice, method: POST
+Send invoice reminder, method: POST
+Cancel sent invoice, method: POST
+Delete invoice, method: DELETE
+Search for invoices, method: POST
+Record payment for invoice, method: POST
+Delete external payment, method: DELETE
+Delete external refund, method: DELETE
+List templates, method: GET
+Create template, method: POST
+Show template details, method: GET
+Fully update template, method: PUT
+Delete template, method: DELETE
+Create product, method: POST
+List products, method: GET
+Show product details, method: GET
+Update product, method: PATCH
+Create plan, method: POST
+List plans, method: GET
+Show plan details, method: GET
+Update plan, method: PATCH
+Deactivate plan, method: POST
+Activate plan, method: POST
+Update pricing, method: POST
+Create subscription, method: POST
+Show subscription details, method: GET
+Update subscription, method: PATCH
+Revise plan or quantity of subscription, method: POST
+Suspend subscription, method: POST
+Activate subscription, method: POST
+Cancel subscription, method: POST
+Capture authorized payment on subscription, method: POST
+List transactions for subscription, method: GET
+Create batch payout, method: POST
+Show payout batch details, method: GET
+Show payout item details, method: GET
+Cancel unclaimed payout item, method: POST
+List available events, method: GET
+Create webhook, method: POST
+List webhooks, method: GET
+Show webhook details, method: GET
+List event notifications, method: GET
+List event subscriptions for webhook, method: GET
+Show event notification details, method: GET
+Trigger a sample event, method: POST
+Verify webhook signature, method: POST
+Resend event notification, method: POST
+Simulate webhook event, method: POST
+Update webhook, method: PATCH
+Delete webhook, method: DELETE
+Add tracking information for multiple PayPal transactions, method: POST
+Update or cancel tracking information for PayPal transaction, method: PUT
+List transactions, method: GET
+List all balances, method: GET
+List disputes, method: GET
+Show dispute details, method: GET
+Accept claim, method: POST
+Appeal dispute, method: POST
+Settle dispute, method: POST
+Update dispute status, method: POST
+Make offer to resolve dispute, method: POST
+Provide evidence, method: POST
+Acknowledge returned item, method: POST
+Provide supporting information for dispute, method: POST
+Escalate dispute to claim, method: POST
+Accept offer to resolve dispute, method: POST
+Send message about dispute to other party, method: POST
+Deny offer to resolve dispute, method: POST
+Partially update dispute, method: PATCH

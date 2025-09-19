@@ -1,0 +1,13 @@
+----------------------------------------------
+       Endpoint dependencies per attribute       
+       Number of api endpoints (nodes): 2
+       Number of dependencies (edges): 1
+       Number of dependencies per attribute: 2
+----------------------------------------------
+get_country  ->  get_cities  [ label = "country : hi"] type: string, parameter: path parameter
+get_country  ->  get_cities  [ label = "id_country : color"] type: int, parameter: query parameter
+
+-----------List of endpoints and methods--------------
+
+get_country, method: POST
+get_cities, method: POST

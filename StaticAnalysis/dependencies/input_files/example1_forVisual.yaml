@@ -1,0 +1,416 @@
+openapi: 3.0.0
+info:
+  title: ENTsoe V3 Copy
+  version: 1.0.0
+servers:
+  - url: https://api.diem-platform.com
+paths:
+  /api/v3/data/entsoeaggregatedinstalledgenerationcapacity/2017/2/26/1000:
+    get:
+      tags:
+        - General
+      summary: Aggregated Installed Generation Capacity
+      operationId:  Aggregated Installed Generation Capacity
+      description: 
+      x-codegen-request-body-name: rest_service13request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: "#/components/schemas/rest_service13request"
+            example:
+              areaRef: BELGIUM_BE_CTA_CTA
+              timezone: CET
+              prodType: waste
+      parameters:
+        - name: x-auth-key
+          in: header
+          schema:
+            type: string
+          example: ASLDKJASDJK2534S
+      responses:
+        '200':
+          description: Successful response
+          content:
+  /api/v3/data/entsoedaaggregatedgenforecastfortype/2021/10/28/20:
+    get:
+      tags:
+        - General
+      summary: Day Ahead Generation Forecast of particular RES
+      operationId:  Day Ahead Generation Forecast of particular RES
+      description: 
+      x-codegen-request-body-name: rest_service38request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: "#/components/schemas/rest_service38request"
+            example:
+              areaRef: GREECE_GR_CTY_CTY
+              prodType: solar
+      parameters:
+        - name: x-auth-key
+          in: header
+          schema:
+            type: string
+          example: ASLDKJASDJK2534S
+      responses:
+        '200':
+          description: Successful response
+          content:
+  /api/v3/data/entsoedaaggregatedgenforecasttotalres/2021/10/28/20:
+    get:
+      tags:
+        - General
+      summary: Day Ahead Generation Forecast Total RES
+      operationId:  Day Ahead Generation Forecast Total RES
+      description: 
+      x-codegen-request-body-name: rest_service62request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: "#/components/schemas/rest_service62request"
+            example:
+              areaRef: GREECE_GR_CTY_CTY
+              prodType: solar
+      parameters:
+        - name: x-auth-key
+          in: header
+          schema:
+            type: string
+          example: ASLDKJASDJK2534S
+      responses:
+        '200':
+          description: Successful response
+          content:
+  /api/v3/data/entsoedatotalloadforecast/2021/10/28/20:
+    get:
+      tags:
+        - General
+      summary: Day Ahead Total Load Forecast
+      operationId:  Day Ahead Total Load Forecast
+      description: 
+      x-codegen-request-body-name: rest_service86request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: "#/components/schemas/rest_service86request"
+            example:
+              areaRef: GREECE_GR_CTY_CTY
+      parameters:
+        - name: x-auth-key
+          in: header
+          schema:
+            type: string
+          example: ASLDKJASDJK2534S
+      responses:
+        '200':
+          description: Successful response
+          content:
+  /api/v3/data/entsoenetpositionsdaily/2020/10/28/20:
+    get:
+      tags:
+        - General
+      summary: Net Positions Daily
+      operationId:  Net Positions Daily
+      description: 
+      x-codegen-request-body-name: rest_service109request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: "#/components/schemas/rest_service109request"
+            example:
+              areaRef: CROATIA_HR_BZN_BZN
+      parameters:
+        - name: x-auth-key
+          in: header
+          schema:
+            type: string
+          example: ASLDKJASDJK2534S
+      responses:
+        '200':
+          description: Successful response
+          content:
+  /api/v3/data/productiontypes:
+    get:
+      tags:
+        - General
+      summary: productiontypes Copy
+      operationId:  productiontypes Copy
+      description: 
+      parameters:
+        - name: x-auth-key
+          in: header
+          schema:
+            type: string
+          example: ASLDKJASDJK2534S
+      responses:
+        '200':
+          description: OK
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+              example:
+                value: Express
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+              example:
+                value: '*'
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+              example:
+                value: Origin, X-Requested-With, Content-Type, Accept, x-auth-token
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+              example:
+                value: POST, GET, PUT, DELETE, OPTIONS
+            Content-Type:
+              schema:
+                type: string
+              example:
+                value: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+              example:
+                value: '3159'
+            ETag:
+              schema:
+                type: string
+              example:
+                value: W/"c57-dWZt4DWhld6NkBTXP7SRaZTKD/E"
+            Date:
+              schema:
+                type: string
+              example:
+                value: Wed, 15 Mar 2023 14:45:31 GMT
+            Connection:
+              schema:
+                type: string
+              example:
+                value: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+              example:
+                value: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: "#/components/schemas/rest_serviceResponse195"
+              example:
+                $schema: http://json-schema.org/draft-04/schema#
+                type: array
+                items:
+                  type: object
+                  properties:
+                    ProductionType:
+                      type: string
+                    ProductionTypeAbbrev:
+                      type: string
+                    ProductionTypeNote:
+                      type: string
+                  required:
+                    - ProductionType
+                    - ProductionTypeAbbrev
+                    - ProductionTypeNote
+  /api/v3/data/areareference/SLO:
+    get:
+      tags:
+        - General
+      summary: areaReference/area Copy
+      operationId:  areaReference/area Copy
+      description: 
+      parameters:
+        - name: x-auth-key
+          in: header
+          schema:
+            type: string
+          example: ASLDKJASDJK2534S
+      responses:
+        '200':
+          description: OK
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+              example:
+                value: Express
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+              example:
+                value: '*'
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+              example:
+                value: Origin, X-Requested-With, Content-Type, Accept, x-auth-token
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+              example:
+                value: POST, GET, PUT, DELETE, OPTIONS
+            Content-Type:
+              schema:
+                type: string
+              example:
+                value: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+              example:
+                value: '705'
+            ETag:
+              schema:
+                type: string
+              example:
+                value: W/"2c1-qQT6aTucR8rzUSDrL9kV+gR9Pkg"
+            Set-Cookie:
+              schema:
+                type: number
+              example:
+                value: >-
+                  connect.sid=s%3AR7IY3FRJjLhHzSjbjrVzX0Qji5L3cIv1.1xCptN7u%2BILngqK3GHmtPnV%2F1YFszSGOVsY6sjlvjzc;
+                  Path=/; HttpOnly
+            Date:
+              schema:
+                type: string
+              example:
+                value: Wed, 19 Apr 2023 15:43:16 GMT
+            Connection:
+              schema:
+                type: string
+              example:
+                value: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+              example:
+                value: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: "#/components/schemas/rest_serviceResponse287"
+              example:
+                $schema: http://json-schema.org/draft-04/schema#
+                type: array
+                items:
+                  type: object
+                  properties:
+                    AreaRefName:
+                      type: string
+                    AreaRefAbbrev:
+                      type: string
+                    Country:
+                      type: string
+                    AreaTypeCode:
+                      type: string
+                    MapCode:
+                      type: string
+                    AreaName:
+                      type: string
+                    EIC:
+                      type: string
+                  required:
+                    - AreaRefName
+                    - AreaRefAbbrev
+                    - Country
+                    - AreaTypeCode
+                    - MapCode
+                    - AreaName
+                    - EIC
+  schemas:
+     rest_service13request:
+       type: object
+       properties: 
+         areaRef: 
+           type:  string
+         timezone: 
+           type:  string
+         prodType: 
+           type:  string
+     rest_service38request:
+       type: object
+       properties: 
+         areaRef: 
+           type:  string
+         prodType: 
+           type:  string
+     rest_service62request:
+       type: object
+       properties: 
+         areaRef: 
+           type:  string
+         prodType: 
+           type:  string
+     rest_service86request:
+       type: object
+       properties: 
+         areaRef: 
+           type:  string
+     rest_service109request:
+       type: object
+       properties: 
+         areaRef: 
+           type:  string
+     rest_serviceResponse195:
+       type: object
+       properties: 
+         example: 
+           $ref: "#/components/schemas/rest_serviceResponse195_example"
+     rest_serviceResponse195_example:
+       type: object
+       properties: 
+         items: 
+           $ref: "#/components/schemas/rest_serviceResponse195_items"
+     rest_serviceResponse195_items:
+       type: object
+       properties: 
+         ProductionType: 
+           type:  string
+         ProductionTypeAbbrev: 
+           type:  string
+         ProductionTypeNote: 
+           type:  string
+     rest_serviceResponse287:
+       type: object
+       properties: 
+         example: 
+           $ref: "#/components/schemas/rest_serviceResponse287_example"
+     rest_serviceResponse287_example:
+       type: object
+       properties: 
+         items: 
+           $ref: "#/components/schemas/rest_serviceResponse287_items"
+     rest_serviceResponse287_items:
+       type: object
+       properties: 
+         AreaRefName: 
+           type:  string
+         AreaRefAbbrev: 
+           type:  string
+         Country: 
+           type:  string
+         AreaTypeCode: 
+           type:  string
+         MapCode: 
+           type:  string
+         AreaName: 
+           type:  string
+         EIC: 
+           type:  string

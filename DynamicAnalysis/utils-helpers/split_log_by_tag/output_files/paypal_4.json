@@ -1,0 +1,2478 @@
+[
+    {
+        "_id": {
+            "$oid": "66ae4dea508280420bdc484b"
+        },
+        "ip": "::ffff:172.18.0.1",
+        "method": "POST",
+        "url": "https://api-m.sandbox.paypal.com",
+        "endpoint": "v1/oauth2/token",
+        "headers": {
+            "accept": "application/json, text/plain, */*",
+            "content-type": "application/x-www-form-urlencoded",
+            "user-agent": "axios/1.7.2",
+            "content-length": "1679",
+            "accept-encoding": "gzip, compress, deflate, br",
+            "host": "localhost:3003",
+            "authorization": "Basic QVVJNlF4elhVRDdxMEdPbUJIMlFxQzl6TW1veWQyMHdtLTBzU0FaZkxheXpqcFAwVWtkWUs2aHpLT1hHWVpZTmY1ZjhaOHNNT0tBeWZxX1k6RUU3UFJfUGNqek9DTDVvWHlEUXZGWS1sMmVUa2FBTm80SDU5R3BHc3RhbkhLRWIwa1IwWXZfdjlHb3lSOVRxbE14M0pibWl6c3dyYzhmdTY=",
+            "connection": "close"
+        },
+        "body": {
+            "grant_type": {
+                "name": "string",
+                "value": "client_credentials"
+            },
+            "ignoreCache": {
+                "name": "string",
+                "value": "True"
+            },
+            "return_authn_schemes": {
+                "name": "string",
+                "value": "True"
+            },
+            "return_client_metadata": {
+                "name": "string",
+                "value": "True"
+            },
+            "return_unconsented_scopes": {
+                "name": "string",
+                "value": "True"
+            },
+            "scope": {
+                "name": "string",
+                "value": "https://uri.paypal.com/services/reporting/search/read https://uri.paypal.com/services/reporting/balances/read https://uri.paypal.com/services/disputes/update-buyer https://uri.paypal.com/services/checkout/one-click-with-merchant-issued-token https://uri.paypal.com/services/payments/futurepayments https://uri.paypal.com/services/invoicing https://uri.paypal.com/services/vault/payment-tokens/read https://uri.paypal.com/services/disputes/read-buyer https://uri.paypal.com/services/payments/realtimepayment https://uri.paypal.com/services/disputes/update-seller https://uri.paypal.com/services/payments/payment/authcapture openid https://uri.paypal.com/services/disputes/read-seller Braintree:Vault https://uri.paypal.com/services/payments/refund https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/pricing/quote-exchange-rates/read https://uri.paypal.com/services/billing-agreements https://api.paypal.com/v1/payments/.* https://uri.paypal.com/payments/payouts https://uri.paypal.com/services/vault/payment-tokens/readwrite https://api.paypal.com/v1/vault/credit-card/.* https://uri.paypal.com/services/shipping/trackers/readwrite https://uri.paypal.com/services/subscriptions https://uri.paypal.com/services/applications/webhooks",
+                "format": {
+                    "name": "uri"
+                }
+            }
+        },
+        "params": [
+            "v1",
+            "oauth2",
+            "token"
+        ],
+        "response": {
+            "responseStatus": 200,
+            "requestSchema": {
+                "scope": {
+                    "name": "string",
+                    "value": "https://uri.paypal.com/services/checkout/one-click-with-merchant-issued-token https://uri.paypal.com/services/payments/futurepayments https://uri.paypal.com/services/invoicing https://uri.paypal.com/services/vault/payment-tokens/read https://uri.paypal.com/services/disputes/read-buyer https://uri.paypal.com/services/payments/realtimepayment https://uri.paypal.com/services/disputes/update-seller https://uri.paypal.com/services/payments/payment/authcapture openid https://uri.paypal.com/services/disputes/read-seller Braintree:Vault https://uri.paypal.com/services/payments/refund https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/pricing/quote-exchange-rates/read https://uri.paypal.com/services/billing-agreements https://api.paypal.com/v1/payments/.* https://uri.paypal.com/payments/payouts https://uri.paypal.com/services/vault/payment-tokens/readwrite https://api.paypal.com/v1/vault/credit-card/.* https://uri.paypal.com/services/shipping/trackers/readwrite https://uri.paypal.com/services/subscriptions https://uri.paypal.com/services/applications/webhooks",
+                    "format": {
+                        "name": "uri"
+                    }
+                },
+                "access_token": {
+                    "name": "string",
+                    "value": "A21AALdOG1zggdtr4sjKRB7A8tDEQXiIOw3VCEbiyizi-Ubmpzjq8X2RZUMNa-4z6Qul1DONUk-UqhTIUzpxXM4GNeWP1rRYg"
+                },
+                "token_type": {
+                    "name": "string",
+                    "value": "Bearer"
+                },
+                "invalid_scope": {
+                    "name": "string",
+                    "value": "https://uri.paypal.com/services/reporting/search/read https://uri.paypal.com/services/disputes/update-buyer https://uri.paypal.com/services/reporting/balances/read",
+                    "format": {
+                        "name": "uri"
+                    }
+                },
+                "login_required_scope": {
+                    "name": "string",
+                    "value": "openid"
+                },
+                "app_id": {
+                    "name": "string",
+                    "value": "APP-80W284485P519543T"
+                },
+                "expires_in": {
+                    "name": "int",
+                    "value": 32400
+                },
+                "supported_authn_schemes": {
+                    "0": {
+                        "name": "string",
+                        "value": "email_password"
+                    },
+                    "1": {
+                        "name": "string",
+                        "value": "remember_me"
+                    }
+                },
+                "nonce": {
+                    "name": "string",
+                    "value": "2024-08-03T15:34:01ZV3QqtVP5BHFk1UHKA5lmiBaddtwWqa-o4kjaETD9j4Y"
+                },
+                "client_metadata": {
+                    "name": {
+                        "name": "string",
+                        "value": "Business App"
+                    },
+                    "display_name": {
+                        "name": "string",
+                        "value": "Business App"
+                    },
+                    "logo_uri": {
+                        "name": "string",
+                        "value": ""
+                    },
+                    "scopes": {
+                        "0": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/services/payments/futurepayments",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "1": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/services/checkout/one-click-with-merchant-issued-token",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "2": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/services/invoicing",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "3": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/services/vault/payment-tokens/read",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "4": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/services/payments/basic",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "5": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/services/disputes/read-buyer",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "6": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/services/payments/realtimepayment",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "7": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/services/payments/payment/authcapture",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "8": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/services/disputes/update-seller",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "9": {
+                            "name": "string",
+                            "value": "openid"
+                        },
+                        "10": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/services/disputes/read-seller",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "11": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/services/payments/refund",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "12": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/web/experience/incontextxo",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "13": {
+                            "name": "string",
+                            "value": "https://api.paypal.com/v1/vault/credit-card",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "14": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/services/pricing/quote-exchange-rates/read",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "15": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/services/billing-agreements",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "16": {
+                            "name": "string",
+                            "value": "Braintree:Vault"
+                        },
+                        "17": {
+                            "name": "string",
+                            "value": "https://api.paypal.com/v1/payments/.*",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "18": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/payments/payouts",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "19": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/services/vault/payment-tokens/readwrite",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "20": {
+                            "name": "string",
+                            "value": "https://api.paypal.com/v1/vault/credit-card/.*",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "21": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/services/shipping/trackers/readwrite",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "22": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/services/subscriptions",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "23": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/services/applications/webhooks",
+                            "format": {
+                                "name": "uri"
+                            }
+                        }
+                    },
+                    "ui_type": {
+                        "name": "string",
+                        "value": "NEW"
+                    }
+                }
+            }
+        },
+        "tag": "4",
+        "createdAt": {
+            "$date": "2024-08-03T15:34:02.022Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "66ae4deb508280420bdc484d"
+        },
+        "ip": "::ffff:172.18.0.1",
+        "method": "POST",
+        "url": "https://api-m.sandbox.paypal.com",
+        "endpoint": "v2/checkout/orders",
+        "headers": {
+            "accept": "application/json, text/plain, */*",
+            "content-type": "application/json",
+            "authorization": "Bearer A21AALdOG1zggdtr4sjKRB7A8tDEQXiIOw3VCEbiyizi-Ubmpzjq8X2RZUMNa-4z6Qul1DONUk-UqhTIUzpxXM4GNeWP1rRYg",
+            "prefer": "return=representation",
+            "user-agent": "axios/1.7.2",
+            "content-length": "390",
+            "accept-encoding": "gzip, compress, deflate, br",
+            "host": "localhost:3003",
+            "connection": "close"
+        },
+        "body": {
+            "intent": {
+                "name": "string",
+                "value": "AUTHORIZE"
+            },
+            "purchase_units": {
+                "0": {
+                    "items": {
+                        "0": {
+                            "name": {
+                                "name": "string",
+                                "value": "T-Shirt"
+                            },
+                            "description": {
+                                "name": "string",
+                                "value": "Green XL"
+                            },
+                            "quantity": {
+                                "name": "string",
+                                "value": "1"
+                            },
+                            "unit_amount": {
+                                "currency_code": {
+                                    "name": "string",
+                                    "value": "USD",
+                                    "format": {
+                                        "name": "currency",
+                                        "variant": "iso4217"
+                                    }
+                                },
+                                "value": {
+                                    "name": "string",
+                                    "value": "42.00"
+                                }
+                            }
+                        }
+                    },
+                    "amount": {
+                        "currency_code": {
+                            "name": "string",
+                            "value": "USD",
+                            "format": {
+                                "name": "currency",
+                                "variant": "iso4217"
+                            }
+                        },
+                        "value": {
+                            "name": "string",
+                            "value": "42.00"
+                        },
+                        "breakdown": {
+                            "item_total": {
+                                "currency_code": {
+                                    "name": "string",
+                                    "value": "USD",
+                                    "format": {
+                                        "name": "currency",
+                                        "variant": "iso4217"
+                                    }
+                                },
+                                "value": {
+                                    "name": "string",
+                                    "value": "42.00"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "application_context": {
+                "return_url": {
+                    "name": "string",
+                    "value": "https://example.com/return",
+                    "format": {
+                        "name": "uri"
+                    }
+                },
+                "cancel_url": {
+                    "name": "string",
+                    "value": "https://example.com/cancel",
+                    "format": {
+                        "name": "uri"
+                    }
+                }
+            }
+        },
+        "params": [
+            "v2",
+            "checkout",
+            "orders"
+        ],
+        "response": {
+            "responseStatus": 201,
+            "requestSchema": {
+                "id": {
+                    "name": "string",
+                    "value": "74N02269LX050074A"
+                },
+                "intent": {
+                    "name": "string",
+                    "value": "AUTHORIZE"
+                },
+                "status": {
+                    "name": "string",
+                    "value": "CREATED"
+                },
+                "purchase_units": {
+                    "0": {
+                        "reference_id": {
+                            "name": "string",
+                            "value": "default"
+                        },
+                        "amount": {
+                            "currency_code": {
+                                "name": "string",
+                                "value": "USD",
+                                "format": {
+                                    "name": "currency",
+                                    "variant": "iso4217"
+                                }
+                            },
+                            "value": {
+                                "name": "string",
+                                "value": "42.00"
+                            },
+                            "breakdown": {
+                                "item_total": {
+                                    "currency_code": {
+                                        "name": "string",
+                                        "value": "USD",
+                                        "format": {
+                                            "name": "currency",
+                                            "variant": "iso4217"
+                                        }
+                                    },
+                                    "value": {
+                                        "name": "string",
+                                        "value": "42.00"
+                                    }
+                                }
+                            }
+                        },
+                        "payee": {
+                            "email_address": {
+                                "name": "string",
+                                "value": "sb-zsp8729869343@business.example.com",
+                                "format": {
+                                    "name": "email",
+                                    "variant": "rfc5321"
+                                }
+                            },
+                            "merchant_id": {
+                                "name": "string",
+                                "value": "BVA8M7H99DBYG"
+                            }
+                        },
+                        "items": {
+                            "0": {
+                                "name": {
+                                    "name": "string",
+                                    "value": "T-Shirt"
+                                },
+                                "unit_amount": {
+                                    "currency_code": {
+                                        "name": "string",
+                                        "value": "USD",
+                                        "format": {
+                                            "name": "currency",
+                                            "variant": "iso4217"
+                                        }
+                                    },
+                                    "value": {
+                                        "name": "string",
+                                        "value": "42.00"
+                                    }
+                                },
+                                "quantity": {
+                                    "name": "string",
+                                    "value": "1"
+                                },
+                                "description": {
+                                    "name": "string",
+                                    "value": "Green XL"
+                                }
+                            }
+                        }
+                    }
+                },
+                "create_time": {
+                    "name": "string",
+                    "value": "2024-08-03T15:34:02Z",
+                    "format": {
+                        "name": "datetime",
+                        "parts": "datetime",
+                        "variant": "rfc3339"
+                    }
+                },
+                "links": {
+                    "0": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://api.sandbox.paypal.com/v2/checkout/orders/74N02269LX050074A",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "self"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "GET"
+                        }
+                    },
+                    "1": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://www.sandbox.paypal.com/checkoutnow?token=74N02269LX050074A",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "approve"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "GET"
+                        }
+                    },
+                    "2": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://api.sandbox.paypal.com/v2/checkout/orders/74N02269LX050074A",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "update"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "PATCH"
+                        }
+                    },
+                    "3": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://api.sandbox.paypal.com/v2/checkout/orders/74N02269LX050074A/authorize",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "authorize"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "POST"
+                        }
+                    }
+                }
+            }
+        },
+        "tag": "4",
+        "createdAt": {
+            "$date": "2024-08-03T15:34:03.100Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "66ae4dec508280420bdc484f"
+        },
+        "ip": "::ffff:172.18.0.1",
+        "method": "GET",
+        "url": "https://api-m.sandbox.paypal.com",
+        "endpoint": "v2/checkout/orders/74N02269LX050074A",
+        "headers": {
+            "accept": "application/json, text/plain, */*",
+            "authorization": "Bearer A21AALdOG1zggdtr4sjKRB7A8tDEQXiIOw3VCEbiyizi-Ubmpzjq8X2RZUMNa-4z6Qul1DONUk-UqhTIUzpxXM4GNeWP1rRYg",
+            "user-agent": "axios/1.7.2",
+            "accept-encoding": "gzip, compress, deflate, br",
+            "host": "localhost:3003",
+            "connection": "close"
+        },
+        "params": [
+            "v2",
+            "checkout",
+            "orders",
+            "74N02269LX050074A"
+        ],
+        "response": {
+            "responseStatus": 200,
+            "requestSchema": {
+                "id": {
+                    "name": "string",
+                    "value": "74N02269LX050074A"
+                },
+                "intent": {
+                    "name": "string",
+                    "value": "AUTHORIZE"
+                },
+                "status": {
+                    "name": "string",
+                    "value": "CREATED"
+                },
+                "purchase_units": {
+                    "0": {
+                        "reference_id": {
+                            "name": "string",
+                            "value": "default"
+                        },
+                        "amount": {
+                            "currency_code": {
+                                "name": "string",
+                                "value": "USD",
+                                "format": {
+                                    "name": "currency",
+                                    "variant": "iso4217"
+                                }
+                            },
+                            "value": {
+                                "name": "string",
+                                "value": "42.00"
+                            },
+                            "breakdown": {
+                                "item_total": {
+                                    "currency_code": {
+                                        "name": "string",
+                                        "value": "USD",
+                                        "format": {
+                                            "name": "currency",
+                                            "variant": "iso4217"
+                                        }
+                                    },
+                                    "value": {
+                                        "name": "string",
+                                        "value": "42.00"
+                                    }
+                                }
+                            }
+                        },
+                        "payee": {
+                            "email_address": {
+                                "name": "string",
+                                "value": "sb-zsp8729869343@business.example.com",
+                                "format": {
+                                    "name": "email",
+                                    "variant": "rfc5321"
+                                }
+                            },
+                            "merchant_id": {
+                                "name": "string",
+                                "value": "BVA8M7H99DBYG"
+                            }
+                        },
+                        "items": {
+                            "0": {
+                                "name": {
+                                    "name": "string",
+                                    "value": "T-Shirt"
+                                },
+                                "unit_amount": {
+                                    "currency_code": {
+                                        "name": "string",
+                                        "value": "USD",
+                                        "format": {
+                                            "name": "currency",
+                                            "variant": "iso4217"
+                                        }
+                                    },
+                                    "value": {
+                                        "name": "string",
+                                        "value": "42.00"
+                                    }
+                                },
+                                "quantity": {
+                                    "name": "string",
+                                    "value": "1"
+                                },
+                                "description": {
+                                    "name": "string",
+                                    "value": "Green XL"
+                                }
+                            }
+                        }
+                    }
+                },
+                "create_time": {
+                    "name": "string",
+                    "value": "2024-08-03T15:34:02Z",
+                    "format": {
+                        "name": "datetime",
+                        "parts": "datetime",
+                        "variant": "rfc3339"
+                    }
+                },
+                "links": {
+                    "0": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://api.sandbox.paypal.com/v2/checkout/orders/74N02269LX050074A",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "self"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "GET"
+                        }
+                    },
+                    "1": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://www.sandbox.paypal.com/checkoutnow?token=74N02269LX050074A",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "approve"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "GET"
+                        }
+                    },
+                    "2": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://api.sandbox.paypal.com/v2/checkout/orders/74N02269LX050074A",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "update"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "PATCH"
+                        }
+                    },
+                    "3": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://api.sandbox.paypal.com/v2/checkout/orders/74N02269LX050074A/authorize",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "authorize"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "POST"
+                        }
+                    }
+                }
+            }
+        },
+        "tag": "4",
+        "createdAt": {
+            "$date": "2024-08-03T15:34:04.788Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "66ae4dee508280420bdc4851"
+        },
+        "ip": "::ffff:172.18.0.1",
+        "method": "PATCH",
+        "url": "https://api-m.sandbox.paypal.com",
+        "endpoint": "v2/checkout/orders/74N02269LX050074A",
+        "headers": {
+            "accept": "application/json, text/plain, */*",
+            "content-type": "application/json",
+            "authorization": "Bearer A21AALdOG1zggdtr4sjKRB7A8tDEQXiIOw3VCEbiyizi-Ubmpzjq8X2RZUMNa-4z6Qul1DONUk-UqhTIUzpxXM4GNeWP1rRYg",
+            "user-agent": "axios/1.7.2",
+            "content-length": "246",
+            "accept-encoding": "gzip, compress, deflate, br",
+            "host": "localhost:3003",
+            "connection": "close"
+        },
+        "body": {
+            "0": {
+                "op": {
+                    "name": "string",
+                    "value": "add"
+                },
+                "path": {
+                    "name": "string",
+                    "value": "/purchase_units/@reference_id=='default'/shipping/address",
+                    "format": {
+                        "name": "jsonPointer",
+                        "variant": "rfc6901"
+                    }
+                },
+                "value": {
+                    "address_line_1": {
+                        "name": "string",
+                        "value": "123 Townsend St"
+                    },
+                    "address_line_2": {
+                        "name": "string",
+                        "value": "Floor 6"
+                    },
+                    "admin_area_2": {
+                        "name": "string",
+                        "value": "San Francisco"
+                    },
+                    "admin_area_1": {
+                        "name": "string",
+                        "value": "CA",
+                        "format": {
+                            "name": "country",
+                            "variant": "iso3166-2"
+                        }
+                    },
+                    "postal_code": {
+                        "name": "string",
+                        "value": "94107"
+                    },
+                    "country_code": {
+                        "name": "string",
+                        "value": "US",
+                        "format": {
+                            "name": "country",
+                            "variant": "iso3166-2"
+                        }
+                    }
+                }
+            }
+        },
+        "params": [
+            "v2",
+            "checkout",
+            "orders",
+            "74N02269LX050074A"
+        ],
+        "response": {
+            "responseStatus": 204,
+            "requestSchema": {
+                "name": "string",
+                "value": ""
+            }
+        },
+        "tag": "4",
+        "createdAt": {
+            "$date": "2024-08-03T15:34:06.447Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "66ae4e05508280420bdc4853"
+        },
+        "ip": "::ffff:172.18.0.1",
+        "method": "POST",
+        "url": "https://api-m.sandbox.paypal.com",
+        "endpoint": "v2/checkout/orders/74N02269LX050074A/authorize",
+        "headers": {
+            "accept": "application/json, text/plain, */*",
+            "content-type": "application/json",
+            "authorization": "Bearer A21AALdOG1zggdtr4sjKRB7A8tDEQXiIOw3VCEbiyizi-Ubmpzjq8X2RZUMNa-4z6Qul1DONUk-UqhTIUzpxXM4GNeWP1rRYg",
+            "prefer": "return=representation",
+            "user-agent": "axios/1.7.2",
+            "content-length": "2",
+            "accept-encoding": "gzip, compress, deflate, br",
+            "host": "localhost:3003",
+            "connection": "close"
+        },
+        "params": [
+            "v2",
+            "checkout",
+            "orders",
+            "74N02269LX050074A",
+            "authorize"
+        ],
+        "response": {
+            "responseStatus": 201,
+            "requestSchema": {
+                "id": {
+                    "name": "string",
+                    "value": "74N02269LX050074A"
+                },
+                "intent": {
+                    "name": "string",
+                    "value": "AUTHORIZE"
+                },
+                "status": {
+                    "name": "string",
+                    "value": "COMPLETED"
+                },
+                "payment_source": {
+                    "paypal": {
+                        "email_address": {
+                            "name": "string",
+                            "value": "sb-oduor30366001@personal.example.com",
+                            "format": {
+                                "name": "email",
+                                "variant": "rfc5321"
+                            }
+                        },
+                        "account_id": {
+                            "name": "string",
+                            "value": "UB7T7P2Q22MAE"
+                        },
+                        "account_status": {
+                            "name": "string",
+                            "value": "VERIFIED"
+                        },
+                        "name": {
+                            "given_name": {
+                                "name": "string",
+                                "value": "John"
+                            },
+                            "surname": {
+                                "name": "string",
+                                "value": "Doe"
+                            }
+                        },
+                        "address": {
+                            "country_code": {
+                                "name": "string",
+                                "value": "GR",
+                                "format": {
+                                    "name": "country",
+                                    "variant": "iso3166-2"
+                                }
+                            }
+                        }
+                    }
+                },
+                "purchase_units": {
+                    "0": {
+                        "reference_id": {
+                            "name": "string",
+                            "value": "default"
+                        },
+                        "amount": {
+                            "currency_code": {
+                                "name": "string",
+                                "value": "USD",
+                                "format": {
+                                    "name": "currency",
+                                    "variant": "iso4217"
+                                }
+                            },
+                            "value": {
+                                "name": "string",
+                                "value": "42.00"
+                            },
+                            "breakdown": {
+                                "item_total": {
+                                    "currency_code": {
+                                        "name": "string",
+                                        "value": "USD",
+                                        "format": {
+                                            "name": "currency",
+                                            "variant": "iso4217"
+                                        }
+                                    },
+                                    "value": {
+                                        "name": "string",
+                                        "value": "42.00"
+                                    }
+                                },
+                                "shipping": {
+                                    "currency_code": {
+                                        "name": "string",
+                                        "value": "USD",
+                                        "format": {
+                                            "name": "currency",
+                                            "variant": "iso4217"
+                                        }
+                                    },
+                                    "value": {
+                                        "name": "string",
+                                        "value": "0.00"
+                                    }
+                                },
+                                "handling": {
+                                    "currency_code": {
+                                        "name": "string",
+                                        "value": "USD",
+                                        "format": {
+                                            "name": "currency",
+                                            "variant": "iso4217"
+                                        }
+                                    },
+                                    "value": {
+                                        "name": "string",
+                                        "value": "0.00"
+                                    }
+                                },
+                                "insurance": {
+                                    "currency_code": {
+                                        "name": "string",
+                                        "value": "USD",
+                                        "format": {
+                                            "name": "currency",
+                                            "variant": "iso4217"
+                                        }
+                                    },
+                                    "value": {
+                                        "name": "string",
+                                        "value": "0.00"
+                                    }
+                                },
+                                "shipping_discount": {
+                                    "currency_code": {
+                                        "name": "string",
+                                        "value": "USD",
+                                        "format": {
+                                            "name": "currency",
+                                            "variant": "iso4217"
+                                        }
+                                    },
+                                    "value": {
+                                        "name": "string",
+                                        "value": "0.00"
+                                    }
+                                }
+                            }
+                        },
+                        "payee": {
+                            "email_address": {
+                                "name": "string",
+                                "value": "sb-zsp8729869343@business.example.com",
+                                "format": {
+                                    "name": "email",
+                                    "variant": "rfc5321"
+                                }
+                            },
+                            "merchant_id": {
+                                "name": "string",
+                                "value": "BVA8M7H99DBYG"
+                            }
+                        },
+                        "description": {
+                            "name": "string",
+                            "value": "T-Shirt"
+                        },
+                        "items": {
+                            "0": {
+                                "name": {
+                                    "name": "string",
+                                    "value": "T-Shirt"
+                                },
+                                "unit_amount": {
+                                    "currency_code": {
+                                        "name": "string",
+                                        "value": "USD",
+                                        "format": {
+                                            "name": "currency",
+                                            "variant": "iso4217"
+                                        }
+                                    },
+                                    "value": {
+                                        "name": "string",
+                                        "value": "42.00"
+                                    }
+                                },
+                                "tax": {
+                                    "currency_code": {
+                                        "name": "string",
+                                        "value": "USD",
+                                        "format": {
+                                            "name": "currency",
+                                            "variant": "iso4217"
+                                        }
+                                    },
+                                    "value": {
+                                        "name": "string",
+                                        "value": "0.00"
+                                    }
+                                },
+                                "quantity": {
+                                    "name": "string",
+                                    "value": "1"
+                                },
+                                "description": {
+                                    "name": "string",
+                                    "value": "Green XL"
+                                }
+                            }
+                        },
+                        "shipping": {
+                            "name": {
+                                "full_name": {
+                                    "name": "string",
+                                    "value": "John Doe"
+                                }
+                            },
+                            "address": {
+                                "address_line_1": {
+                                    "name": "string",
+                                    "value": "123 Townsend St"
+                                },
+                                "address_line_2": {
+                                    "name": "string",
+                                    "value": "Floor 6"
+                                },
+                                "admin_area_2": {
+                                    "name": "string",
+                                    "value": "San Francisco"
+                                },
+                                "admin_area_1": {
+                                    "name": "string",
+                                    "value": "CA",
+                                    "format": {
+                                        "name": "country",
+                                        "variant": "iso3166-2"
+                                    }
+                                },
+                                "postal_code": {
+                                    "name": "string",
+                                    "value": "94107"
+                                },
+                                "country_code": {
+                                    "name": "string",
+                                    "value": "US",
+                                    "format": {
+                                        "name": "country",
+                                        "variant": "iso3166-2"
+                                    }
+                                }
+                            }
+                        },
+                        "payments": {
+                            "authorizations": {
+                                "0": {
+                                    "status": {
+                                        "name": "string",
+                                        "value": "CREATED"
+                                    },
+                                    "id": {
+                                        "name": "string",
+                                        "value": "1UE96596UR5389151"
+                                    },
+                                    "amount": {
+                                        "currency_code": {
+                                            "name": "string",
+                                            "value": "USD",
+                                            "format": {
+                                                "name": "currency",
+                                                "variant": "iso4217"
+                                            }
+                                        },
+                                        "value": {
+                                            "name": "string",
+                                            "value": "42.00"
+                                        }
+                                    },
+                                    "seller_protection": {
+                                        "status": {
+                                            "name": "string",
+                                            "value": "ELIGIBLE"
+                                        },
+                                        "dispute_categories": {
+                                            "0": {
+                                                "name": "string",
+                                                "value": "ITEM_NOT_RECEIVED"
+                                            },
+                                            "1": {
+                                                "name": "string",
+                                                "value": "UNAUTHORIZED_TRANSACTION"
+                                            }
+                                        }
+                                    },
+                                    "expiration_time": {
+                                        "name": "string",
+                                        "value": "2024-09-01T15:34:28Z",
+                                        "format": {
+                                            "name": "datetime",
+                                            "parts": "datetime",
+                                            "variant": "rfc3339"
+                                        }
+                                    },
+                                    "links": {
+                                        "0": {
+                                            "href": {
+                                                "name": "string",
+                                                "value": "https://api.sandbox.paypal.com/v2/payments/authorizations/1UE96596UR5389151",
+                                                "format": {
+                                                    "name": "uri"
+                                                }
+                                            },
+                                            "rel": {
+                                                "name": "string",
+                                                "value": "self"
+                                            },
+                                            "method": {
+                                                "name": "string",
+                                                "value": "GET"
+                                            }
+                                        },
+                                        "1": {
+                                            "href": {
+                                                "name": "string",
+                                                "value": "https://api.sandbox.paypal.com/v2/payments/authorizations/1UE96596UR5389151/capture",
+                                                "format": {
+                                                    "name": "uri"
+                                                }
+                                            },
+                                            "rel": {
+                                                "name": "string",
+                                                "value": "capture"
+                                            },
+                                            "method": {
+                                                "name": "string",
+                                                "value": "POST"
+                                            }
+                                        },
+                                        "2": {
+                                            "href": {
+                                                "name": "string",
+                                                "value": "https://api.sandbox.paypal.com/v2/payments/authorizations/1UE96596UR5389151/void",
+                                                "format": {
+                                                    "name": "uri"
+                                                }
+                                            },
+                                            "rel": {
+                                                "name": "string",
+                                                "value": "void"
+                                            },
+                                            "method": {
+                                                "name": "string",
+                                                "value": "POST"
+                                            }
+                                        },
+                                        "3": {
+                                            "href": {
+                                                "name": "string",
+                                                "value": "https://api.sandbox.paypal.com/v2/payments/authorizations/1UE96596UR5389151/reauthorize",
+                                                "format": {
+                                                    "name": "uri"
+                                                }
+                                            },
+                                            "rel": {
+                                                "name": "string",
+                                                "value": "reauthorize"
+                                            },
+                                            "method": {
+                                                "name": "string",
+                                                "value": "POST"
+                                            }
+                                        },
+                                        "4": {
+                                            "href": {
+                                                "name": "string",
+                                                "value": "https://api.sandbox.paypal.com/v2/checkout/orders/74N02269LX050074A",
+                                                "format": {
+                                                    "name": "uri"
+                                                }
+                                            },
+                                            "rel": {
+                                                "name": "string",
+                                                "value": "up"
+                                            },
+                                            "method": {
+                                                "name": "string",
+                                                "value": "GET"
+                                            }
+                                        }
+                                    },
+                                    "create_time": {
+                                        "name": "string",
+                                        "value": "2024-08-03T15:34:28Z",
+                                        "format": {
+                                            "name": "datetime",
+                                            "parts": "datetime",
+                                            "variant": "rfc3339"
+                                        }
+                                    },
+                                    "update_time": {
+                                        "name": "string",
+                                        "value": "2024-08-03T15:34:28Z",
+                                        "format": {
+                                            "name": "datetime",
+                                            "parts": "datetime",
+                                            "variant": "rfc3339"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "risk_assessment": {
+                            "score": {
+                                "name": "int",
+                                "value": 45
+                            },
+                            "reasons": {
+                                "0": {
+                                    "name": "string",
+                                    "value": "PAYMENT_VELOCITY"
+                                }
+                            }
+                        }
+                    }
+                },
+                "payer": {
+                    "name": {
+                        "given_name": {
+                            "name": "string",
+                            "value": "John"
+                        },
+                        "surname": {
+                            "name": "string",
+                            "value": "Doe"
+                        }
+                    },
+                    "email_address": {
+                        "name": "string",
+                        "value": "sb-oduor30366001@personal.example.com",
+                        "format": {
+                            "name": "email",
+                            "variant": "rfc5321"
+                        }
+                    },
+                    "payer_id": {
+                        "name": "string",
+                        "value": "UB7T7P2Q22MAE"
+                    },
+                    "address": {
+                        "country_code": {
+                            "name": "string",
+                            "value": "GR",
+                            "format": {
+                                "name": "country",
+                                "variant": "iso3166-2"
+                            }
+                        }
+                    }
+                },
+                "create_time": {
+                    "name": "string",
+                    "value": "2024-08-03T15:34:02Z",
+                    "format": {
+                        "name": "datetime",
+                        "parts": "datetime",
+                        "variant": "rfc3339"
+                    }
+                },
+                "update_time": {
+                    "name": "string",
+                    "value": "2024-08-03T15:34:28Z",
+                    "format": {
+                        "name": "datetime",
+                        "parts": "datetime",
+                        "variant": "rfc3339"
+                    }
+                },
+                "links": {
+                    "0": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://api.sandbox.paypal.com/v2/checkout/orders/74N02269LX050074A",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "self"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "GET"
+                        }
+                    }
+                }
+            }
+        },
+        "tag": "4",
+        "createdAt": {
+            "$date": "2024-08-03T15:34:29.677Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "66ae4e08508280420bdc4855"
+        },
+        "ip": "::ffff:172.18.0.1",
+        "method": "POST",
+        "url": "https://api-m.sandbox.paypal.com",
+        "endpoint": "v2/payments/authorizations/1UE96596UR5389151/capture",
+        "headers": {
+            "accept": "application/json, text/plain, */*",
+            "content-type": "application/json",
+            "authorization": "Bearer A21AALdOG1zggdtr4sjKRB7A8tDEQXiIOw3VCEbiyizi-Ubmpzjq8X2RZUMNa-4z6Qul1DONUk-UqhTIUzpxXM4GNeWP1rRYg",
+            "prefer": "return=representation",
+            "user-agent": "axios/1.7.2",
+            "content-length": "254",
+            "accept-encoding": "gzip, compress, deflate, br",
+            "host": "localhost:3003",
+            "connection": "close"
+        },
+        "body": {
+            "amount": {
+                "value": {
+                    "name": "string",
+                    "value": "42"
+                },
+                "currency_code": {
+                    "name": "string",
+                    "value": "USD",
+                    "format": {
+                        "name": "currency",
+                        "variant": "iso4217"
+                    }
+                }
+            },
+            "invoice_id": {
+                "name": "string",
+                "value": "1722699270681",
+                "format": {
+                    "name": "timestamp",
+                    "variant": "millisecondsSinceEpoch"
+                }
+            },
+            "final_capture": {
+                "name": "bool",
+                "value": true
+            },
+            "note_to_payer": {
+                "name": "string",
+                "value": "If the ordered color is not available, we will substitute with a different color free of charge."
+            },
+            "soft_descriptor": {
+                "name": "string",
+                "value": "Bob's Custom Sweaters"
+            }
+        },
+        "params": [
+            "v2",
+            "payments",
+            "authorizations",
+            "1UE96596UR5389151",
+            "capture"
+        ],
+        "response": {
+            "responseStatus": 201,
+            "requestSchema": {
+                "id": {
+                    "name": "string",
+                    "value": "41T77907EN859225V"
+                },
+                "amount": {
+                    "currency_code": {
+                        "name": "string",
+                        "value": "USD",
+                        "format": {
+                            "name": "currency",
+                            "variant": "iso4217"
+                        }
+                    },
+                    "value": {
+                        "name": "string",
+                        "value": "42.00"
+                    }
+                },
+                "final_capture": {
+                    "name": "bool",
+                    "value": true
+                },
+                "seller_protection": {
+                    "status": {
+                        "name": "string",
+                        "value": "ELIGIBLE"
+                    },
+                    "dispute_categories": {
+                        "0": {
+                            "name": "string",
+                            "value": "ITEM_NOT_RECEIVED"
+                        },
+                        "1": {
+                            "name": "string",
+                            "value": "UNAUTHORIZED_TRANSACTION"
+                        }
+                    }
+                },
+                "seller_receivable_breakdown": {
+                    "gross_amount": {
+                        "currency_code": {
+                            "name": "string",
+                            "value": "USD",
+                            "format": {
+                                "name": "currency",
+                                "variant": "iso4217"
+                            }
+                        },
+                        "value": {
+                            "name": "string",
+                            "value": "42.00"
+                        }
+                    },
+                    "paypal_fee": {
+                        "currency_code": {
+                            "name": "string",
+                            "value": "USD",
+                            "format": {
+                                "name": "currency",
+                                "variant": "iso4217"
+                            }
+                        },
+                        "value": {
+                            "name": "string",
+                            "value": "1.73"
+                        }
+                    },
+                    "net_amount": {
+                        "currency_code": {
+                            "name": "string",
+                            "value": "EUR",
+                            "format": {
+                                "name": "currency",
+                                "variant": "iso4217"
+                            }
+                        },
+                        "value": {
+                            "name": "string",
+                            "value": "36.24"
+                        }
+                    },
+                    "receivable_amount": {
+                        "currency_code": {
+                            "name": "string",
+                            "value": "EUR",
+                            "format": {
+                                "name": "currency",
+                                "variant": "iso4217"
+                            }
+                        },
+                        "value": {
+                            "name": "string",
+                            "value": "36.24"
+                        }
+                    },
+                    "exchange_rate": {
+                        "source_currency": {
+                            "name": "string",
+                            "value": "USD",
+                            "format": {
+                                "name": "currency",
+                                "variant": "iso4217"
+                            }
+                        },
+                        "target_currency": {
+                            "name": "string",
+                            "value": "EUR",
+                            "format": {
+                                "name": "currency",
+                                "variant": "iso4217"
+                            }
+                        },
+                        "value": {
+                            "name": "string",
+                            "value": "0.8998275"
+                        }
+                    }
+                },
+                "invoice_id": {
+                    "name": "string",
+                    "value": "1722699270681",
+                    "format": {
+                        "name": "timestamp",
+                        "variant": "millisecondsSinceEpoch"
+                    }
+                },
+                "status": {
+                    "name": "string",
+                    "value": "COMPLETED"
+                },
+                "create_time": {
+                    "name": "string",
+                    "value": "2024-08-03T15:34:32Z",
+                    "format": {
+                        "name": "datetime",
+                        "parts": "datetime",
+                        "variant": "rfc3339"
+                    }
+                },
+                "update_time": {
+                    "name": "string",
+                    "value": "2024-08-03T15:34:32Z",
+                    "format": {
+                        "name": "datetime",
+                        "parts": "datetime",
+                        "variant": "rfc3339"
+                    }
+                },
+                "links": {
+                    "0": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://api.sandbox.paypal.com/v2/payments/captures/41T77907EN859225V",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "self"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "GET"
+                        }
+                    },
+                    "1": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://api.sandbox.paypal.com/v2/payments/captures/41T77907EN859225V/refund",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "refund"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "POST"
+                        }
+                    },
+                    "2": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://api.sandbox.paypal.com/v2/payments/authorizations/1UE96596UR5389151",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "up"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "GET"
+                        }
+                    }
+                }
+            }
+        },
+        "tag": "4",
+        "createdAt": {
+            "$date": "2024-08-03T15:34:32.746Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "66ae4f41508280420bdc4857"
+        },
+        "ip": "::ffff:172.18.0.1",
+        "method": "GET",
+        "url": "https://api-m.sandbox.paypal.com",
+        "endpoint": "v1/customer/disputes",
+        "headers": {
+            "accept": "application/json, text/plain, */*",
+            "authorization": "Bearer A21AALdOG1zggdtr4sjKRB7A8tDEQXiIOw3VCEbiyizi-Ubmpzjq8X2RZUMNa-4z6Qul1DONUk-UqhTIUzpxXM4GNeWP1rRYg",
+            "user-agent": "axios/1.7.2",
+            "accept-encoding": "gzip, compress, deflate, br",
+            "host": "localhost:3003",
+            "connection": "close"
+        },
+        "query": {
+            "disputed_transaction_id": "41T77907EN859225V"
+        },
+        "params": [
+            "v1",
+            "customer",
+            "disputes"
+        ],
+        "response": {
+            "responseStatus": 200,
+            "requestSchema": {
+                "items": {
+                    "0": {
+                        "dispute_id": {
+                            "name": "string",
+                            "value": "PP-R-YBB-10097423"
+                        },
+                        "create_time": {
+                            "name": "string",
+                            "value": "2024-08-03T15:35:39.000Z",
+                            "format": {
+                                "name": "datetime",
+                                "parts": "datetime",
+                                "variant": "rfc3339"
+                            }
+                        },
+                        "update_time": {
+                            "name": "string",
+                            "value": "2024-08-03T15:38:54.000Z",
+                            "format": {
+                                "name": "datetime",
+                                "parts": "datetime",
+                                "variant": "rfc3339"
+                            }
+                        },
+                        "disputed_transactions": {
+                            "0": {
+                                "buyer_transaction_id": {
+                                    "name": "string",
+                                    "value": "82438500FF558164K"
+                                },
+                                "seller": {
+                                    "merchant_id": {
+                                        "name": "string",
+                                        "value": "BVA8M7H99DBYG"
+                                    }
+                                }
+                            }
+                        },
+                        "reason": {
+                            "name": "string",
+                            "value": "MERCHANDISE_OR_SERVICE_NOT_AS_DESCRIBED"
+                        },
+                        "status": {
+                            "name": "string",
+                            "value": "WAITING_FOR_SELLER_RESPONSE"
+                        },
+                        "dispute_state": {
+                            "name": "string",
+                            "value": "REQUIRED_ACTION"
+                        },
+                        "dispute_amount": {
+                            "currency_code": {
+                                "name": "string",
+                                "value": "USD",
+                                "format": {
+                                    "name": "currency",
+                                    "variant": "iso4217"
+                                }
+                            },
+                            "value": {
+                                "name": "string",
+                                "value": "42.00"
+                            }
+                        },
+                        "dispute_life_cycle_stage": {
+                            "name": "string",
+                            "value": "INQUIRY"
+                        },
+                        "dispute_channel": {
+                            "name": "string",
+                            "value": "INTERNAL"
+                        },
+                        "seller_response_due_date": {
+                            "name": "string",
+                            "value": "2024-08-23T15:35:39.000Z",
+                            "format": {
+                                "name": "datetime",
+                                "parts": "datetime",
+                                "variant": "rfc3339"
+                            }
+                        },
+                        "links": {
+                            "0": {
+                                "href": {
+                                    "name": "string",
+                                    "value": "https://api-m.sandbox.paypal.com/v1/customer/disputes/PP-R-YBB-10097423",
+                                    "format": {
+                                        "name": "uri"
+                                    }
+                                },
+                                "rel": {
+                                    "name": "string",
+                                    "value": "self"
+                                },
+                                "method": {
+                                    "name": "string",
+                                    "value": "GET"
+                                }
+                            }
+                        }
+                    }
+                },
+                "links": {
+                    "0": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://api-m.sandbox.paypal.com/v1/customer/disputes?disputed_transaction_id=41T77907EN859225V",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "self"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "GET"
+                        }
+                    },
+                    "1": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://api-m.sandbox.paypal.com/v1/customer/disputes?disputed_transaction_id=41T77907EN859225V",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "first"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "GET"
+                        }
+                    }
+                }
+            }
+        },
+        "tag": "4",
+        "createdAt": {
+            "$date": "2024-08-03T15:39:45.990Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "66ae4f44508280420bdc4859"
+        },
+        "ip": "::ffff:172.18.0.1",
+        "method": "GET",
+        "url": "https://api-m.sandbox.paypal.com",
+        "endpoint": "v1/customer/disputes/PP-R-YBB-10097423",
+        "headers": {
+            "accept": "application/json, text/plain, */*",
+            "authorization": "Bearer A21AALdOG1zggdtr4sjKRB7A8tDEQXiIOw3VCEbiyizi-Ubmpzjq8X2RZUMNa-4z6Qul1DONUk-UqhTIUzpxXM4GNeWP1rRYg",
+            "user-agent": "axios/1.7.2",
+            "accept-encoding": "gzip, compress, deflate, br",
+            "host": "localhost:3003",
+            "connection": "close"
+        },
+        "params": [
+            "v1",
+            "customer",
+            "disputes",
+            "PP-R-YBB-10097423"
+        ],
+        "response": {
+            "responseStatus": 200,
+            "requestSchema": {
+                "dispute_id": {
+                    "name": "string",
+                    "value": "PP-R-YBB-10097423"
+                },
+                "create_time": {
+                    "name": "string",
+                    "value": "2024-08-03T15:35:39.875Z",
+                    "format": {
+                        "name": "datetime",
+                        "parts": "datetime",
+                        "variant": "rfc3339"
+                    }
+                },
+                "update_time": {
+                    "name": "string",
+                    "value": "2024-08-03T15:38:54.094Z",
+                    "format": {
+                        "name": "datetime",
+                        "parts": "datetime",
+                        "variant": "rfc3339"
+                    }
+                },
+                "disputed_transactions": {
+                    "0": {
+                        "buyer_transaction_id": {
+                            "name": "string",
+                            "value": "82438500FF558164K"
+                        },
+                        "seller_transaction_id": {
+                            "name": "string",
+                            "value": "41T77907EN859225V"
+                        },
+                        "create_time": {
+                            "name": "string",
+                            "value": "2024-08-03T15:34:32.000Z",
+                            "format": {
+                                "name": "datetime",
+                                "parts": "datetime",
+                                "variant": "rfc3339"
+                            }
+                        },
+                        "transaction_status": {
+                            "name": "string",
+                            "value": "HELD"
+                        },
+                        "gross_amount": {
+                            "currency_code": {
+                                "name": "string",
+                                "value": "USD",
+                                "format": {
+                                    "name": "currency",
+                                    "variant": "iso4217"
+                                }
+                            },
+                            "value": {
+                                "name": "string",
+                                "value": "42.00"
+                            }
+                        },
+                        "invoice_number": {
+                            "name": "string",
+                            "value": "1722699270681",
+                            "format": {
+                                "name": "timestamp",
+                                "variant": "millisecondsSinceEpoch"
+                            }
+                        },
+                        "buyer": {
+                            "name": {
+                                "name": "string",
+                                "value": "John Doe"
+                            }
+                        },
+                        "seller": {
+                            "email": {
+                                "name": "string",
+                                "value": "sb-zsp8729869343@business.example.com",
+                                "format": {
+                                    "name": "email",
+                                    "variant": "rfc5321"
+                                }
+                            },
+                            "merchant_id": {
+                                "name": "string",
+                                "value": "BVA8M7H99DBYG"
+                            },
+                            "name": {
+                                "name": "string",
+                                "value": "Test Store"
+                            }
+                        },
+                        "items": {
+                            "0": {
+                                "item_name": {
+                                    "name": "string",
+                                    "value": "T-Shirt"
+                                },
+                                "item_description": {
+                                    "name": "string",
+                                    "value": "T-Shirt"
+                                },
+                                "item_quantity": {
+                                    "name": "string",
+                                    "value": "1"
+                                },
+                                "reason": {
+                                    "name": "string",
+                                    "value": "MERCHANDISE_OR_SERVICE_NOT_AS_DESCRIBED"
+                                },
+                                "notes": {
+                                    "name": "string",
+                                    "value": "commentscommentscommentscommentscommentscommentscommentscommentscommentscommentscommentscommentscommentscommentscomments"
+                                },
+                                "item_type": {
+                                    "name": "string",
+                                    "value": "PRODUCT"
+                                }
+                            }
+                        },
+                        "seller_protection_eligible": {
+                            "name": "bool",
+                            "value": true
+                        },
+                        "seller_protection_type": {
+                            "name": "string",
+                            "value": "EXPANDED_SELLER_PROTECTION"
+                        }
+                    }
+                },
+                "reason": {
+                    "name": "string",
+                    "value": "MERCHANDISE_OR_SERVICE_NOT_AS_DESCRIBED"
+                },
+                "status": {
+                    "name": "string",
+                    "value": "WAITING_FOR_SELLER_RESPONSE"
+                },
+                "dispute_amount": {
+                    "currency_code": {
+                        "name": "string",
+                        "value": "USD",
+                        "format": {
+                            "name": "currency",
+                            "variant": "iso4217"
+                        }
+                    },
+                    "value": {
+                        "name": "string",
+                        "value": "42.00"
+                    }
+                },
+                "dispute_state": {
+                    "name": "string",
+                    "value": "REQUIRED_ACTION"
+                },
+                "dispute_life_cycle_stage": {
+                    "name": "string",
+                    "value": "INQUIRY"
+                },
+                "dispute_channel": {
+                    "name": "string",
+                    "value": "INTERNAL"
+                },
+                "messages": {
+                    "0": {
+                        "posted_by": {
+                            "name": "string",
+                            "value": "BUYER"
+                        },
+                        "time_posted": {
+                            "name": "string",
+                            "value": "2024-08-03T15:35:39.875Z",
+                            "format": {
+                                "name": "datetime",
+                                "parts": "datetime",
+                                "variant": "rfc3339"
+                            }
+                        },
+                        "content": {
+                            "name": "string",
+                            "value": "Some extra information"
+                        },
+                        "documents": {
+                            "0": {
+                                "name": {
+                                    "name": "string",
+                                    "value": "image1.jpg"
+                                },
+                                "url": {
+                                    "name": "string",
+                                    "value": "https://api-m.sandbox.paypal.com/v2/content/documents/DIS-010-9d742c8f-64cf-40a0-bb31-e53a14b3462a/files/1/download",
+                                    "format": {
+                                        "name": "uri"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "extensions": {
+                    "merchant_contacted": {
+                        "name": "bool",
+                        "value": false
+                    },
+                    "buyer_contacted_time": {
+                        "name": "string",
+                        "value": "2024-08-03T15:35:38.869Z",
+                        "format": {
+                            "name": "datetime",
+                            "parts": "datetime",
+                            "variant": "rfc3339"
+                        }
+                    }
+                },
+                "evidences": {
+                    "0": {
+                        "evidence_type": {
+                            "name": "string",
+                            "value": "CREATE"
+                        },
+                        "documents": {
+                            "0": {
+                                "name": {
+                                    "name": "string",
+                                    "value": "image1.jpg"
+                                },
+                                "url": {
+                                    "name": "string",
+                                    "value": "https://api-m.sandbox.paypal.com/v2/content/documents/DIS-010-9d742c8f-64cf-40a0-bb31-e53a14b3462a/files/1/download",
+                                    "format": {
+                                        "name": "uri"
+                                    }
+                                }
+                            }
+                        },
+                        "notes": {
+                            "name": "string",
+                            "value": "Some extra information"
+                        },
+                        "source": {
+                            "name": "string",
+                            "value": "SUBMITTED_BY_BUYER"
+                        },
+                        "date": {
+                            "name": "string",
+                            "value": "2024-08-03T15:35:39.875Z",
+                            "format": {
+                                "name": "datetime",
+                                "parts": "datetime",
+                                "variant": "rfc3339"
+                            }
+                        },
+                        "dispute_life_cycle_stage": {
+                            "name": "string",
+                            "value": "INQUIRY"
+                        }
+                    }
+                },
+                "seller_response_due_date": {
+                    "name": "string",
+                    "value": "2024-08-23T15:35:39.875Z",
+                    "format": {
+                        "name": "datetime",
+                        "parts": "datetime",
+                        "variant": "rfc3339"
+                    }
+                },
+                "offer": {
+                    "buyer_requested_amount": {
+                        "currency_code": {
+                            "name": "string",
+                            "value": "USD",
+                            "format": {
+                                "name": "currency",
+                                "variant": "iso4217"
+                            }
+                        },
+                        "value": {
+                            "name": "string",
+                            "value": "42.00"
+                        }
+                    }
+                },
+                "refund_details": {
+                    "allowed_refund_amount": {
+                        "currency_code": {
+                            "name": "string",
+                            "value": "USD",
+                            "format": {
+                                "name": "currency",
+                                "variant": "iso4217"
+                            }
+                        },
+                        "value": {
+                            "name": "string",
+                            "value": "42.00"
+                        }
+                    }
+                },
+                "allowed_response_options": {
+                    "accept_claim": {
+                        "accept_claim_types": {
+                            "0": {
+                                "name": "string",
+                                "value": "PARTIAL_REFUND"
+                            },
+                            "1": {
+                                "name": "string",
+                                "value": "REFUND_WITH_RETURN"
+                            },
+                            "2": {
+                                "name": "string",
+                                "value": "REFUND_WITH_RETURN"
+                            },
+                            "3": {
+                                "name": "string",
+                                "value": "REFUND"
+                            }
+                        }
+                    },
+                    "make_offer": {
+                        "offer_types": {
+                            "0": {
+                                "name": "string",
+                                "value": "REFUND"
+                            },
+                            "1": {
+                                "name": "string",
+                                "value": "REFUND_WITH_RETURN"
+                            },
+                            "2": {
+                                "name": "string",
+                                "value": "REPLACEMENT_WITHOUT_REFUND"
+                            },
+                            "3": {
+                                "name": "string",
+                                "value": "REFUND_WITH_REPLACEMENT"
+                            },
+                            "4": {
+                                "name": "string",
+                                "value": "REFUND_WITH_RETURN"
+                            }
+                        }
+                    }
+                },
+                "links": {
+                    "0": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://api-m.sandbox.paypal.com/v1/customer/disputes/PP-R-YBB-10097423",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "self"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "GET"
+                        }
+                    },
+                    "1": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://api-m.sandbox.paypal.com/v1/customer/disputes/PP-R-YBB-10097423/accept-claim",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "accept_claim"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "POST"
+                        }
+                    },
+                    "2": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://api-m.sandbox.paypal.com/v1/customer/disputes/PP-R-YBB-10097423/send-message",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "send_message"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "POST"
+                        }
+                    },
+                    "3": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://api-m.sandbox.paypal.com/v1/customer/disputes/PP-R-YBB-10097423/escalate",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "escalate"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "POST"
+                        }
+                    },
+                    "4": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://api-m.sandbox.paypal.com/v1/customer/disputes/PP-R-YBB-10097423/make-offer",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "make_offer"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "POST"
+                        }
+                    }
+                }
+            }
+        },
+        "tag": "4",
+        "createdAt": {
+            "$date": "2024-08-03T15:39:48.144Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "66ae4f47508280420bdc485b"
+        },
+        "ip": "::ffff:172.18.0.1",
+        "method": "POST",
+        "url": "https://api-m.sandbox.paypal.com",
+        "endpoint": "v1/customer/disputes/PP-R-YBB-10097423/accept-claim",
+        "headers": {
+            "accept": "application/json, text/plain, */*",
+            "content-type": "application/json",
+            "authorization": "Bearer A21AALdOG1zggdtr4sjKRB7A8tDEQXiIOw3VCEbiyizi-Ubmpzjq8X2RZUMNa-4z6Qul1DONUk-UqhTIUzpxXM4GNeWP1rRYg",
+            "user-agent": "axios/1.7.2",
+            "content-length": "270",
+            "accept-encoding": "gzip, compress, deflate, br",
+            "host": "localhost:3003",
+            "connection": "close"
+        },
+        "body": {
+            "note": {
+                "name": "string",
+                "value": "Full refund to the customer."
+            },
+            "accept_claim_type": {
+                "name": "string",
+                "value": "REFUND_WITH_RETURN"
+            },
+            "return_shipping_address": {
+                "address_line_1": {
+                    "name": "string",
+                    "value": "\u039a\u03bf\u03bb\u03bf\u03ba\u03bf\u03c4\u03c1\u03ce\u03bd\u03b7 1 & \u03a3\u03c4\u03b1\u03b4\u03af\u03bf\u03c5"
+                },
+                "admin_area_2": {
+                    "name": "string",
+                    "value": "\u0391\u03b8\u03ae\u03bd\u03b1"
+                },
+                "admin_area_1": {
+                    "name": "string",
+                    "value": "\u0395\u03bb\u03bb\u03ac\u03b4\u03b1"
+                },
+                "postal_code": {
+                    "name": "string",
+                    "value": "105 62"
+                },
+                "country_code": {
+                    "name": "string",
+                    "value": "GR",
+                    "format": {
+                        "name": "country",
+                        "variant": "iso3166-2"
+                    }
+                }
+            }
+        },
+        "params": [
+            "v1",
+            "customer",
+            "disputes",
+            "PP-R-YBB-10097423",
+            "accept-claim"
+        ],
+        "response": {
+            "responseStatus": 200,
+            "requestSchema": {
+                "links": {
+                    "0": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://api-m.sandbox.paypal.com/v1/customer/disputes/PP-R-YBB-10097423",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "detail"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "GET"
+                        }
+                    }
+                }
+            }
+        },
+        "tag": "4",
+        "createdAt": {
+            "$date": "2024-08-03T15:39:51.519Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "66ae4fd4508280420bdc485d"
+        },
+        "ip": "::ffff:172.18.0.1",
+        "method": "POST",
+        "url": "https://api-m.sandbox.paypal.com",
+        "endpoint": "v1/customer/disputes/PP-R-YBB-10097423/acknowledge-return-item",
+        "headers": {
+            "accept": "application/json, text/plain, */*",
+            "content-type": "application/json",
+            "authorization": "Bearer A21AALdOG1zggdtr4sjKRB7A8tDEQXiIOw3VCEbiyizi-Ubmpzjq8X2RZUMNa-4z6Qul1DONUk-UqhTIUzpxXM4GNeWP1rRYg",
+            "user-agent": "axios/1.7.2",
+            "content-length": "80",
+            "accept-encoding": "gzip, compress, deflate, br",
+            "host": "localhost:3003",
+            "connection": "close"
+        },
+        "body": {
+            "note": {
+                "name": "string",
+                "value": "I have received the item back."
+            },
+            "acknowledgement_type": {
+                "name": "string",
+                "value": "ITEM_RECEIVED"
+            }
+        },
+        "params": [
+            "v1",
+            "customer",
+            "disputes",
+            "PP-R-YBB-10097423",
+            "acknowledge-return-item"
+        ],
+        "response": {
+            "responseStatus": 200,
+            "requestSchema": {
+                "links": {
+                    "0": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://api-m.sandbox.paypal.com/v1/customer/disputes/PP-R-YBB-10097423",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "detail"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "GET"
+                        }
+                    }
+                }
+            }
+        },
+        "tag": "4",
+        "createdAt": {
+            "$date": "2024-08-03T15:42:12.910Z"
+        },
+        "__v": 0
+    }
+]

@@ -1,0 +1,321 @@
+{
+	"info": {
+		"_postman_id": "637060f9-50fe-485c-bcb2-69e92c82628c",
+		"name": "My api refined",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18897170"
+	},
+	"item": [
+		{
+			"name": "CountryExplorer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4445/countries",
+					"host": [
+						"localhost"
+					],
+					"port": "4445",
+					"path": [
+						"countries"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "CountryExplorer",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4445/countries",
+							"host": [
+								"localhost"
+							],
+							"port": "4445",
+							"path": [
+								"countries"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:4445"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "111"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6f-g+Y2d5o6BihZZo/pMdUAgK/S4Lc\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 06 Mar 2024 10:32:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"countryID\": \"1\",\n        \"country\": \"Greece\"\n    },\n    {\n        \"countryID\": \"2\",\n        \"country\": \"France\"\n    },\n    {\n        \"countryID\": \"3\",\n        \"country\": \"Japan\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "CityExplorer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4445/cities?countryID=1&country=Greece",
+					"host": [
+						"localhost"
+					],
+					"port": "4445",
+					"path": [
+						"cities"
+					],
+					"query": [
+						{
+							"key": "countryID",
+							"value": "1"
+						},
+						{
+							"key": "country",
+							"value": "Greece"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "list cities of Greece",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4445/cities?countryID=1&country=Greece",
+							"host": [
+								"localhost"
+							],
+							"port": "4445",
+							"path": [
+								"cities"
+							],
+							"query": [
+								{
+									"key": "countryID",
+									"value": "1"
+								},
+								{
+									"key": "country",
+									"value": "Greece"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:4445"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "75"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4b-V6yRXba5kwfkSoBcbfR1sOk4JGc\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 06 Mar 2024 10:59:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"cities\": [\n        {\n            \"cityID\": \"1\",\n            \"city\": \"Athens\"\n        },\n        {\n            \"cityID\": \"2\",\n            \"city\": \"Piraeus\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "list cities of France",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"countryID\" : \"2\",\r\n\"country\" : \"France\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4445/cities",
+					"host": [
+						"localhost"
+					],
+					"port": "4445",
+					"path": [
+						"cities"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "list cities of France",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"countryID\" : \"2\",\r\n\"country\" : \"France\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4445/cities",
+							"host": [
+								"localhost"
+							],
+							"port": "4445",
+							"path": [
+								"cities"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:4445"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "76"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4c-gsIUEGbyDNeSuHA6GO/4CjaVal0\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 06 Mar 2024 10:33:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"cities\": [\n        {\n            \"cityID\": \"3\",\n            \"city\": \"Paris\"\n        },\n        {\n            \"cityID\": \"4\",\n            \"city\": \"Marseille\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "error request body",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:4445/cities",
+					"host": [
+						"localhost"
+					],
+					"port": "4445",
+					"path": [
+						"cities"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

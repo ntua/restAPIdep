@@ -1,0 +1,106 @@
+----------------------------------------------
+       Endpoint dependencies per attribute       
+       Number of api endpoints (nodes): 28
+       Number of api endpoints (nodes) with inter-dependency: 20
+       Number of dependent only api endpoints (nodes): 8
+       Number of api endpoints (nodes) that only derive dependencies: 6
+       Number of api endpoints (nodes) that are both dependent and derive dependencies: 6
+       Number of dependencies (edges): 47
+       Number of dependencies per attribute: 56
+       Number of dependencies per parameter type (body/query/path): 24/0/32
+----------------------------------------------
+Cancel fine-tune  ->  Create fine-tune  [ label = "model : model"] type: string, parameter: body
+Cancel fine-tune  ->  Create fine-tune  [ label = "id : training_file"] type: string, parameter: body
+Cancel fine-tune  ->  Retrieve file content  [ label = "id : file_id"] type: string, parameter: path
+Cancel fine-tune  ->  Retrieve files  [ label = "id : file_id"] type: string, parameter: path
+Cancel fine-tune  ->  Search  [ label = "model : engine_id"] type: string, parameter: path
+Create fine-tune  ->  List fine-tune events  [ label = "id : fine_tune_id"] type: string, parameter: path
+Create fine-tune  ->  Retrieve file content  [ label = "id : file_id"] type: string, parameter: path
+Create fine-tune  ->  Retrieve files  [ label = "id : file_id"] type: string, parameter: path
+Create fine-tune  ->  Retrieve fine-tune  [ label = "id : fine_tune_id"] type: string, parameter: path
+Create fine-tune  ->  Search  [ label = "model : engine_id"] type: string, parameter: path
+List engines  ->  Answer Question  [ label = "id : search_model"] type: string, parameter: body
+List engines  ->  Create chat message completion  [ label = "id : model"] type: string, parameter: body
+List engines  ->  Create edit  [ label = "id : model"] type: string, parameter: body
+List engines  ->  Create embeddings  [ label = "id : model"] type: string, parameter: body
+List engines  ->  Create fine-tune  [ label = "id : model"] type: string, parameter: body
+List engines  ->  Delete a fine-tuned model. You must have the Owner role in your organization.  [ label = "id : model"] type: string, parameter: path
+List engines  ->  Retrieve engine  [ label = "id : engineId"] type: string, parameter: path
+List engines  ->  Retrieve model  [ label = "id : model_id"] type: string, parameter: path
+List engines  ->  Search  [ label = "id : engine_id"] type: string, parameter: path
+List files  ->  Create fine-tune  [ label = "id : training_file"] type: string, parameter: body
+List files  ->  Retrieve file content  [ label = "id : file_id"] type: string, parameter: path
+List files  ->  Retrieve files  [ label = "id : file_id"] type: string, parameter: path
+List fine-tunes  ->  Create fine-tune  [ label = "id : training_file"] type: string, parameter: body
+List fine-tunes  ->  Create fine-tune  [ label = "model : model"] type: string, parameter: body
+List fine-tunes  ->  Delete a fine-tuned model. You must have the Owner role in your organization.  [ label = "model : model"] type: string, parameter: path
+List fine-tunes  ->  List fine-tune events  [ label = "id : fine_tune_id"] type: string, parameter: path
+List fine-tunes  ->  Retrieve file content  [ label = "id : file_id"] type: string, parameter: path
+List fine-tunes  ->  Retrieve files  [ label = "id : file_id"] type: string, parameter: path
+List fine-tunes  ->  Retrieve fine-tune  [ label = "id : fine_tune_id"] type: string, parameter: path
+List fine-tunes  ->  Search  [ label = "model : engine_id"] type: string, parameter: path
+List models  ->  Create chat message completion  [ label = "id : model"] type: string, parameter: body
+List models  ->  Create chat message completion  [ label = "root : model"] type: string, parameter: body
+List models  ->  Create edit  [ label = "root : model"] type: string, parameter: body
+List models  ->  Create edit  [ label = "id : model"] type: string, parameter: body
+List models  ->  Create embeddings  [ label = "root : model"] type: string, parameter: body
+List models  ->  Create embeddings  [ label = "id : model"] type: string, parameter: body
+List models  ->  Create fine-tune  [ label = "id : model"] type: string, parameter: body
+List models  ->  Create fine-tune  [ label = "root : model"] type: string, parameter: body
+List models  ->  Search  [ label = "id : engine_id"] type: string, parameter: path
+List models  ->  Search  [ label = "root : engine_id"] type: string, parameter: path
+Retrieve engine  ->  Retrieve model  [ label = "id : model_id"] type: string, parameter: path
+Retrieve file content  ->  Use fine-tuned model (completion)  [ label = "prompt : prompt"] type: string, parameter: body
+Retrieve files  ->  Create fine-tune  [ label = "id : training_file"] type: string, parameter: body
+Retrieve files  ->  Retrieve file content  [ label = "id : file_id"] type: string, parameter: path
+Retrieve fine-tune  ->  Create fine-tune  [ label = "id : training_file"] type: string, parameter: body
+Retrieve fine-tune  ->  Create fine-tune  [ label = "model : model"] type: string, parameter: body
+Retrieve fine-tune  ->  List fine-tune events  [ label = "id : fine_tune_id"] type: string, parameter: path
+Retrieve fine-tune  ->  Retrieve file content  [ label = "id : file_id"] type: string, parameter: path
+Retrieve fine-tune  ->  Retrieve files  [ label = "id : file_id"] type: string, parameter: path
+Retrieve fine-tune  ->  Search  [ label = "model : engine_id"] type: string, parameter: path
+Retrieve fine-tune  ->  Use fine-tuned model (completion)  [ label = "fine_tuned_model : model"] type: string, parameter: body
+Retrieve model  ->  Retrieve engine  [ label = "id : engineId"] type: string, parameter: path
+Retrieve model  ->  Retrieve engine  [ label = "root : engineId"] type: string, parameter: path
+Upload file  ->  Create fine-tune  [ label = "id : training_file"] type: string, parameter: body
+Upload file  ->  Retrieve file content  [ label = "id : file_id"] type: string, parameter: path
+Upload file  ->  Retrieve files  [ label = "id : file_id"] type: string, parameter: path
+Delete file
+Create image variation
+Create Transcription
+Create image
+Create image edit
+Create moderation
+Create completion
+Create Translation
+
+-----------List of endpoints and methods--------------
+
+List models, method: GET
+Retrieve model, method: GET
+Create completion, method: POST
+Create chat message completion, method: POST
+Create edit, method: POST
+Create image, method: POST
+Create image edit, method: POST
+Create image variation, method: POST
+Create Transcription, method: POST
+Create Translation, method: POST
+Create embeddings, method: POST
+Upload file, method: POST
+List files, method: GET
+Retrieve files, method: GET
+Retrieve file content, method: GET
+Delete file, method: DELETE
+Create fine-tune, method: POST
+List fine-tunes, method: GET
+Retrieve fine-tune, method: GET
+Cancel fine-tune, method: POST
+List fine-tune events, method: GET
+Delete a fine-tuned model. You must have the Owner role in your organization., method: DELETE
+Use fine-tuned model (completion), method: POST
+Create moderation, method: POST
+List engines, method: GET
+Retrieve engine, method: GET
+Search, method: POST
+Answer Question, method: POST

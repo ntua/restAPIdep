@@ -1,0 +1,324 @@
+{
+	"info": {
+		"_postman_id": "89eda52c-422c-455a-80bc-d6cb124ca807",
+		"name": "HeNex V3 Copy",
+		"description": "This collection includes all the APIs of version 3 for HeNex",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GR Market-Market Results BorderSchedules",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-key",
+						"value": "{{apiKey}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"interconnection\":\"AL-GR\",\r\n    \"direction\":0,\r\n    \"market\":\"DAM\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{protocol}}://{{baseUrl}}/api/v3/data/henexmarketresultsborderschedules/2021/10/29/2",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"data",
+						"henexmarketresultsborderschedules",
+						"2021",
+						"10",
+						"29",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GR Market-PreMarket Results BorderSchedules",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-key",
+						"type": "text",
+						"value": "{{apiKey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"direction\":0,\r\n    \"interconnection\":\"AL-GR\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{protocol}}://{{baseUrl}}/api/v3/data/henexpremarketresultsborderschedules/2020/10/28/5",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"data",
+						"henexpremarketresultsborderschedules",
+						"2020",
+						"10",
+						"28",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GR Market-PreMarket Results Demand",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-key",
+						"type": "text",
+						"value": "{{apiKey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"direction\":1,\r\n    \"class\":\"LV\",\r\n    \"market\":\"DAM\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{protocol}}://{{baseUrl}}/api/v3/data/henexpremarketresultsdemand/2020/10/28/5",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"data",
+						"henexpremarketresultsdemand",
+						"2020",
+						"10",
+						"28",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GR Market-PreMarket Summary per Production Technology",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-key",
+						"type": "text",
+						"value": "{{apiKey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"direction\":0,\r\n    \"technology\":\"Lignite\",\r\n    \"market\":\"DAM\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{protocol}}://{{baseUrl}}/api/v3/data/henexpremarketsummaryperproductiontechnology/2020/10/28/5",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"data",
+						"henexpremarketsummaryperproductiontechnology",
+						"2020",
+						"10",
+						"28",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "interconnections/interconnection Copy",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-key",
+						"type": "text",
+						"value": "{{apiKey}}"
+					}
+				],
+				"url": {
+					"raw": "{{protocol}}://{{baseUrl}}/api/v3/data/interconnections/TR",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"data",
+						"interconnections",
+						"TR"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "interconnections/interconnection Copy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-key",
+								"type": "text",
+								"value": "{{apiKey}}"
+							}
+						],
+						"url": {
+							"raw": "{{protocol}}://{{baseUrl}}/api/v3/data/interconnections/TR",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"data",
+								"interconnections",
+								"TR"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept, x-auth-token"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "POST, GET, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "6670"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1a0e-9I8LOehKXu48HrJX99GxUthlJcc\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 13 Mar 2023 12:53:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"TGInterconnectionName\": \"TR BZN -> GR BZN\",\n        \"interconnectionAbbrev\": \"TR_BZN_GR_BZN\",\n        \"InAreaRefName\": \"Greece / GR BZN / BZN\",\n        \"InAreaRefAbbrev\": \"GREECE_GR_BZN_BZN\",\n        \"OutAreaRefName\": \"Turkey / TR BZN / BZN\",\n        \"OutAreaRefAbbrev\": \"TURKEY_TR_BZN_BZN\"\n    },\n    {\n        \"TGInterconnectionName\": \"GR BZN -> TR BZN\",\n        \"interconnectionAbbrev\": \"GR_BZN_TR_BZN\",\n        \"InAreaRefName\": \"Turkey / TR BZN / BZN\",\n        \"InAreaRefAbbrev\": \"TURKEY_TR_BZN_BZN\",\n        \"OutAreaRefName\": \"Greece / GR BZN / BZN\",\n        \"OutAreaRefAbbrev\": \"GREECE_GR_BZN_BZN\"\n    },\n    {\n        \"TGInterconnectionName\": \"DE(TransnetBW) CTA -> CH CTA\",\n        \"interconnectionAbbrev\": \"DE_TRANSNETBW_CTA_CH_CTA\",\n        \"InAreaRefName\": \"Switzerland / CH CTA / CTA\",\n        \"InAreaRefAbbrev\": \"SWITZERLAND_CH_CTA_CTA\",\n        \"OutAreaRefName\": \"Germany / DE(TransnetBW) CTA / CTA\",\n        \"OutAreaRefAbbrev\": \"GERMANY_DE_TRANSNETBW_CTA_CTA\"\n    },\n    {\n        \"TGInterconnectionName\": \"CH CTA -> DE(TransnetBW) CTA\",\n        \"interconnectionAbbrev\": \"CH_CTA_DE_TRANSNETBW_CTA\",\n        \"InAreaRefName\": \"Germany / DE(TransnetBW) CTA / CTA\",\n        \"InAreaRefAbbrev\": \"GERMANY_DE_TRANSNETBW_CTA_CTA\",\n        \"OutAreaRefName\": \"Switzerland / CH CTA / CTA\",\n        \"OutAreaRefAbbrev\": \"SWITZERLAND_CH_CTA_CTA\"\n    },\n    {\n        \"TGInterconnectionName\": \"IT-South BZN -> IT-Centre-South BZN\",\n        \"interconnectionAbbrev\": \"IT_SOUTH_BZN_IT_CENTRE_SOUTH_BZN\",\n        \"InAreaRefName\": \"Italy / IT-Centre-South BZN / BZN\",\n        \"InAreaRefAbbrev\": \"ITALY_IT_CENTRE_SOUTH_BZN_BZN\",\n        \"OutAreaRefName\": \"Italy / IT-South BZN / BZN\",\n        \"OutAreaRefAbbrev\": \"ITALY_IT_SOUTH_BZN_BZN\"\n    },\n    {\n        \"TGInterconnectionName\": \"IT-Centre-North BZN -> IT-North BZN\",\n        \"interconnectionAbbrev\": \"IT_CENTRE_NORTH_BZN_IT_NORTH_BZN\",\n        \"InAreaRefName\": \"Italy / IT-North BZN / BZN\",\n        \"InAreaRefAbbrev\": \"ITALY_IT_NORTH_BZN_BZN\",\n        \"OutAreaRefName\": \"Italy / IT-Centre-North BZN / BZN\",\n        \"OutAreaRefAbbrev\": \"ITALY_IT_CENTRE_NORTH_BZN_BZN\"\n    },\n    {\n        \"TGInterconnectionName\": \"IT-North BZN -> IT-Centre-North BZN\",\n        \"interconnectionAbbrev\": \"IT_NORTH_BZN_IT_CENTRE_NORTH_BZN\",\n        \"InAreaRefName\": \"Italy / IT-Centre-North BZN / BZN\",\n        \"InAreaRefAbbrev\": \"ITALY_IT_CENTRE_NORTH_BZN_BZN\",\n        \"OutAreaRefName\": \"Italy / IT-North BZN / BZN\",\n        \"OutAreaRefAbbrev\": \"ITALY_IT_NORTH_BZN_BZN\"\n    },\n    {\n        \"TGInterconnectionName\": \"IT-Sardinia BZN -> IT-Centre-South BZN\",\n        \"interconnectionAbbrev\": \"IT_SARDINIA_BZN_IT_CENTRE_SOUTH_BZN\",\n        \"InAreaRefName\": \"Italy / IT-Centre-South BZN / BZN\",\n        \"InAreaRefAbbrev\": \"ITALY_IT_CENTRE_SOUTH_BZN_BZN\",\n        \"OutAreaRefName\": \"Italy / IT-Sardinia BZN / BZN\",\n        \"OutAreaRefAbbrev\": \"ITALY_IT_SARDINIA_BZN_BZN\"\n    },\n    {\n        \"TGInterconnectionName\": \"IT-Centre-South BZN -> IT-Sardinia BZN\",\n        \"interconnectionAbbrev\": \"IT_CENTRE_SOUTH_BZN_IT_SARDINIA_BZN\",\n        \"InAreaRefName\": \"Italy / IT-Sardinia BZN / BZN\",\n        \"InAreaRefAbbrev\": \"ITALY_IT_SARDINIA_BZN_BZN\",\n        \"OutAreaRefName\": \"Italy / IT-Centre-South BZN / BZN\",\n        \"OutAreaRefAbbrev\": \"ITALY_IT_CENTRE_SOUTH_BZN_BZN\"\n    },\n    {\n        \"TGInterconnectionName\": \"IT-Centre-South BZN -> IT-Centre-North BZN\",\n        \"interconnectionAbbrev\": \"IT_CENTRE_SOUTH_BZN_IT_CENTRE_NORTH_BZN\",\n        \"InAreaRefName\": \"Italy / IT-Centre-North BZN / BZN\",\n        \"InAreaRefAbbrev\": \"ITALY_IT_CENTRE_NORTH_BZN_BZN\",\n        \"OutAreaRefName\": \"Italy / IT-Centre-South BZN / BZN\",\n        \"OutAreaRefAbbrev\": \"ITALY_IT_CENTRE_SOUTH_BZN_BZN\"\n    },\n    {\n        \"TGInterconnectionName\": \"IT-Centre-North BZN -> IT-Centre-South BZN\",\n        \"interconnectionAbbrev\": \"IT_CENTRE_NORTH_BZN_IT_CENTRE_SOUTH_BZN\",\n        \"InAreaRefName\": \"Italy / IT-Centre-South BZN / BZN\",\n        \"InAreaRefAbbrev\": \"ITALY_IT_CENTRE_SOUTH_BZN_BZN\",\n        \"OutAreaRefName\": \"Italy / IT-Centre-North BZN / BZN\",\n        \"OutAreaRefAbbrev\": \"ITALY_IT_CENTRE_NORTH_BZN_BZN\"\n    },\n    {\n        \"TGInterconnectionName\": \"IT-SACODC BZN -> IT-Centre-North BZN\",\n        \"interconnectionAbbrev\": \"IT_SACODC_BZN_IT_CENTRE_NORTH_BZN\",\n        \"InAreaRefName\": \"Italy / IT-Centre-North BZN / BZN\",\n        \"InAreaRefAbbrev\": \"ITALY_IT_CENTRE_NORTH_BZN_BZN\",\n        \"OutAreaRefName\": \"Italy / IT-SACODC BZN / BZN\",\n        \"OutAreaRefAbbrev\": \"ITALY_IT_SACODC_BZN_BZN\"\n    },\n    {\n        \"TGInterconnectionName\": \"IT-Centre-North BZN -> IT-SACODC BZN\",\n        \"interconnectionAbbrev\": \"IT_CENTRE_NORTH_BZN_IT_SACODC_BZN\",\n        \"InAreaRefName\": \"Italy / IT-SACODC BZN / BZN\",\n        \"InAreaRefAbbrev\": \"ITALY_IT_SACODC_BZN_BZN\",\n        \"OutAreaRefName\": \"Italy / IT-Centre-North BZN / BZN\",\n        \"OutAreaRefAbbrev\": \"ITALY_IT_CENTRE_NORTH_BZN_BZN\"\n    },\n    {\n        \"TGInterconnectionName\": \"AT CTA -> DE(TransnetBW) CTA\",\n        \"interconnectionAbbrev\": \"AT_CTA_DE_TRANSNETBW_CTA\",\n        \"InAreaRefName\": \"Germany / DE(TransnetBW) CTA / CTA\",\n        \"InAreaRefAbbrev\": \"GERMANY_DE_TRANSNETBW_CTA_CTA\",\n        \"OutAreaRefName\": \"Austria / AT CTA / CTA\",\n        \"OutAreaRefAbbrev\": \"AUSTRIA_AT_CTA_CTA\"\n    },\n    {\n        \"TGInterconnectionName\": \"DE(TransnetBW) CTA -> AT CTA\",\n        \"interconnectionAbbrev\": \"DE_TRANSNETBW_CTA_AT_CTA\",\n        \"InAreaRefName\": \"Austria / AT CTA / CTA\",\n        \"InAreaRefAbbrev\": \"AUSTRIA_AT_CTA_CTA\",\n        \"OutAreaRefName\": \"Germany / DE(TransnetBW) CTA / CTA\",\n        \"OutAreaRefAbbrev\": \"GERMANY_DE_TRANSNETBW_CTA_CTA\"\n    },\n    {\n        \"TGInterconnectionName\": \"TR CTA -> BG CTA\",\n        \"interconnectionAbbrev\": \"TR_CTA_BG_CTA\",\n        \"InAreaRefName\": \"Bulgaria / BG CTA / CTA\",\n        \"InAreaRefAbbrev\": \"BULGARIA_BG_CTA_CTA\",\n        \"OutAreaRefName\": \"Turkey / TR CTA / CTA\",\n        \"OutAreaRefAbbrev\": \"TURKEY_TR_CTA_CTA\"\n    },\n    {\n        \"TGInterconnectionName\": \"BG CTA -> TR CTA\",\n        \"interconnectionAbbrev\": \"BG_CTA_TR_CTA\",\n        \"InAreaRefName\": \"Turkey / TR CTA / CTA\",\n        \"InAreaRefAbbrev\": \"TURKEY_TR_CTA_CTA\",\n        \"OutAreaRefName\": \"Bulgaria / BG CTA / CTA\",\n        \"OutAreaRefAbbrev\": \"BULGARIA_BG_CTA_CTA\"\n    },\n    {\n        \"TGInterconnectionName\": \"GR CTA -> TR CTA\",\n        \"interconnectionAbbrev\": \"GR_CTA_TR_CTA\",\n        \"InAreaRefName\": \"Turkey / TR CTA / CTA\",\n        \"InAreaRefAbbrev\": \"TURKEY_TR_CTA_CTA\",\n        \"OutAreaRefName\": \"Greece / GR CTA / CTA\",\n        \"OutAreaRefAbbrev\": \"GREECE_GR_CTA_CTA\"\n    },\n    {\n        \"TGInterconnectionName\": \"TR CTA -> GR CTA\",\n        \"interconnectionAbbrev\": \"TR_CTA_GR_CTA\",\n        \"InAreaRefName\": \"Greece / GR CTA / CTA\",\n        \"InAreaRefAbbrev\": \"GREECE_GR_CTA_CTA\",\n        \"OutAreaRefName\": \"Turkey / TR CTA / CTA\",\n        \"OutAreaRefAbbrev\": \"TURKEY_TR_CTA_CTA\"\n    },\n    {\n        \"TGInterconnectionName\": \"ME BZN -> IT-Centre-South BZN\",\n        \"interconnectionAbbrev\": \"ME_BZN_IT_CENTRE_SOUTH_BZN\",\n        \"InAreaRefName\": \"Italy / IT-Centre-South BZN / BZN\",\n        \"InAreaRefAbbrev\": \"ITALY_IT_CENTRE_SOUTH_BZN_BZN\",\n        \"OutAreaRefName\": \"Montenegro / ME BZN / BZN\",\n        \"OutAreaRefAbbrev\": \"MONTENEGRO_ME_BZN_BZN\"\n    },\n    {\n        \"TGInterconnectionName\": \"IT-Centre-South BZN -> ME BZN\",\n        \"interconnectionAbbrev\": \"IT_CENTRE_SOUTH_BZN_ME_BZN\",\n        \"InAreaRefName\": \"Montenegro / ME BZN / BZN\",\n        \"InAreaRefAbbrev\": \"MONTENEGRO_ME_BZN_BZN\",\n        \"OutAreaRefName\": \"Italy / IT-Centre-South BZN / BZN\",\n        \"OutAreaRefAbbrev\": \"ITALY_IT_CENTRE_SOUTH_BZN_BZN\"\n    },\n    {\n        \"TGInterconnectionName\": \"TR CTA -> GE CTA\",\n        \"interconnectionAbbrev\": \"TR_CTA_GE_CTA\",\n        \"InAreaRefName\": \"Georgia / GE CTA / CTA\",\n        \"InAreaRefAbbrev\": \"GEORGIA_GE_CTA_CTA\",\n        \"OutAreaRefName\": \"Turkey / TR CTA / CTA\",\n        \"OutAreaRefAbbrev\": \"TURKEY_TR_CTA_CTA\"\n    },\n    {\n        \"TGInterconnectionName\": \"TR BZN -> GE BZN\",\n        \"interconnectionAbbrev\": \"TR_BZN_GE_BZN\",\n        \"InAreaRefName\": \"Georgia / GE BZN / BZN\",\n        \"InAreaRefAbbrev\": \"GEORGIA_GE_BZN_BZN\",\n        \"OutAreaRefName\": \"Turkey / TR BZN / BZN\",\n        \"OutAreaRefAbbrev\": \"TURKEY_TR_BZN_BZN\"\n    }\n]"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "api.diem-platform.com"
+		},
+		{
+			"key": "protocol",
+			"value": "https"
+		},
+		{
+			"key": "apiKey",
+			"value": "ASLDKJASDJK2534S"
+		},
+		{
+			"key": "collectionId",
+			"value": "18897170-31e5912e-abc3-431b-8058-cc6b310644a6",
+			"type": "string"
+		}
+	]
+}

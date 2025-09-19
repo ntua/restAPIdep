@@ -1,0 +1,359 @@
+{
+	"info": {
+		"_postman_id": "8cdc3f62-5fcf-4eab-9c1c-43df707cca06",
+		"name": "ENTsoe V3 Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Aggregated Installed Generation Capacity",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-key",
+						"value": "{{apiKey}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"areaRef\":\"BELGIUM_BE_CTA_CTA\",\r\n    \"timezone\":\"CET\",\r\n    \"prodType\":\"waste\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{protocol}}://{{baseUrl}}/api/v3/data/entsoeaggregatedinstalledgenerationcapacity/2017/2/26/1000",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"data",
+						"entsoeaggregatedinstalledgenerationcapacity",
+						"2017",
+						"2",
+						"26",
+						"1000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Day Ahead Generation Forecast of particular RES",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-key",
+						"value": "{{apiKey}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"areaRef\":\"GREECE_GR_CTY_CTY\",\r\n    \"prodType\":\"solar\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{protocol}}://{{baseUrl}}/api/v3/data/entsoedaaggregatedgenforecastfortype/2021/10/28/20",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"data",
+						"entsoedaaggregatedgenforecastfortype",
+						"2021",
+						"10",
+						"28",
+						"20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Day Ahead Generation Forecast Total RES",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-key",
+						"value": "{{apiKey}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"areaRef\":\"GREECE_GR_CTY_CTY\",\r\n    \"prodType\":\"solar\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{protocol}}://{{baseUrl}}/api/v3/data/entsoedaaggregatedgenforecasttotalres/2021/10/28/20",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"data",
+						"entsoedaaggregatedgenforecasttotalres",
+						"2021",
+						"10",
+						"28",
+						"20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Day Ahead Total Load Forecast",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-key",
+						"value": "{{apiKey}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"areaRef\":\"GREECE_GR_CTY_CTY\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{protocol}}://{{baseUrl}}/api/v3/data/entsoedatotalloadforecast/2021/10/28/20",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"data",
+						"entsoedatotalloadforecast",
+						"2021",
+						"10",
+						"28",
+						"20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Net Positions Daily",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-key",
+						"value": "{{apiKey}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"areaRef\":\"CROATIA_HR_BZN_BZN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{protocol}}://{{baseUrl}}/api/v3/data/entsoenetpositionsdaily/2020/10/28/20",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"data",
+						"entsoenetpositionsdaily",
+						"2020",
+						"10",
+						"28",
+						"20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "productiontypes Copy",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-key",
+						"value": "{{apiKey}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{protocol}}://{{baseUrl}}/api/v3/data/productiontypes",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"data",
+						"productiontypes"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "productiontypes Copy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-key",
+								"value": "{{apiKey}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{protocol}}://{{baseUrl}}/api/v3/data/productiontypes",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"data",
+								"productiontypes"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept, x-auth-token"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "POST, GET, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "3159"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c57-dWZt4DWhld6NkBTXP7SRaZTKD/E\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Mar 2023 14:45:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"ProductionType\": \"Other\",\n        \"ProductionTypeAbbrev\": \"other\",\n        \"ProductionTypeNote\": \"\"\n    },\n    {\n        \"ProductionType\": \"Wind Onshore\",\n        \"ProductionTypeAbbrev\": \"wind_onshore\",\n        \"ProductionTypeNote\": \"For DAPEEP refers to MV production only ENTSOe aggregates all\"\n    },\n    {\n        \"ProductionType\": \"Nuclear\",\n        \"ProductionTypeAbbrev\": \"nuclear\",\n        \"ProductionTypeNote\": \"\"\n    },\n    {\n        \"ProductionType\": \"Geothermal\",\n        \"ProductionTypeAbbrev\": \"geothermal\",\n        \"ProductionTypeNote\": \"\"\n    },\n    {\n        \"ProductionType\": \"Fossil Gas\",\n        \"ProductionTypeAbbrev\": \"fossil_gas\",\n        \"ProductionTypeNote\": \"\"\n    },\n    {\n        \"ProductionType\": \"Wind Offshore\",\n        \"ProductionTypeAbbrev\": \"wind_offshore\",\n        \"ProductionTypeNote\": \"\"\n    },\n    {\n        \"ProductionType\": \"Solar\",\n        \"ProductionTypeAbbrev\": \"solar\",\n        \"ProductionTypeNote\": \"For DAPEEP refers to MV production only ENTSOe aggregates all\"\n    },\n    {\n        \"ProductionType\": \"Fossil Hard coal\",\n        \"ProductionTypeAbbrev\": \"fossil_hard_coal\",\n        \"ProductionTypeNote\": \"\"\n    },\n    {\n        \"ProductionType\": \"Other renewable\",\n        \"ProductionTypeAbbrev\": \"other_renewable\",\n        \"ProductionTypeNote\": \"\"\n    },\n    {\n        \"ProductionType\": \"Biomass\",\n        \"ProductionTypeAbbrev\": \"biomass\",\n        \"ProductionTypeNote\": \"For DAPEEP refers to MV production only ENTSOe aggregates all\"\n    },\n    {\n        \"ProductionType\": \"Hydro Run-of-river and poundage\",\n        \"ProductionTypeAbbrev\": \"hydro_run_of_river_and_poundage\",\n        \"ProductionTypeNote\": \"\"\n    },\n    {\n        \"ProductionType\": \"Fossil Brown coal/Lignite\",\n        \"ProductionTypeAbbrev\": \"fossil_brown_coal_lignite\",\n        \"ProductionTypeNote\": \"\"\n    },\n    {\n        \"ProductionType\": \"Hydro Water Reservoir\",\n        \"ProductionTypeAbbrev\": \"hydro_water_reservoir\",\n        \"ProductionTypeNote\": \"\"\n    },\n    {\n        \"ProductionType\": \"Fossil Oil\",\n        \"ProductionTypeAbbrev\": \"fossil_oil\",\n        \"ProductionTypeNote\": \"\"\n    },\n    {\n        \"ProductionType\": \"Waste\",\n        \"ProductionTypeAbbrev\": \"waste\",\n        \"ProductionTypeNote\": \"\"\n    },\n    {\n        \"ProductionType\": \"Hydro Pumped Storage\",\n        \"ProductionTypeAbbrev\": \"hydro_pumped_storage\",\n        \"ProductionTypeNote\": \"\"\n    },\n    {\n        \"ProductionType\": \"Fossil Oil shale\",\n        \"ProductionTypeAbbrev\": \"fossil_oil_shale\",\n        \"ProductionTypeNote\": \"\"\n    },\n    {\n        \"ProductionType\": \"Fossil Peat\",\n        \"ProductionTypeAbbrev\": \"fossil_peat\",\n        \"ProductionTypeNote\": \"\"\n    },\n    {\n        \"ProductionType\": \"Fossil Coal-derived gas\",\n        \"ProductionTypeAbbrev\": \"fossil_coal_derived_gas\",\n        \"ProductionTypeNote\": \"\"\n    },\n    {\n        \"ProductionType\": \"Marine\",\n        \"ProductionTypeAbbrev\": \"marine\",\n        \"ProductionTypeNote\": \"\"\n    },\n    {\n        \"ProductionType\": \"AC Link\",\n        \"ProductionTypeAbbrev\": \"ac_link\",\n        \"ProductionTypeNote\": \"\"\n    },\n    {\n        \"ProductionType\": \"Substation\",\n        \"ProductionTypeAbbrev\": \"substation\",\n        \"ProductionTypeNote\": \"\"\n    },\n    {\n        \"ProductionType\": \"Transformer\",\n        \"ProductionTypeAbbrev\": \"transformer\",\n        \"ProductionTypeNote\": \"\"\n    },\n    {\n        \"ProductionType\": \"DC Link\",\n        \"ProductionTypeAbbrev\": \"dc_link\",\n        \"ProductionTypeNote\": \"\"\n    },\n    {\n        \"ProductionType\": \"\",\n        \"ProductionTypeAbbrev\": \"\",\n        \"ProductionTypeNote\": \"\"\n    },\n    {\n        \"ProductionType\": \"Solar Rooftop (DAPEEP only)\",\n        \"ProductionTypeAbbrev\": \"solar_rooftop_dapeep_only_\",\n        \"ProductionTypeNote\": \"DAPEEP only (MV)\"\n    },\n    {\n        \"ProductionType\": \"Mixed (DAPEEP only)\",\n        \"ProductionTypeAbbrev\": \"mixed_dapeep_only_\",\n        \"ProductionTypeNote\": \"DAPEEP only (MV)\"\n    },\n    {\n        \"ProductionType\": \"Mixed Dispatchable (DAPEEP only)\",\n        \"ProductionTypeAbbrev\": \"mixed_dispatchable_dapeep_only_\",\n        \"ProductionTypeNote\": \"DAPEEP only (MV)\"\n    },\n    {\n        \"ProductionType\": \"Small Hydro\",\n        \"ProductionTypeAbbrev\": \"small_hydro\",\n        \"ProductionTypeNote\": \"DAPEEP reports hydro production connected to MV only\"\n    }\n]"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "protocol",
+			"value": "https"
+		},
+		{
+			"key": "baseUrl",
+			"value": "api.diem-platform.com"
+		},
+		{
+			"key": "apiKey",
+			"value": "ASLDKJASDJK2534S"
+		}
+	]
+}

@@ -1,0 +1,69 @@
+openapi: 3.0.3
+info:
+  title: My_api
+  version: 1.0.0
+paths:
+  /cities:
+    post:
+      description: Get all possible cities with their corresponding IDs
+      operationId: city_Explorer
+      responses:
+        200:
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/City_name'
+              example: "[\r\n{\r\n\"id_city\": \"1\",\r\n\"city\": \"Athens\"\r\n\  },\r\n{\r\n\"id_city\": \"2\",\r\n\"city\": \"Piraeus\"\r\n},\r\n\  {\r\n\"id_city\": \"3\",\r\n\"city\": \"Tokyo\"\r\n}\r\n]\r\n"
+  /countries:
+    post:
+      description: Given a city and its corresponding ID return the country and its
+        corresponding ID
+      operationId: country_Explorer
+      x-codegen-request-body-name: city_name
+      requestBody:
+        content:
+          '*/*':
+            schema:
+              $ref: '#/components/schemas/City_name'
+            example: "{\r\n\"id_city\":\"1\",\r\n\"city\":\"Athens\"\r\n}"
+        required: true
+      responses:
+        200:
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Country_name'
+              example: "{\r\n\"req_body\": {\r\n\"id_city\": \"1\",\r\n\"city\": \"\
+                Athens\"\r\n},\r\n\"id_country\": \"1\",\r\n\"country\": \"Greece\"\
+                \r\n}"
+components:
+  schemas:
+    Country_name:
+      required:
+      - req_body
+      type: object
+      properties:
+        id_country:
+          type: string
+        country:
+          type: string
+        req_body:
+          $ref: '#/components/schemas/req_body_class'
+    City_name:
+      type: object
+      properties:
+        id_city:
+          type: string
+        city:
+          type: string
+    req_body_class:
+      type: object
+      properties:
+        id_city:
+          type: string
+        city:
+          type: string

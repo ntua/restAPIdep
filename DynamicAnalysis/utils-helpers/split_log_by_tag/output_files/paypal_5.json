@@ -1,0 +1,3044 @@
+[
+    {
+        "_id": {
+            "$oid": "66ae4fd5508280420bdc485f"
+        },
+        "ip": "::ffff:172.18.0.1",
+        "method": "POST",
+        "url": "https://api-m.sandbox.paypal.com",
+        "endpoint": "v1/oauth2/token",
+        "headers": {
+            "accept": "application/json, text/plain, */*",
+            "content-type": "application/x-www-form-urlencoded",
+            "user-agent": "axios/1.7.2",
+            "content-length": "1679",
+            "accept-encoding": "gzip, compress, deflate, br",
+            "host": "localhost:3003",
+            "authorization": "Basic QWY3Sm9WSmE4cHhwZmF3VThxcGJITUR1T3JfRElWS3ByeWtjS0VFdGVQQ2lQTnY4aTRtd2d2ZU5VZVIzSWkwM1VETkUxQmtTZmpuTDdEajE6RU5yd0dtMWxENHJub0xJZ3lNYTJpeHM5VnBqdFd2TC1QRlFMNVNWQ3J1WnQzMXU3R0hsSFVsMzlGQVhIRTJQSEtVcG51UGtnY191Uk5hTW0=",
+            "connection": "close"
+        },
+        "body": {
+            "grant_type": {
+                "name": "string",
+                "value": "client_credentials"
+            },
+            "ignoreCache": {
+                "name": "string",
+                "value": "True"
+            },
+            "return_authn_schemes": {
+                "name": "string",
+                "value": "True"
+            },
+            "return_client_metadata": {
+                "name": "string",
+                "value": "True"
+            },
+            "return_unconsented_scopes": {
+                "name": "string",
+                "value": "True"
+            },
+            "scope": {
+                "name": "string",
+                "value": "https://uri.paypal.com/services/reporting/search/read https://uri.paypal.com/services/reporting/balances/read https://uri.paypal.com/services/disputes/update-buyer https://uri.paypal.com/services/checkout/one-click-with-merchant-issued-token https://uri.paypal.com/services/payments/futurepayments https://uri.paypal.com/services/invoicing https://uri.paypal.com/services/vault/payment-tokens/read https://uri.paypal.com/services/disputes/read-buyer https://uri.paypal.com/services/payments/realtimepayment https://uri.paypal.com/services/disputes/update-seller https://uri.paypal.com/services/payments/payment/authcapture openid https://uri.paypal.com/services/disputes/read-seller Braintree:Vault https://uri.paypal.com/services/payments/refund https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/pricing/quote-exchange-rates/read https://uri.paypal.com/services/billing-agreements https://api.paypal.com/v1/payments/.* https://uri.paypal.com/payments/payouts https://uri.paypal.com/services/vault/payment-tokens/readwrite https://api.paypal.com/v1/vault/credit-card/.* https://uri.paypal.com/services/shipping/trackers/readwrite https://uri.paypal.com/services/subscriptions https://uri.paypal.com/services/applications/webhooks",
+                "format": {
+                    "name": "uri"
+                }
+            }
+        },
+        "params": [
+            "v1",
+            "oauth2",
+            "token"
+        ],
+        "response": {
+            "responseStatus": 200,
+            "requestSchema": {
+                "scope": {
+                    "name": "string",
+                    "value": "https://uri.paypal.com/services/checkout/one-click-with-merchant-issued-token https://uri.paypal.com/services/invoicing https://uri.paypal.com/services/vault/payment-tokens/read https://uri.paypal.com/services/disputes/read-buyer https://uri.paypal.com/services/payments/realtimepayment https://uri.paypal.com/services/disputes/update-seller https://uri.paypal.com/services/payments/payment/authcapture openid https://uri.paypal.com/services/disputes/read-seller Braintree:Vault https://uri.paypal.com/services/payments/refund https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/pricing/quote-exchange-rates/read https://uri.paypal.com/services/billing-agreements https://api.paypal.com/v1/payments/.* https://uri.paypal.com/services/reporting/search/read https://uri.paypal.com/payments/payouts https://uri.paypal.com/services/vault/payment-tokens/readwrite https://api.paypal.com/v1/vault/credit-card/.* https://uri.paypal.com/services/subscriptions https://uri.paypal.com/services/applications/webhooks",
+                    "format": {
+                        "name": "uri"
+                    }
+                },
+                "access_token": {
+                    "name": "string",
+                    "value": "A21AAIZ7GzvqNKW_5O1wX4u731Qn7YULESkDYeLANsJoQo9wbIwRhJ3nVjehxMHKLHmBQ_47mk8eI8XSMYX8bYar4NkYPxLOA"
+                },
+                "token_type": {
+                    "name": "string",
+                    "value": "Bearer"
+                },
+                "invalid_scope": {
+                    "name": "string",
+                    "value": "https://uri.paypal.com/services/payments/futurepayments https://uri.paypal.com/services/shipping/trackers/readwrite https://uri.paypal.com/services/disputes/update-buyer https://uri.paypal.com/services/reporting/balances/read",
+                    "format": {
+                        "name": "uri"
+                    }
+                },
+                "login_required_scope": {
+                    "name": "string",
+                    "value": "openid"
+                },
+                "app_id": {
+                    "name": "string",
+                    "value": "APP-80W284485P519543T"
+                },
+                "expires_in": {
+                    "name": "int",
+                    "value": 32400
+                },
+                "supported_authn_schemes": {
+                    "0": {
+                        "name": "string",
+                        "value": "email_password"
+                    },
+                    "1": {
+                        "name": "string",
+                        "value": "remember_me"
+                    }
+                },
+                "nonce": {
+                    "name": "string",
+                    "value": "2024-08-03T15:42:13Zhho3qW3jehdn_LdS3ybmRddkp1r_sEfwTrzBKtm4gR0"
+                },
+                "client_metadata": {
+                    "name": {
+                        "name": "string",
+                        "value": "Default Application"
+                    },
+                    "display_name": {
+                        "name": "string",
+                        "value": "Default Application"
+                    },
+                    "logo_uri": {
+                        "name": "string",
+                        "value": ""
+                    },
+                    "scopes": {
+                        "0": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/services/invoicing",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "1": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/services/checkout/one-click-with-merchant-issued-token",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "2": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/services/vault/payment-tokens/read",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "3": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/services/payments/basic",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "4": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/services/disputes/read-buyer",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "5": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/services/payments/realtimepayment",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "6": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/services/identity/activities",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "7": {
+                            "name": "string",
+                            "value": "https://api.paypal.com/v1/vault/credit-card",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "8": {
+                            "name": "string",
+                            "value": "Braintree:Vault"
+                        },
+                        "9": {
+                            "name": "string",
+                            "value": "https://api.paypal.com/v1/payments/.*",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "10": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/services/reporting/search/read",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "11": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/services/paypalattributes/business",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "12": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/services/vault/payment-tokens/readwrite",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "13": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/services/applications/webhooks",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "14": {
+                            "name": "string",
+                            "value": "https://api.paypal.com/v1/payments/refund",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "15": {
+                            "name": "string",
+                            "value": "https://identity.x.com/xidentity/resources/profile/me",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "16": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/services/payments/payment/authcapture",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "17": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/services/disputes/update-seller",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "18": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/services/paypalhere",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "19": {
+                            "name": "string",
+                            "value": "openid"
+                        },
+                        "20": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/services/disputes/read-seller",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "21": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/services/payments/refund",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "22": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/web/experience/incontextxo",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "23": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/services/pricing/quote-exchange-rates/read",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "24": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/services/billing-agreements",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "25": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/payments/payouts",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "26": {
+                            "name": "string",
+                            "value": "https://api.paypal.com/v1/vault/credit-card/.*",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "27": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/services/subscriptions",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "28": {
+                            "name": "string",
+                            "value": "https://uri.paypal.com/services/paypalattributes",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "29": {
+                            "name": "string",
+                            "value": "https://api.paypal.com/v1/payments/sale/.*/refund",
+                            "format": {
+                                "name": "uri"
+                            }
+                        }
+                    },
+                    "ui_type": {
+                        "name": "string",
+                        "value": "NEW"
+                    }
+                }
+            }
+        },
+        "tag": "5",
+        "createdAt": {
+            "$date": "2024-08-03T15:42:13.896Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "66ae4fd7508280420bdc4861"
+        },
+        "ip": "::ffff:172.18.0.1",
+        "method": "POST",
+        "url": "https://api-m.sandbox.paypal.com",
+        "endpoint": "v1/catalogs/products",
+        "headers": {
+            "accept": "application/json, text/plain, */*",
+            "content-type": "application/json",
+            "authorization": "Bearer A21AAIZ7GzvqNKW_5O1wX4u731Qn7YULESkDYeLANsJoQo9wbIwRhJ3nVjehxMHKLHmBQ_47mk8eI8XSMYX8bYar4NkYPxLOA",
+            "user-agent": "axios/1.7.2",
+            "content-length": "231",
+            "accept-encoding": "gzip, compress, deflate, br",
+            "host": "localhost:3003",
+            "connection": "close"
+        },
+        "body": {
+            "name": {
+                "name": "string",
+                "value": "T-shirt"
+            },
+            "type": {
+                "name": "string",
+                "value": "PHYSICAL"
+            },
+            "id": {
+                "name": "string",
+                "value": "1722699734903",
+                "format": {
+                    "name": "timestamp",
+                    "variant": "millisecondsSinceEpoch"
+                }
+            },
+            "description": {
+                "name": "string",
+                "value": "Cotton XL"
+            },
+            "category": {
+                "name": "string",
+                "value": "CLOTHING"
+            },
+            "image_url": {
+                "name": "string",
+                "value": "https://example.com/gallary/images/1722699734903.jpg",
+                "format": {
+                    "name": "uri",
+                    "contentType": "image/jpeg"
+                }
+            },
+            "home_url": {
+                "name": "string",
+                "value": "https://example.com/catalog/1722699734903.jpg",
+                "format": {
+                    "name": "uri",
+                    "contentType": "image/jpeg"
+                }
+            }
+        },
+        "params": [
+            "v1",
+            "catalogs",
+            "products"
+        ],
+        "response": {
+            "responseStatus": 201,
+            "requestSchema": {
+                "id": {
+                    "name": "string",
+                    "value": "1722699734903",
+                    "format": {
+                        "name": "timestamp",
+                        "variant": "millisecondsSinceEpoch"
+                    }
+                },
+                "name": {
+                    "name": "string",
+                    "value": "T-shirt"
+                },
+                "description": {
+                    "name": "string",
+                    "value": "Cotton XL"
+                },
+                "create_time": {
+                    "name": "string",
+                    "value": "2024-08-03T15:42:15Z",
+                    "format": {
+                        "name": "datetime",
+                        "parts": "datetime",
+                        "variant": "rfc3339"
+                    }
+                },
+                "links": {
+                    "0": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://api.sandbox.paypal.com/v1/catalogs/products/1722699734903",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "self"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "GET"
+                        }
+                    },
+                    "1": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://api.sandbox.paypal.com/v1/catalogs/products/1722699734903",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "edit"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "PATCH"
+                        }
+                    }
+                }
+            }
+        },
+        "tag": "5",
+        "createdAt": {
+            "$date": "2024-08-03T15:42:15.598Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "66ae4fd9508280420bdc4863"
+        },
+        "ip": "::ffff:172.18.0.1",
+        "method": "GET",
+        "url": "https://api-m.sandbox.paypal.com",
+        "endpoint": "v1/catalogs/products/1722699734903",
+        "headers": {
+            "accept": "application/json, text/plain, */*",
+            "authorization": "Bearer A21AAIZ7GzvqNKW_5O1wX4u731Qn7YULESkDYeLANsJoQo9wbIwRhJ3nVjehxMHKLHmBQ_47mk8eI8XSMYX8bYar4NkYPxLOA",
+            "user-agent": "axios/1.7.2",
+            "accept-encoding": "gzip, compress, deflate, br",
+            "host": "localhost:3003",
+            "connection": "close"
+        },
+        "params": [
+            "v1",
+            "catalogs",
+            "products",
+            "1722699734903"
+        ],
+        "response": {
+            "responseStatus": 200,
+            "requestSchema": {
+                "id": {
+                    "name": "string",
+                    "value": "1722699734903",
+                    "format": {
+                        "name": "timestamp",
+                        "variant": "millisecondsSinceEpoch"
+                    }
+                },
+                "name": {
+                    "name": "string",
+                    "value": "T-shirt"
+                },
+                "description": {
+                    "name": "string",
+                    "value": "Cotton XL"
+                },
+                "type": {
+                    "name": "string",
+                    "value": "PHYSICAL"
+                },
+                "category": {
+                    "name": "string",
+                    "value": "CLOTHING"
+                },
+                "image_url": {
+                    "name": "string",
+                    "value": "https://example.com/gallary/images/1722699734903.jpg",
+                    "format": {
+                        "name": "uri",
+                        "contentType": "image/jpeg"
+                    }
+                },
+                "home_url": {
+                    "name": "string",
+                    "value": "https://example.com/catalog/1722699734903.jpg",
+                    "format": {
+                        "name": "uri",
+                        "contentType": "image/jpeg"
+                    }
+                },
+                "create_time": {
+                    "name": "string",
+                    "value": "2024-08-03T15:42:15Z",
+                    "format": {
+                        "name": "datetime",
+                        "parts": "datetime",
+                        "variant": "rfc3339"
+                    }
+                },
+                "update_time": {
+                    "name": "string",
+                    "value": "2024-08-03T15:42:15Z",
+                    "format": {
+                        "name": "datetime",
+                        "parts": "datetime",
+                        "variant": "rfc3339"
+                    }
+                },
+                "links": {
+                    "0": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://api.sandbox.paypal.com/v1/catalogs/products/1722699734903",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "self"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "GET"
+                        }
+                    },
+                    "1": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://api.sandbox.paypal.com/v1/catalogs/products/1722699734903",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "edit"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "PATCH"
+                        }
+                    }
+                }
+            }
+        },
+        "tag": "5",
+        "createdAt": {
+            "$date": "2024-08-03T15:42:17.148Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "66ae4fda508280420bdc4865"
+        },
+        "ip": "::ffff:172.18.0.1",
+        "method": "POST",
+        "url": "https://api-m.sandbox.paypal.com",
+        "endpoint": "v1/billing/plans",
+        "headers": {
+            "accept": "application/json, text/plain, */*",
+            "content-type": "application/json",
+            "authorization": "Bearer A21AAIZ7GzvqNKW_5O1wX4u731Qn7YULESkDYeLANsJoQo9wbIwRhJ3nVjehxMHKLHmBQ_47mk8eI8XSMYX8bYar4NkYPxLOA",
+            "prefer": "return=representation",
+            "user-agent": "axios/1.7.2",
+            "content-length": "779",
+            "accept-encoding": "gzip, compress, deflate, br",
+            "host": "localhost:3003",
+            "connection": "close"
+        },
+        "body": {
+            "product_id": {
+                "name": "string",
+                "value": "1722699734903",
+                "format": {
+                    "name": "timestamp",
+                    "variant": "millisecondsSinceEpoch"
+                }
+            },
+            "name": {
+                "name": "string",
+                "value": "Fresh Clean Tees Plan"
+            },
+            "description": {
+                "name": "string",
+                "value": "Each shirt they send out to subscribers is designed with lots of attention to detail"
+            },
+            "status": {
+                "name": "string",
+                "value": "ACTIVE"
+            },
+            "billing_cycles": {
+                "0": {
+                    "frequency": {
+                        "interval_unit": {
+                            "name": "string",
+                            "value": "MONTH"
+                        },
+                        "interval_count": {
+                            "name": "int",
+                            "value": 1
+                        }
+                    },
+                    "tenure_type": {
+                        "name": "string",
+                        "value": "TRIAL"
+                    },
+                    "sequence": {
+                        "name": "int",
+                        "value": 1
+                    },
+                    "total_cycles": {
+                        "name": "int",
+                        "value": 1
+                    },
+                    "pricing_scheme": {
+                        "fixed_price": {
+                            "value": {
+                                "name": "string",
+                                "value": "1"
+                            },
+                            "currency_code": {
+                                "name": "string",
+                                "value": "USD",
+                                "format": {
+                                    "name": "currency",
+                                    "variant": "iso4217"
+                                }
+                            }
+                        }
+                    }
+                },
+                "1": {
+                    "frequency": {
+                        "interval_unit": {
+                            "name": "string",
+                            "value": "MONTH"
+                        },
+                        "interval_count": {
+                            "name": "int",
+                            "value": 1
+                        }
+                    },
+                    "tenure_type": {
+                        "name": "string",
+                        "value": "REGULAR"
+                    },
+                    "sequence": {
+                        "name": "int",
+                        "value": 2
+                    },
+                    "total_cycles": {
+                        "name": "int",
+                        "value": 12
+                    },
+                    "pricing_scheme": {
+                        "fixed_price": {
+                            "value": {
+                                "name": "string",
+                                "value": "44"
+                            },
+                            "currency_code": {
+                                "name": "string",
+                                "value": "USD",
+                                "format": {
+                                    "name": "currency",
+                                    "variant": "iso4217"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "payment_preferences": {
+                "auto_bill_outstanding": {
+                    "name": "bool",
+                    "value": true
+                },
+                "setup_fee": {
+                    "value": {
+                        "name": "string",
+                        "value": "10"
+                    },
+                    "currency_code": {
+                        "name": "string",
+                        "value": "USD",
+                        "format": {
+                            "name": "currency",
+                            "variant": "iso4217"
+                        }
+                    }
+                },
+                "setup_fee_failure_action": {
+                    "name": "string",
+                    "value": "CONTINUE"
+                },
+                "payment_failure_threshold": {
+                    "name": "int",
+                    "value": 3
+                }
+            },
+            "taxes": {
+                "percentage": {
+                    "name": "string",
+                    "value": "10"
+                },
+                "inclusive": {
+                    "name": "bool",
+                    "value": false
+                }
+            }
+        },
+        "params": [
+            "v1",
+            "billing",
+            "plans"
+        ],
+        "response": {
+            "responseStatus": 201,
+            "requestSchema": {
+                "id": {
+                    "name": "string",
+                    "value": "P-4RM69877XC879234KM2XE7WQ"
+                },
+                "product_id": {
+                    "name": "string",
+                    "value": "1722699734903",
+                    "format": {
+                        "name": "timestamp",
+                        "variant": "millisecondsSinceEpoch"
+                    }
+                },
+                "name": {
+                    "name": "string",
+                    "value": "Fresh Clean Tees Plan"
+                },
+                "status": {
+                    "name": "string",
+                    "value": "ACTIVE"
+                },
+                "description": {
+                    "name": "string",
+                    "value": "Each shirt they send out to subscribers is designed with lots of attention to detail"
+                },
+                "usage_type": {
+                    "name": "string",
+                    "value": "LICENSED"
+                },
+                "billing_cycles": {
+                    "0": {
+                        "pricing_scheme": {
+                            "version": {
+                                "name": "int",
+                                "value": 1
+                            },
+                            "fixed_price": {
+                                "currency_code": {
+                                    "name": "string",
+                                    "value": "USD",
+                                    "format": {
+                                        "name": "currency",
+                                        "variant": "iso4217"
+                                    }
+                                },
+                                "value": {
+                                    "name": "string",
+                                    "value": "1.0"
+                                }
+                            },
+                            "create_time": {
+                                "name": "string",
+                                "value": "2024-08-03T15:42:18Z",
+                                "format": {
+                                    "name": "datetime",
+                                    "parts": "datetime",
+                                    "variant": "rfc3339"
+                                }
+                            },
+                            "update_time": {
+                                "name": "string",
+                                "value": "2024-08-03T15:42:18Z",
+                                "format": {
+                                    "name": "datetime",
+                                    "parts": "datetime",
+                                    "variant": "rfc3339"
+                                }
+                            }
+                        },
+                        "frequency": {
+                            "interval_unit": {
+                                "name": "string",
+                                "value": "MONTH"
+                            },
+                            "interval_count": {
+                                "name": "int",
+                                "value": 1
+                            }
+                        },
+                        "tenure_type": {
+                            "name": "string",
+                            "value": "TRIAL"
+                        },
+                        "sequence": {
+                            "name": "int",
+                            "value": 1
+                        },
+                        "total_cycles": {
+                            "name": "int",
+                            "value": 1
+                        }
+                    },
+                    "1": {
+                        "pricing_scheme": {
+                            "version": {
+                                "name": "int",
+                                "value": 1
+                            },
+                            "fixed_price": {
+                                "currency_code": {
+                                    "name": "string",
+                                    "value": "USD",
+                                    "format": {
+                                        "name": "currency",
+                                        "variant": "iso4217"
+                                    }
+                                },
+                                "value": {
+                                    "name": "string",
+                                    "value": "44.0"
+                                }
+                            },
+                            "create_time": {
+                                "name": "string",
+                                "value": "2024-08-03T15:42:18Z",
+                                "format": {
+                                    "name": "datetime",
+                                    "parts": "datetime",
+                                    "variant": "rfc3339"
+                                }
+                            },
+                            "update_time": {
+                                "name": "string",
+                                "value": "2024-08-03T15:42:18Z",
+                                "format": {
+                                    "name": "datetime",
+                                    "parts": "datetime",
+                                    "variant": "rfc3339"
+                                }
+                            }
+                        },
+                        "frequency": {
+                            "interval_unit": {
+                                "name": "string",
+                                "value": "MONTH"
+                            },
+                            "interval_count": {
+                                "name": "int",
+                                "value": 1
+                            }
+                        },
+                        "tenure_type": {
+                            "name": "string",
+                            "value": "REGULAR"
+                        },
+                        "sequence": {
+                            "name": "int",
+                            "value": 2
+                        },
+                        "total_cycles": {
+                            "name": "int",
+                            "value": 12
+                        }
+                    }
+                },
+                "payment_preferences": {
+                    "service_type": {
+                        "name": "string",
+                        "value": "PREPAID"
+                    },
+                    "auto_bill_outstanding": {
+                        "name": "bool",
+                        "value": true
+                    },
+                    "setup_fee": {
+                        "currency_code": {
+                            "name": "string",
+                            "value": "USD",
+                            "format": {
+                                "name": "currency",
+                                "variant": "iso4217"
+                            }
+                        },
+                        "value": {
+                            "name": "string",
+                            "value": "10.0"
+                        }
+                    },
+                    "setup_fee_failure_action": {
+                        "name": "string",
+                        "value": "CONTINUE"
+                    },
+                    "payment_failure_threshold": {
+                        "name": "int",
+                        "value": 3
+                    }
+                },
+                "taxes": {
+                    "percentage": {
+                        "name": "string",
+                        "value": "10.0"
+                    },
+                    "inclusive": {
+                        "name": "bool",
+                        "value": false
+                    }
+                },
+                "quantity_supported": {
+                    "name": "bool",
+                    "value": false
+                },
+                "create_time": {
+                    "name": "string",
+                    "value": "2024-08-03T15:42:18Z",
+                    "format": {
+                        "name": "datetime",
+                        "parts": "datetime",
+                        "variant": "rfc3339"
+                    }
+                },
+                "update_time": {
+                    "name": "string",
+                    "value": "2024-08-03T15:42:18Z",
+                    "format": {
+                        "name": "datetime",
+                        "parts": "datetime",
+                        "variant": "rfc3339"
+                    }
+                },
+                "links": {
+                    "0": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://api.sandbox.paypal.com/v1/billing/plans/P-4RM69877XC879234KM2XE7WQ",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "self"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "GET"
+                        },
+                        "encType": {
+                            "name": "string",
+                            "value": "application/json"
+                        }
+                    },
+                    "1": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://api.sandbox.paypal.com/v1/billing/plans/P-4RM69877XC879234KM2XE7WQ",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "edit"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "PATCH"
+                        },
+                        "encType": {
+                            "name": "string",
+                            "value": "application/json"
+                        }
+                    },
+                    "2": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://api.sandbox.paypal.com/v1/billing/plans/P-4RM69877XC879234KM2XE7WQ/deactivate",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "self"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "POST"
+                        },
+                        "encType": {
+                            "name": "string",
+                            "value": "application/json"
+                        }
+                    }
+                }
+            }
+        },
+        "tag": "5",
+        "createdAt": {
+            "$date": "2024-08-03T15:42:18.848Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "66ae4fdc508280420bdc4867"
+        },
+        "ip": "::ffff:172.18.0.1",
+        "method": "PATCH",
+        "url": "https://api-m.sandbox.paypal.com",
+        "endpoint": "v1/billing/plans/P-4RM69877XC879234KM2XE7WQ",
+        "headers": {
+            "accept": "application/json, text/plain, */*",
+            "content-type": "application/json",
+            "authorization": "Bearer A21AAIZ7GzvqNKW_5O1wX4u731Qn7YULESkDYeLANsJoQo9wbIwRhJ3nVjehxMHKLHmBQ_47mk8eI8XSMYX8bYar4NkYPxLOA",
+            "prefer": "return=representation",
+            "user-agent": "axios/1.7.2",
+            "content-length": "84",
+            "accept-encoding": "gzip, compress, deflate, br",
+            "host": "localhost:3003",
+            "connection": "close"
+        },
+        "body": {
+            "0": {
+                "op": {
+                    "name": "string",
+                    "value": "replace"
+                },
+                "path": {
+                    "name": "string",
+                    "value": "/payment_preferences/payment_failure_threshold",
+                    "format": {
+                        "name": "jsonPointer",
+                        "variant": "rfc6901"
+                    }
+                },
+                "value": {
+                    "name": "int",
+                    "value": 7
+                }
+            }
+        },
+        "params": [
+            "v1",
+            "billing",
+            "plans",
+            "P-4RM69877XC879234KM2XE7WQ"
+        ],
+        "response": {
+            "responseStatus": 204,
+            "requestSchema": {
+                "name": "string",
+                "value": ""
+            }
+        },
+        "tag": "5",
+        "createdAt": {
+            "$date": "2024-08-03T15:42:20.609Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "66ae4fde508280420bdc4869"
+        },
+        "ip": "::ffff:172.18.0.1",
+        "method": "POST",
+        "url": "https://api-m.sandbox.paypal.com",
+        "endpoint": "v1/billing/plans/P-4RM69877XC879234KM2XE7WQ/deactivate",
+        "headers": {
+            "accept": "application/json, text/plain, */*",
+            "content-type": "application/json",
+            "authorization": "Bearer A21AAIZ7GzvqNKW_5O1wX4u731Qn7YULESkDYeLANsJoQo9wbIwRhJ3nVjehxMHKLHmBQ_47mk8eI8XSMYX8bYar4NkYPxLOA",
+            "prefer": "return=representation",
+            "user-agent": "axios/1.7.2",
+            "content-length": "2",
+            "accept-encoding": "gzip, compress, deflate, br",
+            "host": "localhost:3003",
+            "connection": "close"
+        },
+        "params": [
+            "v1",
+            "billing",
+            "plans",
+            "P-4RM69877XC879234KM2XE7WQ",
+            "deactivate"
+        ],
+        "response": {
+            "responseStatus": 204,
+            "requestSchema": {
+                "name": "string",
+                "value": ""
+            }
+        },
+        "tag": "5",
+        "createdAt": {
+            "$date": "2024-08-03T15:42:22.185Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "66ae4fdf508280420bdc486b"
+        },
+        "ip": "::ffff:172.18.0.1",
+        "method": "GET",
+        "url": "https://api-m.sandbox.paypal.com",
+        "endpoint": "v1/billing/plans/P-4RM69877XC879234KM2XE7WQ",
+        "headers": {
+            "accept": "application/json, text/plain, */*",
+            "authorization": "Bearer A21AAIZ7GzvqNKW_5O1wX4u731Qn7YULESkDYeLANsJoQo9wbIwRhJ3nVjehxMHKLHmBQ_47mk8eI8XSMYX8bYar4NkYPxLOA",
+            "user-agent": "axios/1.7.2",
+            "accept-encoding": "gzip, compress, deflate, br",
+            "host": "localhost:3003",
+            "connection": "close"
+        },
+        "params": [
+            "v1",
+            "billing",
+            "plans",
+            "P-4RM69877XC879234KM2XE7WQ"
+        ],
+        "response": {
+            "responseStatus": 200,
+            "requestSchema": {
+                "id": {
+                    "name": "string",
+                    "value": "P-4RM69877XC879234KM2XE7WQ"
+                },
+                "product_id": {
+                    "name": "string",
+                    "value": "1722699734903",
+                    "format": {
+                        "name": "timestamp",
+                        "variant": "millisecondsSinceEpoch"
+                    }
+                },
+                "name": {
+                    "name": "string",
+                    "value": "Fresh Clean Tees Plan"
+                },
+                "status": {
+                    "name": "string",
+                    "value": "INACTIVE"
+                },
+                "description": {
+                    "name": "string",
+                    "value": "Each shirt they send out to subscribers is designed with lots of attention to detail"
+                },
+                "usage_type": {
+                    "name": "string",
+                    "value": "LICENSED"
+                },
+                "billing_cycles": {
+                    "0": {
+                        "pricing_scheme": {
+                            "version": {
+                                "name": "int",
+                                "value": 1
+                            },
+                            "fixed_price": {
+                                "currency_code": {
+                                    "name": "string",
+                                    "value": "USD",
+                                    "format": {
+                                        "name": "currency",
+                                        "variant": "iso4217"
+                                    }
+                                },
+                                "value": {
+                                    "name": "string",
+                                    "value": "1.0"
+                                }
+                            },
+                            "create_time": {
+                                "name": "string",
+                                "value": "2024-08-03T15:42:18Z",
+                                "format": {
+                                    "name": "datetime",
+                                    "parts": "datetime",
+                                    "variant": "rfc3339"
+                                }
+                            },
+                            "update_time": {
+                                "name": "string",
+                                "value": "2024-08-03T15:42:18Z",
+                                "format": {
+                                    "name": "datetime",
+                                    "parts": "datetime",
+                                    "variant": "rfc3339"
+                                }
+                            }
+                        },
+                        "frequency": {
+                            "interval_unit": {
+                                "name": "string",
+                                "value": "MONTH"
+                            },
+                            "interval_count": {
+                                "name": "int",
+                                "value": 1
+                            }
+                        },
+                        "tenure_type": {
+                            "name": "string",
+                            "value": "TRIAL"
+                        },
+                        "sequence": {
+                            "name": "int",
+                            "value": 1
+                        },
+                        "total_cycles": {
+                            "name": "int",
+                            "value": 1
+                        }
+                    },
+                    "1": {
+                        "pricing_scheme": {
+                            "version": {
+                                "name": "int",
+                                "value": 1
+                            },
+                            "fixed_price": {
+                                "currency_code": {
+                                    "name": "string",
+                                    "value": "USD",
+                                    "format": {
+                                        "name": "currency",
+                                        "variant": "iso4217"
+                                    }
+                                },
+                                "value": {
+                                    "name": "string",
+                                    "value": "44.0"
+                                }
+                            },
+                            "create_time": {
+                                "name": "string",
+                                "value": "2024-08-03T15:42:18Z",
+                                "format": {
+                                    "name": "datetime",
+                                    "parts": "datetime",
+                                    "variant": "rfc3339"
+                                }
+                            },
+                            "update_time": {
+                                "name": "string",
+                                "value": "2024-08-03T15:42:18Z",
+                                "format": {
+                                    "name": "datetime",
+                                    "parts": "datetime",
+                                    "variant": "rfc3339"
+                                }
+                            }
+                        },
+                        "frequency": {
+                            "interval_unit": {
+                                "name": "string",
+                                "value": "MONTH"
+                            },
+                            "interval_count": {
+                                "name": "int",
+                                "value": 1
+                            }
+                        },
+                        "tenure_type": {
+                            "name": "string",
+                            "value": "REGULAR"
+                        },
+                        "sequence": {
+                            "name": "int",
+                            "value": 2
+                        },
+                        "total_cycles": {
+                            "name": "int",
+                            "value": 12
+                        }
+                    }
+                },
+                "payment_preferences": {
+                    "service_type": {
+                        "name": "string",
+                        "value": "PREPAID"
+                    },
+                    "auto_bill_outstanding": {
+                        "name": "bool",
+                        "value": true
+                    },
+                    "setup_fee": {
+                        "currency_code": {
+                            "name": "string",
+                            "value": "USD",
+                            "format": {
+                                "name": "currency",
+                                "variant": "iso4217"
+                            }
+                        },
+                        "value": {
+                            "name": "string",
+                            "value": "10.0"
+                        }
+                    },
+                    "setup_fee_failure_action": {
+                        "name": "string",
+                        "value": "CONTINUE"
+                    },
+                    "payment_failure_threshold": {
+                        "name": "int",
+                        "value": 7
+                    }
+                },
+                "taxes": {
+                    "percentage": {
+                        "name": "string",
+                        "value": "10.0"
+                    },
+                    "inclusive": {
+                        "name": "bool",
+                        "value": false
+                    }
+                },
+                "quantity_supported": {
+                    "name": "bool",
+                    "value": false
+                },
+                "create_time": {
+                    "name": "string",
+                    "value": "2024-08-03T15:42:18Z",
+                    "format": {
+                        "name": "datetime",
+                        "parts": "datetime",
+                        "variant": "rfc3339"
+                    }
+                },
+                "update_time": {
+                    "name": "string",
+                    "value": "2024-08-03T15:42:22Z",
+                    "format": {
+                        "name": "datetime",
+                        "parts": "datetime",
+                        "variant": "rfc3339"
+                    }
+                },
+                "links": {
+                    "0": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://api.sandbox.paypal.com/v1/billing/plans/P-4RM69877XC879234KM2XE7WQ",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "self"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "GET"
+                        },
+                        "encType": {
+                            "name": "string",
+                            "value": "application/json"
+                        }
+                    },
+                    "1": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://api.sandbox.paypal.com/v1/billing/plans/P-4RM69877XC879234KM2XE7WQ/activate",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "self"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "POST"
+                        },
+                        "encType": {
+                            "name": "string",
+                            "value": "application/json"
+                        }
+                    }
+                }
+            }
+        },
+        "tag": "5",
+        "createdAt": {
+            "$date": "2024-08-03T15:42:23.791Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "66ae4fe1508280420bdc486d"
+        },
+        "ip": "::ffff:172.18.0.1",
+        "method": "POST",
+        "url": "https://api-m.sandbox.paypal.com",
+        "endpoint": "v1/billing/plans/P-4RM69877XC879234KM2XE7WQ/activate",
+        "headers": {
+            "accept": "application/json, text/plain, */*",
+            "content-type": "application/json",
+            "authorization": "Bearer A21AAIZ7GzvqNKW_5O1wX4u731Qn7YULESkDYeLANsJoQo9wbIwRhJ3nVjehxMHKLHmBQ_47mk8eI8XSMYX8bYar4NkYPxLOA",
+            "prefer": "return=representation",
+            "user-agent": "axios/1.7.2",
+            "content-length": "2",
+            "accept-encoding": "gzip, compress, deflate, br",
+            "host": "localhost:3003",
+            "connection": "close"
+        },
+        "params": [
+            "v1",
+            "billing",
+            "plans",
+            "P-4RM69877XC879234KM2XE7WQ",
+            "activate"
+        ],
+        "response": {
+            "responseStatus": 204,
+            "requestSchema": {
+                "name": "string",
+                "value": ""
+            }
+        },
+        "tag": "5",
+        "createdAt": {
+            "$date": "2024-08-03T15:42:25.337Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "66ae4fe3508280420bdc486f"
+        },
+        "ip": "::ffff:172.18.0.1",
+        "method": "POST",
+        "url": "https://api-m.sandbox.paypal.com",
+        "endpoint": "v1/billing/plans/P-4RM69877XC879234KM2XE7WQ/update-pricing-schemes",
+        "headers": {
+            "accept": "application/json, text/plain, */*",
+            "content-type": "application/json",
+            "authorization": "Bearer A21AAIZ7GzvqNKW_5O1wX4u731Qn7YULESkDYeLANsJoQo9wbIwRhJ3nVjehxMHKLHmBQ_47mk8eI8XSMYX8bYar4NkYPxLOA",
+            "user-agent": "axios/1.7.2",
+            "content-length": "417",
+            "accept-encoding": "gzip, compress, deflate, br",
+            "host": "localhost:3003",
+            "connection": "close"
+        },
+        "body": {
+            "pricing_schemes": {
+                "0": {
+                    "billing_cycle_sequence": {
+                        "name": "int",
+                        "value": 1
+                    },
+                    "pricing_scheme": {
+                        "fixed_price": {
+                            "value": {
+                                "name": "string",
+                                "value": "10"
+                            },
+                            "currency_code": {
+                                "name": "string",
+                                "value": "USD",
+                                "format": {
+                                    "name": "currency",
+                                    "variant": "iso4217"
+                                }
+                            }
+                        },
+                        "roll_out_strategy": {
+                            "effective_time": {
+                                "name": "string",
+                                "value": "2025-08-01T00:00:00Z",
+                                "format": {
+                                    "name": "datetime",
+                                    "parts": "datetime",
+                                    "variant": "rfc3339"
+                                }
+                            },
+                            "process_change_from": {
+                                "name": "string",
+                                "value": "NEXT_PAYMENT"
+                            }
+                        }
+                    }
+                },
+                "1": {
+                    "billing_cycle_sequence": {
+                        "name": "int",
+                        "value": 2
+                    },
+                    "pricing_scheme": {
+                        "fixed_price": {
+                            "value": {
+                                "name": "string",
+                                "value": "50"
+                            },
+                            "currency_code": {
+                                "name": "string",
+                                "value": "USD",
+                                "format": {
+                                    "name": "currency",
+                                    "variant": "iso4217"
+                                }
+                            }
+                        },
+                        "roll_out_strategy": {
+                            "effective_time": {
+                                "name": "string",
+                                "value": "2025-08-01T00:00:00Z",
+                                "format": {
+                                    "name": "datetime",
+                                    "parts": "datetime",
+                                    "variant": "rfc3339"
+                                }
+                            },
+                            "process_change_from": {
+                                "name": "string",
+                                "value": "NEXT_PAYMENT"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "params": [
+            "v1",
+            "billing",
+            "plans",
+            "P-4RM69877XC879234KM2XE7WQ",
+            "update-pricing-schemes"
+        ],
+        "response": {
+            "responseStatus": 204,
+            "requestSchema": {
+                "name": "string",
+                "value": ""
+            }
+        },
+        "tag": "5",
+        "createdAt": {
+            "$date": "2024-08-03T15:42:27.649Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "66ae4fe5508280420bdc4871"
+        },
+        "ip": "::ffff:172.18.0.1",
+        "method": "GET",
+        "url": "https://api-m.sandbox.paypal.com",
+        "endpoint": "v1/billing/plans",
+        "headers": {
+            "accept": "application/json, text/plain, */*",
+            "authorization": "Bearer A21AAIZ7GzvqNKW_5O1wX4u731Qn7YULESkDYeLANsJoQo9wbIwRhJ3nVjehxMHKLHmBQ_47mk8eI8XSMYX8bYar4NkYPxLOA",
+            "prefer": "return=representation",
+            "user-agent": "axios/1.7.2",
+            "accept-encoding": "gzip, compress, deflate, br",
+            "host": "localhost:3003",
+            "connection": "close"
+        },
+        "query": {
+            "product_id": "1722699734903"
+        },
+        "params": [
+            "v1",
+            "billing",
+            "plans"
+        ],
+        "response": {
+            "responseStatus": 200,
+            "requestSchema": {
+                "plans": {
+                    "0": {
+                        "id": {
+                            "name": "string",
+                            "value": "P-4RM69877XC879234KM2XE7WQ"
+                        },
+                        "version": {
+                            "name": "int",
+                            "value": 2
+                        },
+                        "product_id": {
+                            "name": "string",
+                            "value": "1722699734903",
+                            "format": {
+                                "name": "timestamp",
+                                "variant": "millisecondsSinceEpoch"
+                            }
+                        },
+                        "name": {
+                            "name": "string",
+                            "value": "Fresh Clean Tees Plan"
+                        },
+                        "status": {
+                            "name": "string",
+                            "value": "ACTIVE"
+                        },
+                        "description": {
+                            "name": "string",
+                            "value": "Each shirt they send out to subscribers is designed with lots of attention to detail"
+                        },
+                        "usage_type": {
+                            "name": "string",
+                            "value": "LICENSED"
+                        },
+                        "billing_cycles": {
+                            "0": {
+                                "pricing_scheme": {
+                                    "version": {
+                                        "name": "int",
+                                        "value": 2
+                                    },
+                                    "fixed_price": {
+                                        "currency_code": {
+                                            "name": "string",
+                                            "value": "USD",
+                                            "format": {
+                                                "name": "currency",
+                                                "variant": "iso4217"
+                                            }
+                                        },
+                                        "value": {
+                                            "name": "string",
+                                            "value": "10.0"
+                                        }
+                                    },
+                                    "create_time": {
+                                        "name": "string",
+                                        "value": "2024-08-03T15:42:27Z",
+                                        "format": {
+                                            "name": "datetime",
+                                            "parts": "datetime",
+                                            "variant": "rfc3339"
+                                        }
+                                    },
+                                    "update_time": {
+                                        "name": "string",
+                                        "value": "2024-08-03T15:42:27Z",
+                                        "format": {
+                                            "name": "datetime",
+                                            "parts": "datetime",
+                                            "variant": "rfc3339"
+                                        }
+                                    }
+                                },
+                                "frequency": {
+                                    "interval_unit": {
+                                        "name": "string",
+                                        "value": "MONTH"
+                                    },
+                                    "interval_count": {
+                                        "name": "int",
+                                        "value": 1
+                                    }
+                                },
+                                "tenure_type": {
+                                    "name": "string",
+                                    "value": "TRIAL"
+                                },
+                                "sequence": {
+                                    "name": "int",
+                                    "value": 1
+                                },
+                                "total_cycles": {
+                                    "name": "int",
+                                    "value": 1
+                                }
+                            },
+                            "1": {
+                                "pricing_scheme": {
+                                    "version": {
+                                        "name": "int",
+                                        "value": 2
+                                    },
+                                    "fixed_price": {
+                                        "currency_code": {
+                                            "name": "string",
+                                            "value": "USD",
+                                            "format": {
+                                                "name": "currency",
+                                                "variant": "iso4217"
+                                            }
+                                        },
+                                        "value": {
+                                            "name": "string",
+                                            "value": "50.0"
+                                        }
+                                    },
+                                    "create_time": {
+                                        "name": "string",
+                                        "value": "2024-08-03T15:42:27Z",
+                                        "format": {
+                                            "name": "datetime",
+                                            "parts": "datetime",
+                                            "variant": "rfc3339"
+                                        }
+                                    },
+                                    "update_time": {
+                                        "name": "string",
+                                        "value": "2024-08-03T15:42:27Z",
+                                        "format": {
+                                            "name": "datetime",
+                                            "parts": "datetime",
+                                            "variant": "rfc3339"
+                                        }
+                                    }
+                                },
+                                "frequency": {
+                                    "interval_unit": {
+                                        "name": "string",
+                                        "value": "MONTH"
+                                    },
+                                    "interval_count": {
+                                        "name": "int",
+                                        "value": 1
+                                    }
+                                },
+                                "tenure_type": {
+                                    "name": "string",
+                                    "value": "REGULAR"
+                                },
+                                "sequence": {
+                                    "name": "int",
+                                    "value": 2
+                                },
+                                "total_cycles": {
+                                    "name": "int",
+                                    "value": 12
+                                }
+                            }
+                        },
+                        "payment_preferences": {
+                            "service_type": {
+                                "name": "string",
+                                "value": "PREPAID"
+                            },
+                            "auto_bill_outstanding": {
+                                "name": "bool",
+                                "value": true
+                            },
+                            "setup_fee": {
+                                "currency_code": {
+                                    "name": "string",
+                                    "value": "USD",
+                                    "format": {
+                                        "name": "currency",
+                                        "variant": "iso4217"
+                                    }
+                                },
+                                "value": {
+                                    "name": "string",
+                                    "value": "10.0"
+                                }
+                            },
+                            "setup_fee_failure_action": {
+                                "name": "string",
+                                "value": "CONTINUE"
+                            },
+                            "payment_failure_threshold": {
+                                "name": "int",
+                                "value": 7
+                            }
+                        },
+                        "taxes": {
+                            "percentage": {
+                                "name": "string",
+                                "value": "10.0"
+                            },
+                            "inclusive": {
+                                "name": "bool",
+                                "value": false
+                            }
+                        },
+                        "quantity_supported": {
+                            "name": "bool",
+                            "value": false
+                        },
+                        "payee": {
+                            "merchant_id": {
+                                "name": "string",
+                                "value": "BVA8M7H99DBYG"
+                            },
+                            "display_data": {
+                                "business_email": {
+                                    "name": "string",
+                                    "value": "cs-sb-zsp8729869343@business.example.com",
+                                    "format": {
+                                        "name": "email",
+                                        "variant": "rfc5321"
+                                    }
+                                }
+                            }
+                        },
+                        "create_time": {
+                            "name": "string",
+                            "value": "2024-08-03T15:42:18Z",
+                            "format": {
+                                "name": "datetime",
+                                "parts": "datetime",
+                                "variant": "rfc3339"
+                            }
+                        },
+                        "update_time": {
+                            "name": "string",
+                            "value": "2024-08-03T15:42:27Z",
+                            "format": {
+                                "name": "datetime",
+                                "parts": "datetime",
+                                "variant": "rfc3339"
+                            }
+                        },
+                        "links": {
+                            "0": {
+                                "href": {
+                                    "name": "string",
+                                    "value": "https://api.sandbox.paypal.com/v1/billing/plans/P-4RM69877XC879234KM2XE7WQ",
+                                    "format": {
+                                        "name": "uri"
+                                    }
+                                },
+                                "rel": {
+                                    "name": "string",
+                                    "value": "self"
+                                },
+                                "method": {
+                                    "name": "string",
+                                    "value": "GET"
+                                },
+                                "encType": {
+                                    "name": "string",
+                                    "value": "application/json"
+                                }
+                            }
+                        }
+                    }
+                },
+                "links": {
+                    "0": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://api.sandbox.paypal.com/v1/billing/plans?product_id=1722699734903&page_size=10&page=1",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "self"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "GET"
+                        },
+                        "encType": {
+                            "name": "string",
+                            "value": "application/json"
+                        }
+                    }
+                }
+            }
+        },
+        "tag": "5",
+        "createdAt": {
+            "$date": "2024-08-03T15:42:29.341Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "66ae4fe7508280420bdc4873"
+        },
+        "ip": "::ffff:172.18.0.1",
+        "method": "POST",
+        "url": "https://api-m.sandbox.paypal.com",
+        "endpoint": "v1/billing/subscriptions",
+        "headers": {
+            "accept": "application/json, text/plain, */*",
+            "content-type": "application/json",
+            "authorization": "Bearer A21AAIZ7GzvqNKW_5O1wX4u731Qn7YULESkDYeLANsJoQo9wbIwRhJ3nVjehxMHKLHmBQ_47mk8eI8XSMYX8bYar4NkYPxLOA",
+            "prefer": "return=representation",
+            "user-agent": "axios/1.7.2",
+            "content-length": "796",
+            "accept-encoding": "gzip, compress, deflate, br",
+            "host": "localhost:3003",
+            "connection": "close"
+        },
+        "body": {
+            "plan_id": {
+                "name": "string",
+                "value": "P-4RM69877XC879234KM2XE7WQ"
+            },
+            "start_time": {
+                "name": "string",
+                "value": "2024-08-04T15:42:30.345Z",
+                "format": {
+                    "name": "datetime",
+                    "parts": "datetime",
+                    "variant": "rfc3339"
+                }
+            },
+            "shipping_amount": {
+                "currency_code": {
+                    "name": "string",
+                    "value": "USD",
+                    "format": {
+                        "name": "currency",
+                        "variant": "iso4217"
+                    }
+                },
+                "value": {
+                    "name": "string",
+                    "value": "10.00"
+                }
+            },
+            "subscriber": {
+                "name": {
+                    "given_name": {
+                        "name": "string",
+                        "value": "John"
+                    },
+                    "surname": {
+                        "name": "string",
+                        "value": "Doe"
+                    }
+                },
+                "email_address": {
+                    "name": "string",
+                    "value": "sb-oduor30366001@personal.example.com",
+                    "format": {
+                        "name": "email",
+                        "variant": "rfc5321"
+                    }
+                },
+                "shipping_address": {
+                    "name": {
+                        "full_name": {
+                            "name": "string",
+                            "value": "John Doe"
+                        }
+                    },
+                    "address": {
+                        "address_line_1": {
+                            "name": "string",
+                            "value": "2211 N First Street"
+                        },
+                        "address_line_2": {
+                            "name": "string",
+                            "value": "Building 17"
+                        },
+                        "admin_area_2": {
+                            "name": "string",
+                            "value": "San Jose"
+                        },
+                        "admin_area_1": {
+                            "name": "string",
+                            "value": "CA",
+                            "format": {
+                                "name": "country",
+                                "variant": "iso3166-2"
+                            }
+                        },
+                        "postal_code": {
+                            "name": "string",
+                            "value": "95131"
+                        },
+                        "country_code": {
+                            "name": "string",
+                            "value": "US",
+                            "format": {
+                                "name": "country",
+                                "variant": "iso3166-2"
+                            }
+                        }
+                    }
+                }
+            },
+            "application_context": {
+                "brand_name": {
+                    "name": "string",
+                    "value": "Example Inc"
+                },
+                "locale": {
+                    "name": "string",
+                    "value": "en-US"
+                },
+                "shipping_preference": {
+                    "name": "string",
+                    "value": "SET_PROVIDED_ADDRESS"
+                },
+                "user_action": {
+                    "name": "string",
+                    "value": "SUBSCRIBE_NOW"
+                },
+                "payment_method": {
+                    "payer_selected": {
+                        "name": "string",
+                        "value": "PAYPAL"
+                    },
+                    "payee_preferred": {
+                        "name": "string",
+                        "value": "IMMEDIATE_PAYMENT_REQUIRED"
+                    }
+                },
+                "return_url": {
+                    "name": "string",
+                    "value": "https://example.com/return",
+                    "format": {
+                        "name": "uri"
+                    }
+                },
+                "cancel_url": {
+                    "name": "string",
+                    "value": "https://example.com/cancel",
+                    "format": {
+                        "name": "uri"
+                    }
+                }
+            }
+        },
+        "params": [
+            "v1",
+            "billing",
+            "subscriptions"
+        ],
+        "response": {
+            "responseStatus": 201,
+            "requestSchema": {
+                "status": {
+                    "name": "string",
+                    "value": "APPROVAL_PENDING"
+                },
+                "status_update_time": {
+                    "name": "string",
+                    "value": "2024-08-03T15:42:30Z",
+                    "format": {
+                        "name": "datetime",
+                        "parts": "datetime",
+                        "variant": "rfc3339"
+                    }
+                },
+                "id": {
+                    "name": "string",
+                    "value": "I-PSA60M3YA1PU"
+                },
+                "plan_id": {
+                    "name": "string",
+                    "value": "P-4RM69877XC879234KM2XE7WQ"
+                },
+                "start_time": {
+                    "name": "string",
+                    "value": "2024-08-04T15:42:30Z",
+                    "format": {
+                        "name": "datetime",
+                        "parts": "datetime",
+                        "variant": "rfc3339"
+                    }
+                },
+                "quantity": {
+                    "name": "string",
+                    "value": "1"
+                },
+                "shipping_amount": {
+                    "currency_code": {
+                        "name": "string",
+                        "value": "USD",
+                        "format": {
+                            "name": "currency",
+                            "variant": "iso4217"
+                        }
+                    },
+                    "value": {
+                        "name": "string",
+                        "value": "10.0"
+                    }
+                },
+                "subscriber": {
+                    "email_address": {
+                        "name": "string",
+                        "value": "sb-oduor30366001@personal.example.com",
+                        "format": {
+                            "name": "email",
+                            "variant": "rfc5321"
+                        }
+                    },
+                    "name": {
+                        "given_name": {
+                            "name": "string",
+                            "value": "John"
+                        },
+                        "surname": {
+                            "name": "string",
+                            "value": "Doe"
+                        }
+                    },
+                    "shipping_address": {
+                        "name": {
+                            "full_name": {
+                                "name": "string",
+                                "value": "John Doe"
+                            }
+                        },
+                        "address": {
+                            "address_line_1": {
+                                "name": "string",
+                                "value": "2211 N First Street"
+                            },
+                            "address_line_2": {
+                                "name": "string",
+                                "value": "Building 17"
+                            },
+                            "admin_area_2": {
+                                "name": "string",
+                                "value": "San Jose"
+                            },
+                            "admin_area_1": {
+                                "name": "string",
+                                "value": "CA",
+                                "format": {
+                                    "name": "country",
+                                    "variant": "iso3166-2"
+                                }
+                            },
+                            "postal_code": {
+                                "name": "string",
+                                "value": "95131"
+                            },
+                            "country_code": {
+                                "name": "string",
+                                "value": "US",
+                                "format": {
+                                    "name": "country",
+                                    "variant": "iso3166-2"
+                                }
+                            }
+                        }
+                    }
+                },
+                "create_time": {
+                    "name": "string",
+                    "value": "2024-08-03T15:42:30Z",
+                    "format": {
+                        "name": "datetime",
+                        "parts": "datetime",
+                        "variant": "rfc3339"
+                    }
+                },
+                "plan_overridden": {
+                    "name": "bool",
+                    "value": false
+                },
+                "links": {
+                    "0": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://www.sandbox.paypal.com/webapps/billing/subscriptions?ba_token=BA-19208231HD563173G",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "approve"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "GET"
+                        }
+                    },
+                    "1": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://api-m.sandbox.paypal.com/v1/billing/subscriptions/I-PSA60M3YA1PU",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "edit"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "PATCH"
+                        }
+                    },
+                    "2": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://api-m.sandbox.paypal.com/v1/billing/subscriptions/I-PSA60M3YA1PU",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "self"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "GET"
+                        }
+                    }
+                }
+            }
+        },
+        "tag": "5",
+        "createdAt": {
+            "$date": "2024-08-03T15:42:31.333Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "66ae5015508280420bdc4875"
+        },
+        "ip": "::ffff:172.18.0.1",
+        "method": "GET",
+        "url": "https://api-m.sandbox.paypal.com",
+        "endpoint": "v1/billing/subscriptions/I-PSA60M3YA1PU",
+        "headers": {
+            "accept": "application/json, text/plain, */*",
+            "authorization": "Bearer A21AAIZ7GzvqNKW_5O1wX4u731Qn7YULESkDYeLANsJoQo9wbIwRhJ3nVjehxMHKLHmBQ_47mk8eI8XSMYX8bYar4NkYPxLOA",
+            "user-agent": "axios/1.7.2",
+            "accept-encoding": "gzip, compress, deflate, br",
+            "host": "localhost:3003",
+            "connection": "close"
+        },
+        "params": [
+            "v1",
+            "billing",
+            "subscriptions",
+            "I-PSA60M3YA1PU"
+        ],
+        "response": {
+            "responseStatus": 200,
+            "requestSchema": {
+                "status": {
+                    "name": "string",
+                    "value": "ACTIVE"
+                },
+                "status_update_time": {
+                    "name": "string",
+                    "value": "2024-08-03T15:43:01Z",
+                    "format": {
+                        "name": "datetime",
+                        "parts": "datetime",
+                        "variant": "rfc3339"
+                    }
+                },
+                "id": {
+                    "name": "string",
+                    "value": "I-PSA60M3YA1PU"
+                },
+                "plan_id": {
+                    "name": "string",
+                    "value": "P-4RM69877XC879234KM2XE7WQ"
+                },
+                "start_time": {
+                    "name": "string",
+                    "value": "2024-08-04T15:42:30Z",
+                    "format": {
+                        "name": "datetime",
+                        "parts": "datetime",
+                        "variant": "rfc3339"
+                    }
+                },
+                "quantity": {
+                    "name": "string",
+                    "value": "1"
+                },
+                "shipping_amount": {
+                    "currency_code": {
+                        "name": "string",
+                        "value": "USD",
+                        "format": {
+                            "name": "currency",
+                            "variant": "iso4217"
+                        }
+                    },
+                    "value": {
+                        "name": "string",
+                        "value": "10.0"
+                    }
+                },
+                "subscriber": {
+                    "email_address": {
+                        "name": "string",
+                        "value": "sb-oduor30366001@personal.example.com",
+                        "format": {
+                            "name": "email",
+                            "variant": "rfc5321"
+                        }
+                    },
+                    "payer_id": {
+                        "name": "string",
+                        "value": "UB7T7P2Q22MAE"
+                    },
+                    "name": {
+                        "given_name": {
+                            "name": "string",
+                            "value": "John"
+                        },
+                        "surname": {
+                            "name": "string",
+                            "value": "Doe"
+                        }
+                    },
+                    "shipping_address": {
+                        "name": {
+                            "full_name": {
+                                "name": "string",
+                                "value": "John Doe"
+                            }
+                        },
+                        "address": {
+                            "address_line_1": {
+                                "name": "string",
+                                "value": "2211 N First Street"
+                            },
+                            "address_line_2": {
+                                "name": "string",
+                                "value": "Building 17"
+                            },
+                            "admin_area_2": {
+                                "name": "string",
+                                "value": "San Jose"
+                            },
+                            "admin_area_1": {
+                                "name": "string",
+                                "value": "CA",
+                                "format": {
+                                    "name": "country",
+                                    "variant": "iso3166-2"
+                                }
+                            },
+                            "postal_code": {
+                                "name": "string",
+                                "value": "95131"
+                            },
+                            "country_code": {
+                                "name": "string",
+                                "value": "US",
+                                "format": {
+                                    "name": "country",
+                                    "variant": "iso3166-2"
+                                }
+                            }
+                        }
+                    }
+                },
+                "billing_info": {
+                    "outstanding_balance": {
+                        "currency_code": {
+                            "name": "string",
+                            "value": "USD",
+                            "format": {
+                                "name": "currency",
+                                "variant": "iso4217"
+                            }
+                        },
+                        "value": {
+                            "name": "string",
+                            "value": "0.0"
+                        }
+                    },
+                    "cycle_executions": {
+                        "0": {
+                            "tenure_type": {
+                                "name": "string",
+                                "value": "TRIAL"
+                            },
+                            "sequence": {
+                                "name": "int",
+                                "value": 1
+                            },
+                            "cycles_completed": {
+                                "name": "int",
+                                "value": 0
+                            },
+                            "cycles_remaining": {
+                                "name": "int",
+                                "value": 1
+                            },
+                            "current_pricing_scheme_version": {
+                                "name": "int",
+                                "value": 2
+                            },
+                            "total_cycles": {
+                                "name": "int",
+                                "value": 1
+                            }
+                        },
+                        "1": {
+                            "tenure_type": {
+                                "name": "string",
+                                "value": "REGULAR"
+                            },
+                            "sequence": {
+                                "name": "int",
+                                "value": 2
+                            },
+                            "cycles_completed": {
+                                "name": "int",
+                                "value": 0
+                            },
+                            "cycles_remaining": {
+                                "name": "int",
+                                "value": 12
+                            },
+                            "current_pricing_scheme_version": {
+                                "name": "int",
+                                "value": 2
+                            },
+                            "total_cycles": {
+                                "name": "int",
+                                "value": 12
+                            }
+                        }
+                    },
+                    "last_payment": {
+                        "amount": {
+                            "currency_code": {
+                                "name": "string",
+                                "value": "USD",
+                                "format": {
+                                    "name": "currency",
+                                    "variant": "iso4217"
+                                }
+                            },
+                            "value": {
+                                "name": "string",
+                                "value": "11.0"
+                            }
+                        },
+                        "time": {
+                            "name": "string",
+                            "value": "2024-08-03T15:43:00Z",
+                            "format": {
+                                "name": "datetime",
+                                "parts": "datetime",
+                                "variant": "rfc3339"
+                            }
+                        }
+                    },
+                    "next_billing_time": {
+                        "name": "string",
+                        "value": "2024-08-04T10:00:00Z",
+                        "format": {
+                            "name": "datetime",
+                            "parts": "datetime",
+                            "variant": "rfc3339"
+                        }
+                    },
+                    "final_payment_time": {
+                        "name": "string",
+                        "value": "2025-08-04T10:00:00Z",
+                        "format": {
+                            "name": "datetime",
+                            "parts": "datetime",
+                            "variant": "rfc3339"
+                        }
+                    },
+                    "failed_payments_count": {
+                        "name": "int",
+                        "value": 0
+                    }
+                },
+                "create_time": {
+                    "name": "string",
+                    "value": "2024-08-03T15:42:59Z",
+                    "format": {
+                        "name": "datetime",
+                        "parts": "datetime",
+                        "variant": "rfc3339"
+                    }
+                },
+                "update_time": {
+                    "name": "string",
+                    "value": "2024-08-03T15:43:01Z",
+                    "format": {
+                        "name": "datetime",
+                        "parts": "datetime",
+                        "variant": "rfc3339"
+                    }
+                },
+                "plan_overridden": {
+                    "name": "bool",
+                    "value": false
+                },
+                "links": {
+                    "0": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://api.sandbox.paypal.com/v1/billing/subscriptions/I-PSA60M3YA1PU/cancel",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "cancel"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "POST"
+                        }
+                    },
+                    "1": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://api.sandbox.paypal.com/v1/billing/subscriptions/I-PSA60M3YA1PU",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "edit"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "PATCH"
+                        }
+                    },
+                    "2": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://api.sandbox.paypal.com/v1/billing/subscriptions/I-PSA60M3YA1PU",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "self"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "GET"
+                        }
+                    },
+                    "3": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://api.sandbox.paypal.com/v1/billing/subscriptions/I-PSA60M3YA1PU/suspend",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "suspend"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "POST"
+                        }
+                    },
+                    "4": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://api.sandbox.paypal.com/v1/billing/subscriptions/I-PSA60M3YA1PU/capture",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "capture"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "POST"
+                        }
+                    }
+                }
+            }
+        },
+        "tag": "5",
+        "createdAt": {
+            "$date": "2024-08-03T15:43:17.037Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "66ae5017508280420bdc4877"
+        },
+        "ip": "::ffff:172.18.0.1",
+        "method": "PATCH",
+        "url": "https://api-m.sandbox.paypal.com",
+        "endpoint": "v1/billing/subscriptions/I-PSA60M3YA1PU",
+        "headers": {
+            "accept": "application/json, text/plain, */*",
+            "content-type": "application/json",
+            "authorization": "Bearer A21AAIZ7GzvqNKW_5O1wX4u731Qn7YULESkDYeLANsJoQo9wbIwRhJ3nVjehxMHKLHmBQ_47mk8eI8XSMYX8bYar4NkYPxLOA",
+            "prefer": "return=representation",
+            "user-agent": "axios/1.7.2",
+            "content-length": "395",
+            "accept-encoding": "gzip, compress, deflate, br",
+            "host": "localhost:3003",
+            "connection": "close"
+        },
+        "body": {
+            "0": {
+                "op": {
+                    "name": "string",
+                    "value": "replace"
+                },
+                "path": {
+                    "name": "string",
+                    "value": "/plan/payment_preferences/auto_bill_outstanding",
+                    "format": {
+                        "name": "jsonPointer",
+                        "variant": "rfc6901"
+                    }
+                },
+                "value": {
+                    "name": "bool",
+                    "value": true
+                }
+            },
+            "1": {
+                "op": {
+                    "name": "string",
+                    "value": "replace"
+                },
+                "path": {
+                    "name": "string",
+                    "value": "/plan/payment_preferences/payment_failure_threshold",
+                    "format": {
+                        "name": "jsonPointer",
+                        "variant": "rfc6901"
+                    }
+                },
+                "value": {
+                    "name": "int",
+                    "value": 1
+                }
+            },
+            "2": {
+                "op": {
+                    "name": "string",
+                    "value": "replace"
+                },
+                "path": {
+                    "name": "string",
+                    "value": "/plan/billing_cycles/@sequence==1/total_cycles",
+                    "format": {
+                        "name": "jsonPointer",
+                        "variant": "rfc6901"
+                    }
+                },
+                "value": {
+                    "name": "int",
+                    "value": 2
+                }
+            },
+            "3": {
+                "op": {
+                    "name": "string",
+                    "value": "replace"
+                },
+                "path": {
+                    "name": "string",
+                    "value": "/plan/billing_cycles/@sequence==2/pricing_scheme/fixed_price",
+                    "format": {
+                        "name": "jsonPointer",
+                        "variant": "rfc6901"
+                    }
+                },
+                "value": {
+                    "currency_code": {
+                        "name": "string",
+                        "value": "USD",
+                        "format": {
+                            "name": "currency",
+                            "variant": "iso4217"
+                        }
+                    },
+                    "value": {
+                        "name": "string",
+                        "value": "100.00"
+                    }
+                }
+            }
+        },
+        "params": [
+            "v1",
+            "billing",
+            "subscriptions",
+            "I-PSA60M3YA1PU"
+        ],
+        "response": {
+            "responseStatus": 204,
+            "requestSchema": {
+                "name": "string",
+                "value": ""
+            }
+        },
+        "tag": "5",
+        "createdAt": {
+            "$date": "2024-08-03T15:43:19.287Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "66ae5018508280420bdc4879"
+        },
+        "ip": "::ffff:172.18.0.1",
+        "method": "POST",
+        "url": "https://api-m.sandbox.paypal.com",
+        "endpoint": "v1/billing/subscriptions/I-PSA60M3YA1PU/suspend",
+        "headers": {
+            "accept": "application/json, text/plain, */*",
+            "content-type": "application/json",
+            "authorization": "Bearer A21AAIZ7GzvqNKW_5O1wX4u731Qn7YULESkDYeLANsJoQo9wbIwRhJ3nVjehxMHKLHmBQ_47mk8eI8XSMYX8bYar4NkYPxLOA",
+            "prefer": "return=representation",
+            "user-agent": "axios/1.7.2",
+            "content-length": "30",
+            "accept-encoding": "gzip, compress, deflate, br",
+            "host": "localhost:3003",
+            "connection": "close"
+        },
+        "body": {
+            "reason": {
+                "name": "string",
+                "value": "Item out of stock"
+            }
+        },
+        "params": [
+            "v1",
+            "billing",
+            "subscriptions",
+            "I-PSA60M3YA1PU",
+            "suspend"
+        ],
+        "response": {
+            "responseStatus": 204,
+            "requestSchema": {
+                "name": "string",
+                "value": ""
+            }
+        },
+        "tag": "5",
+        "createdAt": {
+            "$date": "2024-08-03T15:43:20.958Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "66ae501a508280420bdc487b"
+        },
+        "ip": "::ffff:172.18.0.1",
+        "method": "POST",
+        "url": "https://api-m.sandbox.paypal.com",
+        "endpoint": "v1/billing/subscriptions/I-PSA60M3YA1PU/activate",
+        "headers": {
+            "accept": "application/json, text/plain, */*",
+            "content-type": "application/json",
+            "authorization": "Bearer A21AAIZ7GzvqNKW_5O1wX4u731Qn7YULESkDYeLANsJoQo9wbIwRhJ3nVjehxMHKLHmBQ_47mk8eI8XSMYX8bYar4NkYPxLOA",
+            "user-agent": "axios/1.7.2",
+            "content-length": "36",
+            "accept-encoding": "gzip, compress, deflate, br",
+            "host": "localhost:3003",
+            "connection": "close"
+        },
+        "body": {
+            "reason": {
+                "name": "string",
+                "value": "Items are back in stock"
+            }
+        },
+        "params": [
+            "v1",
+            "billing",
+            "subscriptions",
+            "I-PSA60M3YA1PU",
+            "activate"
+        ],
+        "response": {
+            "responseStatus": 204,
+            "requestSchema": {
+                "name": "string",
+                "value": ""
+            }
+        },
+        "tag": "5",
+        "createdAt": {
+            "$date": "2024-08-03T15:43:22.766Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "66ae501c508280420bdc487d"
+        },
+        "ip": "::ffff:172.18.0.1",
+        "method": "GET",
+        "url": "https://api-m.sandbox.paypal.com",
+        "endpoint": "v1/billing/subscriptions/I-PSA60M3YA1PU/transactions",
+        "headers": {
+            "accept": "application/json, text/plain, */*",
+            "authorization": "Bearer A21AAIZ7GzvqNKW_5O1wX4u731Qn7YULESkDYeLANsJoQo9wbIwRhJ3nVjehxMHKLHmBQ_47mk8eI8XSMYX8bYar4NkYPxLOA",
+            "user-agent": "axios/1.7.2",
+            "accept-encoding": "gzip, compress, deflate, br",
+            "host": "localhost:3003",
+            "connection": "close"
+        },
+        "query": {
+            "start_time": "2022-01-01T00:00:00.000Z",
+            "end_time": "2030-01-01T00:00:00.000Z"
+        },
+        "params": [
+            "v1",
+            "billing",
+            "subscriptions",
+            "I-PSA60M3YA1PU",
+            "transactions"
+        ],
+        "response": {
+            "responseStatus": 200,
+            "requestSchema": {
+                "transactions": {
+                    "0": {
+                        "status": {
+                            "name": "string",
+                            "value": "COMPLETED"
+                        },
+                        "id": {
+                            "name": "string",
+                            "value": "19S79759EW260953D"
+                        },
+                        "amount_with_breakdown": {
+                            "gross_amount": {
+                                "currency_code": {
+                                    "name": "string",
+                                    "value": "USD",
+                                    "format": {
+                                        "name": "currency",
+                                        "variant": "iso4217"
+                                    }
+                                },
+                                "value": {
+                                    "name": "string",
+                                    "value": "11.00"
+                                }
+                            },
+                            "fee_amount": {
+                                "currency_code": {
+                                    "name": "string",
+                                    "value": "USD",
+                                    "format": {
+                                        "name": "currency",
+                                        "variant": "iso4217"
+                                    }
+                                },
+                                "value": {
+                                    "name": "string",
+                                    "value": "0.67"
+                                }
+                            },
+                            "net_amount": {
+                                "currency_code": {
+                                    "name": "string",
+                                    "value": "USD",
+                                    "format": {
+                                        "name": "currency",
+                                        "variant": "iso4217"
+                                    }
+                                },
+                                "value": {
+                                    "name": "string",
+                                    "value": "10.33"
+                                }
+                            }
+                        },
+                        "payer_name": {
+                            "given_name": {
+                                "name": "string",
+                                "value": "John"
+                            },
+                            "surname": {
+                                "name": "string",
+                                "value": "Doe"
+                            }
+                        },
+                        "payer_email": {
+                            "name": "string",
+                            "value": "sb-oduor30366001@personal.example.com",
+                            "format": {
+                                "name": "email",
+                                "variant": "rfc5321"
+                            }
+                        },
+                        "time": {
+                            "name": "string",
+                            "value": "2024-08-03T15:43:00.000Z",
+                            "format": {
+                                "name": "datetime",
+                                "parts": "datetime",
+                                "variant": "rfc3339"
+                            }
+                        }
+                    }
+                },
+                "links": {
+                    "0": {
+                        "href": {
+                            "name": "string",
+                            "value": "https://api-m.sandbox.paypal.com/v1/billing/subscriptions/I-PSA60M3YA1PU/transactions?start_time=2022-01-01T00%3A00%3A00.000Z&end_time=2030-01-01T00%3A00%3A00.000Z",
+                            "format": {
+                                "name": "uri"
+                            }
+                        },
+                        "rel": {
+                            "name": "string",
+                            "value": "SELF"
+                        },
+                        "method": {
+                            "name": "string",
+                            "value": "GET"
+                        }
+                    }
+                }
+            }
+        },
+        "tag": "5",
+        "createdAt": {
+            "$date": "2024-08-03T15:43:24.514Z"
+        },
+        "__v": 0
+    },
+    {
+        "_id": {
+            "$oid": "66ae501e508280420bdc487f"
+        },
+        "ip": "::ffff:172.18.0.1",
+        "method": "POST",
+        "url": "https://api-m.sandbox.paypal.com",
+        "endpoint": "v1/billing/subscriptions/I-PSA60M3YA1PU/cancel",
+        "headers": {
+            "accept": "application/json, text/plain, */*",
+            "content-type": "application/json",
+            "authorization": "Bearer A21AAIZ7GzvqNKW_5O1wX4u731Qn7YULESkDYeLANsJoQo9wbIwRhJ3nVjehxMHKLHmBQ_47mk8eI8XSMYX8bYar4NkYPxLOA",
+            "user-agent": "axios/1.7.2",
+            "content-length": "36",
+            "accept-encoding": "gzip, compress, deflate, br",
+            "host": "localhost:3003",
+            "connection": "close"
+        },
+        "body": {
+            "reason": {
+                "name": "string",
+                "value": "Item out of stock again"
+            }
+        },
+        "params": [
+            "v1",
+            "billing",
+            "subscriptions",
+            "I-PSA60M3YA1PU",
+            "cancel"
+        ],
+        "response": {
+            "responseStatus": 204,
+            "requestSchema": {
+                "name": "string",
+                "value": ""
+            }
+        },
+        "tag": "5",
+        "createdAt": {
+            "$date": "2024-08-03T15:43:26.350Z"
+        },
+        "__v": 0
+    }
+]

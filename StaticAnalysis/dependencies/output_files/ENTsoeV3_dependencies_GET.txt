@@ -1,0 +1,9 @@
+----------------------------------------------
+       Endpoint dependencies               
+       Number of api endpoints (nodes): 7
+       Number of dependencies (edges): 6
+----------------------------------------------
+
+areaReference/area_Copy  ->  Day_Ahead_Generation_Forecast_Total_RES , Day_Ahead_Generation_Forecast_of_particular_RES , Day_Ahead_Total_Load_Forecast
+productiontypes_Copy  ->  Aggregated_Installed_Generation_Capacity , Day_Ahead_Generation_Forecast_Total_RES , Day_Ahead_Generation_Forecast_of_particular_RES
+Net Positions Daily

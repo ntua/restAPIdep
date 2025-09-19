@@ -1,0 +1,13 @@
+----------------------------------------------
+       Endpoint dependencies per attribute       
+       Number of api endpoints (nodes): 7
+       Number of dependencies (edges): 6
+       Number of dependencies per attribute: 6
+----------------------------------------------
+areaReference/area_Copy  ->  Day_Ahead_Generation_Forecast_Total_RES  [ label = "AreaRefAbbrev : areaRef"]
+areaReference/area_Copy  ->  Day_Ahead_Generation_Forecast_of_particular_RES  [ label = "AreaRefAbbrev : areaRef"]
+areaReference/area_Copy  ->  Day_Ahead_Total_Load_Forecast  [ label = "AreaRefAbbrev : areaRef"]
+productiontypes_Copy  ->  Aggregated_Installed_Generation_Capacity  [ label = "ProductionTypeAbbrev : prodType"]
+productiontypes_Copy  ->  Day_Ahead_Generation_Forecast_Total_RES  [ label = "ProductionTypeAbbrev : prodType"]
+productiontypes_Copy  ->  Day_Ahead_Generation_Forecast_of_particular_RES  [ label = "ProductionTypeAbbrev : prodType"]
+Net Positions Daily

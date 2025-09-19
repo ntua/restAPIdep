@@ -1,0 +1,39 @@
+version: '3'
+services:
+  mim:
+    build: .
+    ports:
+      - "3003:3000"
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+      - DB_PORT=27017
+      - DB_USER=mim_admin
+      - DB_PASSWORD=OJDbi4rVgU9k
+      - DB_NAME=mim
+    networks:
+      - app-network
+    volumes:
+      - ./uploads:/app/uploads
+      - ./downloads:/app/downloads
+
+  db:
+    image: mongo
+    restart: always
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=mim_admin
+      - MONGO_INITDB_ROOT_PASSWORD=OJDbi4rVgU9k
+    volumes:
+      - mongodbdata:/data_MIM/db
+    networks:
+      - app-network
+    ports:
+      - "27014:27017"
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  mongodbdata:

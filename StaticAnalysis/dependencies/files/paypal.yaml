@@ -1,0 +1,604 @@
+openapi: 3.0.0
+info:
+  title: PayPal APIs Copy 2
+  description: >-
+    # Getting Started
+
+
+    ## Step 1: Fork the collection using Run in Postman
+
+
+    [](https://god.gw.postman.com/run-collection/19024122-92a85d0e-51e7-47da-9f83-c45dcb1cdf24?action=collection/fork&collection-url=entityId=19024122-92a85d0e-51e7-47da-9f83-c45dcb1cdf24&entityType=collection&workspaceId=345300e6-346e-42e0-aed1-53717919aef0#?env[PayPal%20Override%20Env]=W3sia2V5IjoiUGxlYXNlIE5vdGUgLS0+IiwidmFsdWUiOiI8IFBheVBhbCBQdWJsaWMgQ29sbGVjdGlvbiBjb21lcyB3aXRoIGRlZmF1bHQgcHVibGljIHNldCBvZiBjcmVkZW50aWFscyBzdG9yZWQgYXQgdGhlIENvbGxlY3Rpb24gbGV2ZWwuIFxuVGhpcyBlbnZpcm9ubWVudCBvdmVycmlkZXMgdGhvc2UgZGVmYXVsdCB2YXJpYWJsZXMuIFlvdSBtYXkgYnJpbmcgeW91ciBvd24gY3JlZGVudGlhbHMgZnJvbSBQYXlQYWwgRGV2ZWxvcGVyIERhc2hib2FyZCBhbmQgcGFzdGUgdGhlbSBoZXJlLiBEbyBub3QgZm9yZ290IHRvIGVuYWJsZSB0aGUgdmFpYWJsZSBieSBjaGVja2luZyB0aGUgYm94IGFuZCBoaXQgXCJTYXZlXCIgYmVmb3JlIGludm9raW5nIHRoZSBQYXlQYWwgQVBJcy4gPiIsImVuYWJsZWQiOnRydWV9LHsia2V5IjoiY2xpZW50X2lkIiwidmFsdWUiOiI8IGNvcHkgY3JlZGVudGlhbHMgZnJvbSB5b3VyIGRldmVsb3Blci5wYXlwYWwuY29tIGFuZCBwYXN0ZSB0aGVtIGhlcmUgPiIsImVuYWJsZWQiOmZhbHNlfSx7ImtleSI6ImNsaWVudF9zZWNyZXQiLCJ2YWx1ZSI6IjwgY29weSBjcmVkZW50aWFscyBmcm9tIHlvdXIgZGV2ZWxvcGVyLnBheXBhbC5jb20gYW5kIHBhc3RlIHRoZW0gaGVyZSA+IiwiZW5hYmxlZCI6ZmFsc2V9XQ==)
+
+
+    [![](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/19024122-92a85d0e-51e7-47da-9f83-c45dcb1cdf24?action=collection/fork&collection-url=entityId=19024122-92a85d0e-51e7-47da-9f83-c45dcb1cdf24&entityType=collection&workspaceId=345300e6-346e-42e0-aed1-53717919aef0#?env[PayPal%20Override%20Env]=W3sia2V5IjoiUGxlYXNlIE5vdGUgLS0+IiwidmFsdWUiOiI8IFBheVBhbCBQdWJsaWMgQ29sbGVjdGlvbiBjb21lcyB3aXRoIGRlZmF1bHQgcHVibGljIHNldCBvZiBjcmVkZW50aWFscyBzdG9yZWQgYXQgdGhlIENvbGxlY3Rpb24gbGV2ZWwuIFxuVGhpcyBlbnZpcm9ubWVudCBvdmVycmlkZXMgdGhvc2UgZGVmYXVsdCB2YXJpYWJsZXMuIFlvdSBtYXkgYnJpbmcgeW91ciBvd24gY3JlZGVudGlhbHMgZnJvbSBQYXlQYWwgRGV2ZWxvcGVyIERhc2hib2FyZCBhbmQgcGFzdGUgdGhlbSBoZXJlLiBEbyBub3QgZm9yZ290IHRvIGVuYWJsZSB0aGUgdmFpYWJsZSBieSBjaGVja2luZyB0aGUgYm94IGFuZCBoaXQgXCJTYXZlXCIgYmVmb3JlIGludm9raW5nIHRoZSBQYXlQYWwgQVBJcy4gPiIsImVuYWJsZWQiOnRydWV9LHsia2V5IjoiY2xpZW50X2lkIiwidmFsdWUiOiI8IGNvcHkgY3JlZGVudGlhbHMgZnJvbSB5b3VyIGRldmVsb3Blci5wYXlwYWwuY29tIGFuZCBwYXN0ZSB0aGVtIGhlcmUgPiIsImVuYWJsZWQiOmZhbHNlfSx7ImtleSI6ImNsaWVudF9zZWNyZXQiLCJ2YWx1ZSI6IjwgY29weSBjcmVkZW50aWFscyBmcm9tIHlvdXIgZGV2ZWxvcGVyLnBheXBhbC5jb20gYW5kIHBhc3RlIHRoZW0gaGVyZSA+IiwiZW5hYmxlZCI6ZmFsc2V9XQ==)
+
+
+    ## Step 2: Get your access token
+
+
+    An access token is automatically generated using a default `client_id` and
+    `secret`. PayPal recommends using your own `client_id` and `secret` from the
+    [Developer
+    Dashboard](https://www.paypal.com/signin?intent=developer&returnUri=https%3A%2F%2Fdeveloper.paypal.com%2Fdeveloper%2Fapplication)
+    by entering the values under the **Variables** tab. A pre-request script
+    will generate and manage the `access_token` automatically.
+
+
+    > **Note:** Your developer account `client_id` and `secret` may have a
+    different scope than the default `client_id` and `secret`.
+
+
+    ## Step 3: Make your first API call
+
+
+    PayPal recommends starting with the Orders API. These steps will use the
+    Orders API to create an order and capture payment using [sandbox
+    accounts](https://developer.paypal.com/developer/accounts) linked to your
+    Developer Dashboard account.
+
+
+    To create an order:
+
+
+    1. In your workspace, navigate to your fork of the PayPal collection.
+
+    1. Select **Orders > Create Order**.
+
+    1. Select the **Send** button to create the order. On a successful call, the
+    API returns a 201 order created response code.
+
+    1. In the response, find the **approve** link.
+
+    1. Open the **approve** link in a browser.
+
+    1. Log in with your Developer Dashboard Sandbox Personal Account
+    credentials. You can find those credentials by logging into the Developer
+    Dashboard and selecting **Sandbox > Account**
+
+    1. Select the **Continue** button. Payment has now been made.
+
+
+    To capture payment:
+
+
+    1. In the response of the order you created, find the `order_id`.
+
+    1. In the **Variables** tab, enter the `order_id` number.
+
+    1. Select **Orders > Capture payment for order**.
+
+    1. Select **Send**. On a successful call, the API returns a 201 order
+    created response code.
+
+
+    Your order has been created and payment has been captured. You can verify
+    the transaction in both the sandbox personal account and the sandbox
+    business account.
+
+
+    ![Buyer Payment
+    Verification](https://www.paypalobjects.com/devdoc/transaction-details-buyer.png)
+
+    ![Seller Payment
+    Verification](https://www.paypalobjects.com/devdoc/transaction-details-seller.png)
+  version: 1.0.0
+servers:
+  - url: http://{{base_url}}
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+security:
+  - bearerAuth: []
+paths:
+  /v2/checkout/orders/{order_id}:
+    get:
+      tags:
+        - default
+      summary: Show order details
+      description: >-
+        Shows details for an order, by ID.<blockquote><strong>Note:</strong> For
+        error handling and troubleshooting, see <a
+        href="https://developer.paypal.com/api/rest/reference/orders/v2/errors/#get-order">Orders
+        v2 errors</a>.</blockquote>
+      parameters:
+        - name: order_id
+          in: path
+          schema:
+            type: string
+          required: true
+          example: '{{order_id}}'
+      responses:
+        '200':
+          description: OK
+          headers:
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Server:
+              schema:
+                type: number
+                example: nginx/1.14.0 (Ubuntu)
+            Cache-Control:
+              schema:
+                type: string
+                example: max-age=0, no-cache, no-store, must-revalidate
+            Paypal-Debug-Id:
+              schema:
+                type: string
+                example: c3696ac6b5bdf
+            Strict-Transport-Security:
+              schema:
+                type: string
+                example: max-age=31536000; includeSubDomains
+            Accept-Ranges:
+              schema:
+                type: string
+                example: none
+            Via:
+              schema:
+                type: number
+                example: 1.1 varnish, 1.1 varnish
+            content-encoding:
+              schema:
+                type: string
+                example: gzip
+            Edge-Control:
+              schema:
+                type: string
+                example: max-age=0
+            Date:
+              schema:
+                type: string
+                example: Sun, 30 Apr 2023 19:42:08 GMT
+            X-Served-By:
+              schema:
+                type: string
+                example: cache-fra-eddf8230025-FRA, cache-pmo2280034-PMO
+            X-Cache:
+              schema:
+                type: string
+                example: MISS, MISS
+            X-Cache-Hits:
+              schema:
+                type: string
+                example: 0, 0
+            X-Timer:
+              schema:
+                type: number
+                example: S1682883728.104255,VS0,VE707
+            Vary:
+              schema:
+                type: string
+                example: Accept-Encoding
+            transfer-encoding:
+              schema:
+                type: string
+                example: chunked
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: "#/components/schemas/rest_serviceResponse159_schema"
+              example:
+                id: 8UT184770J1118002
+                intent: CAPTURE
+                status: CREATED
+                purchase_units:
+                  - reference_id: default
+                    amount:
+                      currency_code: USD
+                      value: '100.00'
+                    payee:
+                      email_address: john_merchant@example.com
+                      merchant_id: C7CYMKZDG8D6E
+                    soft_descriptor: JOHNMERCHAN
+                create_time: '2023-04-30T19:23:00Z'
+                links:
+                  - href: >-
+                      https://api.sandbox.paypal.com/v2/checkout/orders/8UT184770J1118002
+                    rel: self
+                    method: GET
+                  - href: >-
+                      https://www.sandbox.paypal.com/checkoutnow?token=8UT184770J1118002
+                    rel: approve
+                    method: GET
+                  - href: >-
+                      https://api.sandbox.paypal.com/v2/checkout/orders/8UT184770J1118002
+                    rel: update
+                    method: PATCH
+                  - href: >-
+                      https://api.sandbox.paypal.com/v2/checkout/orders/8UT184770J1118002/capture
+                    rel: capture
+                    method: POST
+  /v2/checkout/orders:
+    post:
+      tags:
+        - default
+      summary: Create order
+      description: >-
+        Creates an order.<blockquote><strong>Note:</strong> For error handling
+        and troubleshooting, see <a
+        href="https://developer.paypal.com/api/rest/reference/orders/v2/errors/#create-order">Orders
+        v2 errors</a>.</blockquote>
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: "#/components/schemas/rest_service266request"
+              example:
+                intent: CAPTURE
+                purchase_units:
+                  - items:
+                      - name: T-Shirt
+                        description: Green XL
+                        quantity: '1'
+                        unit_amount:
+                          currency_code: USD
+                          value: '100.00'
+                    amount:
+                      currency_code: USD
+                      value: '100.00'
+                      breakdown:
+                        item_total:
+                          currency_code: USD
+                          value: '100.00'
+                application_context:
+                  return_url: https://example.com/return
+                  cancel_url: https://example.com/cancel
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          description: >-
+            The Content-Type header field is used to specify the nature of the
+            data in the body of an entity. PayPal REST APIs support
+            application/json.
+          example: application/json
+        - name: Prefer
+          in: header
+          schema:
+            type: string
+          description: >-
+            The preferred server response upon successful completion of the
+            request. Value is:<ul><li><code>return=minimal</code>. The server
+            returns a minimal response to optimize communication between the API
+            caller and the server. A minimal response includes the
+            <code>id</code>, <code>status</code> and HATEOAS
+            links.</li><li><code>return=representation</code>. The server
+            returns a complete resource representation, including the current
+            state of the resource.</li></ul>
+          example: '{{prefer_representation_detailed}}'
+        - name: PayPal-Request-Id
+          in: header
+          schema:
+            type: string
+          description: >-
+            The server stores keys for 6 hours. The API callers can request the
+            times to up to 72 hours by speaking to their Account Manager.
+          example: '{{$guid}}'
+        - name: PayPal-Client-Metadata-Id
+          in: header
+          schema:
+            type: string
+          description: >-
+            Optional. Verifies that the payment originates from a valid,
+            user-consented device and application. Reduces fraud and decreases
+            declines. Transactions that do not include a client metadata ID are
+            not eligible for PayPal Seller Protection.
+          example: '{{paypal_client_metadata_Id}}'
+        - name: PayPal-Partner-Attribution-Id
+          in: header
+          schema:
+            type: string
+          description: >-
+            Optional. Identifies the caller as a PayPal partner. To receive
+            revenue attribution, specify a unique build notation (BN) code. BN
+            codes provide tracking on all transactions that originate or are
+            associated with a particular partner. To find your BN code, see Code
+            and Credential Reference.
+          example: '{{paypal_partner_attribution_id}}'
+        - name: PayPal-Auth-Assertion
+          in: header
+          schema:
+            type: string
+          description: >+
+            An API client-provided JSON Web Token (JWT) assertion that
+            identifies the merchant. To use this header, you must get consent to
+            act on behalf of a merchant.
+
+          example: '{{paypal_auth_assertion}}'
+      responses:
+        '201':
+          description: Created
+          headers:
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Content-Length:
+              schema:
+                type: integer
+                example: '737'
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Server:
+              schema:
+                type: number
+                example: nginx/1.14.0 (Ubuntu)
+            Cache-Control:
+              schema:
+                type: string
+                example: max-age=0, no-cache, no-store, must-revalidate
+            Paypal-Debug-Id:
+              schema:
+                type: string
+                example: 7b862ee582615
+            Strict-Transport-Security:
+              schema:
+                type: string
+                example: max-age=31536000; includeSubDomains
+            Accept-Ranges:
+              schema:
+                type: string
+                example: bytes
+            Via:
+              schema:
+                type: number
+                example: 1.1 varnish, 1.1 varnish
+            Edge-Control:
+              schema:
+                type: string
+                example: max-age=0
+            Date:
+              schema:
+                type: string
+                example: Sun, 30 Apr 2023 19:23:00 GMT
+            X-Served-By:
+              schema:
+                type: string
+                example: cache-fra-eddf8230106-FRA, cache-pmo2280029-PMO
+            X-Cache:
+              schema:
+                type: string
+                example: MISS, MISS
+            X-Cache-Hits:
+              schema:
+                type: string
+                example: 0, 0
+            X-Timer:
+              schema:
+                type: number
+                example: S1682882579.158649,VS0,VE1155
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: "#/components/schemas/rest_serviceResponse436"
+              example:
+                id: 8UT184770J1118002
+                intent: CAPTURE
+                status: CREATED
+                purchase_units:
+                  - reference_id: default
+                    amount:
+                      currency_code: USD
+                      value: '100.00'
+                    payee:
+                      email_address: john_merchant@example.com
+                      merchant_id: C7CYMKZDG8D6E
+                create_time: '2023-04-30T19:23:00Z'
+                links:
+                  - href: >-
+                      https://api.sandbox.paypal.com/v2/checkout/orders/8UT184770J1118002
+                    rel: self
+                    method: GET
+                  - href: >-
+                      https://www.sandbox.paypal.com/checkoutnow?token=8UT184770J1118002
+                    rel: approve
+                    method: GET
+                  - href: >-
+                      https://api.sandbox.paypal.com/v2/checkout/orders/8UT184770J1118002
+                    rel: update
+                    method: PATCH
+                  - href: >-
+                      https://api.sandbox.paypal.com/v2/checkout/orders/8UT184770J1118002/capture
+                    rel: capture
+                    method: POST
+components:
+  schemas:
+     rest_service266request:
+       type: object
+       properties: 
+         intent: 
+           type:  string
+         purchase_units: 
+           $ref: "#/components/schemas/rest_service266request_purchase_units"
+     rest_service266request_purchase_units:
+       type: object
+       properties: 
+         items: 
+           $ref: "#/components/schemas/rest_service266request_- items"
+     rest_service266request_- items:
+       type: object
+       properties: 
+         name: 
+           type:  string
+         description: 
+           type:  string
+         quantity: 
+           type:  string
+         unit_amount: 
+           $ref: "#/components/schemas/rest_service266request_unit_amount"
+     rest_service266request_unit_amount:
+       type: object
+       properties: 
+         currency_code: 
+           type:  string
+         value: 
+           type:  string
+         amount: 
+           $ref: "#/components/schemas/rest_service266request_amount"
+     rest_service266request_amount:
+       type: object
+       properties: 
+         currency_code: 
+           type:  string
+         value: 
+           type:  string
+         breakdown: 
+           $ref: "#/components/schemas/rest_service266request_breakdown"
+     rest_service266request_breakdown:
+       type: object
+       properties: 
+         item_total: 
+           $ref: "#/components/schemas/rest_service266request_item_total"
+     rest_service266request_item_total:
+       type: object
+       properties: 
+         currency_code: 
+           type:  string
+         value: 
+           type:  string
+         application_context: 
+           $ref: "#/components/schemas/rest_service266request_application_context"
+     rest_service266request_application_context:
+       type: object
+       properties: 
+     rest_serviceResponse436:
+       type: object
+       properties: 
+         example: 
+           $ref: "#/components/schemas/rest_serviceResponse436_example"
+     rest_serviceResponse436_example:
+       type: object
+       properties: 
+         id: 
+           type:  string
+         intent: 
+           type:  string
+         status: 
+           type:  string
+         purchase_units: 
+           $ref: "#/components/schemas/rest_serviceResponse436_purchase_units"
+     rest_serviceResponse436_purchase_units:
+       type: object
+       properties: 
+         items: 
+           $ref: "#/components/schemas/rest_serviceResponse436_items"
+     rest_serviceResponse436_items:
+       type: object
+       properties: 
+         reference_id: 
+           type:  string
+         amount: 
+           $ref: "#/components/schemas/rest_serviceResponse436_amount"
+     rest_serviceResponse436_amount:
+       type: object
+       properties: 
+         currency_code: 
+           type:  string
+         value: 
+           type:  string
+         payee: 
+           $ref: "#/components/schemas/rest_serviceResponse436_payee"
+     rest_serviceResponse436_payee:
+       type: object
+       properties: 
+         email_address: 
+           type:  string
+         merchant_id: 
+           type:  string
+         create_time: 
+           type:  string
+         links: 
+           $ref: "#/components/schemas/rest_serviceResponse436_links"
+     rest_serviceResponse436_links:
+       type: object
+       properties: 
+         items: 
+           $ref: "#/components/schemas/rest_serviceResponse436_items"
+     rest_serviceResponse436_items:
+       type: object
+       properties: 
+         href: 
+           type:  string
+         rel: 
+           type:  string
+         method: 
+           type:  string
+     rest_serviceResponse159_schema:
+       type: object
+       properties: 
+         example: 
+           $ref: "#/components/schemas/rest_serviceResponse159_example"
+     rest_serviceResponse159_example:
+       type: object
+       properties: 
+         id: 
+           type:  string
+         intent: 
+           type:  string
+         status: 
+           type:  string
+         purchase_units: 
+           $ref: "#/components/schemas/rest_serviceResponse159_purchase_units"
+     rest_serviceResponse159_purchase_units:
+       type: object
+       properties: 
+         items: 
+           $ref: "#/components/schemas/rest_serviceResponse159_items"
+     rest_serviceResponse159_items:
+       type: object
+       properties: 
+         reference_id: 
+           type:  string
+         amount: 
+           $ref: "#/components/schemas/rest_serviceResponse159_amount"
+     rest_serviceResponse159_amount:
+       type: object
+       properties: 
+         currency_code: 
+           type:  string
+         value: 
+           type:  string
+         payee: 
+           $ref: "#/components/schemas/rest_serviceResponse159_payee"
+     rest_serviceResponse159_payee:
+       type: object
+       properties: 
+         email_address: 
+           type:  string
+         merchant_id: 
+           type:  string
+         soft_descriptor: 
+           type:  string
+         create_time: 
+           type:  string
+         links: 
+           $ref: "#/components/schemas/rest_serviceResponse159_links"
+     rest_serviceResponse159_links:
+       type: object
+       properties: 
+         items: 
+           $ref: "#/components/schemas/rest_serviceResponse159_items"
+     rest_serviceResponse159_items:
+       type: object
+       properties: 
+         href: 
+           type:  string
+         rel: 
+           type:  string
+         method: 
+           type:  string

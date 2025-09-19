@@ -1,0 +1,432 @@
+----------------------------------------------
+       Endpoint dependencies               
+       Number of api endpoints (nodes): 255
+       Number of dependencies (edges): 1775
+----------------------------------------------
+
+Add_IM_directory_group_members  ->  Add_group_admins , Add_group_members
+Add_a_Zoom_Room  ->  Add_a_location , Change_Zoom_Rooms_app_version , Change_a_Zoom_Room's_location , Change_the_assigned_parent_location , Check-in_or_check-out_of_a_Zoom_Room , Create_a_device_profile , Create_a_reservation , Delete_a_Zoom_Room , Delete_a_device_profile , Delete_a_reservation , Get_Zoom_Room_location_profile , Get_Zoom_Room_profile , Get_Zoom_Room_settings , Get_a_device_profile , Get_device_information , Get_location_settings , List_Zoom_Room_devices , List_Zoom_Room_locations , List_Zoom_Rooms , List_device_profiles , List_workspaces , Update_E911_digital_signage , Update_Zoom_Room_location_profile , Update_Zoom_Room_settings , Update_a_Zoom_Room_profile , Update_a_device_profile , Update_a_reservation , Update_location_settings
+Add_a_location  ->  Add_a_Zoom_Room , Change_a_Zoom_Room's_location , Change_the_assigned_parent_location , Get_Zoom_Room_location_profile , Get_location_settings , List_Zoom_Room_locations , List_Zoom_Rooms , List_workspaces , Update_Zoom_Room_location_profile , Update_location_settings
+Add_a_meeting_registrant  ->  Create_a_meeting , Delete_a_meeting , Delete_a_webinar , Get_a_meeting , Get_a_webinar_registrant , Get_webinar_absentees , List_meeting_registrants , List_webinar_registrants , Update_a_meeting , Update_registrant's_status
+Add_a_user's_TSP_account  ->  Create_a_meeting , Create_a_webinar , Delete_a_user's_TSP_account , Get_a_user's_TSP_account , Get_active/inactive_host_reports , Get_meeting_recordings , Get_telephone_reports , Get_zoom_meetings_client_feedback , List_H.323/SIP_devices , List_IM_directory_group_members , List_SIP_phones , List_Zoom_Rooms , List_group_members , List_meeting_registrants , List_meetings , List_members_in_a_role , List_recording_registrants , List_users , List_webinar_registrants , List_webinars , Update_a_TSP_account , Update_a_user , Update_account's_TSP_information
+Add_a_webinar_registrant  ->  Create_a_webinar , Delete_a_meeting , Delete_a_webinar , Get_a_meeting , Get_a_webinar_registrant , Get_webinar_absentees , List_meeting_registrants , List_webinar_registrants , Update_a_meeting , Update_a_webinar , Update_registrant's_status
+Add_assistants  ->  Create_a_reservation , Delete_Virtual_Background_files , Delete_a_scheduler , Delete_a_user_assistant , Update_a_user , Update_a_user's_presence_status , Upload_Virtual_Background_files
+Add_group_admins  ->  Add_IM_directory_group_members , Add_group_members
+Add_group_members  ->  Add_IM_directory_group_members , Add_group_admins
+Add_panelists  ->  Delete_a_webinar_registrant , Get_a_webinar , Get_live_stream_details , List_webinar_participants
+Assign_a_role  ->  Delete_a_role , Get_role_information , List_members_in_a_role , Unassign_a_role , Update_role_information
+Create_a_H.323/SIP_device  ->  Delete_a_H.323/SIP_device , Update_a_H.323/SIP_device
+Create_a_group  ->  Create_an_IM_directory_group , Update_a_group , Update_a_user , Update_an_IM_directory_group
+Create_a_meeting  ->  Add_IM_directory_group_members , Add_a_meeting_registrant , Add_a_user's_TSP_account , Add_a_webinar_registrant , Add_assistants , Add_group_admins , Add_group_members , Check_a_user_email , Create_a_recording_registrant , Create_a_tracking_field , Create_a_webinar , Create_meeting's_invite_links , Create_users , Create_webinar's_invite_links , Delete_SIP_phone , Delete_a_user , Delete_a_user's_TSP_account , Enable_SIP_phone , Get_a_user's_TSP_account , Get_active/inactive_host_reports , Get_meeting_recordings , Get_telephone_reports , Get_zoom_meetings_client_feedback , List_H.323/SIP_devices , List_IM_directory_group_members , List_SIP_phones , List_Zoom_Rooms , List_group_members , List_meeting_registrants , List_meetings , List_members_in_a_role , List_recording_registrants , List_users , List_webinar_registrants , List_webinars , Perform_batch_registration , Update_Live_Stream_Status , Update_SIP_phone , Update_a_TSP_account , Update_a_meeting , Update_a_tracking_field , Update_a_user , Update_a_user's_email , Update_a_webinar , Update_account_settings , Update_registrant's_status , Update_user_settings , Use_in-meeting_cloud_recording_controls
+Create_a_meeting_poll  ->  Create_a_webinar's_poll , Delete_a_meeting_poll , Delete_a_webinar_poll , Get_a_meeting_poll , Get_a_webinar_poll , Perform_batch_poll_creation , Update_a_meeting_poll , Update_a_webinar_poll
+Create_a_recording_registrant  ->  Create_a_reservation , Update_a_reservation , Update_meeting_recording_settings , Update_registrant's_status
+Create_a_reservation  ->  Check-in_or_check-out_of_a_Zoom_Room , Delete_a_reservation , Update_a_reservation
+Create_a_role  ->  Add_a_user's_TSP_account , Create_a_meeting , Create_a_webinar , Delete_a_user's_TSP_account , Get_a_user's_TSP_account , Get_active/inactive_host_reports , Get_meeting_recordings , Get_telephone_reports , Get_zoom_meetings_client_feedback , List_H.323/SIP_devices , List_IM_directory_group_members , List_SIP_phones , List_Zoom_Rooms , List_group_members , List_meeting_registrants , List_meetings , List_members_in_a_role , List_recording_registrants , List_users , List_webinar_registrants , List_webinars , Update_a_TSP_account , Update_a_user , Update_role_information
+Create_a_tracking_field  ->  Create_a_meeting , Create_a_webinar , Delete_a_tracking_field , Get_a_tracking_field , Update_a_tracking_field
+Create_a_webinar  ->  Add_IM_directory_group_members , Add_a_meeting_registrant , Add_a_user's_TSP_account , Add_a_webinar_registrant , Add_assistants , Add_group_admins , Add_group_members , Check_a_user_email , Create_a_meeting , Create_a_recording_registrant , Create_a_tracking_field , Create_meeting's_invite_links , Create_users , Create_webinar's_invite_links , Delete_SIP_phone , Delete_a_user , Delete_a_user's_TSP_account , Enable_SIP_phone , Get_a_user's_TSP_account , Get_active/inactive_host_reports , Get_meeting_recordings , Get_telephone_reports , Get_webinar_absentees , Get_zoom_meetings_client_feedback , List_H.323/SIP_devices , List_IM_directory_group_members , List_SIP_phones , List_Zoom_Rooms , List_group_members , List_meeting_registrants , List_meeting_templates , List_meetings , List_members_in_a_role , List_recording_registrants , List_users , List_webinar_registrants , List_webinars , Perform_batch_registration , Set_global_dial-in_URL_for_a_TSP_user , Update_Live_Stream_Status , Update_SIP_phone , Update_a_TSP_account , Update_a_meeting , Update_a_meeting_survey , Update_a_tracking_field , Update_a_user , Update_a_user's_email , Update_a_webinar , Update_a_webinar_survey , Update_account_settings , Update_registrant's_status , Update_user_settings , Use_in-meeting_cloud_recording_controls
+Create_a_webinar's_poll  ->  Create_a_meeting_poll , Delete_a_meeting_poll , Delete_a_webinar_poll , Get_a_meeting_poll , Get_a_webinar_poll , Perform_batch_poll_creation , Update_a_meeting_poll , Update_a_webinar_poll
+Create_an_IM_directory_group  ->  Create_a_group , Update_a_group , Update_a_user , Update_an_IM_directory_group
+Create_meeting's_invite_links  ->  Create_a_meeting , Create_a_webinar , Create_webinar's_invite_links , Enable_SIP_phone , Update_Live_Stream_Status , Update_SIP_phone
+Create_users  ->  Add_IM_directory_group_members , Add_a_meeting_registrant , Add_a_webinar_registrant , Add_assistants , Add_group_admins , Add_group_members , Check_a_user_email , Check_a_user's_PM_room , Create_a_meeting , Create_a_recording_registrant , Create_a_reservation , Create_a_webinar , Delete_Virtual_Background_files , Delete_a_scheduler , Delete_a_user , Delete_a_user_assistant , Enable_SIP_phone , List_SIP_phones , Perform_batch_registration , Update_a_meeting , Update_a_user , Update_a_user's_email , Update_a_user's_presence_status , Update_registrant's_status , Upload_Virtual_Background_files , Use_in-meeting_cloud_recording_controls
+Create_webinar's_invite_links  ->  Create_a_meeting , Create_a_webinar , Create_meeting's_invite_links , Enable_SIP_phone , Update_Live_Stream_Status , Update_SIP_phone
+Get_IM_metrics  ->  Assign_a_role , List_SIP_phones
+Get_Zoom_Room_account_profile  ->  Update_Zoom_Room_account_profile , Update_Zoom_Room_location_profile , Update_a_Zoom_Room_profile , Update_a_live_stream , Update_a_livestream
+Get_Zoom_Room_location_profile  ->  List_Zoom_Room_locations , Update_Zoom_Room_account_profile , Update_Zoom_Room_location_profile , Update_a_Zoom_Room_profile , Update_a_live_stream , Update_a_livestream
+Get_Zoom_Room_location_structure  ->  Update_E911_digital_signage , Update_Zoom_Rooms_location_structure
+Get_Zoom_Room_profile  ->  Add_a_Zoom_Room , Update_Zoom_Room_account_profile , Update_Zoom_Room_location_profile , Update_a_Zoom_Room_profile , Update_a_live_stream , Update_a_livestream
+Get_Zoom_Room_settings  ->  Update_Zoom_Room_settings , Update_location_settings
+Get_Zoom_Rooms_details  ->  Assign_a_role , Create_a_group , Create_an_IM_directory_group , List_SIP_phones , List_Zoom_Rooms , Update_a_group , Update_a_user , Update_an_IM_directory_group
+Get_a_device_profile  ->  Create_a_device_profile , Update_a_device_profile
+Get_a_group  ->  Create_a_group , Create_an_IM_directory_group , Update_a_group , Update_a_user , Update_an_IM_directory_group
+Get_a_group's_settings  ->  Add_a_meeting_registrant , Add_a_webinar_registrant , Create_a_recording_registrant , Update_a_group's_settings , Update_a_user , Update_account_settings , Update_locked_settings , Update_user_settings
+Get_a_meeting  ->  Add_IM_directory_group_members , Add_a_meeting_registrant , Add_a_user's_TSP_account , Add_a_webinar_registrant , Add_assistants , Add_group_admins , Add_group_members , Check_a_user_email , Create_a_meeting , Create_a_recording_registrant , Create_a_tracking_field , Create_a_webinar , Create_meeting's_invite_links , Create_users , Create_webinar's_invite_links , Delete_SIP_phone , Delete_a_user , Delete_a_user's_TSP_account , Enable_SIP_phone , Get_a_user's_TSP_account , Get_active/inactive_host_reports , Get_meeting_recordings , Get_telephone_reports , Get_zoom_meetings_client_feedback , List_H.323/SIP_devices , List_IM_directory_group_members , List_SIP_phones , List_Zoom_Rooms , List_group_members , List_meeting_registrants , List_meeting_templates , List_meetings , List_members_in_a_role , List_recording_registrants , List_users , List_webinar_registrants , List_webinars , Perform_batch_registration , Update_Live_Stream_Status , Update_SIP_phone , Update_a_TSP_account , Update_a_meeting , Update_a_tracking_field , Update_a_user , Update_a_user's_email , Update_a_webinar , Update_account_settings , Update_registrant's_status , Update_user_settings , Use_in-meeting_cloud_recording_controls
+Get_a_meeting_poll  ->  Create_a_meeting_poll , Create_a_webinar's_poll , Delete_a_meeting_poll , Delete_a_webinar_poll , Get_a_webinar_poll , Perform_batch_poll_creation , Update_a_meeting_poll , Update_a_webinar_poll
+Get_a_meeting_registrant  ->  Add_IM_directory_group_members , Add_a_meeting_registrant , Add_a_webinar_registrant , Add_assistants , Add_group_admins , Add_group_members , Check_a_user_email , Check_a_user's_PM_room , Create_a_meeting , Create_a_recording_registrant , Create_a_webinar , Create_users , Delete_a_meeting_registrant , Delete_a_user , Delete_a_webinar_registrant , Enable_SIP_phone , Get_a_webinar_registrant , List_SIP_phones , Perform_batch_registration , Update_a_group's_settings , Update_a_meeting , Update_a_user , Update_a_user's_email , Update_registrant's_status , Use_in-meeting_cloud_recording_controls
+Get_a_meeting_survey  ->  Create_a_webinar , Set_global_dial-in_URL_for_a_TSP_user , Update_a_meeting_survey , Update_a_webinar_survey
+Get_a_meeting's_archived_files  ->  Add_IM_directory_group_members , Add_a_meeting_registrant , Add_a_webinar_registrant , Add_assistants , Add_group_admins , Add_group_members , Check_a_user_email , Create_a_meeting , Create_a_recording_registrant , Create_a_reservation , Create_a_webinar , Create_users , Delete_a_meeting_recording_file , Delete_a_user , Delete_meeting_recordings , Enable_SIP_phone , Get_meeting_recording_settings , Get_meeting_recordings , Get_registration_questions , List_SIP_phones , Perform_batch_registration , Recover_a_single_recording , Update_Zoom_Room_location_profile , Update_a_meeting , Update_a_reservation , Update_a_user's_email , Update_meeting_recording_settings , Update_registrant's_status , Update_registration_questions , Use_in-meeting_cloud_recording_controls
+Get_a_tracking_field  ->  Create_a_meeting , Create_a_tracking_field , Create_a_webinar , Delete_a_tracking_field , Update_a_tracking_field
+Get_a_user  ->  Add_IM_directory_group_members , Add_a_meeting_registrant , Add_a_user's_TSP_account , Add_a_webinar_registrant , Add_assistants , Add_group_admins , Add_group_members , Check_a_user_email , Check_a_user's_PM_room , Create_a_group , Create_a_meeting , Create_a_recording_registrant , Create_a_reservation , Create_a_webinar , Create_an_IM_directory_group , Create_users , Delete_Virtual_Background_files , Delete_a_scheduler , Delete_a_user , Delete_a_user_assistant , Delete_a_user's_TSP_account , Enable_SIP_phone , Get_a_user's_TSP_account , Get_account's_managed_domains , Get_account's_trusted_domains , Get_active/inactive_host_reports , Get_meeting_recordings , Get_telephone_reports , Get_zoom_meetings_client_feedback , List_H.323/SIP_devices , List_IM_directory_group_members , List_SIP_phones , List_Zoom_Rooms , List_group_members , List_meeting_registrants , List_meetings , List_members_in_a_role , List_recording_registrants , List_users , List_webinar_registrants , List_webinars , Perform_batch_registration , Update_SIP_phone , Update_Zoom_Room_location_profile , Update_a_TSP_account , Update_a_group , Update_a_group's_settings , Update_a_meeting , Update_a_user , Update_a_user's_email , Update_a_user's_presence_status , Update_account_settings , Update_an_IM_directory_group , Update_registrant's_status , Upload_Virtual_Background_files , Use_in-meeting_cloud_recording_controls
+Get_a_user's_TSP_account  ->  Add_a_user's_TSP_account , Create_a_meeting , Create_a_webinar , Delete_a_user's_TSP_account , Get_active/inactive_host_reports , Get_meeting_recordings , Get_telephone_reports , Get_zoom_meetings_client_feedback , List_H.323/SIP_devices , List_IM_directory_group_members , List_SIP_phones , List_Zoom_Rooms , List_group_members , List_meeting_registrants , List_meetings , List_members_in_a_role , List_recording_registrants , List_users , List_webinar_registrants , List_webinars , Update_a_TSP_account , Update_a_user , Update_account's_TSP_information
+Get_a_webinar  ->  Add_IM_directory_group_members , Add_a_meeting_registrant , Add_a_user's_TSP_account , Add_a_webinar_registrant , Add_assistants , Add_group_admins , Add_group_members , Check_a_user_email , Create_a_meeting , Create_a_recording_registrant , Create_a_tracking_field , Create_a_webinar , Create_meeting's_invite_links , Create_users , Create_webinar's_invite_links , Delete_SIP_phone , Delete_a_user , Delete_a_user's_TSP_account , Enable_SIP_phone , Get_a_user's_TSP_account , Get_active/inactive_host_reports , Get_meeting_recordings , Get_telephone_reports , Get_zoom_meetings_client_feedback , List_H.323/SIP_devices , List_IM_directory_group_members , List_SIP_phones , List_Zoom_Rooms , List_group_members , List_meeting_registrants , List_meeting_templates , List_meetings , List_members_in_a_role , List_recording_registrants , List_users , List_webinar_registrants , List_webinars , Perform_batch_registration , Set_global_dial-in_URL_for_a_TSP_user , Update_Live_Stream_Status , Update_SIP_phone , Update_a_TSP_account , Update_a_meeting , Update_a_meeting_survey , Update_a_tracking_field , Update_a_user , Update_a_user's_email , Update_a_webinar , Update_a_webinar_survey , Update_account_settings , Update_registrant's_status , Update_user_settings , Use_in-meeting_cloud_recording_controls
+Get_a_webinar_poll  ->  Create_a_meeting_poll , Create_a_webinar's_poll , Delete_a_meeting_poll , Delete_a_webinar_poll , Get_a_meeting_poll , Perform_batch_poll_creation , Update_a_meeting_poll , Update_a_webinar_poll
+Get_a_webinar_registrant  ->  Add_IM_directory_group_members , Add_a_meeting_registrant , Add_a_webinar_registrant , Add_assistants , Add_group_admins , Add_group_members , Check_a_user_email , Check_a_user's_PM_room , Create_a_meeting , Create_a_recording_registrant , Create_a_webinar , Create_users , Delete_a_meeting_registrant , Delete_a_user , Delete_a_webinar_registrant , Enable_SIP_phone , Get_a_webinar , Get_live_stream_details , List_SIP_phones , List_webinar_participants , Perform_batch_registration , Update_a_group's_settings , Update_a_meeting , Update_a_user , Update_a_user's_email , Update_registrant's_status , Use_in-meeting_cloud_recording_controls
+Get_a_webinar_survey  ->  Create_a_webinar , Set_global_dial-in_URL_for_a_TSP_user , Update_a_meeting_survey , Update_a_webinar_survey
+Get_account_settings  ->  Create_a_device_profile , Create_a_meeting , Create_a_webinar , Enable_SIP_phone , Update_SIP_phone , Update_a_device_profile , Update_a_group's_settings , Update_account_settings , Update_locked_settings , Update_user_settings
+Get_account's_TSP_information  ->  Add_a_user's_TSP_account , Create_a_meeting , Create_a_webinar , Delete_a_user's_TSP_account , Get_a_user's_TSP_account , Get_active/inactive_host_reports , Get_meeting_recordings , Get_telephone_reports , Get_zoom_meetings_client_feedback , List_H.323/SIP_devices , List_IM_directory_group_members , List_SIP_phones , List_Zoom_Rooms , List_group_members , List_meeting_registrants , List_meetings , List_members_in_a_role , List_recording_registrants , List_users , List_webinar_registrants , List_webinars , Update_a_TSP_account , Update_a_user , Update_account's_TSP_information
+Get_account's_managed_domains  ->  Create_a_meeting , Create_a_webinar , Enable_SIP_phone , Update_SIP_phone , Update_account_settings
+Get_account's_trusted_domains  ->  Create_a_meeting , Create_a_webinar , Enable_SIP_phone , Update_SIP_phone , Update_account_settings
+Get_active/inactive_host_reports  ->  Add_IM_directory_group_members , Add_a_meeting_registrant , Add_a_webinar_registrant , Add_assistants , Add_group_admins , Add_group_members , Check_a_user_email , Create_a_meeting , Create_a_recording_registrant , Create_a_webinar , Create_meeting's_invite_links , Create_users , Create_webinar's_invite_links , Delete_a_meeting's_archived_files , Delete_a_user , Enable_SIP_phone , Get_a_meeting's_archived_files , Get_past_meeting_participants , List_SIP_phones , Perform_batch_registration , Recover_meeting_recordings , Update_Live_Stream_Status , Update_SIP_phone , Update_a_meeting , Update_a_user's_email , Update_registrant's_status , Use_in-meeting_cloud_recording_controls
+Get_billing_invoice_reports  ->  Get_daily_usage_report
+Get_billing_reports  ->  Get_billing_invoice_reports
+Get_chat_messages_reports  ->  Add_IM_directory_group_members , Add_a_meeting_registrant , Add_a_webinar_registrant , Add_assistants , Add_group_admins , Add_group_members , Check_a_user_email , Create_a_meeting , Create_a_recording_registrant , Create_a_webinar , Create_users , Delete_a_user , Enable_SIP_phone , Get_active/inactive_host_reports , Get_sign_In_/_sign_out_activity_report , Get_telephone_reports , List_SIP_phones , Perform_batch_registration , Update_a_meeting , Update_a_user's_email , Update_registrant's_status , Use_in-meeting_cloud_recording_controls
+Get_chat_metrics  ->  Assign_a_role , List_Zoom_Rooms
+Get_chat_sessions_reports  ->  Add_IM_directory_group_members , Add_a_meeting_registrant , Add_a_webinar_registrant , Add_assistants , Add_group_admins , Add_group_members , Check_a_user_email , Create_a_meeting , Create_a_recording_registrant , Create_a_webinar , Create_users , Delete_a_user , Enable_SIP_phone , Get_chat_messages_reports , List_SIP_phones , Perform_batch_registration , Update_a_meeting , Update_a_user's_email , Update_registrant's_status , Use_in-meeting_cloud_recording_controls
+Get_device_information  ->  Create_a_device_profile , Update_a_device_profile
+Get_issues_of_Zoom_Rooms  ->  List_SIP_phones
+Get_live_stream_details  ->  Update_Zoom_Room_account_profile , Update_Zoom_Room_location_profile , Update_a_Zoom_Room_profile , Update_a_live_stream , Update_a_livestream
+Get_livestream_details  ->  Update_a_live_stream , Update_a_livestream
+Get_location_settings  ->  Update_Zoom_Room_settings , Update_location_settings
+Get_locked_settings  ->  Update_a_group's_settings , Update_account_settings , Update_locked_settings , Update_user_settings
+Get_meeting_detail_reports  ->  Add_IM_directory_group_members , Add_a_meeting_registrant , Add_a_webinar_registrant , Add_assistants , Add_group_admins , Add_group_members , Check_a_user_email , Create_a_meeting , Create_a_recording_registrant , Create_a_webinar , Create_meeting's_invite_links , Create_users , Create_webinar's_invite_links , Delete_a_user , Enable_SIP_phone , List_SIP_phones , Perform_batch_registration , Update_Live_Stream_Status , Update_SIP_phone , Update_a_group's_settings , Update_a_meeting , Update_a_user , Update_a_user's_email , Update_registrant's_status , Use_in-meeting_cloud_recording_controls
+Get_meeting_details  ->  Add_a_meeting_registrant , Add_a_webinar_registrant , Assign_a_role , Create_a_group , Create_a_recording_registrant , Create_an_IM_directory_group , Update_a_group , Update_a_group's_settings , Update_a_user , Update_an_IM_directory_group
+Get_meeting_participant_QoS  ->  Create_a_meeting , Create_a_webinar , Enable_SIP_phone , Update_SIP_phone , Update_account_settings
+Get_meeting_participant_reports  ->  Add_IM_directory_group_members , Add_a_meeting_registrant , Add_a_webinar_registrant , Add_assistants , Add_group_admins , Add_group_members , Check_a_user_email , Create_a_meeting , Create_a_recording_registrant , Create_a_webinar , Create_users , Delete_a_user , Enable_SIP_phone , Get_account_settings , List_SIP_phones , List_meeting_templates , Perform_batch_registration , Update_a_meeting , Update_a_user's_email , Update_registrant's_status , Use_in-meeting_cloud_recording_controls
+Get_meeting_poll_reports  ->  Add_IM_directory_group_members , Add_a_meeting_registrant , Add_a_webinar_registrant , Add_assistants , Add_group_admins , Add_group_members , Check_a_user_email , Check_a_user's_PM_room , Create_a_meeting , Create_a_recording_registrant , Create_a_webinar , Create_meeting's_invite_links , Create_users , Create_webinar's_invite_links , Delete_a_meeting's_archived_files , Delete_a_user , Enable_SIP_phone , Get_a_meeting's_archived_files , Get_past_meeting_participants , List_SIP_phones , Perform_batch_registration , Recover_meeting_recordings , Update_Live_Stream_Status , Update_SIP_phone , Update_a_meeting , Update_a_user , Update_a_user's_email , Update_registrant's_status , Update_registration_questions , Use_in-meeting_cloud_recording_controls
+Get_meeting_recording_settings  ->  Create_a_reservation , Update_a_reservation , Update_meeting_recording_settings
+Get_meeting_recordings  ->  Create_a_reservation , Update_a_reservation
+Get_meeting_reports  ->  Add_IM_directory_group_members , Add_a_meeting_registrant , Add_a_webinar_registrant , Add_assistants , Add_group_admins , Add_group_members , Check_a_user_email , Create_a_meeting , Create_a_recording_registrant , Create_a_webinar , Create_meeting's_invite_links , Create_users , Create_webinar's_invite_links , Delete_a_meeting's_archived_files , Delete_a_user , Enable_SIP_phone , Get_a_meeting's_archived_files , Get_past_meeting_participants , List_SIP_phones , Perform_batch_registration , Recover_meeting_recordings , Update_Live_Stream_Status , Update_SIP_phone , Update_a_meeting , Update_a_user's_email , Update_registrant's_status , Use_in-meeting_cloud_recording_controls
+Get_operation_logs_report  ->  Delete_a_user , Get_zoom_meetings_client_feedback
+Get_past_meeting_details  ->  Add_IM_directory_group_members , Add_a_meeting_registrant , Add_a_webinar_registrant , Add_assistants , Add_group_admins , Add_group_members , Check_a_user_email , Create_a_group , Create_a_meeting , Create_a_recording_registrant , Create_a_webinar , Create_an_IM_directory_group , Create_meeting's_invite_links , Create_users , Create_webinar's_invite_links , Delete_a_meeting's_archived_files , Delete_a_user , Enable_SIP_phone , Get_a_meeting's_archived_files , Get_past_meeting_participants , List_SIP_phones , Perform_batch_registration , Recover_meeting_recordings , Update_Live_Stream_Status , Update_SIP_phone , Update_a_group , Update_a_meeting , Update_a_user , Update_a_user's_email , Update_an_IM_directory_group , Update_registrant's_status , Use_in-meeting_cloud_recording_controls
+Get_past_meeting_participants  ->  Add_IM_directory_group_members , Add_a_meeting_registrant , Add_a_webinar_registrant , Add_assistants , Add_group_admins , Add_group_members , Check_a_user_email , Create_a_meeting , Create_a_recording_registrant , Create_a_webinar , Create_meeting's_invite_links , Create_users , Create_webinar's_invite_links , Delete_a_user , Enable_SIP_phone , List_SIP_phones , Perform_batch_registration , Update_Live_Stream_Status , Update_SIP_phone , Update_a_meeting , Update_a_user's_email , Update_registrant's_status , Use_in-meeting_cloud_recording_controls
+Get_post_meeting_feedback  ->  Assign_a_role
+Get_post_webinar_feedback  ->  Assign_a_role
+Get_registration_questions  ->  Update_registration_questions
+Get_role_information  ->  Assign_a_role , Create_a_role , Delete_a_role , List_members_in_a_role , Unassign_a_role , Update_role_information
+Get_sharing/recording_details  ->  List_SIP_phones
+Get_sign_In_/_sign_out_activity_report  ->  Add_IM_directory_group_members , Add_a_meeting_registrant , Add_a_webinar_registrant , Add_assistants , Add_group_admins , Add_group_members , Check_a_user_email , Create_a_meeting , Create_a_recording_registrant , Create_a_webinar , Create_users , Delete_a_user , Enable_SIP_phone , List_SIP_phones , Perform_batch_registration , Update_SIP_phone , Update_a_meeting , Update_a_user's_email , Update_registrant's_status , Use_in-meeting_cloud_recording_controls
+Get_telephone_reports  ->  Add_IM_directory_group_members , Add_a_meeting_registrant , Add_a_webinar_registrant , Add_assistants , Add_group_admins , Add_group_members , Check_a_user_email , Create_a_meeting , Create_a_recording_registrant , Create_a_webinar , Create_meeting's_invite_links , Create_users , Create_webinar's_invite_links , Delete_a_meeting's_archived_files , Delete_a_user , Enable_SIP_phone , Get_a_meeting's_archived_files , Get_past_meeting_participants , List_SIP_phones , Perform_batch_registration , Recover_meeting_recordings , Update_Live_Stream_Status , Update_SIP_phone , Update_a_group's_settings , Update_a_meeting , Update_a_user , Update_a_user's_email , Update_registrant's_status , Use_in-meeting_cloud_recording_controls
+Get_top_25_Zoom_Rooms_with_issues  ->  Get_CRC_port_usage , Get_IM_metrics , Get_Zoom_Rooms_details , Get_active/inactive_host_reports , Get_chat_messages_reports , Get_chat_metrics , Get_chat_sessions_reports , Get_cloud_recording_usage_report , Get_issues_of_Zoom_Rooms , Get_meeting_quality_scores , Get_meeting_reports , Get_operation_logs_report , Get_telephone_reports , Get_top_25_issues_of_Zoom_Rooms , Get_upcoming_events_report , Get_zoom_meetings_client_feedback , List_Zoom_meetings_client_feedback , List_client_meeting_satisfaction , List_meetings , List_webinars
+Get_top_25_issues_of_Zoom_Rooms  ->  Get_CRC_port_usage , Get_IM_metrics , Get_Zoom_Rooms_details , Get_active/inactive_host_reports , Get_chat_messages_reports , Get_chat_metrics , Get_chat_sessions_reports , Get_cloud_recording_usage_report , Get_issues_of_Zoom_Rooms , Get_meeting_quality_scores , Get_meeting_reports , Get_operation_logs_report , Get_telephone_reports , Get_top_25_Zoom_Rooms_with_issues , Get_upcoming_events_report , Get_zoom_meetings_client_feedback , List_Zoom_meetings_client_feedback , List_client_meeting_satisfaction , List_meetings , List_webinars
+Get_upcoming_events_report  ->  Create_a_meeting , Get_active/inactive_host_reports , Get_sign_In_/_sign_out_activity_report , Get_telephone_reports , Update_a_meeting
+Get_user_settings  ->  Create_a_meeting , Create_a_webinar , Update_a_group's_settings , Update_account_settings , Update_locked_settings , Update_user_settings
+Get_webinar_Q&A_report  ->  Create_a_meeting , Create_a_webinar , Create_meeting's_invite_links , Create_webinar's_invite_links , Delete_a_meeting's_archived_files , Enable_SIP_phone , Get_a_meeting's_archived_files , Get_past_meeting_participants , Recover_meeting_recordings , Update_Live_Stream_Status , Update_SIP_phone
+Get_webinar_detail_reports  ->  Add_IM_directory_group_members , Add_a_meeting_registrant , Add_a_webinar_registrant , Add_assistants , Add_group_admins , Add_group_members , Check_a_user_email , Create_a_meeting , Create_a_recording_registrant , Create_a_webinar , Create_meeting's_invite_links , Create_users , Create_webinar's_invite_links , Delete_a_meeting's_archived_files , Delete_a_user , Enable_SIP_phone , Get_a_meeting's_archived_files , Get_past_meeting_participants , List_SIP_phones , Perform_batch_registration , Recover_meeting_recordings , Update_Live_Stream_Status , Update_SIP_phone , Update_a_group's_settings , Update_a_meeting , Update_a_user , Update_a_user's_email , Update_registrant's_status , Use_in-meeting_cloud_recording_controls
+Get_webinar_details  ->  Assign_a_role , Create_a_group , Create_a_meeting , Create_a_webinar , Create_an_IM_directory_group , Update_a_group , Update_a_user , Update_an_IM_directory_group
+Get_webinar_participant_QoS  ->  Create_a_meeting , Create_a_webinar , Enable_SIP_phone , Update_SIP_phone , Update_account_settings
+Get_webinar_participant_reports  ->  Add_IM_directory_group_members , Add_a_meeting_registrant , Add_a_webinar_registrant , Add_assistants , Add_group_admins , Add_group_members , Check_a_user_email , Create_a_meeting , Create_a_recording_registrant , Create_a_webinar , Create_users , Delete_a_user , Enable_SIP_phone , Get_account_settings , List_SIP_phones , Perform_batch_registration , Update_a_meeting , Update_a_user's_email , Update_registrant's_status , Use_in-meeting_cloud_recording_controls
+Get_webinar_participants  ->  Assign_a_role , Create_a_meeting , Create_a_webinar , Enable_SIP_phone , List_SIP_phones , Update_SIP_phone , Update_a_group's_settings , Update_account_settings
+Get_webinar_poll_reports  ->  Add_IM_directory_group_members , Add_a_meeting_registrant , Add_a_webinar_registrant , Add_assistants , Add_group_admins , Add_group_members , Check_a_user_email , Create_a_meeting , Create_a_recording_registrant , Create_a_webinar , Create_meeting's_invite_links , Create_users , Create_webinar's_invite_links , Delete_a_meeting's_archived_files , Delete_a_user , Enable_SIP_phone , Get_a_meeting's_archived_files , Get_past_meeting_participants , List_SIP_phones , Perform_batch_registration , Recover_meeting_recordings , Update_Live_Stream_Status , Update_SIP_phone , Update_a_meeting , Update_a_user's_email , Update_registrant's_status , Use_in-meeting_cloud_recording_controls
+Get_webinar_tracking_sources  ->  Create_a_webinar , List_webinar_registrants , Set_global_dial-in_URL_for_a_TSP_user , Update_a_meeting_survey , Update_a_webinar_survey
+Get_webinar's_session_branding  ->  Set_webinar's_default_branding_Virtual_Background
+Get_zoom_meetings_client_feedback  ->  Assign_a_role , Get_CRC_port_usage , Get_IM_metrics , Get_Zoom_Rooms_details , Get_active/inactive_host_reports , Get_chat_messages_reports , Get_chat_metrics , Get_chat_sessions_reports , Get_cloud_recording_usage_report , Get_issues_of_Zoom_Rooms , Get_meeting_quality_scores , Get_meeting_reports , Get_operation_logs_report , Get_telephone_reports , Get_top_25_Zoom_Rooms_with_issues , Get_top_25_issues_of_Zoom_Rooms , Get_upcoming_events_report , List_Zoom_meetings_client_feedback , List_client_meeting_satisfaction , List_meetings , List_webinars
+List_Q&A_of_past_webinar  ->  Add_IM_directory_group_members , Add_a_meeting_registrant , Add_a_webinar_registrant , Add_assistants , Add_group_admins , Add_group_members , Check_a_user_email , Create_a_meeting , Create_a_recording_registrant , Create_a_webinar , Create_meeting's_invite_links , Create_users , Create_webinar's_invite_links , Delete_a_user , Enable_SIP_phone , Get_webinar_absentees , List_SIP_phones , Perform_batch_registration , Update_Live_Stream_Status , Update_SIP_phone , Update_a_meeting , Update_a_user's_email , Update_registrant's_status , Update_registration_questions , Use_in-meeting_cloud_recording_controls
+List_SIP_phones  ->  Add_IM_directory_group_members , Add_a_meeting_registrant , Add_a_webinar_registrant , Add_assistants , Add_group_admins , Add_group_members , Check_a_user_email , Create_a_meeting , Create_a_recording_registrant , Create_a_webinar , Create_meeting's_invite_links , Create_users , Create_webinar's_invite_links , Delete_SIP_phone , Delete_a_user , Enable_SIP_phone , Perform_batch_registration , Update_Live_Stream_Status , Update_SIP_phone , Update_a_meeting , Update_a_user's_email , Update_a_webinar , Update_account_settings , Update_registrant's_status , Use_in-meeting_cloud_recording_controls
+List_Zoom_Room_devices  ->  Add_a_Zoom_Room , Update_a_Zoom_Room_profile
+List_Zoom_Room_locations  ->  Add_a_Zoom_Room , Add_a_location , Change_a_Zoom_Room's_location , Change_the_assigned_parent_location , Get_Zoom_Room_location_profile , Get_location_settings , List_Zoom_Rooms , List_workspaces , Update_Zoom_Room_location_profile , Update_location_settings
+List_Zoom_Rooms  ->  Add_a_Zoom_Room , Add_a_location , Change_Zoom_Rooms_app_version , Change_a_Zoom_Room's_location , Change_the_assigned_parent_location , Check-in_or_check-out_of_a_Zoom_Room , Create_a_device_profile , Create_a_reservation , Delete_a_Zoom_Room , Delete_a_device_profile , Delete_a_reservation , Get_Zoom_Room_location_profile , Get_Zoom_Room_profile , Get_Zoom_Room_settings , Get_a_device_profile , Get_device_information , Get_location_settings , List_Zoom_Room_devices , List_Zoom_Room_locations , List_device_profiles , List_workspaces , Update_E911_digital_signage , Update_Zoom_Room_location_profile , Update_Zoom_Room_settings , Update_a_Zoom_Room_profile , Update_a_device_profile , Update_a_reservation , Update_location_settings
+List_Zoom_meetings_client_feedback  ->  Add_a_user's_TSP_account , Create_a_meeting , Create_a_webinar , Delete_a_user's_TSP_account , Get_CRC_port_usage , Get_IM_metrics , Get_Zoom_Rooms_details , Get_a_user's_TSP_account , Get_active/inactive_host_reports , Get_chat_messages_reports , Get_chat_metrics , Get_chat_sessions_reports , Get_cloud_recording_usage_report , Get_issues_of_Zoom_Rooms , Get_meeting_quality_scores , Get_meeting_recordings , Get_meeting_reports , Get_operation_logs_report , Get_telephone_reports , Get_top_25_Zoom_Rooms_with_issues , Get_top_25_issues_of_Zoom_Rooms , Get_upcoming_events_report , Get_zoom_meetings_client_feedback , List_H.323/SIP_devices , List_IM_directory_group_members , List_SIP_phones , List_Zoom_Rooms , List_client_meeting_satisfaction , List_group_members , List_meeting_registrants , List_meetings , List_members_in_a_role , List_recording_registrants , List_users , List_webinar_registrants , List_webinars , Update_a_TSP_account , Update_a_user
+List_a_user's_PAC_accounts  ->  Add_a_meeting_registrant , Add_a_webinar_registrant , Create_a_recording_registrant , Update_a_user
+List_all_recordings  ->  Get_CRC_port_usage , Get_IM_metrics , Get_Zoom_Rooms_details , Get_active/inactive_host_reports , Get_chat_messages_reports , Get_chat_metrics , Get_chat_sessions_reports , Get_cloud_recording_usage_report , Get_issues_of_Zoom_Rooms , Get_meeting_quality_scores , Get_meeting_reports , Get_operation_logs_report , Get_telephone_reports , Get_top_25_Zoom_Rooms_with_issues , Get_top_25_issues_of_Zoom_Rooms , Get_upcoming_events_report , Get_zoom_meetings_client_feedback , List_SIP_phones , List_Zoom_meetings_client_feedback , List_client_meeting_satisfaction , List_meetings , List_webinars
+List_archived_files  ->  Create_a_reservation , Delete_a_meeting_recording_file , Delete_meeting_recordings , Get_meeting_recording_settings , Get_meeting_recordings , Get_registration_questions , Recover_a_single_recording , Update_Zoom_Room_location_profile , Update_a_reservation , Update_meeting_recording_settings , Update_registration_questions
+List_client_meeting_satisfaction  ->  Get_CRC_port_usage , Get_IM_metrics , Get_Zoom_Rooms_details , Get_active/inactive_host_reports , Get_chat_messages_reports , Get_chat_metrics , Get_chat_sessions_reports , Get_cloud_recording_usage_report , Get_issues_of_Zoom_Rooms , Get_meeting_quality_scores , Get_meeting_reports , Get_operation_logs_report , Get_telephone_reports , Get_top_25_Zoom_Rooms_with_issues , Get_top_25_issues_of_Zoom_Rooms , Get_upcoming_events_report , Get_zoom_meetings_client_feedback , List_Zoom_meetings_client_feedback , List_meetings , List_webinars
+List_device_profiles  ->  Create_a_device_profile , Update_a_device_profile
+List_group_admins  ->  Add_IM_directory_group_members , Add_a_meeting_registrant , Add_a_webinar_registrant , Add_assistants , Add_group_admins , Add_group_members , Check_a_user_email , Create_a_meeting , Create_a_recording_registrant , Create_a_webinar , Create_meeting's_invite_links , Create_users , Create_webinar's_invite_links , Delete_a_user , Enable_SIP_phone , List_SIP_phones , Perform_batch_registration , Update_Live_Stream_Status , Update_SIP_phone , Update_a_meeting , Update_a_user's_email , Update_registrant's_status , Use_in-meeting_cloud_recording_controls
+List_group_members  ->  Add_IM_directory_group_members , Add_a_meeting_registrant , Add_a_webinar_registrant , Add_assistants , Add_group_admins , Add_group_members , Check_a_user_email , Check_a_user's_PM_room , Create_a_meeting , Create_a_recording_registrant , Create_a_webinar , Create_users , Delete_a_user , Enable_SIP_phone , List_SIP_phones , Perform_batch_registration , Update_a_meeting , Update_a_user , Update_a_user's_email , Update_registrant's_status , Use_in-meeting_cloud_recording_controls
+List_groups  ->  Add_IM_directory_group_members , Add_group_admins , Add_group_members , Delete_IM_directory_group_member , Delete_a_group , Delete_a_group_admin , Delete_a_group_member , Delete_an_IM_directory_group , Get_a_group , List_IM_directory_group_members , List_group_admins , List_group_members , Retrieve_an_IM_directory_group , Update_a_group , Update_a_group_member , Update_an_IM_directory_group
+List_meeting_participants  ->  Assign_a_role , Create_a_meeting , Create_a_webinar , Enable_SIP_phone , Get_account_settings , List_SIP_phones , Update_SIP_phone , Update_a_group's_settings , Update_account_settings
+List_meetings  ->  Assign_a_role , Create_a_group , Create_a_meeting , Create_a_webinar , Create_an_IM_directory_group , List_SIP_phones , List_meeting_templates , Update_a_group , Update_a_meeting , Update_a_user , Update_a_webinar , Update_an_IM_directory_group , Use_in-meeting_cloud_recording_controls
+List_members_in_a_role  ->  Add_a_Zoom_Room , Add_a_location , Add_a_meeting_registrant , Add_a_webinar_registrant , Change_a_Zoom_Room's_location , Change_the_assigned_parent_location , Check_a_user's_PM_room , Create_a_group , Create_a_recording_registrant , Create_an_IM_directory_group , Create_users , Get_Zoom_Room_location_profile , Get_location_settings , List_Zoom_Room_locations , List_Zoom_Rooms , List_workspaces , Perform_batch_registration , Update_Zoom_Room_location_profile , Update_a_group , Update_a_user , Update_an_IM_directory_group , Update_location_settings
+List_past_meeting's_poll_results  ->  Add_IM_directory_group_members , Add_a_meeting_registrant , Add_a_webinar_registrant , Add_assistants , Add_group_admins , Add_group_members , Check_a_user_email , Create_a_meeting , Create_a_recording_registrant , Create_a_webinar , Create_meeting's_invite_links , Create_users , Create_webinar's_invite_links , Delete_a_meeting_poll , Delete_a_user , Delete_a_webinar_poll , Enable_SIP_phone , Get_a_meeting_poll , Get_a_webinar_poll , List_SIP_phones , Perform_batch_registration , Update_Live_Stream_Status , Update_SIP_phone , Update_a_meeting , Update_a_meeting_poll , Update_a_user's_email , Update_a_webinar_poll , Update_registrant's_status , Update_registration_questions , Use_in-meeting_cloud_recording_controls
+List_past_webinar_poll_results  ->  Add_IM_directory_group_members , Add_a_meeting_registrant , Add_a_webinar_registrant , Add_assistants , Add_group_admins , Add_group_members , Check_a_user_email , Create_a_meeting , Create_a_recording_registrant , Create_a_webinar , Create_meeting's_invite_links , Create_users , Create_webinar's_invite_links , Delete_a_meeting_poll , Delete_a_user , Delete_a_webinar_poll , Enable_SIP_phone , Get_a_meeting_poll , Get_a_webinar_poll , Get_webinar_absentees , List_SIP_phones , Perform_batch_registration , Update_Live_Stream_Status , Update_SIP_phone , Update_a_meeting , Update_a_meeting_poll , Update_a_user's_email , Update_a_webinar_poll , Update_registrant's_status , Update_registration_questions , Use_in-meeting_cloud_recording_controls
+List_registration_questions  ->  Update_registration_questions
+List_user_assistants  ->  Add_IM_directory_group_members , Add_a_meeting_registrant , Add_a_webinar_registrant , Add_assistants , Add_group_admins , Add_group_members , Check_a_user_email , Create_a_meeting , Create_a_recording_registrant , Create_a_reservation , Create_a_webinar , Create_users , Delete_Virtual_Background_files , Delete_a_scheduler , Delete_a_user , Delete_a_user_assistant , Enable_SIP_phone , List_SIP_phones , Perform_batch_registration , Update_a_meeting , Update_a_user , Update_a_user's_email , Update_a_user's_presence_status , Update_registrant's_status , Upload_Virtual_Background_files , Use_in-meeting_cloud_recording_controls
+List_user_schedulers  ->  Add_IM_directory_group_members , Add_a_meeting_registrant , Add_a_webinar_registrant , Add_assistants , Add_group_admins , Add_group_members , Check_a_user_email , Create_a_meeting , Create_a_recording_registrant , Create_a_reservation , Create_a_webinar , Create_users , Delete_Virtual_Background_files , Delete_a_scheduler , Delete_a_user , Delete_a_user_assistant , Enable_SIP_phone , List_SIP_phones , Perform_batch_registration , Update_a_meeting , Update_a_user , Update_a_user's_email , Update_a_user's_presence_status , Update_registrant's_status , Upload_Virtual_Background_files , Use_in-meeting_cloud_recording_controls
+List_user's_TSP_accounts  ->  Add_a_user's_TSP_account , Create_a_meeting , Create_a_webinar , Delete_a_user's_TSP_account , Get_a_user's_TSP_account , Get_active/inactive_host_reports , Get_meeting_recordings , Get_telephone_reports , Get_zoom_meetings_client_feedback , List_H.323/SIP_devices , List_IM_directory_group_members , List_SIP_phones , List_Zoom_Rooms , List_group_members , List_meeting_registrants , List_meetings , List_members_in_a_role , List_recording_registrants , List_users , List_webinar_registrants , List_webinars , Update_a_TSP_account , Update_a_user , Update_account's_TSP_information
+List_users  ->  Add_IM_directory_group_members , Add_a_meeting_registrant , Add_a_webinar_registrant , Add_assistants , Add_group_admins , Add_group_members , Check_a_user_email , Check_a_user's_PM_room , Create_a_group , Create_a_meeting , Create_a_recording_registrant , Create_a_reservation , Create_a_webinar , Create_an_IM_directory_group , Create_users , Delete_Virtual_Background_files , Delete_a_scheduler , Delete_a_user , Delete_a_user_assistant , Enable_SIP_phone , Get_active/inactive_host_reports , List_SIP_phones , Perform_batch_registration , Update_Zoom_Room_location_profile , Update_a_group , Update_a_meeting , Update_a_user , Update_a_user's_email , Update_a_user's_presence_status , Update_an_IM_directory_group , Update_registrant's_status , Upload_Virtual_Background_files , Use_in-meeting_cloud_recording_controls
+List_webinar_participants  ->  Add_IM_directory_group_members , Add_a_meeting_registrant , Add_a_webinar_registrant , Add_assistants , Add_group_admins , Add_group_members , Check_a_user_email , Create_a_meeting , Create_a_recording_registrant , Create_a_webinar , Create_meeting's_invite_links , Create_users , Create_webinar's_invite_links , Delete_a_user , Enable_SIP_phone , List_SIP_phones , List_meeting_templates , Perform_batch_registration , Update_Live_Stream_Status , Update_SIP_phone , Update_a_meeting , Update_a_user's_email , Update_registrant's_status , Use_in-meeting_cloud_recording_controls
+List_webinars  ->  Assign_a_role , Create_a_group , Create_an_IM_directory_group , Get_CRC_port_usage , Get_IM_metrics , Get_Zoom_Rooms_details , Get_active/inactive_host_reports , Get_chat_messages_reports , Get_chat_metrics , Get_chat_sessions_reports , Get_cloud_recording_usage_report , Get_issues_of_Zoom_Rooms , Get_meeting_quality_scores , Get_meeting_reports , Get_operation_logs_report , Get_telephone_reports , Get_top_25_Zoom_Rooms_with_issues , Get_top_25_issues_of_Zoom_Rooms , Get_upcoming_events_report , Get_zoom_meetings_client_feedback , List_SIP_phones , List_Zoom_meetings_client_feedback , List_client_meeting_satisfaction , List_meetings , Update_a_group , Update_a_user , Update_an_IM_directory_group
+List_workspaces  ->  Add_a_Zoom_Room , Change_Zoom_Rooms_app_version , Change_a_Zoom_Room's_location , Check-in_or_check-out_of_a_Zoom_Room , Create_a_device_profile , Create_a_reservation , Delete_a_Zoom_Room , Delete_a_device_profile , Delete_a_reservation , Get_Zoom_Room_profile , Get_Zoom_Room_settings , Get_a_device_profile , Get_device_information , List_Zoom_Room_devices , List_device_profiles , Update_E911_digital_signage , Update_Zoom_Room_settings , Update_a_Zoom_Room_profile , Update_a_device_profile , Update_a_reservation
+Perform_batch_poll_creation  ->  Create_a_meeting_poll , Create_a_webinar's_poll , Delete_a_meeting_poll , Delete_a_webinar_poll , Get_a_meeting_poll , Get_a_webinar_poll , Update_a_meeting_poll , Update_a_webinar_poll
+Perform_batch_registration  ->  Add_IM_directory_group_members , Add_a_meeting_registrant , Add_a_webinar_registrant , Add_assistants , Add_group_admins , Add_group_members , Check_a_user_email , Create_a_meeting , Create_a_recording_registrant , Create_a_webinar , Create_users , Delete_a_meeting_registrant , Delete_a_user , Delete_a_webinar_registrant , Enable_SIP_phone , Get_a_meeting_registrant , Get_a_webinar_registrant , List_SIP_phones , Update_a_meeting , Update_a_user's_email , Update_registrant's_status , Use_in-meeting_cloud_recording_controls
+Retrieve_an_IM_directory_group  ->  Create_a_group , Create_an_IM_directory_group , Update_a_group , Update_a_user , Update_an_IM_directory_group
+Update_E911_digital_signage  ->  Check-in_or_check-out_of_a_Zoom_Room , Delete_a_reservation , Update_a_reservation
+Upload_Virtual_Background_files  ->  Delete_Virtual_Background_files
+Upload_a_webinar's_branding_wallpaper  ->  Set_webinar's_default_branding_Virtual_Background
+List tracking fields
+Get user permissions
+Update webinar status
+Get a webinar's join token for local recording
+Remove panelists
+Update user status
+Delete a webinar survey
+Update meeting status
+Get meeting invitation
+List past meeting instances
+List IM directory groups
+Delete a webinar's branding wallpaper
+Update a user's password
+Upload a webinar's branding Virtual Background
+List past webinar files
+Delete user schedulers
+Revoke a user's SSO token
+Delete user assistants
+Get webinar's token
+Get a user's token
+Get a meeting's join token for local recording
+List roles
+Get user's ZAK
+List past webinar instances
+Update Zoom Room account settings
+Get meeting's token
+List meeting participants QoS
+List panelists
+Delete a webinar's branding Virtual Backgrounds
+Delete a meeting survey
+Upload a user's profile picture
+List a webinar's polls
+Get Zoom Room account settings
+List webinar templates
+Remove a panelist
+List webinar participant QoS
+List meeting polls
+List past meeting's files
+Delete a user's profile picture
+List digital signage contents
+
+-----------List of endpoints and methods--------------
+
+Get account settings, method: GET
+Update account settings, method: PATCH
+Get account's managed domains, method: GET
+Get account's trusted domains, method: GET
+List group admins, method: GET
+Add group admins, method: POST
+Delete a group admin, method: DELETE
+Get locked settings, method: GET
+Update locked settings, method: PATCH
+Delete a group member, method: DELETE
+Update a group member, method: PATCH
+List group members, method: GET
+Add group members, method: POST
+Delete Virtual Background files, method: DELETE
+Upload Virtual Background files, method: POST
+Get a group's settings, method: GET
+Update a group's settings, method: PATCH
+Delete a group, method: DELETE
+Get a group, method: GET
+Update a group, method: PATCH
+List groups, method: GET
+Create a group, method: POST
+Delete a H.323/SIP device, method: DELETE
+Update a H.323/SIP device, method: PATCH
+List H.323/SIP devices, method: GET
+Create a H.323/SIP device, method: POST
+List IM directory group members, method: GET
+Add IM directory group members, method: POST
+Delete IM directory group member, method: DELETE
+Delete an IM directory group, method: DELETE
+Retrieve an IM directory group, method: GET
+Update an IM directory group, method: PATCH
+List IM directory groups, method: GET
+Create an IM directory group, method: POST
+List meetings, method: GET
+Create a meeting, method: POST
+Delete user assistants, method: DELETE
+List user assistants, method: GET
+Add assistants, method: POST
+Delete a user assistant, method: DELETE
+Delete a user's profile picture, method: DELETE
+Upload a user's profile picture, method: POST
+Delete user schedulers, method: DELETE
+List user schedulers, method: GET
+Delete a scheduler, method: DELETE
+Get user settings, method: GET
+Update user settings, method: PATCH
+Revoke a user's SSO token, method: DELETE
+Get a user's token, method: GET
+Delete a user's TSP account, method: DELETE
+Get a user's TSP account, method: GET
+Update a TSP account, method: PATCH
+List user's TSP accounts, method: GET
+Add a user's TSP account, method: POST
+Set global dial-in URL for a TSP user, method: PATCH
+List webinars, method: GET
+Create a webinar, method: POST
+Delete a user, method: DELETE
+Get a user, method: GET
+Update a user, method: PATCH
+List meeting templates, method: GET
+Update a user's email, method: PUT
+List a user's PAC accounts, method: GET
+Update a user's password, method: PUT
+Get user permissions, method: GET
+Update a user's presence status, method: PUT
+List all recordings, method: GET
+Update user status, method: PUT
+List webinar templates, method: GET
+List users, method: GET
+Create users, method: POST
+Check a user email, method: GET
+Get user's ZAK, method: GET
+Check a user's PM room, method: GET
+Get a meeting registrant, method: GET
+Delete a meeting registrant, method: DELETE
+List registration questions, method: GET
+Update registration questions, method: PATCH
+List meeting registrants, method: GET
+Add a meeting registrant, method: POST
+Update registrant's status, method: PUT
+Get a meeting poll, method: GET
+Update a meeting poll, method: PUT
+Delete a meeting poll, method: DELETE
+List meeting polls, method: GET
+Create a meeting poll, method: POST
+Get a meeting survey, method: GET
+Update a meeting survey, method: PATCH
+Delete a meeting survey, method: DELETE
+Get livestream details, method: GET
+Update a livestream, method: PATCH
+Update Live Stream Status, method: PATCH
+Get registration questions, method: GET
+List recording registrants, method: GET
+Create a recording registrant, method: POST
+Get meeting recording settings, method: GET
+Update meeting recording settings, method: PATCH
+Delete a meeting recording file, method: DELETE
+Recover a single recording, method: PUT
+Delete meeting recordings, method: DELETE
+Get meeting recordings, method: GET
+Delete a meeting, method: DELETE
+Get a meeting, method: GET
+Update a meeting, method: PATCH
+Update meeting status, method: PUT
+Create meeting's invite links, method: POST
+Get meeting invitation, method: GET
+Perform batch registration, method: POST
+Perform batch poll creation, method: POST
+Get meeting's token, method: GET
+Get a meeting's join token for local recording, method: GET
+Recover meeting recordings, method: PUT
+Get past meeting details, method: GET
+List past meeting instances, method: GET
+List past meeting's poll results, method: GET
+List past meeting's files, method: GET
+Delete a meeting's archived files, method: DELETE
+Get a meeting's archived files, method: GET
+Get past meeting participants, method: GET
+List Zoom meetings client feedback, method: GET
+Get zoom meetings client feedback, method: GET
+List client meeting satisfaction, method: GET
+Get top 25 Zoom Rooms with issues, method: GET
+Get issues of Zoom Rooms, method: GET
+List meeting participants, method: GET
+List meeting participants QoS, method: GET
+Get post meeting feedback, method: GET
+Get sharing/recording details, method: GET
+Get meeting participant QoS, method: GET
+Get meeting details, method: GET
+Get webinar participants, method: GET
+List webinar participant QoS, method: GET
+Get post webinar feedback, method: GET
+Get webinar participant QoS, method: GET
+Get webinar details, method: GET
+List Zoom Rooms, method: GET
+Get top 25 issues of Zoom Rooms, method: GET
+Get Zoom Rooms details, method: GET
+Get chat metrics, method: GET
+Get CRC port usage, method: GET
+Get IM metrics, method: GET
+Get meeting quality scores, method: GET
+List past webinar files, method: GET
+List past webinar instances, method: GET
+List webinar participants, method: GET
+List past webinar poll results, method: GET
+List Q&A of past webinar, method: GET
+Get webinar absentees, method: GET
+Get billing reports, method: GET
+Get billing invoice reports, method: GET
+Get chat sessions reports, method: GET
+Get chat messages reports, method: GET
+Get meeting detail reports, method: GET
+Get meeting participant reports, method: GET
+Get meeting poll reports, method: GET
+Get active/inactive host reports, method: GET
+Get meeting reports, method: GET
+Get webinar detail reports, method: GET
+Get webinar participant reports, method: GET
+Get webinar poll reports, method: GET
+Get webinar Q&A report, method: GET
+Get sign In / sign out activity report, method: GET
+Get cloud recording usage report, method: GET
+Get daily usage report, method: GET
+Get operation logs report, method: GET
+Get telephone reports, method: GET
+Get upcoming events report, method: GET
+List members in a role, method: GET
+Assign a role, method: POST
+Unassign a role, method: DELETE
+Delete a role, method: DELETE
+Get role information, method: GET
+Update role information, method: PATCH
+List roles, method: GET
+Create a role, method: POST
+Get Zoom Room account profile, method: GET
+Update Zoom Room account profile, method: PATCH
+Get Zoom Room account settings, method: GET
+Update Zoom Room account settings, method: PATCH
+Get Zoom Room location structure, method: GET
+Update Zoom Rooms location structure, method: PUT
+Get location settings, method: GET
+Update location settings, method: PATCH
+Get Zoom Room location profile, method: GET
+Update Zoom Room location profile, method: PATCH
+Change the assigned parent location, method: PUT
+List Zoom Room locations, method: GET
+Add a location, method: POST
+Delete a device profile, method: DELETE
+Get a device profile, method: GET
+Update a device profile, method: PATCH
+List device profiles, method: GET
+Create a device profile, method: POST
+Get device information, method: GET
+List Zoom Room devices, method: GET
+Change Zoom Rooms app version, method: PUT
+Get Zoom Room settings, method: GET
+Update Zoom Room settings, method: PATCH
+Delete a Zoom Room, method: DELETE
+Get Zoom Room profile, method: GET
+Update a Zoom Room profile, method: PATCH
+Change a Zoom Room's location, method: PUT
+Add a Zoom Room, method: POST
+List digital signage contents, method: GET
+Update E911 digital signage, method: PATCH
+Check-in or check-out of a Zoom Room, method: PATCH
+Delete SIP phone, method: DELETE
+Update SIP phone, method: PATCH
+List SIP phones, method: GET
+Enable SIP phone, method: POST
+Delete a tracking field, method: DELETE
+Get a tracking field, method: GET
+Update a tracking field, method: PATCH
+List tracking fields, method: GET
+Create a tracking field, method: POST
+Get account's TSP information, method: GET
+Update account's TSP information, method: PATCH
+Get live stream details, method: GET
+Update a live stream, method: PATCH
+Remove panelists, method: DELETE
+List panelists, method: GET
+Add panelists, method: POST
+Remove a panelist, method: DELETE
+Delete a webinar poll, method: DELETE
+Get a webinar poll, method: GET
+Update a webinar poll, method: PUT
+List a webinar's polls, method: GET
+Create a webinar's poll, method: POST
+Delete a webinar registrant, method: DELETE
+Get a webinar registrant, method: GET
+List webinar registrants, method: GET
+Add a webinar registrant, method: POST
+Delete a webinar survey, method: DELETE
+Get a webinar survey, method: GET
+Update a webinar survey, method: PATCH
+Upload a webinar's branding Virtual Background, method: POST
+Set webinar's default branding Virtual Background, method: PATCH
+Delete a webinar's branding Virtual Backgrounds, method: DELETE
+Upload a webinar's branding wallpaper, method: POST
+Delete a webinar's branding wallpaper, method: DELETE
+Get webinar's session branding, method: GET
+Delete a webinar, method: DELETE
+Get a webinar, method: GET
+Update a webinar, method: PATCH
+Create webinar's invite links, method: POST
+Update webinar status, method: PUT
+Get webinar tracking sources, method: GET
+Get webinar's token, method: GET
+Get a webinar's join token for local recording, method: GET
+Delete a reservation, method: DELETE
+Update a reservation, method: PATCH
+Create a reservation, method: POST
+List workspaces, method: GET
+List archived files, method: GET
+Use in-meeting cloud recording controls, method: PATCH

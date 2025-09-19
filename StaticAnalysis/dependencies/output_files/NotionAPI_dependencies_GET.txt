@@ -1,0 +1,48 @@
+----------------------------------------------
+       Endpoint dependencies               
+       Number of api endpoints (nodes): 25
+       Number of dependencies (edges): 39
+----------------------------------------------
+
+List_all_users  ->  Add_comment_to_discussion , Add_comment_to_page
+Retrieve_a_block  ->  Append_block_children , Create_a_database , Create_a_page , Create_a_page_with_content , Update_a_block
+Retrieve_a_database  ->  Add_comment_to_discussion , Add_comment_to_page , Append_block_children , Create_a_database , Create_a_page , Create_a_page_with_content , Filter_a_database , Query_a_database , Sort_a_database , Update_page_properties
+Retrieve_a_page  ->  Add_comment_to_discussion , Add_comment_to_page , Append_block_children , Create_a_database , Create_a_page , Create_a_page_with_content
+Retrieve_a_page_property_item  ->  Create_a_page , Create_a_page_with_content
+Retrieve_a_user  ->  Add_comment_to_discussion , Add_comment_to_page
+Retrieve_block_children  ->  Append_block_children , Create_a_database , Create_a_page , Create_a_page_with_content
+Retrieve_comments  ->  Add_comment_to_discussion , Add_comment_to_page , Append_block_children , Create_a_database , Create_a_page , Create_a_page_with_content
+Retrieve_your_token's_bot_user  ->  Add_comment_to_discussion , Add_comment_to_page
+Delete a block
+Archive a page
+Search
+Update database properties
+Update a database
+
+-----------List of endpoints and methods--------------
+
+Retrieve a user, method: GET
+List all users, method: GET
+Retrieve your token's bot user, method: GET
+Retrieve a database, method: GET
+Query a database, method: POST
+Sort a database, method: POST
+Filter a database, method: POST
+Create a database, method: POST
+Update a database, method: PATCH
+Update database properties, method: PATCH
+Create a page, method: POST
+Create a page with content, method: POST
+Retrieve a page, method: GET
+Update page properties, method: PATCH
+Archive a page, method: DELETE
+Retrieve a page property item, method: GET
+Retrieve block children, method: GET
+Append block children, method: PATCH
+Update a block, method: PATCH
+Retrieve a block, method: GET
+Delete a block, method: DELETE
+Search, method: POST
+Retrieve comments, method: GET
+Add comment to page, method: POST
+Add comment to discussion, method: POST

@@ -1,0 +1,90 @@
+----------------------------------------------
+       Endpoint dependencies per attribute       
+       Number of api endpoints (nodes): 28
+       Number of dependencies (edges): 35
+       Number of dependencies per attribute: 43
+----------------------------------------------
+List_engines  ->  Answer_Question  [ label = "id : search_model"] type: string, parameter: body parameter
+List_engines  ->  Create_chat_message_completion  [ label = "id : model"] type: string, parameter: body parameter
+List_engines  ->  Create_edit  [ label = "id : model"] type: string, parameter: body parameter
+List_engines  ->  Create_embeddings  [ label = "id : model"] type: string, parameter: body parameter
+List_engines  ->  Create_fine-tune  [ label = "id : model"] type: string, parameter: body parameter
+List_engines  ->  Delete_a_fine-tuned_model._You_must_have_the_Owner_role_in_your_organization.  [ label = "id : model"] type: string, parameter: path parameter
+List_engines  ->  Retrieve_engine  [ label = "id : engineId"] type: string, parameter: path parameter
+List_engines  ->  Retrieve_model  [ label = "id : model_id"] type: string, parameter: path parameter
+List_engines  ->  Search  [ label = "id : engine_id"] type: string, parameter: path parameter
+List_files  ->  Create_fine-tune  [ label = "id : training_file"] type: string, parameter: body parameter
+List_files  ->  Retrieve_file_content  [ label = "id : file_id"] type: string, parameter: path parameter
+List_files  ->  Retrieve_files  [ label = "id : file_id"] type: string, parameter: path parameter
+List_fine-tunes  ->  Create_fine-tune  [ label = "id : training_file"] type: string, parameter: body parameter
+List_fine-tunes  ->  Create_fine-tune  [ label = "model : model"] type: string, parameter: body parameter
+List_fine-tunes  ->  Delete_a_fine-tuned_model._You_must_have_the_Owner_role_in_your_organization.  [ label = "model : model"] type: string, parameter: path parameter
+List_fine-tunes  ->  List_fine-tune_events  [ label = "id : fine_tune_id"] type: string, parameter: path parameter
+List_fine-tunes  ->  Retrieve_file_content  [ label = "id : file_id"] type: string, parameter: path parameter
+List_fine-tunes  ->  Retrieve_files  [ label = "id : file_id"] type: string, parameter: path parameter
+List_fine-tunes  ->  Retrieve_fine-tune  [ label = "id : fine_tune_id"] type: string, parameter: path parameter
+List_fine-tunes  ->  Search  [ label = "model : engine_id"] type: string, parameter: path parameter
+List_models  ->  Create_chat_message_completion  [ label = "id : model"] type: string, parameter: body parameter
+List_models  ->  Create_chat_message_completion  [ label = "root : model"] type: string, parameter: body parameter
+List_models  ->  Create_edit  [ label = "id : model"] type: string, parameter: body parameter
+List_models  ->  Create_edit  [ label = "root : model"] type: string, parameter: body parameter
+List_models  ->  Create_embeddings  [ label = "id : model"] type: string, parameter: body parameter
+List_models  ->  Create_embeddings  [ label = "root : model"] type: string, parameter: body parameter
+List_models  ->  Create_fine-tune  [ label = "id : model"] type: string, parameter: body parameter
+List_models  ->  Create_fine-tune  [ label = "root : model"] type: string, parameter: body parameter
+List_models  ->  Search  [ label = "id : engine_id"] type: string, parameter: path parameter
+List_models  ->  Search  [ label = "root : engine_id"] type: string, parameter: path parameter
+Retrieve_engine  ->  Retrieve_model  [ label = "id : model_id"] type: string, parameter: path parameter
+Retrieve_file_content  ->  Use_fine-tuned_model_(completion)  [ label = "prompt : prompt"] type: string, parameter: body parameter
+Retrieve_files  ->  Create_fine-tune  [ label = "id : training_file"] type: string, parameter: body parameter
+Retrieve_files  ->  Retrieve_file_content  [ label = "id : file_id"] type: string, parameter: path parameter
+Retrieve_fine-tune  ->  Create_fine-tune  [ label = "id : training_file"] type: string, parameter: body parameter
+Retrieve_fine-tune  ->  Create_fine-tune  [ label = "model : model"] type: string, parameter: body parameter
+Retrieve_fine-tune  ->  List_fine-tune_events  [ label = "id : fine_tune_id"] type: string, parameter: path parameter
+Retrieve_fine-tune  ->  Retrieve_file_content  [ label = "id : file_id"] type: string, parameter: path parameter
+Retrieve_fine-tune  ->  Retrieve_files  [ label = "id : file_id"] type: string, parameter: path parameter
+Retrieve_fine-tune  ->  Search  [ label = "model : engine_id"] type: string, parameter: path parameter
+Retrieve_fine-tune  ->  Use_fine-tuned_model_(completion)  [ label = "fine_tuned_model : model"] type: string, parameter: body parameter
+Retrieve_model  ->  Retrieve_engine  [ label = "id : engineId"] type: string, parameter: path parameter
+Retrieve_model  ->  Retrieve_engine  [ label = "root : engineId"] type: string, parameter: path parameter
+Delete file
+Create Translation
+Create image variation
+Create Transcription
+Create image edit
+Cancel fine-tune
+Upload file
+Create completion
+Create image
+Create moderation
+
+-----------List of endpoints and methods--------------
+
+List models, method: GET
+Retrieve model, method: GET
+Create completion, method: POST
+Create chat message completion, method: POST
+Create edit, method: POST
+Create image, method: POST
+Create image edit, method: POST
+Create image variation, method: POST
+Create Transcription, method: POST
+Create Translation, method: POST
+Create embeddings, method: POST
+Upload file, method: POST
+List files, method: GET
+Retrieve files, method: GET
+Retrieve file content, method: GET
+Delete file, method: DELETE
+Create fine-tune, method: POST
+List fine-tunes, method: GET
+Retrieve fine-tune, method: GET
+Cancel fine-tune, method: POST
+List fine-tune events, method: GET
+Delete a fine-tuned model. You must have the Owner role in your organization., method: DELETE
+Use fine-tuned model (completion), method: POST
+Create moderation, method: POST
+List engines, method: GET
+Retrieve engine, method: GET
+Search, method: POST
+Answer Question, method: POST

@@ -1,0 +1,13 @@
+----------------------------------------------
+       Endpoint dependencies per attribute       
+       Number of api endpoints (nodes): 2
+       Number of dependencies (edges): 0
+       Number of dependencies per attribute: 0
+----------------------------------------------
+get_country
+get_cities
+
+-----------List of endpoints and methods--------------
+
+get_cities, method: POST
+get_country, method: POST

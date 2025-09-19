@@ -1,0 +1,126 @@
+----------------------------------------------
+       Endpoint dependencies per attribute       
+       Number of api endpoints (nodes): 25
+       Number of api endpoints (nodes) with inter-dependency: 20
+       Number of dependent only api endpoints (nodes): 11
+       Number of api endpoints (nodes) that only derive dependencies: 9
+       Number of api endpoints (nodes) that are both dependent and derive dependencies: 0
+       Number of dependencies (edges): 39
+       Number of dependencies per attribute: 82
+       Number of dependencies per parameter type (body/query/path): 82/0/0
+----------------------------------------------
+List all users  ->  Add comment to discussion  [ label = "object : object"] type: string, parameter: body
+List all users  ->  Add comment to page  [ label = "object : object"] type: string, parameter: body
+Retrieve a block  ->  Append block children  [ label = "type : type"] type: string, parameter: body
+Retrieve a block  ->  Append block children  [ label = "object : object"] type: string, parameter: body
+Retrieve a block  ->  Append block children  [ label = "type : heading_2"] type: string, parameter: body
+Retrieve a block  ->  Create a database  [ label = "type : type"] type: string, parameter: body
+Retrieve a block  ->  Create a page  [ label = "color : color"] type: string, parameter: body
+Retrieve a block  ->  Create a page  [ label = "type : type"] type: string, parameter: body
+Retrieve a block  ->  Create a page with content  [ label = "color : color"] type: string, parameter: body
+Retrieve a block  ->  Create a page with content  [ label = "type : type"] type: string, parameter: body
+Retrieve a block  ->  Create a page with content  [ label = "object : object"] type: string, parameter: body
+Retrieve a block  ->  Update a block  [ label = "content : type"] type: string, parameter: body
+Retrieve a block  ->  Update a block  [ label = "plain_text : type"] type: string, parameter: body
+Retrieve a database  ->  Add comment to discussion  [ label = "type : type"] type: string, parameter: body
+Retrieve a database  ->  Add comment to discussion  [ label = "object : object"] type: string, parameter: body
+Retrieve a database  ->  Add comment to page  [ label = "object : object"] type: string, parameter: body
+Retrieve a database  ->  Append block children  [ label = "type : type"] type: string, parameter: body
+Retrieve a database  ->  Append block children  [ label = "type : heading_2"] type: string, parameter: body
+Retrieve a database  ->  Create a database  [ label = "type : type"] type: string, parameter: body
+Retrieve a database  ->  Create a database  [ label = "color : color"] type: string, parameter: body
+Retrieve a database  ->  Create a page  [ label = "name : name"] type: string, parameter: body
+Retrieve a database  ->  Create a page  [ label = "id : id"] type: string, parameter: body
+Retrieve a database  ->  Create a page  [ label = "color : color"] type: string, parameter: body
+Retrieve a database  ->  Create a page  [ label = "type : type"] type: string, parameter: body
+Retrieve a database  ->  Create a page with content  [ label = "type : type"] type: string, parameter: body
+Retrieve a database  ->  Create a page with content  [ label = "id : id"] type: string, parameter: body
+Retrieve a database  ->  Create a page with content  [ label = "color : color"] type: string, parameter: body
+Retrieve a database  ->  Create a page with content  [ label = "name : name"] type: string, parameter: body
+Retrieve a database  ->  Filter a database  [ label = "name : equals"] type: string, parameter: body
+Retrieve a database  ->  Filter a database  [ label = "name : property"] type: string, parameter: body
+Retrieve a database  ->  Query a database  [ label = "name : equals"] type: string, parameter: body
+Retrieve a database  ->  Query a database  [ label = "name : property"] type: string, parameter: body
+Retrieve a database  ->  Sort a database  [ label = "name : property"] type: string, parameter: body
+Retrieve a database  ->  Sort a database  [ label = "name : equals"] type: string, parameter: body
+Retrieve a database  ->  Update page properties  [ label = "name : name"] type: string, parameter: body
+Retrieve a page  ->  Add comment to discussion  [ label = "object : object"] type: string, parameter: body
+Retrieve a page  ->  Add comment to page  [ label = "object : object"] type: string, parameter: body
+Retrieve a page  ->  Append block children  [ label = "type : heading_2"] type: string, parameter: body
+Retrieve a page  ->  Append block children  [ label = "type : type"] type: string, parameter: body
+Retrieve a page  ->  Create a database  [ label = "type : type"] type: string, parameter: body
+Retrieve a page  ->  Create a page  [ label = "type : type"] type: string, parameter: body
+Retrieve a page  ->  Create a page  [ label = "color : color"] type: string, parameter: body
+Retrieve a page  ->  Create a page with content  [ label = "type : type"] type: string, parameter: body
+Retrieve a page  ->  Create a page with content  [ label = "color : color"] type: string, parameter: body
+Retrieve a page property item  ->  Create a page  [ label = "id : id"] type: string, parameter: body
+Retrieve a page property item  ->  Create a page  [ label = "color : color"] type: string, parameter: body
+Retrieve a page property item  ->  Create a page  [ label = "name : name"] type: string, parameter: body
+Retrieve a page property item  ->  Create a page with content  [ label = "name : name"] type: string, parameter: body
+Retrieve a page property item  ->  Create a page with content  [ label = "color : color"] type: string, parameter: body
+Retrieve a page property item  ->  Create a page with content  [ label = "id : id"] type: string, parameter: body
+Retrieve a user  ->  Add comment to discussion  [ label = "object : object"] type: string, parameter: body
+Retrieve a user  ->  Add comment to page  [ label = "object : object"] type: string, parameter: body
+Retrieve block children  ->  Append block children  [ label = "type : heading_2"] type: string, parameter: body
+Retrieve block children  ->  Append block children  [ label = "type : type"] type: string, parameter: body
+Retrieve block children  ->  Append block children  [ label = "object : object"] type: string, parameter: body
+Retrieve block children  ->  Create a database  [ label = "type : type"] type: string, parameter: body
+Retrieve block children  ->  Create a page  [ label = "color : color"] type: string, parameter: body
+Retrieve block children  ->  Create a page  [ label = "type : type"] type: string, parameter: body
+Retrieve block children  ->  Create a page with content  [ label = "type : type"] type: string, parameter: body
+Retrieve block children  ->  Create a page with content  [ label = "color : color"] type: string, parameter: body
+Retrieve block children  ->  Create a page with content  [ label = "object : object"] type: string, parameter: body
+Retrieve comments  ->  Add comment to discussion  [ label = "url : url"] type: string, parameter: body
+Retrieve comments  ->  Add comment to discussion  [ label = "href : url"] type: string, parameter: body
+Retrieve comments  ->  Add comment to discussion  [ label = "plain_text : url"] type: string, parameter: body
+Retrieve comments  ->  Add comment to discussion  [ label = "href : content"] type: string, parameter: body
+Retrieve comments  ->  Add comment to discussion  [ label = "content : url"] type: string, parameter: body
+Retrieve comments  ->  Add comment to discussion  [ label = "id : id"] type: string, parameter: body
+Retrieve comments  ->  Add comment to discussion  [ label = "url : content"] type: string, parameter: body
+Retrieve comments  ->  Add comment to discussion  [ label = "plain_text : content"] type: string, parameter: body
+Retrieve comments  ->  Add comment to discussion  [ label = "object : object"] type: string, parameter: body
+Retrieve comments  ->  Add comment to discussion  [ label = "content : content"] type: string, parameter: body
+Retrieve comments  ->  Add comment to page  [ label = "id : id"] type: string, parameter: body
+Retrieve comments  ->  Add comment to page  [ label = "object : object"] type: string, parameter: body
+Retrieve comments  ->  Append block children  [ label = "type : type"] type: string, parameter: body
+Retrieve comments  ->  Append block children  [ label = "type : heading_2"] type: string, parameter: body
+Retrieve comments  ->  Create a database  [ label = "type : type"] type: string, parameter: body
+Retrieve comments  ->  Create a page  [ label = "color : color"] type: string, parameter: body
+Retrieve comments  ->  Create a page  [ label = "type : type"] type: string, parameter: body
+Retrieve comments  ->  Create a page with content  [ label = "type : type"] type: string, parameter: body
+Retrieve comments  ->  Create a page with content  [ label = "color : color"] type: string, parameter: body
+Retrieve your token's bot user  ->  Add comment to discussion  [ label = "object : object"] type: string, parameter: body
+Retrieve your token's bot user  ->  Add comment to page  [ label = "object : object"] type: string, parameter: body
+Delete a block
+Archive a page
+Search
+Update database properties
+Update a database
+
+-----------List of endpoints and methods--------------
+
+Retrieve a user, method: GET
+List all users, method: GET
+Retrieve your token's bot user, method: GET
+Retrieve a database, method: GET
+Query a database, method: POST
+Sort a database, method: POST
+Filter a database, method: POST
+Create a database, method: POST
+Update a database, method: PATCH
+Update database properties, method: PATCH
+Create a page, method: POST
+Create a page with content, method: POST
+Retrieve a page, method: GET
+Update page properties, method: PATCH
+Archive a page, method: DELETE
+Retrieve a page property item, method: GET
+Retrieve block children, method: GET
+Append block children, method: PATCH
+Update a block, method: PATCH
+Retrieve a block, method: GET
+Delete a block, method: DELETE
+Search, method: POST
+Retrieve comments, method: GET
+Add comment to page, method: POST
+Add comment to discussion, method: POST
