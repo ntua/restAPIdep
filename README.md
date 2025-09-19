@@ -1,10 +1,10 @@
-# Inter-Endpoint Dependency Analysis
+# Inter-Endpoint Dependency Analysis in RESTful APIs 🔗📊
 
-This repository contains the **source code for both static and dynamic analysis of inter-endpoint dependencies**, as introduced and investigated in the paper:
+This repository contains the **source code for static and dynamic analysis of inter-endpoint dependencies**, as presented in the paper:
 
 **"Enhancing API Documentation by Inter-Endpoint Dependency Graphs"**  
 *Authors: [Panagiotis Papadeas](https://github.com/PanagiotisPapadeas), [Dimitris Gerokonstantis](https://github.com/DimitrisDavidGerokonstantis), [Christos Hadjichristofi](https://github.com/ChristosHadjichristofi), [Vassilios Vescoukis](https://github.com/vvescoukis)*  
-*Published at the 20th Conference on Computer Science and Intelligence Systems (FedCSIS, 2025)*
+*[Published](https://annals-csis.org/proceedings/2025/pliks/8035.pdf) at the 20th Conference on Computer Science and Intelligence Systems (FedCSIS, 2025)*
 
 ---
 
@@ -12,17 +12,17 @@ This repository contains the **source code for both static and dynamic analysis 
 
 When interacting or integrating with APIs, it is essential that developers have information **not only about how to call each endpoint**, but also about **all possible interactions with other endpoints** that either consume output or provide input data.  
 
-Current API documentation usually treats each endpoint as an independent service and **does not highlight these interactions**.  
+Current API documentation usually treats each endpoint as an independent service and **does not highlight how endpoints interact with each other**. This project focuses on **identifying and documenting a specific type of these interactions, called inter-endpoint dependencies**.
 
 An **inter-endpoint dependency** is an interaction between API endpoints:  
 
 - If invoking endpoint **Y** requires input data obtained from a call to endpoint **X**, then the required call order is `(X, Y)`, and thus we say that **Y depends on X**.  
 
-### Types of Inter-Endpoint Dependencies
+### 🔹 Types of Inter-Endpoint Dependencies
 
-1. **body-body**: Information retrieved from the **response body** of an API call serves as input to the **request body** of the next API call.  
-2. **body-path**: Information retrieved from the **response body** serves as a **path parameter** input for the next API call.  
-3. **body-query**: Information retrieved from the **response body** serves as a **query parameter** input for the next API call.  
+1. **body-body**: Response data from one API call is used as the **request body** of another.  
+2. **body-path**: Response data from one API call is used as a **path parameter** for another.  
+3. **body-query**: Response data from one API call is used as a **query parameter** for another.  
 
 ---
 
@@ -31,15 +31,15 @@ An **inter-endpoint dependency** is an interaction between API endpoints:
 We introduce **two approaches** for identifying inter-endpoint dependencies:
 
 ### 1️⃣ Static Analysis
-- **Based on API documentation**: Identifies matches on values, types, or parameter names of input/output attributes of API calls.  
-- **Input**: Postman Collection of the API under analysis.    
+- **Based on API documentation**: Identifies matches on types, values, or parameter names of input/output attributes of API endpoints.  
+- **Input**: A **Postman Collection** including request/response structures and full examples of API calls with real data.    
 
 ### 2️⃣ Dynamic Analysis
 - **Based on actual API calls** captured using a **man-in-the-middle (MIM) agent**.  
 - Analyzes HTTP traffic to find matches between **input and output values** of different API calls.  
 - **Input**: Log file of real API calls exported by the MIM agent.  
-- **Implementation**: Standalone dockerized MIM component (other implementations possible, e.g., browser extensions or internal API Gateway components).  
-- **More information**: Refer to the `DynamicAnalysis/man_in_the_middle/` folder in this repository.  
+- **Implementation**: Standalone dockerized MIM component (other implementations possible, e.g., browser extension or internal API Gateway component).  
+- **More information**: Refer to the [`DynamicAnalysis/man_in_the_middle/`](DynamicAnalysis/man_in_the_middle/) folder in this repository.  
 
 ---
 
