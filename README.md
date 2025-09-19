@@ -1,4 +1,4 @@
-# Inter-Endpoint Dependency Analysis in RESTful APIs 🔗📊
+# Inter-Endpoint Dependency Analysis in RESTful APIs 📊
 
 This repository contains the **source code for static and dynamic analysis of inter-endpoint dependencies**, as presented in the paper:
 
