@@ -1,10 +1,18 @@
-# Inter-Endpoint Dependency Analysis in RESTful APIs 📊
+<h1 align="center">📊 Inter-Endpoint Dependency Analysis in RESTful APIs</h1>
 
-This repository contains the **source code for static and dynamic analysis of inter-endpoint dependencies**, as introduced in the paper:
+<p align="center">
+This repository contains the <b>source code for static and dynamic analysis of inter-endpoint dependencies</b>, as introduced in the paper:
+</p>
 
-**"Enhancing API Documentation by Inter-Endpoint Dependency Graphs"**  
-*Authors: [Panagiotis Papadeas](https://github.com/PanagiotisPapadeas), [Dimitris Gerokonstantis](https://github.com/DimitrisDavidGerokonstantis), [Christos Hadjichristofi](https://github.com/ChristosHadjichristofi), [Vassilios Vescoukis](https://github.com/vvescoukis)*  
-*[Published](https://annals-csis.org/proceedings/2025/pliks/8035.pdf) at the 20th Conference on Computer Science and Intelligence Systems (FedCSIS, 2025)*  
+<p align="center">
+<b>"Enhancing API Documentation by Inter-Endpoint Dependency Graphs"</b><br/>
+<i>Authors: 
+<a href="https://github.com/PanagiotisPapadeas">Panagiotis Papadeas</a>, 
+<a href="https://github.com/DimitrisDavidGerokonstantis">Dimitris Gerokonstantis</a>, 
+<a href="https://github.com/ChristosHadjichristofi">Christos Hadjichristofi</a>, 
+<a href="https://github.com/vvescoukis">Vassilios Vescoukis</a></i><br/>
+<a href="https://annals-csis.org/proceedings/2025/pliks/8035.pdf">Published</a> at the 20th Conference on Computer Science and Intelligence Systems <a href="https://2025.fedcsis.org/">(FedCSIS, 2025)</a>
+</p>
 
 ---
 
@@ -19,9 +27,15 @@ Unfortunately, most API documentation treats each endpoint as an isolated entity
 - This implies a dependency order `(X → Y)`, meaning **Y depends on X**.  
 
 ### 🔹 Types of Inter-Endpoint Dependencies
-1. **body-body**: Response body data is used in the **request body** of another API call.  
-2. **body-path**: Response body data is used as a **path parameter** in another API call.  
-3. **body-query**: Response body data is used as a **query parameter** in another API call.  
+<div align="center">
+
+| Type        | Description |
+|-------------|-------------|
+| **body-body** | Response body data is used in the **request body** of another API call. |
+| **body-path** | Response body data is used as a **path parameter** in another API call. |
+| **body-query** | Response body data is used as a **query parameter** in another API call. |
+
+</div>
 
 ---
 
@@ -47,7 +61,9 @@ We provide **two complementary approaches** for detecting inter-endpoint depende
 
 The [`StaticAnalysis/`](StaticAnalysis/) folder contains the full implementation and resources for static analysis.  
 
-### Running the Static Dependency Analyzer
+<details>
+<summary><b>▶️ Running the Static Dependency Analyzer</b></summary>
+
 1. Navigate to [`StaticAnalysis/dependencies/`](StaticAnalysis/dependencies/).  
 2. Prepare an input Postman Collection and save it in the `input_files/` directory (sample collections are provided in [`StaticAnalysis/dependencies/input_files/`](StaticAnalysis/dependencies/input_files/), e.g., the **PayPal API (Paypal.json)**).  
 3. Run the analyzer:  
@@ -58,6 +74,7 @@ The [`StaticAnalysis/`](StaticAnalysis/) folder contains the full implementation
 4. Provide the name of your input Postman Collection (you may use one of the provided examples or your own collection).
 
 5. Configure options when prompted:
+
    * **Include query and path parameters** → Detect dependencies not only for request bodies but also for **query** and **path** parameters.
    * **GET dependencies only** → Restrict analysis to dependencies derived only from `GET` endpoints (the most common dependency case).
 
@@ -67,14 +84,23 @@ The [`StaticAnalysis/`](StaticAnalysis/) folder contains the full implementation
    StaticAnalysis/dependencies/output_files/jsonObject.txt
    ```
 
+</details>
+
+---
+
 ## ⚡ Dynamic Analysis: How It Works
 
-The [`DynamicAnalysis/`](DynamicAnalysis/) folder contains the full implementation and utilities for dynamic analysis.  
+The [`DynamicAnalysis/`](DynamicAnalysis/) folder contains the full implementation and utilities for dynamic analysis.
 
-### Running the Dynamic Dependency Analyzer
-1. Prepare a log file of API calls (examples provided in [`DynamicAnalysis/man_in_the_middle/exported_logs/`](DynamicAnalysis/man_in_the_middle/exported_logs) for **Notion**, **PayPal**, and **OpenAI** APIs). You can use our MIM agent implementation to generate you own log file ([`DynamicAnalysis/man_in_the_middle/standalone_mim_implementation/`](DynamicAnalysis/man_in_the_middle/standalone_mim_implementation/)).  
-2. Navigate to [`DynamicAnalysis/dynamic_dependency_analyser/`](DynamicAnalysis/dynamic_dependency_analyser/).  
-3. Install dependencies:  
+<details>
+<summary><b>▶️ Running the Dynamic Dependency Analyzer</b></summary>
+
+1. Prepare a log file of API calls (examples provided in [`DynamicAnalysis/man_in_the_middle/exported_logs/`](DynamicAnalysis/man_in_the_middle/exported_logs) for **Notion**, **PayPal**, and **OpenAI** APIs). You can use our MIM agent implementation to generate you own log file ([`DynamicAnalysis/man_in_the_middle/standalone_mim_implementation/`](DynamicAnalysis/man_in_the_middle/standalone_mim_implementation/)).
+
+2. Navigate to [`DynamicAnalysis/dynamic_dependency_analyser/`](DynamicAnalysis/dynamic_dependency_analyser/).
+
+3. Install dependencies:
+
    ```
    pip install -r requirements.txt
    ```
@@ -97,7 +123,9 @@ The [`DynamicAnalysis/`](DynamicAnalysis/) folder contains the full implementati
 
 7. Results will be saved in [`DynamicAnalysis/dynamic_dependency_analyser/output_files/`](DynamicAnalysis/dynamic_dependency_analyser/output_files/)
 
-### 🔧 Utilities
+---
+
+## 🔧 Utilities
 
 Located in [`DynamicAnalysis/utils-helpers/`](DynamicAnalysis/utils-helpers/):
 
@@ -105,6 +133,8 @@ Located in [`DynamicAnalysis/utils-helpers/`](DynamicAnalysis/utils-helpers/):
 * **Postman Filter**: Keep only a subset of endpoints in a Postman Collection for more focused static analysis.
 
 ---
+
+</details>
 
 ## 🗂️ Output
 
@@ -117,11 +147,11 @@ Both static and dynamic analysis methods generate a **structured JSON file** con
 These outputs can be visualized using the **RADAR tool**:
 👉 [RADAR – REST API Dependencies and Analysis of Relationships](https://radar.softlab.ntua.gr)
 
-* Upload a **Postman collection** for static analysis.
-* Upload an **API log file** for dynamic analysis.
-* RADAR renders the output JSON as a **directed graph**, where:
+<div>
 
-  * **Nodes** = Endpoints
-  * **Edges** = Dependencies
+### 📊 RADAR Visualization
 
----
+* **Nodes** = Endpoints
+* **Edges** = Dependencies
+
+</div>
