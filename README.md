@@ -11,7 +11,7 @@ This repository contains the <b>source code for static and dynamic analysis of i
 <a href="https://github.com/DimitrisDavidGerokonstantis">Dimitris Gerokonstantis</a>, 
 <a href="https://github.com/ChristosHadjichristofi">Christos Hadjichristofi</a>, 
 <a href="https://github.com/vvescoukis">Vassilios Vescoukis</a></i><br/>
-<a href="https://github.com/ntua/restAPIdep">Published</a> at the 20th Conference on Computer Science and Intelligence Systems <a href="https://2025.fedcsis.org/">(FedCSIS, 2025)</a>
+<a href="https://ieeexplore.ieee.org/document/11214587">Published</a> at the 20th Conference on Computer Science and Intelligence Systems <a href="https://2025.fedcsis.org/">(FedCSIS, 2025)</a>
 </p>
 
 ---
